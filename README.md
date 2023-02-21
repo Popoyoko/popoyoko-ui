@@ -29,7 +29,7 @@ Launch the Storybook environment, a development tool for designing and testing u
 
 port 6006 is used
 
-### `npm run build-storybook` 
+### `npm run build-storybook`
 
 Allows you to create a build of the user interface of the application or website, using Storybook as a compilation tool.
 
@@ -44,4 +44,4 @@ The "--watch" option tells Vite to monitor the application's source files and to
 
 # Learn More
 
-You can learn more in the [Vite documentation](https://vitejs.dev/guide/ )
+You can learn more in the [Vite documentation](https://vitejs.dev/guide/)

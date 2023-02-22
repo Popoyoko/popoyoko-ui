@@ -1,0 +1,32 @@
+# .github/workflows/chromatic.yml
+
+# Workflow name
+name: 'Chromatic and publish Storybook'
+
+# Event for the workflow
+on:
+  push:
+    branches:
+    - main
+
+# List of jobs
+jobs:
+  chromatic-deployment:
+    # Operating System
+    runs-on: ubuntu-latest
+    # Job steps
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install dependencies
+        # 👇 Install dependencies with the same package manager used in the project (replace it as needed), e.g. yarn, npm, pnpm
+        run: npm
+        # 👇 Publish Storybook
+      - name: Publish Storybook
+        run: npm run deploy-storybook
+        # 👇 Adds Chromatic as a step in the workflow
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
+        # Chromatic GitHub Action options
+        with:
+          # 👇 Chromatic projectToken, refer to the manage page to obtain it.
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}

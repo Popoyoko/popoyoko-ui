@@ -8,7 +8,7 @@ import babel from "@rollup/plugin-babel";
 export default {
   input: "src/components/index.ts",
   output: {
-    dir: "dist",
+    dir: "dist/",
     format: "cjs",
     sourcemap: true,
   },

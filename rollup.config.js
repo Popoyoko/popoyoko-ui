@@ -13,7 +13,7 @@ export default {
     sourcemap: true,
   },
   plugins: [
-    resolve(),
+    resolve({ modules: ["node_modules", "src/ui"] }),
     commonjs(),
     typescript(),
     postcss({
@@ -26,9 +26,7 @@ export default {
       exclude: /node_modules/,
     }),
     copy({
-      targets: [
-        { src: "src/components/**/*", dest: "dist/components" },
-      ],
+      targets: [{ src: "src/components/**/*", dest: "dist/components" }],
     }),
   ],
   external: ["react", "react-dom"],

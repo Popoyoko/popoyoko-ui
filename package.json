@@ -4,6 +4,8 @@
   "main": "./dist/components/index.ts",
   "private": true,
   "type": "module",
+  "module": "./dist/components/index.ts",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "require": "./dist/components/index.ts",

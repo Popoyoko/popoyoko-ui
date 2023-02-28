@@ -3,6 +3,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import postcss from "rollup-plugin-postcss";
 import copy from "rollup-plugin-copy";
+import babel from "@rollup/plugin-babel";
 
 export default {
   input: "src/components/index.ts",
@@ -18,6 +19,11 @@ export default {
     postcss({
       extract: true,
       modules: true,
+    }),
+    babel({
+      babelHelpers: "bundled",
+      extensions: [".js", ".jsx", ".ts", ".tsx"],
+      exclude: /node_modules/,
     }),
     copy({
       targets: [

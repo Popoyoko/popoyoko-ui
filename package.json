@@ -1,7 +1,7 @@
 {
   "name": "ui",
   "version": "0.1.0",
-  "main": "popoyoko-ui.ts",
+  "main": "./dist/components/index.ts",
   "private": true,
   "type": "module",
   "dependencies": {

@@ -27,7 +27,7 @@ export default {
     }),
     copy({
       targets: [
-        { src: "src/components/**/*", dest: "dist/components" },
+        { src: "src/components/**/*", dest: "dist/" },
         { src: "package.json", dest: "dist" },
       ],
     }),

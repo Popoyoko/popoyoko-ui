@@ -1,13 +1,13 @@
 {
   "name": "popoyoko-ui",
   "version": "0.1.0",
-  "main": "./dist/components/index.ts",
+  "main": "./dist/index.js",
   "private": true,
   "type": "module",
-  "module": "./dist/components/index.ts",
+  "module": "./dist/index.js",
   "exports": {
     ".": {
-      "require": "./dist/components/index.ts",
+      "require": "./dist/index.js",
       "import": "./src/index.ts",
       "types": "./dist/index.d.ts"
     }

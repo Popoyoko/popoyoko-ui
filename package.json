@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "main": "./dist/components/index.ts",
   "private": true,
-  "type": "commonjs",
+  "type": "module",
   "module": "./dist/components/index.ts",
   "exports": {
     ".": {

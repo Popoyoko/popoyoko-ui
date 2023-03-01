@@ -5,11 +5,11 @@
   "private": true,
   "type": "module",
   "module": "./dist/components/index.ts",
-  "types": "./index.d.ts",
   "exports": {
     ".": {
       "require": "./dist/components/index.ts",
-      "import": "./src/index.ts"
+      "import": "./src/index.ts",
+      "types": "./dist/index.d.ts"
     }
   },
   "dependencies": {

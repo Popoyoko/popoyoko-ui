@@ -60,7 +60,8 @@
     "react-dom": "^16.8.0"
   },
   "exports": {
-    "./Button": "./src/Button.tsx"
+    ".": "./dist/index.js",
+    "./components/*": "./dist/components/*"
   },
   "devDependencies": {
     "@babel/core": "^7.21.0",

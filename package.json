@@ -15,6 +15,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "rollup": "^3.18.0",
     "ts-loader": "^9.4.2",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
@@ -29,6 +30,7 @@
     "chromatic": "npx chromatic --project-token=e656df12e018",
     "deploy-storybook": "storybook-to-ghpages",
     "build-rollup": "tsc && rollup -c",
+    "build-bundle": "rollup -c",
     "prepare": "npm run build"
   },
   "eslintConfig": {

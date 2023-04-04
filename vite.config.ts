@@ -7,10 +7,11 @@ export default defineConfig({
   plugins: [react(),
     // ajoutez le plugin copy et configurez-le pour copier le fichier package.json
     copy({
-      targets: [{ src: "package.json", dest: "dist" }],
+      targets: [{ src: "package.json", dest: "dist" },{ src: 'src/components/**/*', dest: 'dist/components' }],
       hook: "writeBundle" // exécutez la copie après la génération des fichiers
     })
   ],
+  
   build: {
     outDir: "dist",
     sourcemap: true,

@@ -1,9 +1,16 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";//SWC (Speedy WebAssembly Compiler)
+import copy from "rollup-plugin-copy";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(),
+    // ajoutez le plugin copy et configurez-le pour copier le fichier package.json
+    copy({
+      targets: [{ src: "package.json", dest: "dist" }],
+      hook: "writeBundle" // exécutez la copie après la génération des fichiers
+    })
+  ],
   build: {
     outDir: "dist",
     sourcemap: true,

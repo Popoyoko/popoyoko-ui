@@ -1,4 +1,6 @@
 import "./index.css";
+import React from 'react';
+
 
 interface ButtonProps {
   primary?: boolean;

@@ -2,9 +2,9 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";//SWC (Speedy WebAssembly Compiler)
 import copy from "rollup-plugin-copy";
 import eslint from '@rollup/plugin-eslint';
+import path from "path";
 
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(),
     eslint({
@@ -21,20 +21,18 @@ export default defineConfig({
   ],
   
   build: {
-    outDir: "dist",
-    sourcemap: true,
-    //vider le répertoire de sortie avant de générer
-    emptyOutDir: true,
-    rollupOptions: {
-      input: "./src/components/index.ts",
-      output: {
-        // nom des fichiers générés pour les points d'entrée
-        entryFileNames: "[name].js",
-        // nom des fichiers générés pour les "chunks"
-        chunkFileNames: "[name].js",
-        //nom des fichiers générés pour les fichiers statiques 
-        assetFileNames: "[name].[ext]",
-      }
+    lib: {
+      entry: path.resolve(__dirname, './src/index.tsx'),
+      name: 'popoyoko-ui-vite'
     },
-  },
+    rollupOptions: {
+      external: ['react', 'react-dom'],
+      output: {
+        globals: {
+          react: 'React',
+          'react-dom': 'ReactDOM'
+        }
+      }
+    }
+  }
 });

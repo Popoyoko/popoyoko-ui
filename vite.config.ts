@@ -1,34 +1,20 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react-swc";//SWC (Speedy WebAssembly Compiler)
-import copy from "rollup-plugin-copy";
+import * as path from 'path';
+import { defineConfig } from 'vite';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(),
-    // ajoutez le plugin copy et configurez-le pour copier le fichier package.json
-    copy({
-      targets: [{ src: "package.json", dest: "dist" },{ src: 'src/components/**/*', dest: 'dist/' }],
-      flatten: false,
-      // verbose: true, voir toit les fichier traités oar fast-glob dans la console
-      hook: "writeBundle" // exécutez la copie après la génération des fichiers
-    })
-  ],
-  
   build: {
-    outDir: "dist",
-    sourcemap: true,
-    //vider le répertoire de sortie avant de générer
-    emptyOutDir: true,
-    rollupOptions: {
-      input: "./src/components/index.ts",
-      output: {
-        // nom des fichiers générés pour les points d'entrée
-        entryFileNames: "[name].js",
-        // nom des fichiers générés pour les "chunks"
-        chunkFileNames: "[name].js",
-        //nom des fichiers générés pour les fichiers statiques 
-        assetFileNames: "[name].[ext]",
-      }
+    lib: {
+      entry: path.resolve(__dirname, './src/index.tsx'),
+      name: 'popoyoko-ui-vite'
     },
-  },
+    rollupOptions: {
+      external: ['react', 'react-dom'],
+      output: {
+        globals: {
+          react: 'React',
+          'react-dom': 'ReactDOM'
+        }
+      }
+    }
+  }
 });

@@ -2,15 +2,15 @@
   "name": "vite-popoyoko",
   "private": true,
   "version": "0.0.0",
-  "main": "src/index.js",
+  "main": "./build/vite-popoyoko.cjs.js",
   "files": [
     "build"
   ],
-  "module": "./build/vite-popoyoko.mjs.js",
+  "module": "./build/vite-popoyoko.es.js",
   "exports": {
     ".": {
-      "import": "./build/vite-popoyoko.mjs.js",
-      "require": "./build/vite-popoyoko.umd.js"
+      "import": "./build/vite-popoyoko.es.js",
+      "require": "./build/vite-popoyoko.cjs.js" 
     }
   },
   "scripts": {

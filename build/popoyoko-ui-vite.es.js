@@ -1,14 +1,18 @@
-import b from "react";
-const m = ({ primary: t = !1, size: o = "medium", backgroundColor: e, label: n, ...r }) => {
-  const s = t ? "storybook-button--primary" : "storybook-button--secondary";
-  return /* @__PURE__ */ b.createElement("button", {
+import t from "react";
+const l = ({ primary: o = !1, size: e = "medium", backgroundColor: n, label: r, ...s }) => {
+  const u = o ? "storybook-button--primary" : "storybook-button--secondary";
+  return /* @__PURE__ */ t.createElement("button", {
     type: "button",
-    className: ["storybook-button", `storybook-button--${o}`, s].join(" "),
-    style: { backgroundColor: e },
-    ...r
-  }, n);
+    className: ["storybook-button", `storybook-button--${e}`, u].join(" "),
+    style: { backgroundColor: n },
+    ...s
+  }, r);
 };
+function c() {
+  return /* @__PURE__ */ t.createElement("h1", null, " Hello ");
+}
 export {
-  m as Button
+  l as Button,
+  c as Title
 };
 //# sourceMappingURL=popoyoko-ui-vite.es.js.map

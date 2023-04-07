@@ -3,6 +3,16 @@
   "private": true,
   "version": "0.0.0",
   "main": "src/index.js",
+  "files": [
+    "build"
+  ],
+  "module": "./build/vite-popoyoko.mjs.js",
+  "exports": {
+    ".": {
+      "import": "./build/vite-popoyoko.mjs.js",
+      "require": "./build/vite-popoyoko.umd.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -14,7 +24,8 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "rollup-plugin-copy": "^3.4.0"
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-typescript2": "^0.34.1"
   },
   "devDependencies": {
     "@babel/core": "^7.21.4",

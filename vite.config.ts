@@ -23,8 +23,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, './src/index.tsx'),
-      name: 'popoyoko-ui-vite',
-      fileName: (format) => `index.${format}.js`,
+      name: 'popoyoko-ui-vite'
     },
     rollupOptions: {
       external: ['react', 'react-dom'],
@@ -34,9 +33,6 @@ export default defineConfig({
           'react-dom': 'ReactDOM'
         }
       }
-    },
-    outDir: 'dist',
-    sourcemap: true,
-    assetsDir: 'assets'
+    }
   }
 });

@@ -1,0 +1,2 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const u=require("react");const b=({primary:t=!1,size:o="medium",backgroundColor:e,label:n,...r})=>{const s=t?"storybook-button--primary":"storybook-button--secondary";return u.createElement("button",{type:"button",className:["storybook-button",`storybook-button--${o}`,s].join(" "),style:{backgroundColor:e},...r},n)};exports.Button=b;
+//# sourceMappingURL=popoyoko-ui-vite.cjs.js.map

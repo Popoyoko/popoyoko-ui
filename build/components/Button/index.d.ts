@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import "./index.css";
 interface ButtonProps {
     primary?: boolean;

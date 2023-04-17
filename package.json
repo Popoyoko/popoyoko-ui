@@ -2,7 +2,18 @@
   "name": "vite-popoyoko",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "main": "./build/index.d.ts",
+  "files": [
+    "build"
+  ],
+  "module": "./build/popoyoko-ui-vite.es.js",
+  "types": "./build/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./build/popoyoko-ui-vite.es.js",
+      "require": "./build/popoyoko-ui-vite.cjs.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -12,9 +23,11 @@
     "watch": "vite build --watch --mode development"
   },
   "dependencies": {
+    "esbuild": "^0.17.17",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "rollup-plugin-copy": "^3.4.0"
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-typescript2": "^0.34.1"
   },
   "devDependencies": {
     "@babel/core": "^7.21.4",

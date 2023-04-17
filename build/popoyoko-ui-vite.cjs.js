@@ -1,0 +1,2 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const t=require("react");const l=({primary:o=!1,size:e="medium",backgroundColor:n,label:r,...u})=>{const s=o?"storybook-button--primary":"storybook-button--secondary";return t.createElement("button",{type:"button",className:["storybook-button",`storybook-button--${e}`,s].join(" "),style:{backgroundColor:n},...u},r)};function b(){return t.createElement("h1",null," Hello ")}exports.Button=l;exports.Title=b;
+//# sourceMappingURL=popoyoko-ui-vite.cjs.js.map

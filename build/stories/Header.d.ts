@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import './header.css';
 type User = {
     name: string;

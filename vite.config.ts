@@ -1,6 +1,7 @@
 import * as path from 'path';
 import { defineConfig } from 'vite';
 import ts from 'rollup-plugin-typescript2';
+import eslint from '@rollup/plugin-eslint';
 
 export default defineConfig({
   build: {
@@ -21,6 +22,10 @@ export default defineConfig({
       plugins: [
         ts({
           tsconfig: path.resolve(__dirname, 'tsconfig.json')
+        }),
+        eslint({
+          include: ['src/**/*.ts', 'src/**/*.tsx'], // Les fichiers à linter
+          exclude: ['node_modules/**', 'dist/**'] // Les fichiers à exclure
         })
       ]
     },

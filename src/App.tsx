@@ -1,11 +1,12 @@
-import { useState } from 'react'
-import logo_popoyoko from '/Logo-popoyoko.svg'
-import './App.css'
-import React from 'react';
-
+import { useState } from "react";
+import logo_popoyoko from "/Logo-popoyoko.svg";
+import "./App.css";
+import React from "react";
+import Card from "./components/Card";
+import Button from "./components/Button";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <div className="App">
@@ -18,9 +19,16 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
+
+        {/* <Button label="Click me!" onClick={() => alert('Hello world!')} backgroundColor="#f00"></Button>
+
+        <Card background="url(https://imgs.search.brave.com/KUc_Sjgkt3SuouS7E-9zbhV2YGG7MFpPmcNklJmJYu0/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9ib25q/b3VybmF0dXJlLmZy/L3dwLWNvbnRlbnQv/dXBsb2Fkcy9pbWFn/ZS1wYXlzYWdlLWdy/YXR1aXRlLWEtdGVs/ZWNoYXJnZXItNS5q/cGc)"/>
+
+        <Card label="label" subTitle="subtitle" mention="mention" price={56} background="url(https://imgs.search.brave.com/KUc_Sjgkt3SuouS7E-9zbhV2YGG7MFpPmcNklJmJYu0/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9ib25q/b3VybmF0dXJlLmZy/L3dwLWNvbnRlbnQv/dXBsb2Fkcy9pbWFn/ZS1wYXlzYWdlLWdy/YXR1aXRlLWEtdGVs/ZWNoYXJnZXItNS5q/cGc)"/> */}
+
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

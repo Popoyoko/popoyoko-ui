@@ -1,16 +1,13 @@
 import "./index.css";
-import React from "react";
-declare const Button: ({ primary, size, backgroundColor, label, ...props }: {
-    [x: string]: any;
+interface ButtonProps {
     primary?: boolean;
-    size?: string;
-    backgroundColor: any;
-    label: any;
-}) => React.DetailedReactHTMLElement<{
-    type: string;
-    className: string;
-    style: {
-        backgroundColor: any;
-    };
-}, HTMLElement>;
+    backgroundColor?: string;
+    size?: "small" | "medium" | "large";
+    label: string;
+    onClick?: () => void;
+}
+/**
+ * Primary UI component for user interaction
+ */
+declare const Button: ({ primary, size, backgroundColor, label, ...props }: ButtonProps) => JSX.Element;
 export default Button;

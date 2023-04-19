@@ -1,11 +1,13 @@
 import "./index.css";
-interface CardProps {
-    mention?: string;
-    label?: string;
-    subTitle?: string;
-    price?: number;
-    background?: string;
-    variant?: "simple" | "media";
-}
-declare const Card: ({ background, label, mention, subTitle, price, ...props }: CardProps) => JSX.Element;
+import React from "react";
+declare const Card: ({ background, label, mention, subTitle, price, ...props }: {
+    [x: string]: any;
+    background: any;
+    label: any;
+    mention: any;
+    subTitle: any;
+    price: any;
+}) => React.DetailedReactHTMLElement<{
+    className: string;
+}, HTMLElement>;
 export default Card;

@@ -1,4 +1,4 @@
-import "./index.css";
+import "./Information.css";
 import React from "react";
 import information from "../../assets/information.svg";
 
@@ -7,7 +7,7 @@ interface InformationProps {
   background?: string;
 }
 
-const Information = ({
+export const Information = ({
   background,
   label,
   ...props
@@ -24,4 +24,3 @@ const Information = ({
   );
 };
 
-export default Information;

@@ -8,7 +8,48 @@ const meta: Meta<typeof Card> = {
   title: 'Design System/Card',
   component: Card,
   argTypes: {
-    background: { control: 'color' },
+    variant: {
+      table: {
+        category: 'Variant',
+        subcategory: 'Style',
+      },
+    },
+    // Assigns the argTypes to the Colors category
+    background: {
+      control: 'color',
+      table: {
+        category: 'Colors',
+        // Assigns the argTypes to a specific subcategory
+        subcategory: 'Button colors',
+      },
+    },
+    mention: {
+      control: {
+        type: 'text'
+      },
+      table: {
+        category: 'Text',
+        subcategory: 'Mention contents',
+      },
+    },
+    label: {
+      table: {
+        category: 'Text',
+        subcategory: 'Title contents',
+      },
+    },
+    subTitle: {
+      table: {
+        category: 'Text',
+        subcategory: 'Subtitle contents',
+      },
+    },
+    price: {
+      table: {
+        category: 'Text',
+        subcategory: 'Price contents',
+      },
+    },
   },
 } 
 

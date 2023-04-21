@@ -9,9 +9,43 @@ const meta: Meta<typeof Button> = {
   component: Button,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
-    backgroundColor: { control: 'color' },
+    // Assigns the argTypes to the Colors category
+    backgroundColor: {
+      control: 'color',
+      table: {
+        category: 'Colors',
+        // Assigns the argTypes to a specific subcategory
+        subcategory: 'Button colors',
+      },
+    },
+    primary: {
+      table: {
+        category: 'Colors',
+        subcategory: 'Button style',
+      },
+    },
+    label: {
+      table: {
+        category: 'Text',
+        subcategory: 'Button contents',
+      },
+    },
+    // Assigns the argType to the Events category
+    onClick: {
+      table: {
+        category: 'Events',
+        subcategory: 'Button Events',
+      },
+    },
+    // Assigns the argType to the Sizes category
+    size: {
+      table: {
+        category: 'Sizes',
+      },
+    },
   },
-} 
+};
+
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 export default meta;

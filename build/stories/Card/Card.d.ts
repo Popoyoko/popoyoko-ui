@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import "./Card.css";
 interface CardProps {
     mention?: string;

@@ -1,8 +1,9 @@
 import "./index.css";
 import React from "react";
-declare const Card: ({ background, label, mention, subTitle, price, ...props }: {
+declare const Card: ({ background, backgroundColor, label, mention, subTitle, price, ...props }: {
     [x: string]: any;
     background: any;
+    backgroundColor: any;
     label: any;
     mention: any;
     subTitle: any;

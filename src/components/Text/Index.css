@@ -1,0 +1,27 @@
+.text-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    width: 312px;
+    height: 288px;
+    overflow-x: scroll;
+}
+
+.text-title {
+    width: 312px;
+    height: 32px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.text-description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 0px;
+    isolation: isolate;
+    font-family: 'sans-serif';
+}

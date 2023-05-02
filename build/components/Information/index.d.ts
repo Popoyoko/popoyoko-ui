@@ -1,7 +1,6 @@
 import "./index.css";
 import React from "react";
-declare const Information: ({ background, label, ...props }: {
-    [x: string]: any;
+declare const Information: ({ background, label }: {
     background: any;
     label: any;
 }) => React.DetailedReactHTMLElement<{

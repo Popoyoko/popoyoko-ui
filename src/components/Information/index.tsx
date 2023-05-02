@@ -10,7 +10,7 @@ interface InformationProps {
 const Information = ({
   background,
   label,
-  ...props
+  // ...props
 }: InformationProps) => {
 
   return (

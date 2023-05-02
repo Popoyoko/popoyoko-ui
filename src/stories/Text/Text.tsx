@@ -1,4 +1,4 @@
-import "./text.css";
+import "./Text.css";
 import React from 'react';
 
 interface TextProps {
@@ -7,13 +7,12 @@ interface TextProps {
     backgroundColor?: string;
     divWidth?: string;
 }
-
-const Text: React.FC<TextProps> = ({
+export const Text = ({
     title, 
     description,
     backgroundColor,
     divWidth
-}) => {
+}: TextProps) => {
     const divStyle = Object.assign(
       { width: divWidth },
       { backgroundColor: backgroundColor }  
@@ -29,5 +28,3 @@ const Text: React.FC<TextProps> = ({
         </div>
     );
 };
-
-export default Text;

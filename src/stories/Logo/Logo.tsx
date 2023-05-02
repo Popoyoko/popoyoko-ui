@@ -1,4 +1,4 @@
-import "./index.css";
+import "./Logo.css";
 import React from 'react';
 
 interface LogoProps {

@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import "./Text.css";
 interface TextProps {
     title: string;

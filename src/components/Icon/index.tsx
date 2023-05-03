@@ -1,17 +1,22 @@
 import "./index.css";
 import React from "react";
-import incon from "../../assets/incon.svg";
+import icon from "../../assets/icon.svg";
 
 interface IconProps {
-    size?: "small" | "medium" | "large";
+  small?: boolean;
+  medium?: boolean;
+  large?: boolean;
 }
 
-const Icon = ({
-  size
-}: IconProps) => {
+const Icon = ({ small, medium, large }: IconProps) => {
+  let className = "icon";
+  if (small) className += " icon-small";
+  if (medium) className += " icon-medium";
+  if (large) className += " icon-large";
+
   return (
-    <div className="icon">
-        <img src = {incon} alt="Icon"/>
+    <div className={className}>
+      <img src={icon} alt="Icon" />
     </div>
   );
 };

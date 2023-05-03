@@ -12,6 +12,10 @@
     gap: 8px;
 }
 
+img {
+    height: 8px;
+}
+
 .buttonSecondary:hover {
     background: #FFFFFF;
     border: 2px dashed #228C53;

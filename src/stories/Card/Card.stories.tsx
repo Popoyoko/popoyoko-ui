@@ -28,19 +28,16 @@ const meta: Meta<typeof Card> = {
         category: 'Backgrounds',
       },
     },
-    mention: {
-      control: {
-        type: 'text'
-      },
-      table: {
-        category: 'Text',
-        subcategory: 'Mention contents',
-      },
-    },
     label: {
       table: {
         category: 'Text',
         subcategory: 'Title contents',
+      },
+    },
+    mention: {
+      table: {
+        category: 'Text',
+        subcategory: 'Mention contents',
       },
     },
     subTitle: {
@@ -57,7 +54,7 @@ const meta: Meta<typeof Card> = {
     },
   },
   args: {
-    background: "url(https://imgs.search.brave.com/KUc_Sjgkt3SuouS7E-9zbhV2YGG7MFpPmcNklJmJYu0/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9ib25q/b3VybmF0dXJlLmZy/L3dwLWNvbnRlbnQv/dXBsb2Fkcy9pbWFn/ZS1wYXlzYWdlLWdy/YXR1aXRlLWEtdGVs/ZWNoYXJnZXItNS5q/cGc)"
+    background: "#bbbbbb"
   }
 } 
 

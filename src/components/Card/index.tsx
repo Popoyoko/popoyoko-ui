@@ -2,8 +2,8 @@ import "./index.css";
 import React from "react";
 
 interface CardProps {
-  mention?: string;
   label?: string;
+  mention?: string;
   subTitle?: string;
   price?: number;
   background?: string;

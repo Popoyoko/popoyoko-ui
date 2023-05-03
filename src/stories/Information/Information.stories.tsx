@@ -11,6 +11,9 @@ const meta: Meta<typeof Information> = {
   argTypes: {
     background: { control: "color" },
   },
+  args: {
+    label: "Exemple of really long texte that can be fit there"
+  }
 };
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
@@ -19,7 +22,7 @@ type Story = StoryObj<typeof Information>;
 
 export const Primary: Story = {
   render: (args) => <Information {...args} />,
-  args: {
-    label: "Exemple of really long texte that can be fit there",
-  },
+  // args: {
+  //   label: "Exemple of really long texte that can be fit there",
+  // },
 };

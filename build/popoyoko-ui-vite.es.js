@@ -17,22 +17,17 @@ const i = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNCIgaGVpZ2h0PSIxNyIgdmlld0J
   label: a
   // ...props
 }) => /* @__PURE__ */ e.createElement("div", { className: "container-information", style: { background: t } }, /* @__PURE__ */ e.createElement("h2", null, "Information"), /* @__PURE__ */ e.createElement("div", { className: "information-section" }, /* @__PURE__ */ e.createElement("div", { className: "information-svg" }, /* @__PURE__ */ e.createElement("img", { src: i, alt: "Information" })), /* @__PURE__ */ e.createElement("div", { className: "information-content" }, a)));
-const D = ({ title: t, description: a, onChange: n }) => {
-  const o = (c) => {
-    n(c.target.value);
-  };
-  return /* @__PURE__ */ e.createElement("div", { className: "text-layout" }, /* @__PURE__ */ e.createElement("p", { className: "text-title" }, t), /* @__PURE__ */ e.createElement("textarea", {
-    value: a,
-    onChange: o,
-    className: "text-description"
-  }));
-};
-const g = ({ src: t }) => /* @__PURE__ */ e.createElement("div", { className: "logo" }, /* @__PURE__ */ e.createElement("img", { src: t }));
+const D = ({ title: t, description: a, onChange: n }) => /* @__PURE__ */ e.createElement("div", { className: "text-layout" }, /* @__PURE__ */ e.createElement("p", { className: "text-title" }, t), /* @__PURE__ */ e.createElement("textarea", {
+  value: a,
+  onChange: n,
+  className: "text-description"
+}));
+const y = ({ src: t }) => /* @__PURE__ */ e.createElement("div", { className: "logo" }, /* @__PURE__ */ e.createElement("img", { src: t }));
 export {
   N as Button,
   I as Card,
   E as Information,
-  g as Logo,
+  y as Logo,
   D as Text
 };
 //# sourceMappingURL=popoyoko-ui-vite.es.js.map

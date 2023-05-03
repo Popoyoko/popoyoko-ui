@@ -9,9 +9,10 @@ const meta: Meta<typeof Card> = {
   component: Card,
   argTypes: {
     variant: {
+      control: "select",
       table: {
         category: 'Variant',
-        subcategory: 'Style',
+        subcategory: 'Style'
       },
     },
     // Assigns the argTypes to the Colors category
@@ -51,6 +52,9 @@ const meta: Meta<typeof Card> = {
       },
     },
   },
+  args: {
+    background: "url(https://imgs.search.brave.com/KUc_Sjgkt3SuouS7E-9zbhV2YGG7MFpPmcNklJmJYu0/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9ib25q/b3VybmF0dXJlLmZy/L3dwLWNvbnRlbnQv/dXBsb2Fkcy9pbWFn/ZS1wYXlzYWdlLWdy/YXR1aXRlLWEtdGVs/ZWNoYXJnZXItNS5q/cGc)"
+  }
 } 
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
@@ -58,9 +62,19 @@ export default meta;
 type Story = StoryObj<typeof Card>
 
 export const simple: Story = {
-  render: () => <Card variant='simple' label="label" />,
+  render: (args) => <Card {...args} />,
+  args: {
+    variant: "simple"
+  }
 };
 
 export const media: Story = {
-  render: () => <Card variant='media' label="label" mention='mention' subTitle='subTitle' price={246} />,
+  render: (args) => <Card {...args} />,
+  args: {
+    variant: "media",
+    label: "Title",
+    mention: "Mention",
+    subTitle: "SubTitle",
+    price: 246,
+  }
 };

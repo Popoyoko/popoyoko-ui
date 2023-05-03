@@ -1,7 +1,8 @@
+/// <reference types="react" />
 import "./Card.css";
 interface CardProps {
-    mention?: string;
     label?: string;
+    mention?: string;
     subTitle?: string;
     price?: number;
     background?: string;

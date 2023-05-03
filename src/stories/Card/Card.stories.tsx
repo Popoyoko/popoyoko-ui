@@ -19,9 +19,13 @@ const meta: Meta<typeof Card> = {
     background: {
       control: 'color',
       table: {
-        category: 'Colors',
-        // Assigns the argTypes to a specific subcategory
-        subcategory: 'Button colors',
+        category: 'Backgrounds',
+      },
+    },
+    backgroundColor: {
+      control: "color",
+      table: {
+        category: 'Backgrounds',
       },
     },
     mention: {

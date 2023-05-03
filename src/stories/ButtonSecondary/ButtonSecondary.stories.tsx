@@ -8,7 +8,6 @@ export default {
     argTypes: {
         label: {control: 'text' },
         typeSvg: { options: ['none', 'left', 'right', 'only'], control: {type: 'radio'},},
-
     },
 }as Meta;
 

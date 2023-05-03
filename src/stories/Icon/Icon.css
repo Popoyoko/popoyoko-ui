@@ -1,0 +1,15 @@
+.icon-small img {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .icon-medium img {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .icon-large img {
+    width: 32px;
+    height: 32px;
+  }
+  

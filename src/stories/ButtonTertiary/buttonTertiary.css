@@ -12,6 +12,10 @@
     gap: 8px;
 }
 
+img {
+    height: 8px;
+}
+
 .buttonTertiary:hover {
     background: #FFFFFF;
     color: #228C53;

@@ -12,6 +12,10 @@
     gap: 8px;
 }
 
+img {
+    height: 8px;
+}
+
 .buttonPrimary:hover {
     background-color:#21C167;
     color: #DCF4E1;

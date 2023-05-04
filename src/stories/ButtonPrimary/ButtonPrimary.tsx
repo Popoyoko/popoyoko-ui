@@ -6,14 +6,14 @@ interface ButtonPrimaryProps {
     label: string;
     srcIcon?: string;
     onClick?: () => void;
-}
+};
 
-export const ButtonPrimary: React.FC<ButtonPrimaryProps> = ({
+export const ButtonPrimary = ({
     label,
     typeSvg,
     srcIcon,
     onClick,
-}) => {
+}: ButtonPrimaryProps) => {
 
     let icon = null;
     if(typeSvg === 'none'){

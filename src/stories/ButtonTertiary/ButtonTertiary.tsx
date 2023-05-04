@@ -8,12 +8,12 @@ interface ButtonTertiaryProps {
     onClick?: () => void;
 }
 
-export const ButtonTertiary: React.FC<ButtonTertiaryProps> = ({
+export const ButtonTertiary = ({
     label,
     typeSvg,
     srcIcon,
     onClick,
-}) => {
+}: ButtonTertiaryProps) => {
 
     if(typeSvg === 'none'){
         return(

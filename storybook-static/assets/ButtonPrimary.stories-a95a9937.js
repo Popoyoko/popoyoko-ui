@@ -1,8 +1,8 @@
 import{j as r,a as l}from"./jsx-runtime-670450c2.js";import"./index-f1f749bf.js";import"./_commonjsHelpers-042e6b4d.js";const a=({label:e,typeSvg:t,srcIcon:o,onClick:m})=>{if(t==="none")return r("button",{className:"buttonPrimary",children:e});if(t==="left")return l("button",{className:"buttonPrimary",children:[r("img",{src:o}),e]});if(t==="right")return l("button",{className:"buttonPrimary",children:[e,r("img",{src:o})]});if(t==="only")return r("button",{className:"buttonPrimary",children:r("img",{src:o})})};try{a.displayName="ButtonPrimary",a.__docgenInfo={description:"",displayName:"ButtonPrimary",props:{typeSvg:{defaultValue:null,description:"",name:"typeSvg",required:!0,type:{name:"enum",value:[{value:'"none"'},{value:'"left"'},{value:'"right"'},{value:'"only"'}]}},label:{defaultValue:null,description:"",name:"label",required:!0,type:{name:"string"}},srcIcon:{defaultValue:null,description:"",name:"srcIcon",required:!1,type:{name:"string"}},onClick:{defaultValue:null,description:"",name:"onClick",required:!1,type:{name:"() => void"}}}}}catch{}const y={title:"Design System/Button Primary",component:a,argTypes:{label:{control:"text"},typeSvg:{options:["none","left","right","only"],control:{type:"radio"}}}},n={render:e=>r(a,{...e}),args:{typeSvg:"none",label:"label"}};var i,s,u;n.parameters={...n.parameters,docs:{...(i=n.parameters)==null?void 0:i.docs,source:{originalSource:`{
   render: args => <ButtonPrimary {...args} />,
   args: {
-    typeSvg: 'none',
-    label: 'label'
+    typeSvg: "none",
+    label: "label"
   }
-}`,...(u=(s=n.parameters)==null?void 0:s.docs)==null?void 0:u.source}}};const g=["Primary"];export{n as Primary,g as __namedExportsOrder,y as default};
-//# sourceMappingURL=ButtonPrimary.stories-eac1662a.js.map
+}`,...(u=(s=n.parameters)==null?void 0:s.docs)==null?void 0:u.source}}};const g=["Button"];export{n as Button,g as __namedExportsOrder,y as default};
+//# sourceMappingURL=ButtonPrimary.stories-a95a9937.js.map

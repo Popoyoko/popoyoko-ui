@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import "./Information.css";
 interface InformationProps {
     label?: string;

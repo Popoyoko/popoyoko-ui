@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import "./Logo.css";
 interface LogoProps {
     src: string;

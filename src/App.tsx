@@ -3,7 +3,6 @@ import logo_popoyoko from "/Logo-popoyoko.svg";
 import "./App.css";
 import React from "react";
 import Card from "./components/Card";
-import Button from "./components/Button";
 import Avatar from "./components/Avatar";
 
 function App() {
@@ -26,8 +25,8 @@ function App() {
         <Card background="url(https://imgs.search.brave.com/KUc_Sjgkt3SuouS7E-9zbhV2YGG7MFpPmcNklJmJYu0/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9ib25q/b3VybmF0dXJlLmZy/L3dwLWNvbnRlbnQv/dXBsb2Fkcy9pbWFn/ZS1wYXlzYWdlLWdy/YXR1aXRlLWEtdGVs/ZWNoYXJnZXItNS5q/cGc)"/>
 
         <Card label="label" subTitle="subtitle" mention="mention" price={56} background="url(https://imgs.search.brave.com/KUc_Sjgkt3SuouS7E-9zbhV2YGG7MFpPmcNklJmJYu0/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9ib25q/b3VybmF0dXJlLmZy/L3dwLWNvbnRlbnQv/dXBsb2Fkcy9pbWFn/ZS1wYXlzYWdlLWdy/YXR1aXRlLWEtdGVs/ZWNoYXJnZXItNS5q/cGc)"/> */}
-<Avatar></Avatar>
-<Avatar small></Avatar>
+{/* <Avatar></Avatar>
+<Avatar small></Avatar> */}
       </div>
     </div>
   );

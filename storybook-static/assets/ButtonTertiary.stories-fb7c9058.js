@@ -1,0 +1,8 @@
+import{j as e,a as l}from"./jsx-runtime-670450c2.js";import"./index-f1f749bf.js";import"./_commonjsHelpers-042e6b4d.js";const a=({label:t,typeSvg:r,srcIcon:o,onClick:c})=>r==="none"?e("button",{className:"buttonTertiary",children:t}):r==="left"?l("button",{className:"buttonTertiary",children:[e("img",{src:o}),t]}):r==="right"?l("button",{className:"buttonTertiary",children:[t,e("img",{src:o})]}):r==="only"?e("button",{className:"buttonTertiary",children:e("img",{src:o})}):e("button",{className:"buttonTertiary"});try{a.displayName="ButtonTertiary",a.__docgenInfo={description:"",displayName:"ButtonTertiary",props:{typeSvg:{defaultValue:null,description:"",name:"typeSvg",required:!0,type:{name:"enum",value:[{value:'"none"'},{value:'"left"'},{value:'"right"'},{value:'"only"'}]}},label:{defaultValue:null,description:"",name:"label",required:!0,type:{name:"string"}},srcIcon:{defaultValue:null,description:"",name:"srcIcon",required:!1,type:{name:"string"}},onClick:{defaultValue:null,description:"",name:"onClick",required:!1,type:{name:"() => void"}}}}}catch{}const y={title:"Design System/Button Tertiary",component:a,argTypes:{label:{control:"text"},typeSvg:{options:["none","left","right","only"],control:{type:"radio"}}}},n={render:t=>e(a,{...t}),args:{typeSvg:"none",label:"label"}};var s,i,u;n.parameters={...n.parameters,docs:{...(s=n.parameters)==null?void 0:s.docs,source:{originalSource:`{
+  render: args => <ButtonTertiary {...args} />,
+  args: {
+    typeSvg: 'none',
+    label: 'label'
+  }
+}`,...(u=(i=n.parameters)==null?void 0:i.docs)==null?void 0:u.source}}};const g=["Button"];export{n as Button,g as __namedExportsOrder,y as default};
+//# sourceMappingURL=ButtonTertiary.stories-fb7c9058.js.map

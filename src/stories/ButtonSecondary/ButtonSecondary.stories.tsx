@@ -1,21 +1,25 @@
 import React from "react";
-import { Meta, Story } from '@storybook/react'
-import { ButtonSecondary, ButtonSecondaryProps } from './ButtonSecondary'
+import { Meta, StoryObj } from '@storybook/react'
+import { ButtonSecondary } from './ButtonSecondary'
 
-export default {
+const meta: Meta<typeof ButtonSecondary> = {
+    title: 'Design System/Button Secondary',
     component: ButtonSecondary,
-    title: 'Button-secondary-component',
     argTypes: {
         label: {control: 'text' },
         typeSvg: { options: ['none', 'left', 'right', 'only'], control: {type: 'radio'},},
     },
-}as Meta;
-
-const Template: Story<ButtonSecondaryProps> = (args) => <ButtonSecondary {...args} />
-
-export const Button = Template.bind({});
-Button.args = {
-    typeSvg: 'none',
-    label: 'label',
-    onClick:'',
 }
+
+export default meta;
+type Story = StoryObj<typeof ButtonSecondary>;
+
+
+export const Primary: Story = {
+    render: (args) => <ButtonSecondary {...args} />,
+    args: {
+        typeSvg: 'none',
+    label: 'label',
+    // onClick:'',
+    },
+  };

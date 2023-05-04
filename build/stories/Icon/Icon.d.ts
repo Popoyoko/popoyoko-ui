@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import "./Icon.css";
 interface IconProps {
     size?: "small" | "medium" | "large";

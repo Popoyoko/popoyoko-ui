@@ -1,4 +1,4 @@
-import './buttonPrimary.css';
+import './index.css';
 import React from 'react';
 
 interface ButtonPrimaryProps {

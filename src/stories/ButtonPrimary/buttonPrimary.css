@@ -1,0 +1,32 @@
+.buttonPrimary {
+    background-color:#228C53;
+    color: #F6FCF7;
+    border: none;
+    border-radius: 2px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 8px;
+}
+
+img {
+    height: 8px;
+}
+
+.buttonPrimary:hover {
+    background-color:#21C167;
+    color: #DCF4E1;
+}
+
+.buttonPrimary:active {
+    background-color:#1B6042;
+    color: #FFFFFF;
+}
+
+.buttonPrimary:disabled {
+    background-color:rgba(33, 193, 103, 0.19);
+    color:#21C1674A; 
+}

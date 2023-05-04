@@ -1,49 +1,51 @@
-import './buttonTertiary.css';
+import './index.css';
 import React from 'react';
 
-interface ButtonTertiaryProps {
+interface ButtonSecondaryProps {
     typeSvg: 'none' | 'left' | 'right' | 'only';
     label: string;
     srcIcon?: string;
     onClick?: () => void;
 }
 
-export const ButtonTertiary = ({
+const ButtonSecondary = ({
     label,
     typeSvg,
     srcIcon,
     onClick,
-}: ButtonTertiaryProps) => {
+}: ButtonSecondaryProps) => {
 
     if(typeSvg === 'none'){
         return(
-            <button className='buttonTertiary'>
+            <button className='buttonSecondary'>
                 {label}
             </button>
         );
     } else if(typeSvg === 'left'){
         return(
-            <button className='buttonTertiary'>
+            <button className='buttonSecondary'>
                 <img src={srcIcon}></img>
                 {label}
             </button>
         );
     } else if(typeSvg === 'right'){
         return(
-            <button className='buttonTertiary'>
+            <button className='buttonSecondary'>
                 {label}
                 <img src={srcIcon}></img>
-                </button>
+            </button>
         );
     } else if(typeSvg === 'only'){
         return(
-            <button className='buttonTertiary'>
+            <button className='buttonSecondary'>
                 <img src={srcIcon}></img>
             </button>
         );
     }
 
     return (
-        <button className='buttonTertiary'></button>
+        <button className='buttonSecondary'></button>
     )
 };
+
+export default ButtonSecondary;

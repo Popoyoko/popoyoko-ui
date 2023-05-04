@@ -1,22 +1,23 @@
 import React from "react";
-import { Meta, Story } from '@storybook/react'
-import { ButtonTertiary, ButtonTertiaryProps } from './ButtonTertiary'
+import { Meta, StoryObj } from '@storybook/react'
+import { ButtonTertiary } from './ButtonTertiary'
 
-export default {
+const meta: Meta<typeof ButtonTertiary> = {
+    title: 'Design System/Button Tertiary',
     component: ButtonTertiary,
-    title: 'Button-tertiary-component',
     argTypes: {
         label: {control: 'text' },
         typeSvg: { options: ['none', 'left', 'right', 'only'], control: {type: 'radio'},},
-
     },
-}as Meta;
-
-const Template: Story<ButtonTertiaryProps> = (args) => <ButtonTertiary {...args} />
-
-export const Button = Template.bind({});
-Button.args = {
-    typeSvg: 'none',
-    label: 'label',
 }
 
+export default meta;
+type Story = StoryObj<typeof ButtonTertiary>;
+
+export const Button: Story = {
+    render: (args) => <ButtonTertiary {...args} />,
+    args: {
+        typeSvg: 'none',
+        label: 'label',
+    },
+  };

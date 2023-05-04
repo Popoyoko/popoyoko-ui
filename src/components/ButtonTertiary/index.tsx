@@ -1,4 +1,4 @@
-import './buttonTertiary.css';
+import './index.css';
 import React from 'react';
 
 interface ButtonTertiaryProps {
@@ -8,7 +8,7 @@ interface ButtonTertiaryProps {
     onClick?: () => void;
 }
 
-export const ButtonTertiary = ({
+const ButtonTertiary = ({
     label,
     typeSvg,
     srcIcon,
@@ -47,3 +47,5 @@ export const ButtonTertiary = ({
         <button className='buttonTertiary'></button>
     )
 };
+
+export default ButtonTertiary;

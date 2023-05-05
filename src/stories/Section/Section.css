@@ -1,0 +1,49 @@
+.container-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 16px;
+  }
+  
+  .container-section > h2 {
+    margin: 0;
+  
+    font-family: "Co Headline";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 28px;
+  
+    color: #000000;
+  }
+  
+  .section-btn {
+    box-sizing: border-box;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+    gap: 16px;
+  
+  
+    border: 2px dashed #32568f;
+  }
+  
+  .section-btn > p {
+    margin: 0;
+  
+  
+    font-family: "Co Headline";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 24px;
+    /* identical to box height, or 75% */
+  
+    color: #32568f;
+  }
+  
+  

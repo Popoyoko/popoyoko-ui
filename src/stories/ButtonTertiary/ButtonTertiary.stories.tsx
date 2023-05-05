@@ -3,7 +3,7 @@ import { Meta, StoryObj } from '@storybook/react'
 import { ButtonTertiary } from './ButtonTertiary'
 
 const meta: Meta<typeof ButtonTertiary> = {
-    title: 'Design System/Button Tertiary',
+    title: 'Design System/Buttons/Button Tertiary',
     component: ButtonTertiary,
     argTypes: {
         label: {control: 'text' },
@@ -14,7 +14,7 @@ const meta: Meta<typeof ButtonTertiary> = {
 export default meta;
 type Story = StoryObj<typeof ButtonTertiary>;
 
-export const Button: Story = {
+export const Button_Tertiary: Story = {
     render: (args) => <ButtonTertiary {...args} />,
     args: {
         typeSvg: 'none',

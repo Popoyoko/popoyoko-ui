@@ -8,9 +8,6 @@ const meta: Meta<typeof Information> = {
   title: "Design System/Information",
   component: Information,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {
-    background: { control: "color" },
-  },
   args: {
     label: "Exemple of really long texte that can be fit there"
   }
@@ -22,7 +19,4 @@ type Story = StoryObj<typeof Information>;
 
 export const Primary: Story = {
   render: (args) => <Information {...args} />,
-  // args: {
-  //   label: "Exemple of really long texte that can be fit there",
-  // },
 };

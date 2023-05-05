@@ -62,14 +62,14 @@ const meta: Meta<typeof Card> = {
 export default meta;
 type Story = StoryObj<typeof Card>
 
-export const simple: Story = {
+export const Media_Only: Story = {
   render: (args) => <Card {...args} />,
   args: {
     variant: "simple"
   }
 };
 
-export const media: Story = {
+export const Default_Card: Story = {
   render: (args) => <Card {...args} />,
   args: {
     variant: "media",

@@ -1,0 +1,10 @@
+.ratio {
+    position: relative;
+    overflow: hidden;
+    border: solid 2px grey;
+  }
+  
+  .ratio-1-1 {
+    aspect-ratio: 1 / 1;
+  }
+  

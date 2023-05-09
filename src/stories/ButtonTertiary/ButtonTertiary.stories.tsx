@@ -3,7 +3,7 @@ import { Meta, StoryObj } from '@storybook/react'
 import { ButtonTertiary } from './ButtonTertiary'
 
 const meta: Meta<typeof ButtonTertiary> = {
-    title: 'Design System/Buttons/Button Tertiary',
+    title: 'Components/Buttons/Button Tertiary',
     component: ButtonTertiary,
     argTypes: {
         label: {control: 'text' },

@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { ButtonPrimary } from "./ButtonPrimary";
 
 const meta: Meta<typeof ButtonPrimary> = {
-  title: "Design System/Buttons/Button Primary",
+  title: "Components/Buttons/Button Primary",
   component: ButtonPrimary,
   argTypes: {
     label: { control: "text" },

@@ -5,7 +5,7 @@ import { Icon } from "./Icon";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta: Meta<typeof Icon> = {
-  title: "Design System/Icon",
+  title: "Components/Icon",
   component: Icon,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {

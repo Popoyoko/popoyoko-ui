@@ -1,25 +1,23 @@
 import React from "react";
-import { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react";
 import { InputSelector } from "./InputSelector";
 
 const meta: Meta<typeof InputSelector> = {
-    title: "Design System/Button Primary",
+    title: "Design System/Input Selector component",
     component: InputSelector,
     argTypes: {
-        label: {control: "text"},
-        active: { control: {type: "radio"},},
-        hover: { control: {type: "radio"},},
+        label: { control: "text" },
+        hover: { control: "boolean"},
     },
 };
 
 export default meta;
 type Story = StoryObj<typeof InputSelector>;
 
-export const InputSelector: Story = {
+export const InputSelectorComponent: Story = {
     render: (args) => <InputSelector {...args} />,
     args: {
-        label: "label",
-        hover: '',
-        active: '',
+      label: "label",
+      hover: true,
     },
-};
+  };

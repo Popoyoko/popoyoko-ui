@@ -1,53 +1,57 @@
-.div-selector{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 4px;
-    gap: 16px;
-}
-
-.dark-green{
-    box-sizing: border-box;
-
-    width: 32px;
-    height: 32px;
-
-    background: #F8F8F8;
-    border: 2px solid #0F2B2A;
-    border-radius: 1024px;
-}
-
-.green{
-    box-sizing: border-box;
-
-    width: 32px;
-    height: 32px;
-
-    background: #FFFFFF;
-    border: 2px solid #228C53;
-    border-radius: 1024px;
-}
-
-/* Changer l'apparence de la case à cocher */
-input[type="checkbox"] {
-    appearance: none;
+.dark-green {
     -webkit-appearance: none;
+    appearance: none;
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #7FC35A;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #0F2B2A;
     background-color: #fff;
-    cursor: pointer; 
-  }
+    cursor: pointer;
+    position: relative;
+}
   
-  /* Changer l'apparence de la coche */
-  input[type="checkbox"]:checked::before {
-    content: "\2714";
-    display: block;
-    text-align: center;
-    font-size: 16px;
-    line-height: 20px;
-    color: #fff;
-    background-color: #7FC35A;
+.dark-green::before {
+    content: '';
+    display: none;
+    width: 8px;
+    height: 8px;
+    background-color: #0F2B2A;
     border-radius: 50%;
-  }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  
+.dark-green:checked::before {
+    display: block;
+}
+
+.green {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #228C53;
+    background-color: #fff;
+    cursor: pointer;
+    position: relative;
+}
+  
+.green::before {
+    content: '';
+    display: none;
+    width: 8px;
+    height: 8px;
+    background-color: #228C53;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  
+.green:checked::before {
+    display: block;
+}

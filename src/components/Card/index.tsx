@@ -7,7 +7,6 @@ interface CardProps {
   mention?: string;
   subTitle?: string;
   price?: number;
-  backgroundColor?: string;
   variant?: "simple" | "media";
 }
 

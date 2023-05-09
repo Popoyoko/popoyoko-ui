@@ -1,5 +1,6 @@
 import "./index.css";
 import React from "react";
+import RatioRectangle from "../RatioRectangle";
 
 interface CardProps {
   label?: string;
@@ -20,11 +21,9 @@ const Card = ({
   price, 
   ...props
 }: CardProps) => {
-  const variant = label ? "media" : "simple";
-  const cardClass = variant === "simple" ? "card" : "card media";
   return (
-    <div className="card">
-      <div className={cardClass} style={{ background }} {...props}></div>
+    <div>
+      <div className="card"><RatioRectangle></RatioRectangle></div>
       {label && (
         <div className="card-section" style={{ backgroundColor }}>
           <div className="card-group">

@@ -1,16 +1,7 @@
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.card{
   padding: 0px;
-
-  height: 10rem;
-  width: 15rem;
-
-  flex: none;
-  flex-grow: 0;
+  width: auto;
 }
-
 .card-section {
   width: 100%;
 }

@@ -7,14 +7,11 @@ interface CardProps {
   mention?: string;
   subTitle?: string;
   price?: number;
-  background?: string;
   backgroundColor?: string;
   variant?: "simple" | "media";
 }
 
 const Card = ({
-  background,
-  backgroundColor,
   label,
   mention,
   subTitle,
@@ -25,7 +22,7 @@ const Card = ({
     <div>
       <div className="card"><RatioRectangle></RatioRectangle></div>
       {label && (
-        <div className="card-section" style={{ backgroundColor }}>
+        <div className="card-section">
           <div className="card-group">
             <p>{mention}</p>
             <div className="card-information">

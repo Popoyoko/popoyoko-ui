@@ -5,7 +5,7 @@ import { RatioCube } from "./RatioCube";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta: Meta<typeof RatioCube> = {
-  title: "Design System/Ratios/Ratio 1:1",
+  title: "Components/Ratios/Ratio 1:1",
   component: RatioCube,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
 };

@@ -5,7 +5,7 @@ import { Card } from './Card'
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta: Meta<typeof Card> = {
-  title: 'Design System/Card',
+  title: 'Components/Card',
   component: Card,
   argTypes: {
     variant: {

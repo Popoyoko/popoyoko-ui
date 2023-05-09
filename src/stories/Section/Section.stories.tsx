@@ -5,7 +5,7 @@ import { Section } from "./Section";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta: Meta<typeof Section> = {
-  title: "Design System/Section",
+  title: "Components/Section",
   component: Section,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   args: {

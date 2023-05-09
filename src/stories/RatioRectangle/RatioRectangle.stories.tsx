@@ -5,7 +5,7 @@ import { RatioRectangle } from "./RatioRectangle";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta: Meta<typeof RatioRectangle> = {
-  title: "Design System/Ratios/Ratio 2:3",
+  title: "Components/Ratios/Ratio 2:3",
   component: RatioRectangle,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
 };

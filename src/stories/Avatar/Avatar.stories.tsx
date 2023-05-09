@@ -5,7 +5,7 @@ import { Avatar } from "./Avatar";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta: Meta<typeof Avatar> = {
-  title: "Design System/Avatar",
+  title: "Components/Avatar",
   component: Avatar,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {

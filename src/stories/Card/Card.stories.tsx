@@ -16,18 +16,6 @@ const meta: Meta<typeof Card> = {
       },
     },
     // Assigns the argTypes to the Colors category
-    background: {
-      control: 'color',
-      table: {
-        category: 'Backgrounds',
-      },
-    },
-    backgroundColor: {
-      control: "color",
-      table: {
-        category: 'Backgrounds',
-      },
-    },
     label: {
       table: {
         category: 'Text',
@@ -53,9 +41,6 @@ const meta: Meta<typeof Card> = {
       },
     },
   },
-  args: {
-    background: "#bbbbbb"
-  }
 } 
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args

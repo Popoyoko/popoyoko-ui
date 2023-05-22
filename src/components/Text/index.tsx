@@ -4,18 +4,13 @@ import React from "react";
 interface TextProps {
   title: string;
   description: string;
-  onChange: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
 }
 
-const Text = ({ title, description, onChange }: TextProps) => {
+const Text = ({ title, description}: TextProps) => {
   return (
     <div className="text-layout">
       <p className="text-title">{title}</p>
-      <textarea
-        value={description}
-        onChange={onChange}
-        className="text-description"
-      ></textarea>
+      <p className="text-description">{description}</p>
     </div>
   );
 };

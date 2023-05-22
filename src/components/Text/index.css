@@ -3,14 +3,12 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
-    width: 312px;
-    height: 288px;
-    overflow-x: scroll;
+    overflow-y: scroll;
+    width: 19.5rem;
+height: 18rem;
 }
 
 .text-title {
-    width: 312px;
-    height: 32px;
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
@@ -24,4 +22,8 @@
     padding: 16px 0px;
     isolation: isolate;
     font-family: 'sans-serif';
+}
+
+p{
+    margin: 0;
 }

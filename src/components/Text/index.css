@@ -22,6 +22,7 @@ height: 18rem;
     padding: 16px 0px;
     isolation: isolate;
     font-family: 'sans-serif';
+    text-align: start;
 }
 
 p{

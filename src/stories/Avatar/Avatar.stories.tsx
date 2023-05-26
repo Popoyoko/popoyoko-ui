@@ -15,7 +15,13 @@ const meta: Meta<typeof Avatar> = {
         category: "Variant",
       },
     },
-    badge: {
+    showbadge: {
+      control: "boolean",
+      table: {
+        category: "Variant",
+      }
+    },
+    showedit: {
       control: "boolean",
       table: {
         category: "Variant",
@@ -30,6 +36,8 @@ const meta: Meta<typeof Avatar> = {
   },
   args: {
     background: "#808080",
+    showbadge: true,
+    showedit: true,
   },
 };
 
@@ -41,7 +49,7 @@ export const small: Story = {
     render: (args) => <Avatar {...args} />,
     args: {
       small: true,
-      badge: true,
+      showbadge: true,
     },
 };
 
@@ -49,5 +57,6 @@ export const cover: Story = {
   render: (args) => <Avatar {...args} />,
   args: {
     small: false,
+    showedit: true,
   },
 };

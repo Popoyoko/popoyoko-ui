@@ -15,6 +15,12 @@ const meta: Meta<typeof Avatar> = {
         category: "Variant",
       },
     },
+    badge: {
+      control: "boolean",
+      table: {
+        category: "Variant",
+      }
+    },
     background: {
       control: "file",
       table: {
@@ -32,9 +38,16 @@ export default meta;
 type Story = StoryObj<typeof Avatar>;
 
 export const small: Story = {
-    render: () => <Avatar small/>,
+    render: (args) => <Avatar {...args} />,
+    args: {
+      small: true,
+      badge: true,
+    },
 };
 
 export const cover: Story = {
-  render: () => <Avatar />,
+  render: (args) => <Avatar {...args} />,
+  args: {
+    small: false,
+  },
 };

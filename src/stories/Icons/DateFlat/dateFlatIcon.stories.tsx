@@ -5,7 +5,7 @@ import { DateFlatIcon } from './dateFlatIcon'
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta: Meta<typeof DateFlatIcon> = {
-  title: 'Icons/DateFlat',
+  title: 'Icons/Date/DateFlat',
   component: DateFlatIcon,
 } 
 

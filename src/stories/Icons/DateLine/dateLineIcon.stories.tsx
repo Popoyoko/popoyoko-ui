@@ -5,7 +5,7 @@ import { DateLineIcon } from './dateLineIcon'
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta: Meta<typeof DateLineIcon> = {
-  title: 'Icons/DateLine',
+  title: 'Icons/Date/DateLine',
   component: DateLineIcon,
 } 
 

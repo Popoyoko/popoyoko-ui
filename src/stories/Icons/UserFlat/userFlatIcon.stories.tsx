@@ -5,7 +5,7 @@ import { UserFlatIcon } from './userFlatIcon'
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta: Meta<typeof UserFlatIcon> = {
-  title: 'Icons/UserFlat',
+  title: 'Icons/User/UserFlat',
   component: UserFlatIcon,
 } 
 

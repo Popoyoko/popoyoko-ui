@@ -5,7 +5,7 @@ import { UserLineIcon } from './userLineIcon'
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta: Meta<typeof UserLineIcon> = {
-  title: 'Icons/UserLine',
+  title: 'Icons/User/UserLine',
   component: UserLineIcon,
 } 
 

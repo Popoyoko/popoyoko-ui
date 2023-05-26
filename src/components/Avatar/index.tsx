@@ -4,23 +4,27 @@ import edit from "../../assets/edit.svg";
 
 interface AvatarProps {
   small?: boolean;
+  showbadge?: boolean;
+  showedit?: boolean;
   background?: string;
 }
 
-const Avatar = ({ small, background }: AvatarProps) => {
+const Avatar = ({ small, showbadge, showedit, background }: AvatarProps) => {
   let className = "avatar";
   if (small) className += " avatar-small";
 
   return (
     <div className={className} style={{ background }}>
       {small ? (
-        <div className="badge"></div>
+        showbadge && <div className="badge"></div>
       ) : (
         <div className="edit">
-          <button className="btn-edit">
-            <p>Edit</p>
-            <img src={edit} alt="edit" />
-          </button>
+          {showedit && (
+            <button className="btn-edit">
+              <p>Edit</p>
+              <img src={edit} alt="edit" />
+            </button>
+          )}
         </div>
       )}
     </div>

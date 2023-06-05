@@ -1,10 +1,10 @@
 import React from "react";
 import { Meta, StoryObj } from '@storybook/react'
-import { ButtonTertiary } from './ButtonTertiary'
+import { Tertiary } from './Tertiary'
 
-const meta: Meta<typeof ButtonTertiary> = {
-    title: 'Components/Buttons/Button Tertiary',
-    component: ButtonTertiary,
+const meta: Meta<typeof Tertiary> = {
+    title: 'Components/Buttons/Tertiary',
+    component: Tertiary,
     argTypes: {
         label: {control: 'text' },
         typeSvg: { options: ['none', 'left', 'right', 'only'], control: {type: 'radio'},},
@@ -12,10 +12,10 @@ const meta: Meta<typeof ButtonTertiary> = {
 }
 
 export default meta;
-type Story = StoryObj<typeof ButtonTertiary>;
+type Story = StoryObj<typeof Tertiary>;
 
-export const Button_Tertiary: Story = {
-    render: (args) => <ButtonTertiary {...args} />,
+export const tertiary: Story = {
+    render: (args) => <Tertiary {...args} />,
     args: {
         typeSvg: 'none',
         label: 'label',

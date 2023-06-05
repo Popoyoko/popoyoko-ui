@@ -1,0 +1,16 @@
+.small {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border-radius: 1024px;
+}
+
+.badge {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 12px;
+  height: 12px;
+  background: #32568f;
+  border-radius: 1024px;
+}

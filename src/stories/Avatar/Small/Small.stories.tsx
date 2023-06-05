@@ -1,27 +1,15 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Avatar } from "./Avatar";
+import { Small } from "./Small";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
-const meta: Meta<typeof Avatar> = {
-  title: "Components/Avatar",
-  component: Avatar,
+const meta: Meta<typeof Small> = {
+  title: "Components/Avatar/Small",
+  component: Small,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
-    small: {
-      control: "boolean",
-      table: {
-        category: "Variant",
-      },
-    },
     showbadge: {
-      control: "boolean",
-      table: {
-        category: "Variant",
-      }
-    },
-    showedit: {
       control: "boolean",
       table: {
         category: "Variant",
@@ -37,26 +25,17 @@ const meta: Meta<typeof Avatar> = {
   args: {
     background: "#808080",
     showbadge: true,
-    showedit: true,
   },
 };
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 export default meta;
-type Story = StoryObj<typeof Avatar>;
+type Story = StoryObj<typeof Small>;
 
 export const small: Story = {
-    render: (args) => <Avatar {...args} />,
+    render: (args) => <Small {...args} />,
     args: {
-      small: true,
-      showbadge: true,
+
     },
 };
 
-export const cover: Story = {
-  render: (args) => <Avatar {...args} />,
-  args: {
-    small: false,
-    showedit: true,
-  },
-};

@@ -1,34 +1,21 @@
-import "./index.css";
 import React from "react";
-import edit from "../../assets/edit.svg";
+import Small from "./Small";
+import Cover from "./Cover";
 
 interface AvatarProps {
-  small?: boolean;
-  showbadge?: boolean;
-  showedit?: boolean;
-  background?: string;
+    children?: React.ReactNode;
 }
 
-const Avatar = ({ small, showbadge, showedit, background }: AvatarProps) => {
-  let className = "avatar";
-  if (small) className += " avatar-small";
+interface AvatarComponent extends React.FC<AvatarProps> {
+  Small: typeof Small;
+  Cover: typeof Cover;
+}
 
-  return (
-    <div className={className} style={{ background }}>
-      {small ? (
-        showbadge && <div className="badge"></div>
-      ) : (
-        <div className="edit">
-          {showedit && (
-            <button className="btn-edit">
-              <p>Edit</p>
-              <img src={edit} alt="edit" />
-            </button>
-          )}
-        </div>
-      )}
-    </div>
-  );
+const Avatar: AvatarComponent = ({ children }) => {
+  return <div>{children}</div>;
 };
+
+Avatar.Small = Small;
+Avatar.Cover = Cover;
 
 export default Avatar;

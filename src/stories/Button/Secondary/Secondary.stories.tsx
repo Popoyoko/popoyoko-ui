@@ -1,10 +1,10 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import { ButtonSecondary } from "./ButtonSecondary";
+import { Secondary } from "./Secondary"
 
-const meta: Meta<typeof ButtonSecondary> = {
-  title: "Components/Buttons/Button Secondary",
-  component: ButtonSecondary,
+const meta: Meta<typeof Secondary> = {
+  title: "Components/Buttons/Secondary",
+  component: Secondary,
   argTypes: {
     label: { control: "text" },
     typeSvg: {
@@ -15,10 +15,10 @@ const meta: Meta<typeof ButtonSecondary> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof ButtonSecondary>;
+type Story = StoryObj<typeof Secondary>;
 
-export const Button_Secondary: Story = {
-  render: (args) => <ButtonSecondary {...args} />,
+export const secondary: Story = {
+  render: (args) => <Secondary {...args} />,
   args: {
     typeSvg: "none",
     label: "label",

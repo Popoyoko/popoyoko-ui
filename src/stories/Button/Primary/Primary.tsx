@@ -1,44 +1,44 @@
-import './buttonPrimary.css';
+import './Primary.css';
 import React from 'react';
 
-interface ButtonPrimaryProps {
+interface PrimaryProps {
     typeSvg: 'none' | 'left' | 'right' | 'only';
     label: string;
     srcIcon?: string;
     onClick?: () => void;
 };
 
-export const ButtonPrimary = ({
+export const Primary = ({
     label,
     typeSvg,
     srcIcon,
     onClick,
-}: ButtonPrimaryProps) => {
+}: PrimaryProps) => {
 
     let icon = null;
     if(typeSvg === 'none'){
         return(
-            <button className='buttonPrimary'>
+            <button className='primary'>
                 {label}
             </button>
         );
     } else if(typeSvg === 'left'){
         return(
-            <button className='buttonPrimary'>
+            <button className='primary'>
                 <img src={srcIcon}></img>
                 {label}
             </button>
         );
     } else if(typeSvg === 'right'){
         return(
-            <button className='buttonPrimary'>
+            <button className='primary'>
                 {label}
                 <img src={srcIcon}></img>
                 </button>
         );
     } else if(typeSvg === 'only'){
         return(
-            <button className='buttonPrimary'>
+            <button className='primary'>
                 <img src={srcIcon}></img>
                </button>
         );

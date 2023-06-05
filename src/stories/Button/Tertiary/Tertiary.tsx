@@ -1,49 +1,49 @@
-import './buttonTertiary.css';
+import './Tertiary.css';
 import React from 'react';
 
-interface ButtonTertiaryProps {
+interface TertiaryProps {
     typeSvg: 'none' | 'left' | 'right' | 'only';
     label: string;
     srcIcon?: string;
     onClick?: () => void;
 }
 
-export const ButtonTertiary = ({
+export const Tertiary = ({
     label,
     typeSvg,
     srcIcon,
     onClick,
-}: ButtonTertiaryProps) => {
+}: TertiaryProps) => {
 
     if(typeSvg === 'none'){
         return(
-            <button className='buttonTertiary'>
+            <button className='tertiary'>
                 {label}
             </button>
         );
     } else if(typeSvg === 'left'){
         return(
-            <button className='buttonTertiary'>
+            <button className='tertiary'>
                 <img src={srcIcon}></img>
                 {label}
             </button>
         );
     } else if(typeSvg === 'right'){
         return(
-            <button className='buttonTertiary'>
+            <button className='tertiary'>
                 {label}
                 <img src={srcIcon}></img>
                 </button>
         );
     } else if(typeSvg === 'only'){
         return(
-            <button className='buttonTertiary'>
+            <button className='tertiary'>
                 <img src={srcIcon}></img>
             </button>
         );
     }
 
     return (
-        <button className='buttonTertiary'></button>
+        <button className='tertiary'></button>
     )
 };

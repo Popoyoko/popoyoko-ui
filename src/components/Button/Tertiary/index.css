@@ -1,4 +1,4 @@
-.buttonTertiary {
+.tertiary {
     background: #F8F8F8;
     border-radius: 2px;
     color: #1B6042;
@@ -16,19 +16,19 @@ img {
     height: 8px;
 }
 
-.buttonTertiary:hover {
+.tertiary:hover {
     background: #FFFFFF;
     color: #228C53;
     border: 2px #FFFFFF;
 }
 
-.buttonTertiary:active {
+.tertiary:active {
     background: #E4E4E4;
     border: 2px dashed #153F33;
     color: #153F33;
 }
 
-.buttonTertiary:disabled {
+.tertiary:disabled {
     background: rgba(119, 119, 119, 0.11);
     border: 2px dashed rgba(33, 193, 103, 0.11);
     color: rgba(33, 193, 103, 0.11);

@@ -1,4 +1,4 @@
-.buttonPrimary {
+.primary {
     background-color:#228C53;
     color: #F6FCF7;
     border: none;
@@ -16,17 +16,17 @@ img {
     height: 8px;
 }
 
-.buttonPrimary:hover {
+.primary:hover {
     background-color:#21C167;
     color: #DCF4E1;
 }
 
-.buttonPrimary:active {
+.primary:active {
     background-color:#1B6042;
     color: #FFFFFF;
 }
 
-.buttonPrimary:disabled {
+.primary:disabled {
     background-color:rgba(33, 193, 103, 0.19);
     color:#21C1674A; 
 }

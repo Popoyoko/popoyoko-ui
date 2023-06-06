@@ -1,8 +1,8 @@
 import "./index.css";
 import React from "react";
 
-const RatioCube = ({}) => {
+const Cube = ({}) => {
   return <div className="ratio ratio-1-1"></div>;
 };
 
-export default RatioCube;
+export default Cube;

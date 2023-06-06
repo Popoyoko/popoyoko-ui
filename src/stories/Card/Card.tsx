@@ -1,6 +1,6 @@
 import "./Card.css";
 import React from "react";
-import RatioRectangle from "../../components/Ratio/RatioRectangle";
+import Rectangle from "../../components/Ratio/Rectangle";
 
 interface CardProps {
   label?: string;
@@ -19,7 +19,7 @@ export const Card = ({
 }: CardProps) => {
   return (
     <div>
-      <div className="card"><RatioRectangle></RatioRectangle></div>
+      <div className="card"><Rectangle></Rectangle></div>
       {label && (
         <div className="card-section">
           <div className="card-group">

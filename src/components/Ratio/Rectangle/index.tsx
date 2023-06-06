@@ -1,8 +1,8 @@
 import "./index.css";
 import React from "react";
 
-const RatioRectangle = ({}) => {
+const Rectangle = ({}) => {
   return <div className="ratio ratio-2-3"></div>;
 };
 
-export default RatioRectangle;
+export default Rectangle;

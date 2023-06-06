@@ -1,4 +1,4 @@
-import "./RatioCube.css";
+import "./Cube.css";
 import React from "react";
 
 export const Cube = ({}) => {

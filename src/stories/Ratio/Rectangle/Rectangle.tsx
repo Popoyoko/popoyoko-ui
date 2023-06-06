@@ -1,4 +1,4 @@
-import "./RatioRectangle.css";
+import "./Rectangle.css";
 import React from "react";
 
 export const Rectangle = ({}) => {

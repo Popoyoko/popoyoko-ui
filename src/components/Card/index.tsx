@@ -1,41 +1,21 @@
-import "./index.css";
 import React from "react";
-import RatioRectangle from "../Ratio/Rectangle";
+import Default from "./Default";
+import Media from "./Media";
 
 interface CardProps {
-  label?: string;
-  mention?: string;
-  subTitle?: string;
-  price?: number;
-  variant?: "simple" | "media";
+  children?: React.ReactNode;
 }
 
-const Card = ({
-  label,
-  mention,
-  subTitle,
-  price, 
-  ...props
-}: CardProps) => {
-  return (
-    <div>
-      <div className="card"><RatioRectangle></RatioRectangle></div>
-      {label && (
-        <div className="card-section">
-          <div className="card-group">
-            <p>{mention}</p>
-            <div className="card-information">
-              <div className="card-title">
-              <p>{label}</p>
-              <p>{subTitle}</p>
-              </div>
-              {price}
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
-  );
+interface CardComponent extends React.FC<CardProps> {
+  Default: typeof Default;
+  Media: typeof Media;
+}
+
+const Card: CardComponent = ({ children }) => {
+  return <div>{children}</div>;
 };
+
+Card.Default = Default;
+Card.Media = Media;
 
 export default Card;

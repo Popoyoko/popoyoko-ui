@@ -1,7 +1,7 @@
-import "./RatioCube.css";
+import "./Cube.css";
 import React from "react";
 
-export const RatioCube = ({}) => {
+export const Cube = ({}) => {
   return <div className="ratio ratio-1-1"></div>;
 };
 

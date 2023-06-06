@@ -8,5 +8,5 @@ export { default as Logo} from "./Logo";
 export { default as Icon} from "./Icon";
 export { default as Avatar} from "./Avatar";
 export { default as Section } from "./Section";
-export { default as RatioRectangle } from "./RatioRectangle";
-export { default as RatioCube } from "./RatioCube";
+export { default as RatioRectangle } from "./Ratio/Rectangle";
+export { default as RatioCube } from "./Ratio/Cube";

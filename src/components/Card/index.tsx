@@ -1,6 +1,6 @@
 import "./index.css";
 import React from "react";
-import RatioRectangle from "../RatioRectangle";
+import RatioRectangle from "../Ratio/RatioRectangle";
 
 interface CardProps {
   label?: string;

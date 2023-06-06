@@ -1,10 +1,10 @@
-import "./index.css";
+import "./Media.css";
 import React from "react";
-import Rectangle from "../../Ratio/Rectangle";
+import Rectangle from "../../../components/Ratio/Rectangle";
 
 interface MediaProps {}
 
-const Media = ({}: MediaProps) => {
+export const Media = ({}: MediaProps) => {
   return (
     <div className="card">
       <Rectangle></Rectangle>
@@ -12,4 +12,3 @@ const Media = ({}: MediaProps) => {
   );
 };
 
-export default Media;

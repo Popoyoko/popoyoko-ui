@@ -1,6 +1,6 @@
-import "./index.css";
+import "./Default.css";
 import React from "react";
-import Rectangle from "../../Ratio/Rectangle";
+import Rectangle from "../../../components/Ratio/Rectangle";
 
 interface DefaultProps {
   label?: string;
@@ -9,7 +9,7 @@ interface DefaultProps {
   price?: number;
 }
 
-const Default = ({ label, mention, subTitle, price, ...props }: DefaultProps) => {
+export const Default = ({ label, mention, subTitle, price, ...props }: DefaultProps) => {
   return (
     <div>
       <div className="card">
@@ -31,4 +31,3 @@ const Default = ({ label, mention, subTitle, price, ...props }: DefaultProps) =>
   );
 };
 
-export default Default;

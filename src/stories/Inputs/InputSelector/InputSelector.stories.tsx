@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { InputSelector } from "./InputSelector";
 
 const meta: Meta<typeof InputSelector> = {
-    title: "Components/Input Selector component",
+    title: "Components/Inputs/Selector component",
     component: InputSelector,
     argTypes: {
         label: { control: "text" },

@@ -1,0 +1,45 @@
+/* Style de base du bouton */
+.selectbtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 12px;
+    gap: 4px;
+
+    width: 326px;
+    height: 48px;
+
+    background: #F7F7F8;
+    border: 2px solid #0F082B;
+    border-radius: 4px;
+  }
+  
+  /* Style du menu déroulant (?) */
+  .select-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 326px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Style liens menu déroulant */
+  .select-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Style liens menu déroulant lorsque survolés */
+  .select-content a:hover {
+    background-color: #0F082B;
+    color: white;
+  }
+  
+  /* Affichage menu déroulant lorsque bouton survolé */
+  .select:hover .select-content {
+    display: block;
+  }

@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { InputDownloadPicture } from "./InputDownloadPicture";
 
 const meta: Meta<typeof InputDownloadPicture> = {
-    title: "Components/Input Download Picture component",
+    title: "Components/Inputs/Download Picture component",
     component: InputDownloadPicture,
     argTypes: {
         label: { control: "text" },

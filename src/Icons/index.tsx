@@ -14,8 +14,8 @@ import Upload from "./Upload/section.svg";
 import UserFlat from "./UserFlat/userFlat.svg";
 import UserLine from "./UserLine/userLine.svg";
 
-
 interface IconsProps {
+  size: "small" | "medium" | "large";
   children?: React.ReactNode;
 }
 
@@ -34,11 +34,13 @@ interface IconsComponent extends React.FC<IconsProps> {
   Upload: typeof Upload;
   UserFlat: typeof UserFlat;
   UserLine: typeof UserLine;
-
 }
 
-const Icons: IconsComponent = ({ children }) => {
-  return <div>{children}</div>;
+const Icons: IconsComponent = ({ size, children }) => {
+    const className = `icon-${size}`;
+
+
+  return <div className={className}>{children}</div>;
 };
 
 Icons.Add = Add;
@@ -55,6 +57,5 @@ Icons.Search = Search;
 Icons.Upload = Upload;
 Icons.UserFlat = UserFlat;
 Icons.UserLine = UserLine;
-
 
 export default Icons;

@@ -2,7 +2,11 @@ export { default as ButtonPrimary } from "./ButtonPrimary";
 export { default as ButtonSecondary } from "./ButtonSecondary";
 export { default as ButtonTertiary } from "./ButtonTertiary";
 
+
+export {default as InputSearch } from "./Inputs/Search";
+
 export { default as InputText } from "./Inputs/Text";
+
 
 export { default as Card } from "./Card";
 export { default as Information } from "./Information";

@@ -1,11 +1,11 @@
-import './index.css';
+import './InputText.css';
 import React from 'react';
 
 interface InputTextProps {
     placeholder: string;
 };
 
-const InputText = ({
+export const InputText = ({
     placeholder,
 }: InputTextProps) => {
     return (
@@ -13,6 +13,4 @@ const InputText = ({
             <p className='placeholder'>{placeholder}</p>
         </div>
     )
-};
-
-export default InputText;
+}

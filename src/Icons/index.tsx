@@ -1,3 +1,5 @@
+import "./index.css"
+
 import React from "react";
 import Add from "./Add/add.svg";
 import AddPicture from "./AddPicture/addPicture.svg";
@@ -37,8 +39,7 @@ interface IconsComponent extends React.FC<IconsProps> {
 }
 
 const Icons: IconsComponent = ({ size, children }) => {
-    const className = `icon-${size}`;
-
+  const className = `icon-${size}`;
 
   return <div className={className}>{children}</div>;
 };

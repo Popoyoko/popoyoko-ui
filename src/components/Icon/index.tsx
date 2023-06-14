@@ -1,23 +1,21 @@
 import "./index.css";
 import React from "react";
-import icon from "../../assets/icon.svg";
+import {Add, AddPicture} from "../../Icons/index"
 
 interface IconProps {
-  small?: boolean;
-  medium?: boolean;
-  large?: boolean;
+  size: "small" | "medium" | "large";
+  iconId: string;
 }
 
-const Icon = ({ small, medium, large }: IconProps) => {
-  let className = "icon";
-  if (small) className += " icon-small";
-  if (medium) className += " icon-medium";
-  if (large) className += " icon-large";
+
+
+const Icon = ({ size, iconId }: IconProps) => {
+  const className = `icon-${size}`;
 
   return (
-    <div className={className}>
-      <img src={icon} alt="Icon" />
-    </div>
+    <svg className={className}>
+    <use xlinkHref={#${iconId}}/>
+  </svg>
   );
 };
 

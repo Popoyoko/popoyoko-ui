@@ -2,6 +2,7 @@ import * as path from 'path';
 import { defineConfig } from 'vite';
 import ts from 'rollup-plugin-typescript2';
 import eslint from '@rollup/plugin-eslint';
+import svgr from 'vite-plugin-svgr'
 
 export default defineConfig({
   build: {
@@ -26,6 +27,9 @@ export default defineConfig({
         eslint({
           include: ['src/**/*.ts', 'src/**/*.tsx'], // Les fichiers à linter
           exclude: ['node_modules/**', 'build/**'] // Les fichiers à exclure
+        }),
+        svgr({
+          exportAsDefault: true
         })
       ]
     },

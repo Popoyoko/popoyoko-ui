@@ -1,6 +1,24 @@
 import "./index.css";
 import React from "react";
-import { Add, AddPicture } from "../../Icons/index";
+// import {
+//   Add,
+//   AddPicture,
+//   ArrowBottom,
+//   ArrowLeft,
+//   ArrowRight,
+//   ArrowTop,
+//   ArrowTriangle,
+//   DateFlat,
+//   DateLine,
+//   Information,
+//   Search,
+//   Upload,
+//   UserFlat,
+//   UserLine,
+// } from "../../Icons/index";
+
+import Add  from "../../Icons/Add/add.svg"
+import AddPicture  from "../../Icons/Add/add.svg"
 
 interface IconProps {
   size: "small" | "medium" | "large";
@@ -19,19 +37,26 @@ const Icon = ({ size, iconId }: IconProps) => {
     case "AddPicture":
       selectedIcon = <AddPicture />;
       break;
-    // Ajoutez le reste des cas pour les autres icônes SVG
 
     default:
       break;
   }
 
   return (
-    // <svg className={className}>
-    //   <symbol id="Add" viewBox="0 0 24 24">
-    //   <use xlinkHref={`#${iconId}`} />
-    //   </symbol>
+    //svg add for now
+    // <svg
+    //   width="24"
+    //   height="24"
+    //   viewBox="0 0 24 24"
+    //   fill="none"
+    //   xmlns="http://www.w3.org/2000/svg"
+    // >
+    //   <path d="M12 4H10V11H3V13H10V20H12V13H19V11H12V4Z" fill="#2018B0" />
     // </svg>
-    <svg className={className}><use xlinkHref={`#${iconId}`} /></svg>
+    //exportation of svg doesn't rly work 
+
+      <img src={selectedIcon}/>
+
   );
 };
 

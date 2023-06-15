@@ -1,5 +1,6 @@
 import "./Cover.css";
 import React from "react";
+import { Button } from "../../../components";
 import edit from "../../../assets/edit.svg";
 
 interface CoverProps {
@@ -8,17 +9,15 @@ interface CoverProps {
 }
 
 export const Cover = ({ showedit, background }: CoverProps) => {
-
   return (
     <div className="cover" style={{ background }}>
-        {showedit && (
+      {showedit && (
         <div className="edit">
-            <button className="btn-edit">
-              <p>Edit</p>
-              <img src={edit} alt="edit" />
-            </button>
+          <div className="edit">
+            <Button.Tertiary typeSvg="right" label="Edit" srcIcon={edit} />
+          </div>
         </div>
-        )}
+      )}
     </div>
   );
 };

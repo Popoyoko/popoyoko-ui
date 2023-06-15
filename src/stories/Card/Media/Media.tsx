@@ -1,13 +1,13 @@
 import "./Media.css";
 import React from "react";
-import Rectangle from "../../../components/Ratio/Rectangle";
+import L2H3 from "../../../components/Ratio/L2H3";
 
 interface MediaProps {}
 
 export const Media = ({}: MediaProps) => {
   return (
     <div className="card">
-      <Rectangle></Rectangle>
+      <L2H3></L2H3>
     </div>
   );
 };

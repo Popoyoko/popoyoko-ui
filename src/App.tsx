@@ -4,8 +4,9 @@ import "./App.css";
 import React from "react";
 import Card from "./components/Card";
 import Avatar from "./components/Avatar";
-import Icons from "./Icons";
+
 import Information from "./components/Information";
+import Icon from "./components/Icon";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -30,7 +31,9 @@ function App() {
 {/* <Avatar></Avatar>²
 <Avatar small></Avatar> */}
 <Avatar.Small showbadge background="red" />
-
+<Icon size="small" iconId="AddPicture" />
+<Icon size="medium" iconId="Add" />
+<Information></Information>
 {/* <Icons.Information></Icons.Information> doesnt work*/}
       </div>
     </div>

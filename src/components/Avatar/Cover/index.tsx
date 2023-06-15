@@ -16,12 +16,14 @@ const Cover = ({ showedit, background }: CoverProps) => {
       };
 
   return (
-    <div className="cover" style={backgroundImageStyle}>
+    <div className="cover">
+      <img className="cover" src={background} style={backgroundImageStyle}></img>
       {showedit && (
         <div className="edit">
           <Button.Tertiary typeSvg="right" label="Edit" srcIcon={edit} />
         </div>
       )}
+      
     </div>
   );
 };

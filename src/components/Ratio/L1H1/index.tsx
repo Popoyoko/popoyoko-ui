@@ -1,7 +1,8 @@
-import "./Cube.css";
+import "./index.css";
 import React from "react";
 
-export const Cube = ({}) => {
+const L1H1 = ({}) => {
   return <div className="ratio ratio-1-1"></div>;
 };
 
+export default L1H1;

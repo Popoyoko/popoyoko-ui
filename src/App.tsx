@@ -4,8 +4,9 @@ import "./App.css";
 import React from "react";
 import Card from "./components/Card";
 import Avatar from "./components/Avatar";
-import Icons from "./Icons";
+
 import Information from "./components/Information";
+import Icon from "./components/Icon";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -29,8 +30,11 @@ function App() {
         <Card label="label" subTitle="subtitle" mention="mention" price={56} background="url(https://imgs.search.brave.com/KUc_Sjgkt3SuouS7E-9zbhV2YGG7MFpPmcNklJmJYu0/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9ib25q/b3VybmF0dXJlLmZy/L3dwLWNvbnRlbnQv/dXBsb2Fkcy9pbWFn/ZS1wYXlzYWdlLWdy/YXR1aXRlLWEtdGVs/ZWNoYXJnZXItNS5q/cGc)"/> */}
 {/* <Avatar></Avatar>²
 <Avatar small></Avatar> */}
-<Avatar.Small showbadge background="red" />
-
+<Avatar.Small showbadge/>
+<Icon size="small" iconId="AddPicture" />
+<Icon size="medium" iconId="Add" />
+<Information></Information>
+<Avatar.Cover showedit/>
 {/* <Icons.Information></Icons.Information> doesnt work*/}
       </div>
     </div>

@@ -1,6 +1,6 @@
 import "./Information.css";
 import React from "react";
-import information from "../../assets/information.svg";
+import information from "../../Icons/Information/information.svg";
 
 interface InformationProps {
   label?: string;

@@ -1,19 +1,19 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Cube } from "./Cube";
+import { L1H1 } from "./L1H1";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
-const meta: Meta<typeof Cube> = {
+const meta: Meta<typeof L1H1> = {
   title: "Components/Ratios/Ratio 1:1",
-  component: Cube,
+  component: L1H1,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
 };
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 export default meta;
-type Story = StoryObj<typeof Cube>;
+type Story = StoryObj<typeof L1H1>;
 
 export const Ratio1_1: Story = {
-  render: () => <Cube />,
+  render: () => <L1H1 />,
 };

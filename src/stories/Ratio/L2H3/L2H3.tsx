@@ -1,8 +1,7 @@
-import "./index.css";
+import "./L2H3.css";
 import React from "react";
 
-const Rectangle = ({}) => {
+export const L2H3 = ({}) => {
   return <div className="ratio ratio-2-3"></div>;
 };
 
-export default Rectangle;

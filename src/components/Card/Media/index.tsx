@@ -1,6 +1,6 @@
 import "./index.css";
 import React from "react";
-import Rectangle from "../../Ratio/Rectangle";
+import Rectangle from "../../Ratio/L2H3";
 
 interface MediaProps {}
 

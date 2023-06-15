@@ -34,6 +34,7 @@ function App() {
 <Icon size="small" iconId="AddPicture" />
 <Icon size="medium" iconId="Add" />
 <Information></Information>
+<Avatar.Cover showedit/>
 {/* <Icons.Information></Icons.Information> doesnt work*/}
       </div>
     </div>

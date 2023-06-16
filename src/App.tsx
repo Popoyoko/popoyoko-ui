@@ -31,8 +31,7 @@ function App() {
 {/* <Avatar></Avatar>²
 <Avatar small></Avatar> */}
 <Avatar.Small showbadge/>
-<Icon size="small" iconId="AddPicture" />
-<Icon size="medium" iconId="Add" />
+<Icon icon="AddPicture" size="large"></Icon>
 <Information></Information>
 <Avatar.Cover showedit/>
 {/* <Icons.Information></Icons.Information> doesnt work*/}

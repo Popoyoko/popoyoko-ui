@@ -28,9 +28,7 @@ export default defineConfig({
           include: ['src/**/*.ts', 'src/**/*.tsx'], // Les fichiers à linter
           exclude: ['node_modules/**', 'build/**'] // Les fichiers à exclure
         }),
-        svgr({
-          exportAsDefault: true
-        })
+        svgr()
       ]
     },
     outDir: 'build',

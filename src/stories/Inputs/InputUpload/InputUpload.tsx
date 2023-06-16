@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import "./InputUpload.css";
+import upload from "../../../Icons/Upload/upload.svg";
 
 interface InputUploadProps {
   onChange: (file: File | null) => void;
@@ -32,7 +33,10 @@ const InputUpload: React.FC<InputUploadProps> = ({
         ref={inputRef}
         onChange={handleFileChange}
       />
-      <button onClick={handleClick}>{label}</button>
+      <button onClick={handleClick}>
+        {label}
+        <img src={upload} alt='upload'></img>
+        </button>
     </>
   );
 };

@@ -10,9 +10,6 @@ const meta: Meta<typeof InputUpload> = {
     },
 };
 
-
-
-
 export default meta;
 type Story = StoryObj<typeof InputUpload>;
 

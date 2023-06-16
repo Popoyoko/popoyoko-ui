@@ -1,20 +1,27 @@
 import React from 'react';
-import { Story, Meta } from '@storybook/react';
-import InputUpload from './InputUpload'; // Importez votre composant UploadButton
+import { StoryObj, Meta } from '@storybook/react';
+import InputUpload from './InputUpload';
 
-export default {
-  title: 'Components/Inputs/Upload',
-  component: InputUpload,
-} as Meta;
-
-const Template: Story = (args) => (
-  <InputUpload {...args} />
-);
-
-export const Default = Template.bind({});
-Default.args = {
-  label: 'label',
-  onChange: (file) => {
-    console.log('File uploaded:', file);
-  },
+const meta: Meta<typeof InputUpload> = {
+    title: 'Components/Inputs/Upload',
+    component: InputUpload,
+    argTypes: {
+        label: { control: "text"},
+    },
 };
+
+
+
+
+export default meta;
+type Story = StoryObj<typeof InputUpload>;
+
+export const upload: Story = {
+render: (args) => <InputUpload {...args} />,
+args:{
+    label: 'label',
+    onChange: (file) => {
+        console.log('File uploaded:', file);
+        },
+    },
+}

@@ -4,7 +4,7 @@ export { default as Button } from "./Button"
 export {default as InputSearch } from "./Inputs/Search";
 
 export { default as InputText } from "./Inputs/Text";
-
+export { default as InputUpload } from "./Inputs/Upload";
 
 export { default as Card } from "./Card";
 export { default as Information } from "./Information";

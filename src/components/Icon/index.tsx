@@ -1,9 +1,9 @@
 import "./index.css";
 import React from "react";
 
-import { ReactComponent as Add } from "../../Icons/Add/add.svg";
-import { ReactComponent as AddPicture } from "../../Icons/AddPicture/addPicture.svg";
-
+import addSvg from "../../Icons/Add/add.svg";
+import addPictureSvg from "../../Icons/AddPicture/addPicture.svg";
+import { ReactSVG } from 'react-svg';
 // import { ReactComponent as Add } from "react";
 
 
@@ -16,9 +16,11 @@ const Icon = ({ icon, size }: IconProps) => {
   const className = `icon-${size}`;
 
   return (
-    <svg className={className} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 4H10V11H3V13H10V20H12V13H19V11H12V4Z" fill="#2018B0"/>
-</svg>
+    <div className={className}>
+    {icon === "add" && <ReactSVG src={addSvg} />}
+    {icon === "addPicture" && <ReactSVG src={addPictureSvg} />}
+  </div>
+ 
   );
 };
 

@@ -2,9 +2,8 @@
 export { default as Button } from "./Button"
 
 export {default as InputSearch } from "./Inputs/Search";
-
 export { default as InputText } from "./Inputs/Text";
-
+export { default as InputDownload } from "./Inputs/Download";
 
 export { default as Card } from "./Card";
 export { default as Information } from "./Information";

@@ -18,12 +18,14 @@ export const Cover = ({ showedit, background }: CoverProps) => {
 
   return (
     <div className="cover">
+      <Ratio.L1H1>
       <img className="cover" src={background} style={backgroundImageStyle}></img>
       {showedit && (
         <div className="edit">
           <Button.Tertiary typeSvg="right" label="Edit" srcIcon={edit} />
         </div>
       )}
+      </Ratio.L1H1>
     </div>
   );
 };

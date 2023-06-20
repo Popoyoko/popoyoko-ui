@@ -1,13 +1,13 @@
 import "./index.css";
 import React from "react";
-import Rectangle from "../../Ratio/L2H3";
+import Ratio from "../../Ratio";
 
 interface MediaProps {}
 
 const Media = ({}: MediaProps) => {
   return (
     <div className="card">
-      <Rectangle></Rectangle>
+      <Ratio.L2H3></Ratio.L2H3>
     </div>
   );
 };

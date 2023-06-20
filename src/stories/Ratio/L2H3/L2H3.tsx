@@ -3,7 +3,9 @@ import React from "react";
 
 export const L2H3 = ({ children }) => {
   return <div className="ratio ratio-2-3">
-{children}
+{children && (
+        <div>{children}</div>
+      )}
   </div>;
 };
 

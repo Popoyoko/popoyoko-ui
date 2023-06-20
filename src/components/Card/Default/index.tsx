@@ -1,6 +1,6 @@
 import "./index.css";
 import React from "react";
-import Rectangle from "../../Ratio/L2H3";
+import Ratio from "../../Ratio";
 
 interface DefaultProps {
   label?: string;
@@ -13,7 +13,7 @@ const Default = ({ label, mention, subTitle, price, ...props }: DefaultProps) =>
   return (
     <div>
       <div className="card">
-        <Rectangle></Rectangle>
+        <Ratio.L2H3></Ratio.L2H3>
       </div>
       <div className="card-section">
         <div className="card-group">

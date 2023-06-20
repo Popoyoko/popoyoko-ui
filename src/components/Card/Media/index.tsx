@@ -2,12 +2,10 @@ import "./index.css";
 import React from "react";
 import Ratio from "../../Ratio";
 
-interface MediaProps {}
-
-const Media = ({}: MediaProps) => {
+const Media = ({}) => {
   return (
     <div className="card">
-      <Ratio.L1H1></Ratio.L1H1>
+      <Ratio.L2H3></Ratio.L2H3>
     </div>
   );
 };

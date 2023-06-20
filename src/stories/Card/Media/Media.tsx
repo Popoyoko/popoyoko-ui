@@ -7,7 +7,7 @@ interface MediaProps {}
 export const Media = ({}: MediaProps) => {
   return (
     <div className="card">
-      <Ratio.L1H1></Ratio.L1H1>
+      <Ratio.L2H3></Ratio.L2H3>
     </div>
   );
 };

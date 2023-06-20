@@ -1,0 +1,1 @@
+{"version":3,"file":"L1H1.stories-dae58123.js","sources":["../../src/stories/Ratio/L1H1/L1H1.tsx"],"sourcesContent":["import \"./L1H1.css\";\nimport React from \"react\";\n\nexport const L1H1 = ({}) => {\n  return <div className=\"ratio ratio-1-1\"></div>;\n};\n\n"],"names":["L1H1","jsx"],"mappings":"iHAGO,MAAAA,EAAA,CAAA,CAAA,IACLC,EAAA,MAAA,CAAA,UAAA,iBAAA,CAAA;;"}

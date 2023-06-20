@@ -1,0 +1,1 @@
+{"version":3,"file":"L2H3.stories-a45db5b2.js","sources":["../../src/stories/Ratio/L2H3/L2H3.tsx"],"sourcesContent":["import \"./L2H3.css\";\nimport React from \"react\";\n\nexport const L2H3 = ({}) => {\n  return <div className=\"ratio ratio-2-3\"></div>;\n};\n\n"],"names":["L2H3","jsx"],"mappings":"iHAGO,MAAAA,EAAA,CAAA,CAAA,IACLC,EAAA,MAAA,CAAA,UAAA,iBAAA,CAAA;;"}

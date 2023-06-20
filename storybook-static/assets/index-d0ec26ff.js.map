@@ -1,0 +1,1 @@
+{"version":3,"file":"index-d0ec26ff.js","sources":["../../src/components/Ratio/L2H3/index.tsx"],"sourcesContent":["import \"./index.css\";\nimport React from \"react\";\n\nconst L2H3 = ({}) => {\n  return <div className=\"ratio ratio-2-3\"></div>;\n};\n\nexport default L2H3;\n"],"names":["L2H3","jsx"],"mappings":"8CAGA,MAAAA,EAAA,CAAA,CAAA,IACEC,EAAA,MAAA,CAAA,UAAA,iBAAA,CAAA"}

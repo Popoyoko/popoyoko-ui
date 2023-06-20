@@ -1,0 +1,5 @@
+import{j as o}from"./jsx-runtime-670450c2.js";import"./index-f1f749bf.js";import"./_commonjsHelpers-042e6b4d.js";const r=({showbadge:a,background:n})=>o("div",{className:"small",style:{background:n},children:a&&o("div",{className:"badge"})});try{r.displayName="Small",r.__docgenInfo={description:"",displayName:"Small",props:{showbadge:{defaultValue:null,description:"",name:"showbadge",required:!1,type:{name:"boolean"}},background:{defaultValue:null,description:"",name:"background",required:!1,type:{name:"string"}}}}}catch{}const i={title:"Components/Avatar/Small",component:r,argTypes:{showbadge:{control:"boolean",table:{category:"Variant"}},background:{control:"file",table:{category:"Background"}}},args:{background:"#808080",showbadge:!0}},e={render:a=>o(r,{...a}),args:{}};var s,l,t;e.parameters={...e.parameters,docs:{...(s=e.parameters)==null?void 0:s.docs,source:{originalSource:`{
+  render: args => <Small {...args} />,
+  args: {}
+}`,...(t=(l=e.parameters)==null?void 0:l.docs)==null?void 0:t.source}}};const p=["small"];export{p as __namedExportsOrder,i as default,e as small};
+//# sourceMappingURL=Small.stories-abc5b989.js.map

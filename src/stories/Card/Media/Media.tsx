@@ -1,13 +1,13 @@
 import "./Media.css";
 import React from "react";
-import L2H3 from "../../../components/Ratio/L2H3";
+import Ratio from "../../../components/Ratio";
 
 interface MediaProps {}
 
 export const Media = ({}: MediaProps) => {
   return (
     <div className="card">
-      <L2H3></L2H3>
+      <Ratio.L1H1></Ratio.L1H1>
     </div>
   );
 };

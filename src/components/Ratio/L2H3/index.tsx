@@ -1,16 +1,14 @@
 import "./index.css";
-import React, { ReactNode } from "react";
+import React from "react";
 
-interface L2H3Props {
-  children?: ReactNode;
-}
-
-const L2H3 = ({ children }: L2H3Props) => {
+const L2H3 = ({ children }) => {
   return <div className="ratio ratio-2-3">
-{children && (
-        <div>{children}</div>
-      )}
+{children}
   </div>;
+};
+
+L2H3.defaultProps = {
+  children: null
 };
 
 export default L2H3;

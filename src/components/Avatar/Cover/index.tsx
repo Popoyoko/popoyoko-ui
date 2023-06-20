@@ -1,6 +1,7 @@
 import "./index.css";
 import React from "react";
 import Button from "../../Button";
+import Ratio from "../../Ratio"
 import edit from "../../../assets/edit.svg";
 
 interface CoverProps {
@@ -17,13 +18,14 @@ const Cover = ({ showedit, background }: CoverProps) => {
 
   return (
     <div className="cover">
+      <Ratio.L1H1>
       <img className="cover" src={background} style={backgroundImageStyle}></img>
       {showedit && (
         <div className="edit">
           <Button.Tertiary typeSvg="right" label="Edit" srcIcon={edit} />
         </div>
       )}
-      
+      </Ratio.L1H1>
     </div>
   );
 };

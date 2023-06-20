@@ -1,6 +1,6 @@
 
 export { default as Button } from "./Button"
-
+export { default as Ratio } from "./Ratio"
 export {default as InputSearch } from "./Inputs/Search";
 export { default as InputText } from "./Inputs/Text";
 

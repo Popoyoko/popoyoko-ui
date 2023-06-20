@@ -1,6 +1,8 @@
 import "./Section.css";
 import React from "react";
-import upload from "../../Icons/Upload/upload.svg"
+
+import upload from "../../Icons/Upload/upload.svg";
+
 
 interface SectionProps {
   title?: string;

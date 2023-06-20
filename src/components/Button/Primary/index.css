@@ -1,6 +1,6 @@
 .primary {
-    background-color:#228C53;
-    color: #F6FCF7;
+    background-color:#191CB1;
+    color: #EEEBFF;
     border: none;
     border-radius: 2px;
 
@@ -17,16 +17,16 @@ img {
 }
 
 .primary:hover {
-    background-color:#21C167;
-    color: #DCF4E1;
+    background-color:#0023FC;
+    color: #D9CCFF;
 }
 
 .primary:active {
-    background-color:#1B6042;
-    color: #FFFFFF;
+    background-color:#171673;
+    color:#F5F6FF;
 }
 
 .primary:disabled {
-    background-color:rgba(33, 193, 103, 0.19);
-    color:#21C1674A; 
+    background-color:rgba(0, 35, 252, 0.19);
+    color:rgba(0, 35, 252, 0.29);
 }

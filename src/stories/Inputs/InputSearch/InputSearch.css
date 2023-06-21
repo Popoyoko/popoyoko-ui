@@ -24,7 +24,7 @@
     line-height: 24px;
     color: #0F082B;
 
-    outline: none;
+    /* outline: none; */
   }
 
   .placeholder:focus{

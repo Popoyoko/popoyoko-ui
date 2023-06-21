@@ -37,22 +37,40 @@ const Icon = ({ size, icon }: IconProps) => {
     case "arrowBottom":
       iconElement = <ReactSVG src={ArrowBottom} />;
       break;
-    case "addPicture":
-      iconElement = <ReactSVG src={AddPicture} />;
+    case "ArrowLeft":
+      iconElement = <ReactSVG src={ArrowLeft} />;
       break;
-      case "addPicture":
-        iconElement = <ReactSVG src={AddPicture} />;
+      case "ArrowRight":
+        iconElement = <ReactSVG src={ArrowRight} />;
         break;
-        case "addPicture":
-      iconElement = <ReactSVG src={AddPicture} />;
+        case "ArrowTop":
+      iconElement = <ReactSVG src={ArrowTop} />;
       break;
-      case "addPicture":
-      iconElement = <ReactSVG src={AddPicture} />;
+      case "ArrowTriangle":
+      iconElement = <ReactSVG src={ArrowTriangle} />;
       break;
-      case "addPicture":
-      iconElement = <ReactSVG src={AddPicture} />;
+      case "DateFlat":
+      iconElement = <ReactSVG src={DateFlat} />;
       break;
-      
+      case "DateLine":
+      iconElement = <ReactSVG src={DateLine} />;
+      break;
+      case "Information":
+      iconElement = <ReactSVG src={Information} />;
+      break;
+      case "Search":
+      iconElement = <ReactSVG src={Search} />;
+      break;
+      case "Upload":
+      iconElement = <ReactSVG src={Upload} />;
+      break;
+      case "UserFlat":
+      iconElement = <ReactSVG src={UserFlat} />;
+      break;
+      case "UserLine":
+      iconElement = <ReactSVG src={UserLine} />;
+      break;
+
     default:
       break;
   }
@@ -63,6 +81,19 @@ const Icon = ({ size, icon }: IconProps) => {
 Icon.Add = () => <Icon icon="add" size="large" />;
 Icon.AddPicture = () => <Icon icon="addPicture" size="large" />;
 Icon.ArrowBottom = () => <Icon icon="arrowBottom" size="large" />;
+Icon.ArrowLeft = () => <Icon icon="arrowLeft" size="large" />;
+Icon.ArrowRight = () => <Icon icon="ArrowRight" size="large" />;
+Icon.ArrowTop = () => <Icon icon="ArrowTop" size="large" />;
+Icon.ArrowTriangle = () => <Icon icon="ArrowTriangle" size="large" />;
+Icon.DateFlat = () => <Icon icon="DateFlat" size="large" />;
+Icon.DateLine = () => <Icon icon="DateLine" size="large" />;
+Icon.Information = () => <Icon icon="Information" size="large" />;
+Icon.Search = () => <Icon icon="Search" size="large" />;
+Icon.Upload = () => <Icon icon="Upload" size="large" />;
+Icon.UserFlat = () => <Icon icon="UserFlat" size="large" />;
+Icon.UserLine = () => <Icon icon="UserLine" size="large" />;
+
+
 // Ajoutez d'autres sous-composants pour les autres icônes
 
 export default Icon;

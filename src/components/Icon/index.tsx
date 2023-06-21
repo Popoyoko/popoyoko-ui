@@ -81,19 +81,19 @@ const Icon = ({ size, icon }: IconProps) => {
 };
 
 Icon.Add = ({size}) => <Icon icon="Add" size={size} />;
-Icon.AddPicture = () => <Icon icon="AddPicture" size="medium" />;
-Icon.ArrowBottom = () => <Icon icon="ArrowBottom" size="large" />;
-Icon.ArrowLeft = () => <Icon icon="ArrowLeft" size="large" />;
-Icon.ArrowRight = () => <Icon icon="ArrowRight" size="large" />;
-Icon.ArrowTop = () => <Icon icon="ArrowTop" size="large" />;
-Icon.ArrowTriangle = () => <Icon icon="ArrowTriangle" size="large" />;
-Icon.DateFlat = () => <Icon icon="DateFlat" size="large" />;
-Icon.DateLine = () => <Icon icon="DateLine" size="large" />;
-Icon.Information = () => <Icon icon="Information" size="large" />;
-Icon.Search = () => <Icon icon="Search" size="large" />;
-Icon.Upload = () => <Icon icon="Upload" size="large" />;
-Icon.UserFlat = () => <Icon icon="UserFlat" size="large" />;
-Icon.UserLine = () => <Icon icon="UserLine" size="large" />;
+Icon.AddPicture = ({size}) => <Icon icon="AddPicture" size={size} />;
+Icon.ArrowBottom = ({size}) => <Icon icon="ArrowBottom" size={size} />;
+Icon.ArrowLeft = ({size}) => <Icon icon="ArrowLeft" size={size} />;
+Icon.ArrowRight = ({size}) => <Icon icon="ArrowRight" size={size} />;
+Icon.ArrowTop = ({size}) => <Icon icon="ArrowTop" size={size} />;
+Icon.ArrowTriangle = ({size}) => <Icon icon="ArrowTriangle" size={size} />;
+Icon.DateFlat = ({size}) => <Icon icon="DateFlat" size={size} />;
+Icon.DateLine = ({size}) => <Icon icon="DateLine" size={size} />;
+Icon.Information = ({size}) => <Icon icon="Information" size={size} />;
+Icon.Search = ({size}) => <Icon icon="Search" size={size} />;
+Icon.Upload = ({size}) => <Icon icon="Upload" size={size} />;
+Icon.UserFlat = ({size}) => <Icon icon="UserFlat" size={size} />;
+Icon.UserLine = ({size}) => <Icon icon="UserLine" size={size} />;
 
 
 // Ajoutez d'autres sous-composants pour les autres icônes

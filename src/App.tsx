@@ -33,10 +33,9 @@ function App() {
 <Avatar small></Avatar> */}
 <Avatar.Small showbadge/>
 <Icon.Add size="small"/>
-<Icon.AddPicture />
-<Icon.ArrowBottom />
-<Icon.ArrowLeft />
-<Icon.DateFlat />
+<Icon.AddPicture size="medium"/>
+<Icon.ArrowBottom size="large"/>
+
 <Information></Information>
 <Avatar.Cover showedit/>
 

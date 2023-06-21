@@ -7,6 +7,7 @@ import Avatar from "./components/Avatar";
 
 import Information from "./components/Information";
 import Icon from "./components/Icon";
+import { Button } from "./components";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -31,10 +32,13 @@ function App() {
 {/* <Avatar></Avatar>²
 <Avatar small></Avatar> */}
 <Avatar.Small showbadge/>
-{/* <Icon icon="Add" size="large"></Icon> */}
-<Icon icon="addPicture" size="medium" />
+<Icon.Add/>
+<Icon.AddPicture size="medium"/>
+<Icon.ArrowBottom size="large"/>
+
 <Information></Information>
 <Avatar.Cover showedit/>
+
 {/* <Icons.Information></Icons.Information> doesnt work*/}
       </div>
     </div>

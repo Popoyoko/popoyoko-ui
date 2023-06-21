@@ -32,9 +32,11 @@ function App() {
 {/* <Avatar></Avatar>²
 <Avatar small></Avatar> */}
 <Avatar.Small showbadge/>
-<Icon.Add />
+<Icon.Add size="small"/>
 <Icon.AddPicture />
 <Icon.ArrowBottom />
+<Icon.ArrowLeft />
+<Icon.DateFlat />
 <Information></Information>
 <Avatar.Cover showedit/>
 

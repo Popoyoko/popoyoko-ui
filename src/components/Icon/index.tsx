@@ -28,13 +28,13 @@ const Icon = ({ size, icon }: IconProps) => {
   let iconElement = null;
 
   switch (icon) {
-    case "add":
+    case "Add":
       iconElement = <ReactSVG src={Add} />;
       break;
-    case "addPicture":
+    case "AddPicture":
       iconElement = <ReactSVG src={AddPicture} />;
       break;
-    case "arrowBottom":
+    case "ArrowBottom":
       iconElement = <ReactSVG src={ArrowBottom} />;
       break;
     case "ArrowLeft":
@@ -73,15 +73,17 @@ const Icon = ({ size, icon }: IconProps) => {
 
     default:
       break;
+
+
   }
 
   return <div className={className}>{iconElement}</div>;
 };
 
-Icon.Add = () => <Icon icon="add" size="large" />;
-Icon.AddPicture = () => <Icon icon="addPicture" size="large" />;
-Icon.ArrowBottom = () => <Icon icon="arrowBottom" size="large" />;
-Icon.ArrowLeft = () => <Icon icon="arrowLeft" size="large" />;
+Icon.Add = ({size}) => <Icon icon="Add" size={size} />;
+Icon.AddPicture = () => <Icon icon="AddPicture" size="medium" />;
+Icon.ArrowBottom = () => <Icon icon="ArrowBottom" size="large" />;
+Icon.ArrowLeft = () => <Icon icon="ArrowLeft" size="large" />;
 Icon.ArrowRight = () => <Icon icon="ArrowRight" size="large" />;
 Icon.ArrowTop = () => <Icon icon="ArrowTop" size="large" />;
 Icon.ArrowTriangle = () => <Icon icon="ArrowTriangle" size="large" />;

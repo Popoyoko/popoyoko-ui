@@ -1,8 +1,9 @@
 import "./index.css";
 import React from "react";
+import { ReactSVG } from "react-svg";
 
-import AddSvg from "../../Icons/Add/add.svg";
-import AddPictureSvg from "../../Icons/AddPicture/addPicture.svg";
+import Add from "../../Icons/Add/add.svg";
+import AddPicture from "../../Icons/AddPicture/addPicture.svg";
 import ArrowBottom from "../../Icons/ArrowBottom/bottom.svg";
 import ArrowLeft from "../../Icons/ArrowLeft/left.svg";
 import ArrowRight from "../../Icons/ArrowRight/right.svg";
@@ -16,25 +17,52 @@ import Upload from "../../Icons/Upload/upload.svg";
 import UserFlat from "../../Icons/UserFlat/userFlat.svg";
 import UserLine from "../../Icons/UserLine/userLine.svg";
 
-import { ReactSVG } from 'react-svg';
-// import { ReactComponent as Add } from "react";
-
-
 interface IconProps {
   size: "small" | "medium" | "large";
-  icon: string; // Type générique pour le composant SVG
+  icon: string;
 }
 
-const Icon = ({ icon, size }: IconProps) => {
+const Icon = ({ size, icon }: IconProps) => {
   const className = `icon-${size}`;
 
-  return (
-    <div className={className}>
-    {icon === "add" && <ReactSVG src={Add} />}
-    {icon === "addPicture" && <ReactSVG src={AddPicture} />}
-  </div>
- 
-  );
+  let iconElement = null;
+
+  switch (icon) {
+    case "add":
+      iconElement = <ReactSVG src={Add} />;
+      break;
+    case "addPicture":
+      iconElement = <ReactSVG src={AddPicture} />;
+      break;
+    case "arrowBottom":
+      iconElement = <ReactSVG src={ArrowBottom} />;
+      break;
+    case "addPicture":
+      iconElement = <ReactSVG src={AddPicture} />;
+      break;
+      case "addPicture":
+        iconElement = <ReactSVG src={AddPicture} />;
+        break;
+        case "addPicture":
+      iconElement = <ReactSVG src={AddPicture} />;
+      break;
+      case "addPicture":
+      iconElement = <ReactSVG src={AddPicture} />;
+      break;
+      case "addPicture":
+      iconElement = <ReactSVG src={AddPicture} />;
+      break;
+      
+    default:
+      break;
+  }
+
+  return <div className={className}>{iconElement}</div>;
 };
+
+Icon.Add = () => <Icon icon="add" size="large" />;
+Icon.AddPicture = () => <Icon icon="addPicture" size="large" />;
+Icon.ArrowBottom = () => <Icon icon="arrowBottom" size="large" />;
+// Ajoutez d'autres sous-composants pour les autres icônes
 
 export default Icon;

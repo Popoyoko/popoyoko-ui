@@ -23,7 +23,7 @@ interface IconProps {
 }
 
 const Icon = ({ size, icon }: IconProps) => {
-  const className = `icon-${size}`;
+ const className = `icon-${size ? size : "medium"}`;
 
   let iconElement = null;
 
@@ -80,20 +80,21 @@ const Icon = ({ size, icon }: IconProps) => {
   return <div className={className}>{iconElement}</div>;
 };
 
-Icon.Add = ({size}) => <Icon icon="Add" size={size} />;
-Icon.AddPicture = ({size}) => <Icon icon="AddPicture" size={size} />;
-Icon.ArrowBottom = ({size}) => <Icon icon="ArrowBottom" size={size} />;
-Icon.ArrowLeft = ({size}) => <Icon icon="ArrowLeft" size={size} />;
-Icon.ArrowRight = ({size}) => <Icon icon="ArrowRight" size={size} />;
-Icon.ArrowTop = ({size}) => <Icon icon="ArrowTop" size={size} />;
-Icon.ArrowTriangle = ({size}) => <Icon icon="ArrowTriangle" size={size} />;
-Icon.DateFlat = ({size}) => <Icon icon="DateFlat" size={size} />;
-Icon.DateLine = ({size}) => <Icon icon="DateLine" size={size} />;
-Icon.Information = ({size}) => <Icon icon="Information" size={size} />;
-Icon.Search = ({size}) => <Icon icon="Search" size={size} />;
-Icon.Upload = ({size}) => <Icon icon="Upload" size={size} />;
-Icon.UserFlat = ({size}) => <Icon icon="UserFlat" size={size} />;
-Icon.UserLine = ({size}) => <Icon icon="UserLine" size={size} />;
+Icon.Add = (props) => <Icon icon="Add" {...props} />;
+Icon.AddPicture = (props) => <Icon icon="AddPicture" {...props} />;
+Icon.ArrowBottom = (props) => <Icon icon="ArrowBottom" {...props} />;
+Icon.ArrowLeft = (props) => <Icon icon="ArrowLeft" {...props} />;
+Icon.ArrowRight = (props) => <Icon icon="ArrowRight" {...props} />;
+Icon.ArrowTop = (props) => <Icon icon="ArrowTop" {...props} />;
+Icon.ArrowTriangle = (props) => <Icon icon="ArrowTriangle" {...props} />;
+Icon.DateFlat = (props) => <Icon icon="DateFlat" {...props} />;
+Icon.DateLine = (props) => <Icon icon="DateLine" {...props} />;
+Icon.Information = (props) => <Icon icon="Information" {...props} />;
+Icon.Search = (props) => <Icon icon="Search" {...props} />;
+Icon.Upload = (props) => <Icon icon="Upload" {...props} />;
+Icon.UserFlat = (props) => <Icon icon="UserFlat" {...props} />;
+Icon.UserLine = (props) => <Icon icon="UserLine" {...props} />;
+
 
 
 // Ajoutez d'autres sous-composants pour les autres icônes

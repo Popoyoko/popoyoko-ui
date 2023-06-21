@@ -32,7 +32,7 @@ function App() {
 {/* <Avatar></Avatar>²
 <Avatar small></Avatar> */}
 <Avatar.Small showbadge/>
-<Icon.Add size="small"/>
+<Icon.Add/>
 <Icon.AddPicture size="medium"/>
 <Icon.ArrowBottom size="large"/>
 

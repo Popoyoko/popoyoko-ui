@@ -1,6 +1,6 @@
-import "./index.css";
 import React from "react";
 import { ReactSVG } from "react-svg";
+import "./index.css";
 
 import Add from "../../Icons/Add/add.svg";
 import AddPicture from "../../Icons/AddPicture/addPicture.svg";
@@ -22,62 +22,33 @@ interface IconProps {
   icon: string;
 }
 
-export const Icon = ({ size, icon }: IconProps) => {
- const className = `icon-${size ? size : "medium"}`;
+const iconMap = {
+  Add,
+  AddPicture,
+  ArrowBottom,
+  ArrowLeft,
+  ArrowRight,
+  ArrowTop,
+  ArrowTriangle,
+  DateFlat,
+  DateLine,
+  Information,
+  Search,
+  Upload,
+  UserFlat,
+  UserLine,
+};
 
-  let iconElement = null;
+export const Icon = ({ size = "medium", icon }: IconProps) => {
+  const className = `icon-${size} icon`;
 
-  switch (icon) {
-    case "Add":
-      iconElement = <ReactSVG src={Add} />;
-      break;
-    case "AddPicture":
-      iconElement = <ReactSVG src={AddPicture} />;
-      break;
-    case "ArrowBottom":
-      iconElement = <ReactSVG src={ArrowBottom} />;
-      break;
-    case "ArrowLeft":
-      iconElement = <ReactSVG src={ArrowLeft} />;
-      break;
-      case "ArrowRight":
-        iconElement = <ReactSVG src={ArrowRight} />;
-        break;
-        case "ArrowTop":
-      iconElement = <ReactSVG src={ArrowTop} />;
-      break;
-      case "ArrowTriangle":
-      iconElement = <ReactSVG src={ArrowTriangle} />;
-      break;
-      case "DateFlat":
-      iconElement = <ReactSVG src={DateFlat} />;
-      break;
-      case "DateLine":
-      iconElement = <ReactSVG src={DateLine} />;
-      break;
-      case "Information":
-      iconElement = <ReactSVG src={Information} />;
-      break;
-      case "Search":
-      iconElement = <ReactSVG src={Search} />;
-      break;
-      case "Upload":
-      iconElement = <ReactSVG src={Upload} />;
-      break;
-      case "UserFlat":
-      iconElement = <ReactSVG src={UserFlat} />;
-      break;
-      case "UserLine":
-      iconElement = <ReactSVG src={UserLine} />;
-      break;
+  const IconElement = iconMap[icon];
 
-    default:
-      break;
-
-
-  }
-
-  return <div className={className}>{iconElement}</div>;
+  return (
+    <div className={className}>
+      <ReactSVG src={IconElement} />
+    </div>
+  );
 };
 
 Icon.Add = (props) => <Icon icon="Add" {...props} />;
@@ -94,4 +65,3 @@ Icon.Search = (props) => <Icon icon="Search" {...props} />;
 Icon.Upload = (props) => <Icon icon="Upload" {...props} />;
 Icon.UserFlat = (props) => <Icon icon="UserFlat" {...props} />;
 Icon.UserLine = (props) => <Icon icon="UserLine" {...props} />;
-

@@ -1,6 +1,6 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { InputDownload } from "./InputDownload";
+import { InputDownload } from "./index";
 
 const meta: Meta<typeof InputDownload> = {
     title: "Components/Inputs/Download",

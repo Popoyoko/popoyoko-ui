@@ -4,9 +4,11 @@ import { Logo } from "../Logo";
 
 import Avatar from "../Avatar";
 
+
 interface HeaderProps {}
 
 export const Header = ({}: HeaderProps) => {
+
   return (
     <div className="container-header">
       <Logo src=""></Logo>

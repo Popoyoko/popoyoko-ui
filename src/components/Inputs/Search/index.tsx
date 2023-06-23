@@ -1,10 +1,10 @@
-import './index.css';
-import React from 'react';
+import "./index.css";
+import React from "react";
 
 interface InputSearchProps {
-    placeholder: string;
-    srcIcon: string;
-};
+  placeholder: string;
+  srcIcon: string;
+}
 
 export const InputSearch = ({
     placeholder,

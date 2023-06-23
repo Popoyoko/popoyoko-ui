@@ -1,5 +1,11 @@
+@font-face {
+  font-family: "Co Headline";
+  src: url("/fonts/Co_Headline_Bold.otf") format("otf");
+  /* Autres déclarations de police... */
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Co Headline", sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -29,6 +35,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  font-family: "CoHeadlineBold", sans-serif;
 }
 
 h1 {

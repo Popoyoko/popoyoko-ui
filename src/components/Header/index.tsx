@@ -4,9 +4,7 @@ import Logo from "../Logo";
 
 import Avatar from "../Avatar";
 
-interface HeaderProps {}
-
-const Header = ({}: HeaderProps) => {
+const Header = () => {
   return (
     <div className="container-header">
       <Logo src=""></Logo>

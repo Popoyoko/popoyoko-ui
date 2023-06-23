@@ -1,8 +1,0 @@
-import{j as e,a as i}from"./jsx-runtime-670450c2.js";import"./index-f1f749bf.js";import"./_commonjsHelpers-042e6b4d.js";const n=({label:r,typeSvg:t,srcIcon:l,onClick:u})=>t==="none"?e("button",{className:"tertiary",children:r}):t==="left"?i("button",{className:"tertiary",children:[e("img",{src:l}),r]}):t==="right"?i("button",{className:"tertiary",children:[r,e("img",{src:l})]}):t==="only"?e("button",{className:"tertiary",children:e("img",{src:l})}):e("button",{className:"tertiary"});try{n.displayName="Tertiary",n.__docgenInfo={description:"",displayName:"Tertiary",props:{typeSvg:{defaultValue:null,description:"",name:"typeSvg",required:!0,type:{name:"enum",value:[{value:'"right"'},{value:'"left"'},{value:'"none"'},{value:'"only"'}]}},label:{defaultValue:null,description:"",name:"label",required:!0,type:{name:"string"}},srcIcon:{defaultValue:null,description:"",name:"srcIcon",required:!1,type:{name:"string"}},onClick:{defaultValue:null,description:"",name:"onClick",required:!1,type:{name:"() => void"}}}}}catch{}const y={title:"Components/Buttons/Tertiary",component:n,argTypes:{label:{control:"text"},typeSvg:{options:["none","left","right","only"],control:{type:"radio"}}}},a={render:r=>e(n,{...r}),args:{typeSvg:"none",label:"label"}};var o,s,c;a.parameters={...a.parameters,docs:{...(o=a.parameters)==null?void 0:o.docs,source:{originalSource:`{
-  render: args => <Tertiary {...args} />,
-  args: {
-    typeSvg: 'none',
-    label: 'label'
-  }
-}`,...(c=(s=a.parameters)==null?void 0:s.docs)==null?void 0:c.source}}};const g=["tertiary"];export{g as __namedExportsOrder,y as default,a as tertiary};
-//# sourceMappingURL=Tertiary.stories-6e483b81.js.map

@@ -1,4 +1,5 @@
 import "./index.css";
+import "./index.scss";
 import React from "react";
 
 interface PrimaryProps {
@@ -8,12 +9,7 @@ interface PrimaryProps {
   onClick?: () => void;
 }
 
-export const Primary = ({
-  label,
-  typeSvg,
-  srcIcon,
-  onClick,
-}: PrimaryProps) => {
+export const Primary = ({ label, typeSvg, srcIcon, onClick }: PrimaryProps) => {
   let icon = null;
   if (typeSvg === "none") {
     return <button className="primary">{label}</button>;
@@ -39,4 +35,3 @@ export const Primary = ({
     );
   }
 };
-

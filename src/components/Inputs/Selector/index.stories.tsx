@@ -1,6 +1,6 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { InputSelector } from "./InputSelector";
+import { InputSelector } from "./index";
 
 const meta: Meta<typeof InputSelector> = {
     title: "Components/Inputs/Selector component",

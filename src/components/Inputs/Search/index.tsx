@@ -6,7 +6,7 @@ interface InputSearchProps {
     srcIcon: string;
 };
 
-const InputSearch = ({
+export const InputSearch = ({
     placeholder,
     srcIcon,
 }: InputSearchProps) => {
@@ -25,6 +25,4 @@ const InputSearch = ({
             <svg href={srcIcon} className='vector'></svg>
         </div>
     )
-};
-
-export default InputSearch;
+}

@@ -8,7 +8,7 @@ interface TertiaryProps {
     onClick?: () => void;
 }
 
-const Tertiary = ({
+export const Tertiary = ({
     label,
     typeSvg,
     srcIcon,
@@ -48,4 +48,3 @@ const Tertiary = ({
     )
 };
 
-export default Tertiary;

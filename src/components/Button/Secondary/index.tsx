@@ -8,7 +8,7 @@ interface SecondaryProps {
     onClick?: () => void;
 }
 
-const Secondary = ({
+export const Secondary = ({
     label,
     typeSvg,
     srcIcon,
@@ -48,4 +48,3 @@ const Secondary = ({
     )
 };
 
-export default Secondary;

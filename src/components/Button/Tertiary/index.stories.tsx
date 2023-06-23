@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta, StoryObj } from '@storybook/react'
-import { Tertiary } from './Tertiary'
+import { Tertiary } from './index'
 
 const meta: Meta<typeof Tertiary> = {
     title: 'Components/Buttons/Tertiary',

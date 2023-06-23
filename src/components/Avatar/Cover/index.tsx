@@ -9,7 +9,7 @@ interface CoverProps {
   background?: string;
 }
 
-const Cover = ({ showedit, background }: CoverProps) => {
+export const Cover = ({ showedit, background }: CoverProps) => {
   const backgroundImageStyle = background
     ? { backgroundImage: `url(${background})` }
     : {
@@ -30,4 +30,4 @@ const Cover = ({ showedit, background }: CoverProps) => {
   );
 };
 
-export default Cover;
+

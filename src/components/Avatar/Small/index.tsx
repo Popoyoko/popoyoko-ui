@@ -6,7 +6,7 @@ interface SmallProps {
   background?: string;
 }
 
-const Small = ({ showbadge, background }: SmallProps) => {
+export const Small = ({ showbadge, background }: SmallProps) => {
   const backgroundImageStyle = background
     ? { backgroundImage: `url(${background})` }
     : {
@@ -25,4 +25,3 @@ const Small = ({ showbadge, background }: SmallProps) => {
   );
 };
 
-export default Small;

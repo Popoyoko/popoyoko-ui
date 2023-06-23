@@ -1,11 +1,11 @@
-import './index.css';
-import React from 'react';
+import "./index.css";
+import React, { LabelHTMLAttributes, HTMLLabelElement } from "react";
 import download from "../../../assets/download.svg";
 
 interface InputDownloadProps {
-    label: string;
-    icon: "right" | "left";
-};
+  label: string;
+  icon: "right" | "left";
+}
 
 export const InputDownload = ({
     label,
@@ -33,3 +33,4 @@ export const InputDownload = ({
         );
     }
 };
+

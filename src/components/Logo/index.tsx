@@ -5,7 +5,7 @@ interface LogoProps {
     src: string;
 }
 
-const Logo = ({
+export const Logo = ({
     src
 }: LogoProps) => {
     return (
@@ -14,5 +14,3 @@ const Logo = ({
         </div>
     );
 };
-
-export default Logo

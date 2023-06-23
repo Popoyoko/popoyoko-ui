@@ -7,7 +7,7 @@ interface InputDownloadProps {
     icon: "right" | "left";
 };
 
-const InputDownload = ({
+export const InputDownload = ({
     label,
     icon,
 }: InputDownloadProps) => {
@@ -33,5 +33,3 @@ const InputDownload = ({
         );
     }
 };
-
-export default InputDownload;

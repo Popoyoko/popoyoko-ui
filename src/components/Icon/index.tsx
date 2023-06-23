@@ -22,7 +22,7 @@ interface IconProps {
   icon: string;
 }
 
-const Icon = ({ size, icon }: IconProps) => {
+export const Icon = ({ size, icon }: IconProps) => {
  const className = `icon-${size ? size : "medium"}`;
 
   let iconElement = null;
@@ -95,8 +95,3 @@ Icon.Upload = (props) => <Icon icon="Upload" {...props} />;
 Icon.UserFlat = (props) => <Icon icon="UserFlat" {...props} />;
 Icon.UserLine = (props) => <Icon icon="UserLine" {...props} />;
 
-
-
-// Ajoutez d'autres sous-composants pour les autres icônes
-
-export default Icon;

@@ -6,7 +6,7 @@ interface TextProps {
   description: string;
 }
 
-const Text = ({ title, description}: TextProps) => {
+export const Text = ({ title, description}: TextProps) => {
   return (
     <div className="text-layout">
       <p className="text-title">{title}</p>
@@ -15,4 +15,3 @@ const Text = ({ title, description}: TextProps) => {
   );
 };
 
-export default Text;

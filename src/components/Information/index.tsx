@@ -6,7 +6,7 @@ interface InformationProps {
   label?: string;
 }
 
-const Information = ({
+export const Information = ({
   label,
 }: InformationProps) => {
 
@@ -20,5 +20,3 @@ const Information = ({
 </div>
   );
 };
-
-export default Information;

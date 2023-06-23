@@ -1,12 +1,12 @@
 import "./index.css";
 import React from "react";
-import Logo from "../Logo";
+import { Logo } from "../Logo";
 
 import Avatar from "../Avatar";
 
 interface HeaderProps {}
 
-const Header = ({}: HeaderProps) => {
+export const Header = ({}: HeaderProps) => {
   return (
     <div className="container-header">
       <Logo src=""></Logo>
@@ -15,4 +15,3 @@ const Header = ({}: HeaderProps) => {
   );
 };
 
-export default Header;

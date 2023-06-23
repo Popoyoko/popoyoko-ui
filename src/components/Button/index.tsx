@@ -1,7 +1,7 @@
 import React from "react";
-import Primary from "./Primary";
-import Secondary from "./Secondary";
-import Tertiary from "./Tertiary";
+import {Primary} from "./Primary";
+import {Secondary} from "./Secondary";
+import {Tertiary} from "./Tertiary";
 
 interface ButtonProps {
     children?: React.ReactNode;

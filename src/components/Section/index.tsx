@@ -7,7 +7,7 @@ interface SectionProps {
   label?: string;
 }
 
-const Section = ({
+export const Section = ({
   title,
   label,
 }: // ...props
@@ -25,4 +25,3 @@ SectionProps) => {
   );
 };
 
-export default Section;

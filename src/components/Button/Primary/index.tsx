@@ -8,7 +8,7 @@ interface PrimaryProps {
   onClick?: () => void;
 }
 
-const Primary = ({
+export const Primary = ({
   label,
   typeSvg,
   srcIcon,
@@ -40,4 +40,3 @@ const Primary = ({
   }
 };
 
-export default Primary;

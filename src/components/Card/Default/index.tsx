@@ -9,7 +9,7 @@ interface DefaultProps {
   price?: number;
 }
 
-const Default = ({ label, mention, subTitle, price }: DefaultProps) => {
+export const Default = ({ label, mention, subTitle, price, ...props }: DefaultProps) => {
   return (
     <div>
       <div className="card">
@@ -31,4 +31,3 @@ const Default = ({ label, mention, subTitle, price }: DefaultProps) => {
   );
 };
 
-export default Default;

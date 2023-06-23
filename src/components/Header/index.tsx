@@ -1,10 +1,14 @@
 import "./index.css";
 import React from "react";
-import Logo from "../Logo";
+import { Logo } from "../Logo";
 
 import Avatar from "../Avatar";
 
-const Header = () => {
+
+interface HeaderProps {}
+
+export const Header = ({}: HeaderProps) => {
+
   return (
     <div className="container-header">
       <Logo src=""></Logo>
@@ -13,4 +17,3 @@ const Header = () => {
   );
 };
 
-export default Header;

@@ -1,6 +1,6 @@
 import React from "react";
-import Small from "./Small";
-import Cover from "./Cover";
+import {Small} from "./Small";
+import {Cover} from "./Cover";
 
 interface AvatarProps {
     children?: React.ReactNode;

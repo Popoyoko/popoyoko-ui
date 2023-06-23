@@ -7,28 +7,30 @@ interface InputDownloadProps {
   icon: "right" | "left";
 }
 
-const InputDownload = ({ label, icon }: InputDownloadProps) => {
-  if (icon === "left") {
-    return (
-      <form>
-        <label htmlFor="file-input" className="downloadbtn">
-          {label}
-          <img src={download} alt="download" />
-          <input type="file" name="file" id="file-input" />
-        </label>
-      </form>
-    );
-  } else if (icon === "right") {
-    return (
-      <form>
-        <label htmlFor="file-input" className="downloadbtn">
-          <img src={download} alt="download" />
-          {label}
-          <input type="file" name="file" id="file-input" />
-        </label>
-      </form>
-    );
-  }
+export const InputDownload = ({
+    label,
+    icon,
+}: InputDownloadProps) => {
+    if(icon === "left") {
+        return (
+            <form>
+                <label for="file-input" class="downloadbtn">
+                    {label}
+                    <img  src={download} alt="download"/>
+                    <input type="file" name="file" id="file-input" />
+                </label>
+            </form>
+        );
+    } else if (icon === "right") {
+        return (
+            <form>
+                <label for="file-input" class="downloadbtn">
+                    <img  src={download} alt="download"/>
+                    {label}
+                    <input type="file" name="file" id="file-input" />
+                </label>
+            </form>
+        );
+    }
 };
 
-export default InputDownload;

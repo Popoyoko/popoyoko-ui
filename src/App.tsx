@@ -7,7 +7,8 @@ import Avatar from "./components/Avatar";
 
 import {Information} from "./components/Information";
 import {Icon} from "./components/Icon";
-import { Button } from "./components";
+
+import Button from "./components/Button";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -39,7 +40,9 @@ function App() {
 <Information></Information>
 <Avatar.Cover showedit/>
 <Information></Information>
-
+<Button.Primary label="Primary Button" typeSvg="none"/>
+<Button.Secondary label="Primary Button" typeSvg="none"/>
+<Button.Tertiary label="Primary Button" typeSvg="none"/>
 {/* <Icons.Information></Icons.Information> doesnt work*/}
       </div>
     </div>

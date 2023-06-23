@@ -1,24 +1,56 @@
+import "./index.css";
 import React from "react";
-import {Primary} from "./Primary";
-import {Secondary} from "./Secondary";
-import {Tertiary} from "./Tertiary";
 
 interface ButtonProps {
-    children?: React.ReactNode;
+  type: "primary" | "secondary" | "tertiary";
+  typeSvg: "none" | "left" | "right" | "only";
+  label: string;
+  srcIcon?: string;
+  onClick?: () => void;
 }
 
-interface ButtonComponent extends React.FC<ButtonProps> {
-    Primary: typeof Primary;
-    Secondary : typeof Secondary;
-    Tertiary : typeof Tertiary;
-}
-
-const Button: ButtonComponent = ({ children }) => {
-  return <div>{children}</div>;
+const Button = ({
+  type = "primary",
+  label,
+  typeSvg,
+  srcIcon,
+  onClick,
+}: ButtonProps) => {
+  if (typeSvg === "none") {
+    return <button className={type}>{label}</button>;
+  } else if (typeSvg === "left") {
+    return (
+      <button className={type}>
+        <img src={srcIcon} alt="Icon" />
+        {label}
+      </button>
+    );
+  } else if (typeSvg === "right") {
+    return (
+      <button className={type}>
+        {label}
+        <img src={srcIcon} alt="Icon" />
+      </button>
+    );
+  } else if (typeSvg === "only") {
+    return (
+      <button className={type}>
+        <img src={srcIcon} alt="Icon" />
+      </button>
+    );
+  }
 };
 
-Button.Primary = Primary;
-Button.Secondary  = Secondary;
-Button.Tertiary = Tertiary;
+Button.Primary = (props: Omit<ButtonProps, "type">) => {
+  return <Button type="primary" {...props} />;
+};
+
+Button.Secondary = (props: Omit<ButtonProps, "type">) => {
+  return <Button type="secondary" {...props} />;
+};
+
+Button.Tertiary = (props: Omit<ButtonProps, "type">) => {
+  return <Button type="tertiary" {...props} />;
+};
 
 export default Button;

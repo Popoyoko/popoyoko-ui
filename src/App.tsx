@@ -5,8 +5,8 @@ import React from "react";
 import Card from "./components/Card";
 import Avatar from "./components/Avatar";
 
-import Information from "./components/Information";
-import Icon from "./components/Icon";
+import {Information} from "./components/Information";
+import {Icon} from "./components/Icon";
 import { Button } from "./components";
 
 function App() {
@@ -38,6 +38,7 @@ function App() {
 
 <Information></Information>
 <Avatar.Cover showedit/>
+<Information></Information>
 
 {/* <Icons.Information></Icons.Information> doesnt work*/}
       </div>

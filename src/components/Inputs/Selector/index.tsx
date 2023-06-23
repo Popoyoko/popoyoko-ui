@@ -1,4 +1,4 @@
-import './InputSelector.css';
+import './index.css';
 import React from 'react';
 
 interface InputSelectorProps {

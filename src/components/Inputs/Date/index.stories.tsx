@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import { InputDate } from "./InputDate"
+import { InputDate } from "./index"
 
 const meta: Meta<typeof InputDate> = {
     title: "Components/Inputs/Date-button",

@@ -1,14 +1,19 @@
-.icon-small svg {
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+.icon-small {
   width: 8px;
   height: 8px;
 }
 
-.icon-medium svg {
+.icon-medium {
   width: 16px;
   height: 16px;
 }
 
-.icon-large svg {
+.icon-large {
   width: 32px;
   height: 32px;
 }

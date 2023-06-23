@@ -33,7 +33,7 @@ function App() {
 <Avatar small></Avatar> */}
 <Avatar.Small showbadge/>
 <Icon.Add/>
-<Icon.AddPicture size="medium"/>
+<Icon.AddPicture size="small"/>
 <Icon.ArrowBottom size="large"/>
 
 <Information></Information>

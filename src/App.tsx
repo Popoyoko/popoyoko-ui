@@ -9,6 +9,7 @@ import {Information} from "./components/Information";
 import {Icon} from "./components/Icon";
 
 import Button from "./components/Button";
+import { Header } from "./components";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -43,6 +44,7 @@ function App() {
 <Button.Primary label="Primary Button" typeSvg="none"/>
 <Button.Secondary label="Primary Button" typeSvg="none"/>
 <Button.Tertiary label="Primary Button" typeSvg="none"/>
+<Header></Header>
 {/* <Icons.Information></Icons.Information> doesnt work*/}
       </div>
     </div>

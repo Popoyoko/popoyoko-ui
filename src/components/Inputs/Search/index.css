@@ -1,3 +1,8 @@
+.container-search{
+    display: flex;
+    
+}
+
 .placeholder {
     display: flex;
     flex-direction: row;
@@ -6,8 +11,8 @@
     padding: 12px;
     gap: 4px;
     
-    width: 326px;
-    height: 72px;
+    /* width: 326px;
+    height: 72px; */
     
     background: #F7F7F8;
     border: 2px solid #0F082B;
@@ -21,11 +26,3 @@
     color: #0F082B;
 }
 
-.vector {
-    position: absolute;
-    left: 4.29px;
-    right: 4px;
-    top: 4px;
-    bottom: 4.29px;
-
-}

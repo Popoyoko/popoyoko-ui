@@ -1,5 +1,6 @@
 import "./index.css";
 import React from "react";
+import { Icon } from "../../Icon";
 
 interface InputSearchProps {
   placeholder: string;
@@ -20,9 +21,9 @@ export const InputSearch = ({
       };
     
     return (
-        <div>
+        <div className="container-search">
             <input type='text' className='placeholder' placeholder={placeholder} onKeyDown={handleSearch}></input>
-            <svg href={srcIcon} className='vector'></svg>
+            <Icon.Search/>
         </div>
     )
 }

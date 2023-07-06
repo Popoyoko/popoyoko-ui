@@ -1,6 +1,6 @@
 import "./index.css";
 import React from "react";
-import information from "../../Icons/Information/information.svg";
+import { Icon } from "../Icon";
 
 interface InformationProps {
   label?: string;
@@ -14,7 +14,7 @@ export const Information = ({
 <div className="container-information">
     <h2>Information</h2>
     <div className="information-section" >
-        <div className="information-svg"><img src = {information} alt="Information"/></div>
+        <Icon.Information/>
         <div className="information-content">{label}</div>
     </div>
 </div>

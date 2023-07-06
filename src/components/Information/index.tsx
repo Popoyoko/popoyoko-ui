@@ -14,7 +14,7 @@ export const Information = ({
 <div className="container-information">
     <h2>Information</h2>
     <div className="information-section" >
-        <div className="information-svg"><Icon.Information size="small"/></div>
+        <Icon.Information/>
         <div className="information-content">{label}</div>
     </div>
 </div>

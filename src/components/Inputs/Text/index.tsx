@@ -9,7 +9,7 @@ export const InputText = ({
     placeholder,
 }: InputTextProps) => {
     return (
-        <div className='text'>
+        <div className='input'>
             <p className='placeholder'>{placeholder}</p>
         </div>
     )

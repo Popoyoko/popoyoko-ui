@@ -1,1 +1,1 @@
-export * from "./components/index";
+import "./index.scss";

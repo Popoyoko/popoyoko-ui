@@ -1,5 +1,5 @@
 import React from "react";
-import {Default} from "./Default";
+import {Default, DefaultProps} from "./Default";
 import {Media} from "./Media";
 
 interface CardProps {
@@ -7,7 +7,7 @@ interface CardProps {
 }
 
 interface CardComponent extends React.FC<CardProps> {
-  Default: typeof Default;
+  Default: React.FC<DefaultProps>;
   Media: typeof Media;
 }
 

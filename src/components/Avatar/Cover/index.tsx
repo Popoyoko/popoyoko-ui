@@ -4,7 +4,7 @@ import Button from "../../Button";
 import Ratio from "../../Ratio"
 import edit from "../../../assets/edit.svg";
 
-interface CoverProps {
+export interface CoverProps {
   showedit?: boolean;
   background?: string;
 }

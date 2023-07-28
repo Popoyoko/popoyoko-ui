@@ -2,7 +2,7 @@ import "./index.css";
 import React from "react";
 import Ratio from "../../Ratio";
 
-interface DefaultProps {
+export interface DefaultProps {
   label?: string;
   mention?: string;
   subTitle?: string;

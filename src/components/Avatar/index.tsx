@@ -1,14 +1,14 @@
 import React from "react";
-import {Small} from "./Small";
-import {Cover} from "./Cover";
+import { Small, SmallProps } from "./Small";
+import { Cover, CoverProps } from "./Cover";
 
 interface AvatarProps {
-    children?: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 interface AvatarComponent extends React.FC<AvatarProps> {
-  Small: typeof Small;
-  Cover: typeof Cover;
+  Small: React.FC<SmallProps>;
+  Cover: React.FC<CoverProps>;
 }
 
 const Avatar: AvatarComponent = ({ children }) => {

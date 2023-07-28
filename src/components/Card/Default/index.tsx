@@ -9,7 +9,12 @@ export interface DefaultProps {
   price?: number;
 }
 
-export const Default = ({ label, mention, subTitle, price, ...props }: DefaultProps) => {
+export const Default = ({
+  label = "",
+  mention = "",
+  subTitle = "",
+  price = 0,
+}: DefaultProps) => {
   return (
     <div>
       <div className="card">

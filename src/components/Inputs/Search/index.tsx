@@ -13,8 +13,6 @@ export const InputSearch = ({
     const handleSearch = (event) => {
         if (event.key === 'Enter') {
           const searchTerm = event.target.value;
-          //Faire quelque chose avec le terme de recherche (pour l'instant console.log)
-          console.log('Recherche: ' + searchTerm);
         }
       };
     

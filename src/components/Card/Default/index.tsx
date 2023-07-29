@@ -2,14 +2,19 @@ import "./index.css";
 import React from "react";
 import Ratio from "../../Ratio";
 
-interface DefaultProps {
+export interface DefaultProps {
   label?: string;
   mention?: string;
   subTitle?: string;
   price?: number;
 }
 
-export const Default = ({ label, mention, subTitle, price, ...props }: DefaultProps) => {
+export const Default = ({
+  label = "",
+  mention = "",
+  subTitle = "",
+  price = 0,
+}: DefaultProps) => {
   return (
     <div>
       <div className="card">

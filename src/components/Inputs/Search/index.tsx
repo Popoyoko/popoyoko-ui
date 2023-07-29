@@ -21,7 +21,7 @@ export const InputSearch = ({
       };
     
     return (
-        <div className="container-search">
+        <div className="input">
             <input type='text' className='placeholder' placeholder={placeholder} onKeyDown={handleSearch}></input>
             <Icon.Search/>
         </div>

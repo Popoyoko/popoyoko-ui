@@ -1,10 +1,8 @@
 import "./index.css";
 import React from "react";
-declare const Text: ({ title, description, onChange }: {
-    title: any;
-    description: any;
-    onChange: any;
-}) => React.DetailedReactHTMLElement<{
-    className: string;
-}, HTMLElement>;
-export default Text;
+interface TextProps {
+    title: string;
+    description: string;
+}
+export declare const Text: ({ title, description }: TextProps) => React.JSX.Element;
+export {};

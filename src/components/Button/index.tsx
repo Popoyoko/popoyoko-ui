@@ -6,7 +6,6 @@ interface ButtonProps {
   typeSvg: "none" | "left" | "right" | "only";
   label: string;
   srcIcon?: string;
-  onClick?: () => void;
 }
 
 const Button = ({
@@ -14,7 +13,6 @@ const Button = ({
   label,
   typeSvg,
   srcIcon,
-  onClick,
 }: ButtonProps) => {
   if (typeSvg === "none") {
     return <button className={type}>{label}</button>;

@@ -1,7 +1,7 @@
 import "./index.css";
 import React from "react";
 
-interface SmallProps {
+export interface SmallProps {
   showbadge?: boolean;
   background?: string;
 }

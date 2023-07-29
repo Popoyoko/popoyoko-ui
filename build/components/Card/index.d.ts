@@ -1,14 +1,12 @@
-import "./index.css";
 import React from "react";
-declare const Card: ({ background, backgroundColor, label, mention, subTitle, price, ...props }: {
-    [x: string]: any;
-    background: any;
-    backgroundColor: any;
-    label: any;
-    mention: any;
-    subTitle: any;
-    price: any;
-}) => React.DetailedReactHTMLElement<{
-    className: string;
-}, HTMLElement>;
+import { Default } from "./Default";
+import { Media } from "./Media";
+interface CardProps {
+    children?: React.ReactNode;
+}
+interface CardComponent extends React.FC<CardProps> {
+    Default: typeof Default;
+    Media: typeof Media;
+}
+declare const Card: CardComponent;
 export default Card;

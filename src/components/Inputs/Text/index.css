@@ -1,10 +1,11 @@
-.text {
+.input {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+
     align-items: flex-start;
 
     gap: 4px;
+    padding: 12px;
 
     background: #F7F7F8;
     border: 2px solid #0F082B;
@@ -18,4 +19,5 @@
     /* identical to box height, or 150% */
 
     color: #0F082B;
+    margin: 0;
 }

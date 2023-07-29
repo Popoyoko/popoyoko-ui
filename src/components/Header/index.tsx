@@ -4,15 +4,14 @@ import { Logo } from "../Logo";
 import { InputSearch } from "../Inputs/Search";
 import Avatar from "../Avatar";
 
-interface HeaderProps {}
+// interface HeaderProps {}
 
-export const Header = ({}: HeaderProps) => {
+export const Header = () => {
   return (
     <div className="container-header">
       <Logo src=""></Logo>
       <InputSearch
         placeholder="Hypnose, massages, magnétiseur..."
-        srcIcon=""
       ></InputSearch>
       <Avatar.Small></Avatar.Small>
     </div>

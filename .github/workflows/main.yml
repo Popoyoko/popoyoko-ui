@@ -11,7 +11,7 @@ on:
 
 # List of jobs
 jobs:
-  Deployment (Main Branch):
+  deployment-on-main:
     # Operating System
     runs-on: ubuntu-latest
     # Job steps

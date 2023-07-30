@@ -7,7 +7,7 @@ name: "Build Storybook"
 on:
   push:
     branches:
-      - main
+      - develop
 
 # List of jobs
 jobs:

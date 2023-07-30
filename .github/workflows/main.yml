@@ -1,7 +1,7 @@
 # .github/workflows/main.yml
 
 # Workflow name
-name: "Build Storybook"
+name: "🚀 Deployment (Main Branch)"
 
 # Event for the workflow
 on:

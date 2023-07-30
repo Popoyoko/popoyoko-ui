@@ -19,4 +19,5 @@ jobs:
       - uses: oven-sh/setup-bun@v1
         with:
           bun-version: latest
+      - run: cat package.json
       - run: bun i

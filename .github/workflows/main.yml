@@ -11,7 +11,7 @@ on:
 
 # List of jobs
 jobs:
-  chromatic-deployment:
+  🚀 Deployment (Main Branch):
     # Operating System
     runs-on: ubuntu-latest
     # Job steps
@@ -19,14 +19,4 @@ jobs:
       - uses: oven-sh/setup-bun@v1
         with:
           bun-version: latest
-      - uses: actions/checkout@v1
-        # 👇 Check if the branch is the specific branch you want to build on
-        if: ${{ github.ref == 'refs/heads/main' }}
-      - name: Install dependencies
-        # 👇 Install dependencies with the same package manager used in the project (replace it as needed), e.g. yarn, npm, pnpm
-        run: bun install
-      # 👇 Add another step to build Storybook on the specific branch
-      - name: Build Storybook
-        # 👇 Check if the branch is the specific branch you want to build on
-        if: ${{ github.ref == 'refs/heads/main' }}
-        run: bun run build-storybook
+          run: bun i

@@ -1,35 +1,36 @@
 # .github/workflows/main.yml
 
-# Workflow name
 name: "🚀 Deployment (Main Branch)"
 
-# Event for the workflow
 on:
   push:
     branches:
       - develop
 
-# List of jobs
 jobs:
   deployment-on-main:
-    # Operating System
     runs-on: ubuntu-latest
-    # Job steps
+
     steps:
-      - uses: oven-sh/setup-bun@v1
+      - name: 🐰 Set up bun
+        uses: oven-sh/setup-bun@v1
         with:
           bun-version: latest
-      - name: Checkout code
+
+      - name: 📥 Checkout code
         uses: actions/checkout@v2
         with:
           ref: develop
-      - name: Install dependancies
+
+      - name: 📦 Install dependencies
         run: bun i
-      - name: Build Storybook
+
+      - name: 🎨 Build Storybook
         run: bun run build-storybook
+
       - name: 🚀 Deploy
-        uses: JamesIves/github-pages-deploy-action@v4.4.1
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          folder: storybook-static # The folder the action should deploy.
-          branch: main
-          single-commit: true
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./storybook-static
+          publish_branch: main

@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactSVG } from "react-svg";
+import ReactSVG from "react-svg";
 import "./index.css";
 
 import Add from "../../Icons/Add/add.svg";

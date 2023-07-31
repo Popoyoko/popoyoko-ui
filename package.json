@@ -2,12 +2,12 @@
   "name": "vite-popoyoko",
   "private": true,
   "version": "0.0.0",
-  "main": "./build/index.d.ts",
+  "main": "./build/index",
   "files": [
     "build"
   ],
   "module": "./build/popoyoko-ui-vite.es.js",
-  "types": "./build/index.d.ts",
+  "types": "./build/index",
   "exports": {
     ".": {
       "import": "./build/popoyoko-ui-vite.es.js",

@@ -7,7 +7,7 @@ import svgr from "vite-plugin-svgr";
 export default defineConfig({
   build: {
     lib: {
-      entry: path.resolve(__dirname, "./src/index.tsx"),
+      entry: path.resolve(__dirname, "./src/index.d.ts"),
       name: "popoyoko-ui-vite",
       formats: ["es", "cjs"],
       fileName: (format) => `popoyoko-ui-vite.${format}.js`,

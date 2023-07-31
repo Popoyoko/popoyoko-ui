@@ -36,18 +36,18 @@ function App() {
         <Card label="label" subTitle="subtitle" mention="mention" price={56} background="url(https://imgs.search.brave.com/KUc_Sjgkt3SuouS7E-9zbhV2YGG7MFpPmcNklJmJYu0/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9ib25q/b3VybmF0dXJlLmZy/L3dwLWNvbnRlbnQv/dXBsb2Fkcy9pbWFn/ZS1wYXlzYWdlLWdy/YXR1aXRlLWEtdGVs/ZWNoYXJnZXItNS5q/cGc)"/> */}
         {/* <Avatar></Avatar>²
 <Avatar small></Avatar> */}
-        {/* <Avatar.Small showbadge /> */}
+        <Avatar.Small showbadge />
         <Icon.Add />
         <Icon.AddPicture size="small" />
         <Icon.ArrowBottom size="large" />
 
-        {/* <Information></Information> */}
-        {/* <Avatar.Cover showedit/>
+        <Information></Information>
+        <Avatar.Cover showedit/>
 <Information></Information>
 <Button.Primary label="Primary Button" typeSvg="none"/>
 <Button.Secondary label="Primary Button" typeSvg="none"/>
 <Button.Tertiary label="Primary Button" typeSvg="none"/>
-<Header></Header> */}
+<Header></Header>
         {/* <Icons.Information></Icons.Information> doesnt work*/}
         <InputDate
           placeholder="Saisissez une date"

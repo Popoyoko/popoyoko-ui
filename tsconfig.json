@@ -16,7 +16,7 @@
     "declaration": true,
     "jsx": "react"
   },
-  "include": ["src", "index.d.ts"],
+  "include": ["src", "src/index.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }],
   "exclude": [
     "node_modules",

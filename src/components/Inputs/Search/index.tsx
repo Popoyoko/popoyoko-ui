@@ -4,12 +4,10 @@ import { Icon } from "../../Icon";
 
 interface InputSearchProps {
   placeholder: string;
-  srcIcon: string;
 }
 
 export const InputSearch = ({
     placeholder,
-    srcIcon,
 }: InputSearchProps) => {
 
     const handleSearch = (event) => {

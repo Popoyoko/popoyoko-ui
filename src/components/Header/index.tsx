@@ -12,7 +12,6 @@ export const Header = () => {
       <Logo src=""></Logo>
       <InputSearch
         placeholder=""
-        srcIcon=""
       ></InputSearch>
       <Avatar.Small></Avatar.Small>
     </div>

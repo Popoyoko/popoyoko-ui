@@ -2,7 +2,7 @@
   "name": "vite-popoyoko",
   "private": true,
   "version": "0.0.0",
-  "main": "./build/index.d.ts",
+  "main": "./build/popoyoko-ui-vite.es.js",
   "files": [
     "build"
   ],

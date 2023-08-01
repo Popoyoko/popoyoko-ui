@@ -6,7 +6,7 @@ export interface SmallProps {
   background?: string;
 }
 
-export const Small = ({ showbadge, background }: SmallProps) => {
+export const Small = ({ showbadge = true, background=`url(https://st3.depositphotos.com/23594922/31822/v/600/depositphotos_318221368-stock-illustration-missing-picture-page-for-website.jpg)` }: SmallProps) => {
   const backgroundImageStyle = background
     ? { backgroundImage: `url(${background})` }
     : {
@@ -24,4 +24,3 @@ export const Small = ({ showbadge, background }: SmallProps) => {
     </div>
   );
 };
-

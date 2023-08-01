@@ -9,7 +9,7 @@ export interface CoverProps {
   background?: string;
 }
 
-export const Cover = ({ showedit, background }: CoverProps) => {
+export const Cover = ({ showedit=true, background=`url(https://st3.depositphotos.com/23594922/31822/v/600/depositphotos_318221368-stock-illustration-missing-picture-page-for-website.jpg)` }: CoverProps) => {
   const backgroundImageStyle = background
     ? { backgroundImage: `url(${background})` }
     : {

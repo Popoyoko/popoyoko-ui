@@ -7,7 +7,7 @@ interface InformationProps {
 }
 
 export const Information = ({
-  label,
+  label="Information",
 }: InformationProps) => {
 
   return (

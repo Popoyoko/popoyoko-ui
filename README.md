@@ -1,6 +1,6 @@
 # popoyoko-ui-vite
 
-##This reportory is using bun instead of npm
+## This reportory is using bun instead of npm
 Bun supports Linux (x64 & arm64) and macOS (x64 & Apple Silicon).
 
 Linux users — Kernel version 5.6 or higher is strongly recommended, but the minimum is 5.1.

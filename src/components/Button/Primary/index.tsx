@@ -10,7 +10,7 @@ interface PrimaryProps {
 }
 
 export const Primary = ({ label, typeSvg, srcIcon, onClick }: PrimaryProps) => {
-  let icon = null;
+  // let icon = null;
   if (typeSvg === "none") {
     return <button className="primary" onClick={onClick}>{label}</button>;
   } else if (typeSvg === "left") {

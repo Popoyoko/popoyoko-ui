@@ -17,34 +17,34 @@ export const Secondary = ({
 
     if(typeSvg === 'none'){
         return(
-            <button className='secondary'>
+            <button className='secondary' onClick={onClick}>
                 {label}
             </button>
         );
     } else if(typeSvg === 'left'){
         return(
-            <button className='secondary'>
+            <button className='secondary' onClick={onClick}>
                 <img src={srcIcon}></img>
                 {label}
             </button>
         );
     } else if(typeSvg === 'right'){
         return(
-            <button className='secondary'>
+            <button className='secondary' onClick={onClick}>
                 {label}
                 <img src={srcIcon}></img>
             </button>
         );
     } else if(typeSvg === 'only'){
         return(
-            <button className='secondary'>
+            <button className='secondary' onClick={onClick}>
                 <img src={srcIcon}></img>
             </button>
         );
     }
 
     return (
-        <button className='secondary'></button>
+        <button className='secondary' onClick={onClick}></button>
     )
 };
 

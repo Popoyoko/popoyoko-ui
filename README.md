@@ -1,15 +1,36 @@
 # popoyoko-ui-vite
 
+##This reportory is using bun instead of npm
+Bun supports Linux (x64 & arm64) and macOS (x64 & Apple Silicon).
+
+Linux users — Kernel version 5.6 or higher is strongly recommended, but the minimum is 5.1.
+
+Windows users — Bun does not currently provide a native Windows build. We're working on this; progress can be tracked at this issue. In the meantime, use one of the installation methods below for Windows Subsystem for Linux.
+
+### with install script (recommended)
+curl -fsSL https://bun.sh/install | bash
+
+### with npm
+npm install -g bun
+
+### with Homebrew
+brew tap oven-sh/bun
+brew install bun
+
+### with Docker
+docker pull oven/bun
+docker run --rm --init --ulimit memlock=-1:-1 oven/bun
+
 This is a library project linked to a storybook that includes the components of the Popoyoko design system.
 
-### `npm run dev`
+### `bun run dev`
 
 Runs the vite application in development mode.
 
 The page will be reloaded if you make any changes.
 You will also see all lint errors in the console.
 
-### `npm run build`
+### `bun run build`
 
 Builds the application for production in the build folder.
 
@@ -19,21 +40,21 @@ Builds the application for production in the build folder.
 
 Your library is ready to be exported to other applications!
 
-### `npm run preview`
+### `bun run preview`
 
 Launch a local development server that allows to preview the application under development.
 
-### `npm run storybook`
+### `bun run storybook`
 
 Launch the Storybook environment, a development tool for designing and testing user interface components in isolation.
 
 port 6006 is used
 
-### `npm run build-storybook` 
+### `bun run build-storybook` 
 
 Allows you to create a build of the user interface of the application or website, using Storybook as a compilation tool.
 
-### `npm run watch`
+### `bun run watch`
 
 Launch a compilation process in "watch" mode that monitors the application's source files and automatically recompiles them as soon as there are changes.
 

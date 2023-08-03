@@ -20,7 +20,9 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "watch": "vite build --watch --mode development"
+    "watch": "vite build --watch --mode development",
+    "lint": "eslint --ext .ts,.tsx src"
+
   },
   "dependencies": {
     "caniuse-lite": "^1.0.30001507",

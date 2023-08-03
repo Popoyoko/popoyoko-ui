@@ -1,25 +1,7 @@
 # popoyoko-ui-vite
 
 ## This reportory is using bun instead of npm
-Bun supports Linux (x64 & arm64) and macOS (x64 & Apple Silicon).
-
-Linux users — Kernel version 5.6 or higher is strongly recommended, but the minimum is 5.1.
-
-Windows users — Bun does not currently provide a native Windows build. We're working on this; progress can be tracked at this issue. In the meantime, use one of the installation methods below for Windows Subsystem for Linux.
-
-### with install script (recommended)
-curl -fsSL https://bun.sh/install | bash
-
-### with npm
-npm install -g bun
-
-### with Homebrew
-brew tap oven-sh/bun
-brew install bun
-
-### with Docker
-docker pull oven/bun
-docker run --rm --init --ulimit memlock=-1:-1 oven/bun
+[Installation de bun](Installation)
 
 This is a library project linked to a storybook that includes the components of the Popoyoko design system.
 

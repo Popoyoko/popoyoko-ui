@@ -1,5 +1,5 @@
 import './index.css';
-import React from 'react';
+import React, { JSX } from 'react';
 
 interface InputSelectProps {
     label: string;

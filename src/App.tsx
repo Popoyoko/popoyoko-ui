@@ -2,7 +2,7 @@ import { useState } from "react";
 import logo_popoyoko from "/Logo-popoyoko.svg";
 import "./App.css";
 import React from "react";
-import Card from "./components/Card";
+// import Card from "./components/Card";
 import Avatar from "./components/Avatar";
 
 import { Information } from "./components/Information";
@@ -10,7 +10,7 @@ import { Icon } from "./components/Icon";
 
 import Button from "./components/Button";
 import { Header } from "./components";
-import { Search } from "./Icons";
+// import { Search } from "./Icons";
 import { InputDate } from "./components/Inputs/Date";
 import { InputText } from "./components/Inputs/Text";
 

@@ -17,8 +17,8 @@ export const upload: Story = {
 render: (args) => <InputUpload {...args} />,
 args:{
     label: 'label',
-    onChange: (file) => {
-        console.log('File uploaded:', file);
-        },
+    // onChange: (file) => {
+    //     console.log('File uploaded:', file);
+    //     },
     },
 }

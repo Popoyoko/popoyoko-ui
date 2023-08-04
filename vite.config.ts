@@ -25,8 +25,8 @@ export default defineConfig({
         copy({
           targets: [
             {
-              src: "src/Icons/**/*.svg",
-              dest: "build/Icons", // Spécifiez le répertoire "Icons" à l'intérieur de "build"
+              src: "src/Icons",
+              dest: "build", // Spécifiez le répertoire "Icons" à l'intérieur de "build"
             },
           ],
           hook: "writeBundle", // Utilisez le hook "writeBundle" pour copier après la génération du bundle

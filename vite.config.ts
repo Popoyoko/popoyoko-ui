@@ -3,6 +3,7 @@ import { defineConfig } from "vite";
 import ts from "rollup-plugin-typescript2";
 import eslint from "@rollup/plugin-eslint";
 import svgr from "vite-plugin-svgr";
+import copy from "rollup-plugin-copy";
 
 export default defineConfig({
   build: {
@@ -21,6 +22,15 @@ export default defineConfig({
         },
       },
       plugins: [
+        copy({
+          targets: [
+            {
+              src: "src/Icons/**/*.svg",
+              dest: "build/Icons", // Spécifiez le répertoire "Icons" à l'intérieur de "build"
+            },
+          ],
+          hook: "writeBundle", // Utilisez le hook "writeBundle" pour copier après la génération du bundle
+        }),
         ts({
           tsconfig: path.resolve(__dirname, "tsconfig.json"),
         }),

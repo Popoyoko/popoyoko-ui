@@ -26,7 +26,7 @@ export default defineConfig({
         }),
         eslint({
           include: ["src/**/*.ts", "src/**/*.tsx"], // Les fichiers à linter
-          exclude: ["node_modules/**", "build/**"], // Les fichiers à exclure
+          exclude: ["node_modules/**", "build/**", "src/**/*.stories.tsx"], // Les fichiers à exclure
         }),
         svgr(),
       ],

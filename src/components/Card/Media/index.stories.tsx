@@ -14,5 +14,5 @@ export default meta;
 type Story = StoryObj<typeof Media>
 
 export const Media_Only: Story = {
-  render: (args) => <Media {...args} />,
+  render: () => <Media />,
 };

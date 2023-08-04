@@ -1,21 +1,20 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import "./index.css";
 import upload from "../../../Icons/Upload/upload.svg";
 
 interface InputUploadProps {
-  onChange: (file: File | null) => void;
   label: string;
 }
 
 const InputUpload: React.FC<InputUploadProps> = ({ 
-    onChange,
     label 
 }) => {
   const inputRef = useRef<HTMLInputElement>(null);
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files && e.target.files[0];
-    onChange(file);
+    setSelectedFile(file);
   };
 
   const handleClick = () => {
@@ -35,8 +34,9 @@ const InputUpload: React.FC<InputUploadProps> = ({
       />
       <button onClick={handleClick}>
         {label}
+        {selectedFile && selectedFile.name} {/* Affiche le nom du fichier sélectionné */}
         <img src={upload} alt='upload'></img>
-        </button>
+      </button>
     </>
   );
 };

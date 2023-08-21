@@ -1,3 +1,4 @@
+
 # popoyoko-ui-vite
 
 ## This reportory is using bun instead of npm
@@ -45,6 +46,25 @@ command launches the "vite build" command with two additional options: "--watch"
 
 The "--watch" option tells Vite to monitor the application's source files and to recompile automatically as soon as there are changes. The "--mode development" option tells Vite to compile the application in development mode
 
+
+## Use in a react project
+
+**To use Popoyoko UI Vite in your React project, follow these steps:**
+
+ Install the package using your package manager of choice (bun, npm or yarn):
+
+ ### `bun install popoyoko-ui-vite`
+
+Now you can import the desired components from the library
+
+For example :
+```bash 
+    import { Information } from "vite-popoyoko";
+```
+ You can easily view all components and their props directly in the storybook.
+
 # Learn More
 
 You can learn more in the [Vite documentation](https://vitejs.dev/guide/ )
+
+

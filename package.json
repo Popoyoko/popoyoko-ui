@@ -7,11 +7,11 @@
     "build"
   ],
   "module": "./build/popoyoko-ui-vite.es.js",
-  "types": "./build/index.d.ts",
   "exports": {
     ".": {
       "import": "./build/popoyoko-ui-vite.es.js",
-      "require": "./build/popoyoko-ui-vite.cjs.js"
+      "require": "./build/popoyoko-ui-vite.cjs.js",
+      "types": "./build/index.d.ts"
     }
   },
   "scripts": {

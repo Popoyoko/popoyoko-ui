@@ -1,10 +1,26 @@
 import React, { useRef, useState } from 'react';
-import "./index.css";
+import styled from 'styled-components';
 import upload from "../../../Icons/Upload/upload.svg";
 
 interface InputUploadProps {
   label: string;
 }
+
+const ButtonUpload = styled.button`
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px 16px;
+gap: 8px;
+
+width: 326px;
+height: 54px;
+
+background: #F7F7F8;
+border: 2px dashed #171673;
+border-radius: 2px;
+`;
 
 const InputUpload: React.FC<InputUploadProps> = ({ 
     label 
@@ -32,11 +48,11 @@ const InputUpload: React.FC<InputUploadProps> = ({
         ref={inputRef}
         onChange={handleFileChange}
       />
-      <button onClick={handleClick}>
+      <ButtonUpload onClick={handleClick}>
         {label}
         {selectedFile && selectedFile.name} {/* Affiche le nom du fichier sélectionné */}
         <img src={upload} alt='upload'></img>
-      </button>
+      </ButtonUpload>
     </>
   );
 };

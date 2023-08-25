@@ -1,4 +1,3 @@
-import './index.css';
 import { JSX } from 'react';
 interface InputSelectProps {
     label: string;

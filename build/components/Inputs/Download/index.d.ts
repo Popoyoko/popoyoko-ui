@@ -1,4 +1,3 @@
-import './index.css';
 import React from 'react';
 interface InputDownloadProps {
     label: string;

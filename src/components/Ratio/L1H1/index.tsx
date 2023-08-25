@@ -1,10 +1,19 @@
-import "./index.css";
 import React from "react";
+import styled from 'styled-components';
+
+const RatioWrapper = styled.div`
+  position: relative;
+  overflow: hidden;
+`;
+
+const Ratio1to1 = styled(RatioWrapper)`
+  aspect-ratio: 1 / 1;
+`;
 
 export const L1H1 = ({ children }) => {
-  return <div className="ratio ratio-1-1">
+  return <Ratio1to1>
 {children}
-  </div>;
+  </Ratio1to1>;
 };
 
 L1H1.defaultProps = {

@@ -1,5 +1,37 @@
-import './index.css';
 import React from 'react';
+import styled from "styled-components";
+
+const TertiaryButton = styled.button`
+background: #F8F8F8;
+border-radius: 2px;
+color: #1B6042;
+border: 2px #F8F8F8;
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px 16px;
+gap: 8px;
+
+&:hover {
+background: #FFFFFF;
+color: #228C53;
+border: 2px #FFFFFF;
+}
+
+&:active {
+background: #E4E4E4;
+border: 2px dashed #153F33;
+color: #153F33;
+}
+
+&:disabled {
+background: rgba(119, 119, 119, 0.11);
+border: 2px dashed rgba(33, 193, 103, 0.11);
+color: rgba(33, 193, 103, 0.11);
+}
+`;
 
 interface TertiaryProps {
     typeSvg: 'none' | 'left' | 'right' | 'only';
@@ -17,34 +49,34 @@ export const Tertiary = ({
 
     if(typeSvg === 'none'){
         return(
-            <button className='tertiary' onClick={onClick}>
+            <TertiaryButton onClick={onClick}>
                 {label}
-            </button>
+            </TertiaryButton>
         );
     } else if(typeSvg === 'left'){
         return(
-            <button className='tertiary' onClick={onClick}>
+            <TertiaryButton onClick={onClick}>
                 <img src={srcIcon}></img>
                 {label}
-            </button>
+            </TertiaryButton>
         );
     } else if(typeSvg === 'right'){
         return(
-            <button className='tertiary' onClick={onClick}>
+            <TertiaryButton onClick={onClick}>
                 {label}
                 <img src={srcIcon}></img>
-                </button>
+                </TertiaryButton>
         );
     } else if(typeSvg === 'only'){
         return(
-            <button className='tertiary' onClick={onClick}>
+            <TertiaryButton onClick={onClick}>
                 <img src={srcIcon}></img>
-            </button>
+            </TertiaryButton>
         );
     }
 
     return (
-        <button className='tertiary' onClick={onClick}></button>
+        <TertiaryButton onClick={onClick}></TertiaryButton>
     )
 };
 

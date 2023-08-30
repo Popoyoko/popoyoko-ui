@@ -1,3 +1,4 @@
+import useMatchMedia from "./hooks/useMatchMedia";
 import { useState } from "react";
 import logo_popoyoko from "/Logo-popoyoko.svg";
 import "./App.css";
@@ -8,7 +9,8 @@ import { Ratio } from "./components";
 
 function App() {
   const [count, setCount] = useState(0);
-
+  const isMobile = useMatchMedia("(max-width:700px)");
+  
   return (
     <div className="App">
       <div>
@@ -18,6 +20,7 @@ function App() {
       </div>
 
       {/* Practolib test */}
+      {isMobile ? (
       <Ratio.L1H1>
         <InputText placeholder="placeholder" />
 
@@ -31,6 +34,9 @@ function App() {
 
         <Button.Tertiary label="Créer un compte" typeSvg="none" />
       </Ratio.L1H1>
+      ) : (
+        <></>
+        )}
     </div>
   );
 }

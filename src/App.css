@@ -25,3 +25,47 @@
 .read-the-docs {
   color: #888;
 }
+
+
+
+
+
+
+body{
+  margin: 0;
+}
+
+.FormSection {
+  display: flex;
+padding: 16px;
+flex-direction: column;
+
+gap: 32px;
+align-self: stretch;
+}
+
+.FormGroup {
+  display: flex;
+
+flex-direction: column;
+
+gap: 16px;
+}
+
+.FormSection > h2 {
+  text-align: start;
+  margin: 0;
+  line-height: 32px;
+}
+
+.Text {
+display: flex;
+flex-direction: column;
+gap: 8px;
+}
+
+.Text > p {
+  margin: 0;
+  text-align: start;
+  gap: 8px;
+}

@@ -34,9 +34,9 @@ img {
 
 .secondary {
   background: #f8f8f8;
-  border: 2px dashed #1b6042;
+  border: 2px solid #171673;
   border-radius: 2px;
-  color: #1b6042;
+  color: #171673;
 
   display: flex;
   flex-direction: row;
@@ -49,20 +49,20 @@ img {
 
 .secondary:hover {
   background: #ffffff;
-  border: 2px dashed #228c53;
-  color: #228c53;
+  border: 2px solid #191CB1;
+  color: #191CB1;
 }
 
 .secondary:active {
   background: #e4e4e4;
-  border: 2px dashed #153f33;
-  color: #153f33;
+  border: 2px solid #111046;
+  color: #111046;
 }
 
 .secondary:disabled {
-  background: rgba(119, 119, 119, 0.11);
-  border: 2px dashed rgba(33, 193, 103, 0.11);
-  color: rgba(33, 193, 103, 0.11);
+  border-radius: 2px;
+border: 2px dashed rgba(0, 35, 252, 0.11);
+background: rgba(112, 112, 119, 0.11);
 }
 
 .tertiary {

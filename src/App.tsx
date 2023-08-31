@@ -10,7 +10,7 @@ import { Ratio } from "./components";
 function App() {
   const [count, setCount] = useState(0);
   const isMobile = useMatchMedia("(max-width:700px)");
-  
+
   return (
     <div className="App">
       <div>
@@ -21,22 +21,33 @@ function App() {
 
       {/* Practolib test */}
       {isMobile ? (
-      <Ratio.L1H1>
-        <InputText placeholder="placeholder" />
-
-        <InputText placeholder="placeholder" />
-
-        <Button.Primary
-          label="Se connecter"
-          onClick={() => {}}
-          typeSvg="none"
-        />
-
-        <Button.Tertiary label="Créer un compte" typeSvg="none" />
-      </Ratio.L1H1>
+        <div className="Login">
+          <div className="FormSection">
+            <h2>Connexion</h2>
+            <div className="FormGroup">
+              <div className="Text">
+                <p>Email</p>
+                <InputText placeholder="placeholder" />
+              </div>
+              <div className="Text">
+                <p>Mot de passe</p>
+                <InputText placeholder="placeholder" />
+              </div>
+            </div>
+            <Button.Primary
+              label="Se connecter"
+              onClick={() => {}}
+              typeSvg="none"
+            />
+          </div>
+          <div className="FormSection">
+            <h2>Pas encore de compte ?</h2>
+            <Button.Secondary label="Créer un compte" typeSvg="none" />
+          </div>
+        </div>
       ) : (
         <></>
-        )}
+      )}
     </div>
   );
 }

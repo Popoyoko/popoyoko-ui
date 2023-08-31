@@ -22,6 +22,7 @@ const Placeholder = styled.p`
   font-size: 16px;
   color: #0F082B;
   margin: 0;
+  line-height: 24px;
 `;
 
 export const InputText = ({

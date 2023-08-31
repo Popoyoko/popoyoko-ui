@@ -13,15 +13,15 @@ function App() {
 
   return (
     <div className="App">
-      <div>
-        <a href="http://localhost:6006/" target="_blank">
-          <img src={logo_popoyoko} className="logo popoyoko" />
-        </a>
-      </div>
-
       {/* Practolib test */}
       {isMobile ? (
         <div className="Login">
+          <div className="Logo">
+            <a href="http://localhost:6006/" target="_blank">
+              <img src={logo_popoyoko} className="logo popoyoko" />
+            </a>
+          </div>
+
           <div className="FormSection">
             <h2>Connexion</h2>
             <div className="FormGroup">

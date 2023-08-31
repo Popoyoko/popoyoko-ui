@@ -1,6 +1,6 @@
 import React from "react";
 import ReactSVG from "react-svg";
-import "./index.css";
+import styled from "styled-components";
 
 import Add from "../../Icons/Add/add.svg";
 import AddPicture from "../../Icons/AddPicture/addPicture.svg";
@@ -16,6 +16,26 @@ import Search from "../../Icons/Search/search.svg";
 import Upload from "../../Icons/Upload/upload.svg";
 import UserFlat from "../../Icons/UserFlat/userFlat.svg";
 import UserLine from "../../Icons/UserLine/userLine.svg";
+
+const IconContainer = styled.div`
+  width: 100%;
+  height: 100%;
+
+  &.icon-small {
+    width: 8px;
+    height: 8px;
+  }
+
+  &.icon-medium {
+    width: 16px;
+    height: 16px;
+  }
+
+  &.icon-large {
+    width: 32px;
+    height: 32px;
+  }
+`;
 
 interface IconProps {
   size: "small" | "medium" | "large";
@@ -45,9 +65,9 @@ export const Icon = ({ size = "medium", icon }: IconProps) => {
   const IconElement = iconMap[icon];
 
   return (
-    <div className={className}>
+    <IconContainer className={className}>
       <ReactSVG src={IconElement} />
-    </div>
+    </IconContainer>
   );
 };
 

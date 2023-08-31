@@ -1,8 +1,30 @@
-import "./index.css";
 import React from "react";
+import styled from "styled-components";
 import Button from "../../Button";
 import Ratio from "../../Ratio"
 import edit from "../../../assets/edit.svg";
+
+const CoverContainer = styled.div`
+  position: relative;
+  width: 256px;
+  height: 256px;
+  background-size: cover;
+  object-fit: cover;
+`;
+
+const EditContainer = styled.div`
+  padding: 16px;
+  gap: 16px;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+`;
+
+const CoverImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
 
 export interface CoverProps {
   showedit?: boolean;
@@ -17,16 +39,16 @@ export const Cover = ({ showedit=true, background=`url(https://st3.depositphotos
       };
 
   return (
-    <div className="cover">
+    <CoverContainer>
       <Ratio.L1H1>
-      <img className="cover" src={background} style={backgroundImageStyle}></img>
+      <CoverImage src={background} style={backgroundImageStyle}></CoverImage>
       {showedit && (
-        <div className="edit">
+        <EditContainer>
           <Button.Tertiary typeSvg="right" label="Edit" srcIcon={edit} />
-        </div>
+        </EditContainer>
       )}
       </Ratio.L1H1>
-    </div>
+    </CoverContainer>
   );
 };
 

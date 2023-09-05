@@ -36,7 +36,7 @@ function App() {
             </div>
             <Button.Primary
               label="Se connecter"
-              onClick={() => {}}
+         
               typeSvg="none"
             />
           </div>

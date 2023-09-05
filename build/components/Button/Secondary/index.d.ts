@@ -1,7 +1,6 @@
-import './index.css';
-import React from 'react';
+import React from "react";
 interface SecondaryProps {
-    typeSvg: 'none' | 'left' | 'right' | 'only';
+    typeSvg: "none" | "left" | "right" | "only";
     label: string;
     srcIcon?: string;
     onClick?: () => void;

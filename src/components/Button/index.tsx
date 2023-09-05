@@ -95,6 +95,15 @@ const StyledButton = styled.button`
   }
 `;
 
+
+const SpanButton = styled.span`
+font-family: Co Headline;
+font-size: 22px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+`
+
 const Button = ({
   type = "primary",
   label,
@@ -102,18 +111,18 @@ const Button = ({
   srcIcon,
 }: ButtonProps) => {
   if (typeSvg === "none") {
-    return <StyledButton className={type}>{label}</StyledButton>;
+    return <StyledButton className={type}><SpanButton>{label}</SpanButton></StyledButton>;
   } else if (typeSvg === "left") {
     return (
       <StyledButton className={type}>
         <img src={srcIcon} alt="Icon" />
-        {label}
+        <SpanButton>{label}</SpanButton>
       </StyledButton>
     );
   } else if (typeSvg === "right") {
     return (
       <StyledButton className={type}>
-        {label}
+        <SpanButton>{label}</SpanButton>
         <img src={srcIcon} alt="Icon" />
       </StyledButton>
     );

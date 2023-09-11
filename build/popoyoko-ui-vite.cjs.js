@@ -471,12 +471,15 @@ Error generating stack: `+d.message+`
   background: #F7F7F8;
   border: 2px solid #0F082B;
   border-radius: 4px;
-`,tp=ze.p`
+`,tp=ze.input`
   font-family: 'Co Headline';
   font-style: normal;
   font-size: 16px;
   color: #0F082B;
-  margin: 0;
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
   line-height: 24px;
-`,rp=({placeholder:s})=>q.createElement(ep,null,q.createElement(tp,null,s));exports.Avatar=nl;exports.Button=Xn;exports.Card=Cu;exports.Header=zd;exports.Icon=Fe;exports.Information=Yd;exports.InputText=rp;exports.Logo=Ic;exports.Ratio=Ji;exports.Section=Qd;exports.Text=qd;
+`,rp=({placeholder:s})=>q.createElement(ep,null,q.createElement(tp,{placeholder:s}));exports.Avatar=nl;exports.Button=Xn;exports.Card=Cu;exports.Header=zd;exports.Icon=Fe;exports.Information=Yd;exports.InputText=rp;exports.Logo=Ic;exports.Ratio=Ji;exports.Section=Qd;exports.Text=qd;
 //# sourceMappingURL=popoyoko-ui-vite.cjs.js.map

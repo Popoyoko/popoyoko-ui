@@ -65,7 +65,7 @@ export declare const InputText: ({ placeholder }: {
     "aria-colindextext"?: string;
     "aria-colspan"?: number;
     "aria-controls"?: string;
-    "aria-current"?: boolean | "time" | "true" | "false" | "page" | "step" | "location" | "date";
+    "aria-current"?: boolean | "time" | "step" | "true" | "false" | "page" | "location" | "date";
     "aria-describedby"?: string;
     "aria-description"?: string;
     "aria-details"?: string;

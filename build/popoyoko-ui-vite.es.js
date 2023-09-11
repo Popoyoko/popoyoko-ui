@@ -12269,14 +12269,17 @@ const Bd = ({ placeholder: s }) => /* @__PURE__ */ q.createElement("div", { clas
   background: #F7F7F8;
   border: 2px solid #0F082B;
   border-radius: 4px;
-`, tp = Fe.p`
+`, tp = Fe.input`
   font-family: 'Co Headline';
   font-style: normal;
   font-size: 16px;
   color: #0F082B;
-  margin: 0;
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
   line-height: 24px;
-`, sp = ({ placeholder: s }) => /* @__PURE__ */ q.createElement(ep, null, /* @__PURE__ */ q.createElement(tp, null, s));
+`, sp = ({ placeholder: s }) => /* @__PURE__ */ q.createElement(ep, null, /* @__PURE__ */ q.createElement(tp, { placeholder: s }));
 export {
   ku as Avatar,
   Ho as Button,

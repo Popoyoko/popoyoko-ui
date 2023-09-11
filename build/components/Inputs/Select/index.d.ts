@@ -1,9 +1,7 @@
-import { JSX } from 'react';
+import React from "react";
 interface InputSelectProps {
     label: string;
-    href: string;
     options: string[];
-    anchorElement: JSX.Element;
 }
-export declare const InputSelect: ({ label, href, options, anchorElement, }: InputSelectProps) => JSX.Element;
+export declare const InputSelect: ({ label, options }: InputSelectProps) => React.JSX.Element;
 export {};

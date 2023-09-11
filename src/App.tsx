@@ -3,7 +3,7 @@ import { useState } from "react";
 import logo_popoyoko from "/Logo-popoyoko.svg";
 import "./App.css";
 import React from "react";
-import { InputText } from "./components";
+import { Icon, Information, InputText } from "./components";
 import { Button } from "./components";
 import { Ratio } from "./components";
 import { InputSelect } from "./components/Inputs/Select";
@@ -40,7 +40,7 @@ function App() {
                   options={["Option 1", "Option 2", "Option 3"]}
                 />
 
-                <InputRadio label="rtazeazeazeazeazee"/>
+                <InputRadio label="rtazeazeazef efesfe fefeqzdzd fefeazzaea zeazee"/>
               </div>
             </div>
             <Button.Primary label="Se connecter" typeSvg="none" />
@@ -49,6 +49,8 @@ function App() {
             <h2>Pas encore de compte ?</h2>
             <Button.Secondary label="Créer un compte" typeSvg="none" />
           </div>
+          <Information label="tazeazd"></Information>
+          <Icon.Add />
         </div>
       ) : (
         <></>

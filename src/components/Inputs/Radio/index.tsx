@@ -1,23 +1,22 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useState } from "react";
+import styled from "styled-components";
 
 const RadioWrapper = styled.div`
-display: flex;
-padding: 4px;
-align-items: center;
-gap: 16px;
-`
+  display: flex;
+  padding: 4px;
+  align-items: center;
+  gap: 16px;
+`;
 
 const CustomRadio = styled.input`
-
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  border: 2px solid #0F082B;
-  background: #F7F7F8;
+  border: 2px solid #0f082b;
+  background: #f7f7f8;
 
   &:hover {
-    background: #F7F7F8;
+    background: #f7f7f8;
   }
 
   &:checked:before {
@@ -26,24 +25,30 @@ const CustomRadio = styled.input`
 `;
 
 const Label = styled.label`
-  margin-left: 8px; // Ajoutez des styles supplémentaires si nécessaire
+  color: #1b1a23;
+  font-family: Co Headline;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  word-break: break-word;
+  text-align: start;
 `;
 
 interface InputRadioProps {
-    label: string;
+  label: string;
 }
 
 export const InputRadio = ({ label }: InputRadioProps) => {
-    const [isChecked, setIsChecked] = useState(false);
+  const [isChecked, setIsChecked] = useState(false);
 
-    const handleRadioClick = () => {
-        setIsChecked(!isChecked);
-    };
+  const handleRadioClick = () => {
+    setIsChecked(!isChecked);
+  };
 
-    return (
-        <RadioWrapper onClick={handleRadioClick}>
-            <CustomRadio type="radio" checked={isChecked} />
-            <Label>{label}</Label>
-        </RadioWrapper>
-    );
+  return (
+    <RadioWrapper onClick={handleRadioClick}>
+      <CustomRadio type="radio" checked={isChecked} />
+      <Label>{label}</Label>
+    </RadioWrapper>
+  );
 };

@@ -7,7 +7,7 @@ import { InputText } from "./components";
 import { Button } from "./components";
 import { Ratio } from "./components";
 import { InputSelect } from "./components/Inputs/Select";
-import { InputSelector } from "./components/Inputs/Selector";
+import { InputRadio } from "./components/Inputs/Radio";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -40,7 +40,7 @@ function App() {
                   options={["Option 1", "Option 2", "Option 3"]}
                 />
 
-                <InputSelector label="rte"/>
+                <InputRadio label="rtazeazeazeazeazee"/>
               </div>
             </div>
             <Button.Primary label="Se connecter" typeSvg="none" />

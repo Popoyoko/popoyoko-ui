@@ -22,6 +22,8 @@ function App() {
             <a href="http://localhost:6006/" target="_blank">
               <img src={logo_popoyoko} className="logo popoyoko" />
             </a>
+            <Icon.Add small/>
+          <Icon.ArrowRight large/>
           </div>
 
           <div className="FormSection">
@@ -51,6 +53,7 @@ function App() {
           </div>
           <Information label="tazeazd"></Information>
           <Icon.Add />
+          <Icon.ArrowRight large/>
         </div>
       ) : (
         <></>

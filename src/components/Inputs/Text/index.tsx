@@ -16,12 +16,15 @@ const InputWrapper = styled.div`
   border-radius: 4px;
 `;
 
-const Placeholder = styled.p`
+const TextInput = styled.input`
   font-family: 'Co Headline';
   font-style: normal;
   font-size: 16px;
   color: #0F082B;
-  margin: 0;
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
   line-height: 24px;
 `;
 
@@ -30,7 +33,7 @@ export const InputText = ({
 }: InputTextProps) => {
     return (
         <InputWrapper>
-            <Placeholder>{placeholder}</Placeholder>
+            <TextInput placeholder={placeholder} />
         </InputWrapper>
     )
 }

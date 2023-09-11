@@ -3,9 +3,11 @@ import { useState } from "react";
 import logo_popoyoko from "/Logo-popoyoko.svg";
 import "./App.css";
 import React from "react";
-import { InputText } from "./components";
+import { Icon, Information, InputText } from "./components";
 import { Button } from "./components";
 import { Ratio } from "./components";
+import { InputSelect } from "./components/Inputs/Select";
+import { InputRadio } from "./components/Inputs/Radio";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -32,18 +34,23 @@ function App() {
               <div className="Text">
                 <p>Mot de passe</p>
                 <InputText placeholder="placeholder" />
+
+                <InputSelect
+                  label="Sélectionnez aze"
+                  options={["Option 1", "Option 2", "Option 3"]}
+                />
+
+                <InputRadio label="rtazeazeazef efesfe fefeqzdzd fefeazzaea zeazee"/>
               </div>
             </div>
-            <Button.Primary
-              label="Se connecter"
-              onClick={() => {}}
-              typeSvg="none"
-            />
+            <Button.Primary label="Se connecter" typeSvg="none" />
           </div>
           <div className="FormSection">
             <h2>Pas encore de compte ?</h2>
             <Button.Secondary label="Créer un compte" typeSvg="none" />
           </div>
+          <Information label="tazeazd"></Information>
+          <Icon.Add />
         </div>
       ) : (
         <></>

@@ -1,4 +1,3 @@
-import "./index.scss";
 import React from "react";
 interface PrimaryProps {
     typeSvg: "none" | "left" | "right" | "only";

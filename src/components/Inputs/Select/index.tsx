@@ -1,73 +1,56 @@
-import React, { JSX } from 'react';
-import styled from 'styled-components';
+import React, { useState } from "react";
+import styled from "styled-components";
 
 interface InputSelectProps {
-    label: string;
-    href: string;
-    options: string[];
-    anchorElement: JSX.Element;
-};
-
-const SelectButton = styled.button`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 12px;
-  gap: 4px;
-  width: 326px;
-  height: 48px;
-  background: #f7f7f8;
-  border: 2px solid #0f082b;
-  border-radius: 4px;
-`;
+  label: string;
+  options: string[];
+}
 
 const SelectWrapper = styled.div`
   position: relative;
-
-  &:hover .select-content {
-    display: block;
-  }
 `;
 
-const SelectContent = styled.div`
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  width: 326px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-`;
-
-const SelectOption = styled.a`
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
+const SelectLabel = styled.label`
   display: block;
-
-  &:hover {
-    background-color: #0f082b;
-    color: white;
-  }
+  font-family: "Co Headline";
+  font-style: normal;
+  font-size: 16px;
+  color: #0f082b;
+  margin-bottom: 4px;
 `;
 
-export const InputSelect = ({
-    label,
-    href,
-    options,
-    anchorElement,
-}: InputSelectProps) => {
-    return(
-        <SelectWrapper>
-            <SelectButton>{label}</SelectButton>
-            <SelectContent>
-            {anchorElement}
-            {options.map((option, index) => (
-                <SelectOption  key={index} href={href}>
-                {option}
-                </SelectOption >
-            ))}
-            </SelectContent>
-        </SelectWrapper>
-    )
-}
+const SelectInput = styled.select`
+  width: 100%;
+  padding: 12px;
+  background: #f7f7f8;
+  border: 2px solid #0f082b;
+  border-radius: 4px;
+  font-family: "Co Headline";
+  font-style: normal;
+  font-size: 16px;
+  color: #0f082b;
+  outline: none;
+`;
+
+export const InputSelect = ({ label, options }: InputSelectProps) => {
+  const [selectedOption, setSelectedOption] = useState<string | undefined>(
+    undefined
+  );
+
+  const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedOption(event.target.value);
+  };
+
+  return (
+    <SelectWrapper>
+      <SelectInput value={selectedOption} onChange={handleSelectChange}>
+        <option value="">{label}</option>
+        {options.map((option, index) => (
+          <option key={index} value={option}>
+            {option}
+          </option>
+        ))}
+      </SelectInput>
+    </SelectWrapper>
+  );
+};

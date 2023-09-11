@@ -1,25 +1,22 @@
 import './index.css';
-import React from 'react';
+import React, { useState } from 'react';
 
 interface InputSelectorProps {
-    hover: boolean;
     label: string;
-};
+}
 
-export const InputSelector = ({
-    hover,
-    label,
-}: InputSelectorProps) => {
-    let className;
-    if(hover === true){
-        className = "dark-green";
-    } else if(hover === false){
-        className = "green";
-    }
+export const InputSelector = ({ label }: InputSelectorProps) => {
+    const [isChecked, setIsChecked] = useState(false);
+
+    const handleRadioClick = () => {
+        setIsChecked(!isChecked);
+    };
+
+    const className = isChecked ? "dark-green" : "green";
     
-    return(
-        <div>
-            <input type="radio" className={className}/>
+    return (
+        <div onClick={handleRadioClick}>
+            <input type="radio" className={className} checked={isChecked} />
             <label>{label}</label>
         </div>
     );

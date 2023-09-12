@@ -1177,19 +1177,19 @@ const $f = Oe.div`
 
   /* Styles pour le bouton primary */
   &.primary {
-    background-color: #191cb1;
+    background-color: #228C53;
     color: #eeebff;
     border: none;
     border-radius: 2px;
     font-family: serif;
 
     &:hover {
-      background-color: #0023fc;
+      background-color: #228C53
       color: #d9ccff;
     }
 
     &:active {
-      background-color: #171673;
+      background-color: #228C53;
       color: #f5f6ff;
     }
 

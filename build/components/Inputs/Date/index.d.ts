@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 interface InputDateProps {
-    placeholder: string;
-    srcIcon: string;
-    onClick?: () => void;
+    label: string;
+    value?: string;
+    onChange?: (value: string) => void;
 }
-export declare const InputDate: ({ placeholder, srcIcon, onClick, }: InputDateProps) => React.JSX.Element;
+export declare const InputDate: ({ label, value, onChange }: InputDateProps) => React.JSX.Element;
 export {};

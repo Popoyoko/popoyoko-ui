@@ -91,7 +91,7 @@ See https://s-c.sh/2BAXzed for more info.`),window[Us]+=1);const Hf=Oe.div`
     font-family: serif;
 
     &:hover {
-      background-color: #228C53
+      background-color: #228C53;
       color: #d9ccff;
     }
 
@@ -109,20 +109,20 @@ See https://s-c.sh/2BAXzed for more info.`),window[Us]+=1);const Hf=Oe.div`
   /* Styles pour le bouton secondary */
   &.secondary {
     background: #f8f8f8;
-    border: 2px solid #171673;
+    border: 2px solid #1B6042;
     border-radius: 2px;
-    color: #171673;
+    color: #1B6042;
 
     &:hover {
       background: #ffffff;
-      border: 2px solid #191CB1;
-      color: #191CB1;
+      border: 2px solid #1B6042;
+      color: #1B6042;
     }
 
     &:active {
       background: #e4e4e4;
-      border: 2px solid #111046;
-      color: #111046;
+      border: 2px solid #1B6042;
+      color: #1B6042;
     }
 
     &:disabled {
@@ -142,12 +142,10 @@ See https://s-c.sh/2BAXzed for more info.`),window[Us]+=1);const Hf=Oe.div`
     &:hover {
       background: #ffffff;
       color: #228c53;
-      border: 2px #ffffff;
     }
 
     &:active {
       background: #e4e4e4;
-      border: 2px dashed #153f33;
       color: #153f33;
     }
 
@@ -463,30 +461,41 @@ Error generating stack: `+d.message+`
   font-family: 'sans-serif';
   text-align: start;
 `,qd=({title:s,description:h})=>Q.createElement(Xd,null,Q.createElement(Jd,null,s),Q.createElement(Kd,null,h)),ep=Oe.div`
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 4px;
-  padding: 12px;
-  background: #F7F7F8;
-  border: 2px solid #0F082B;
-  border-radius: 4px;
-`,tp=Oe.input`
-  font-family: 'Co Headline';
-  font-style: normal;
-  font-size: 16px;
-  color: #0F082B;
-  border: none;
-  background: transparent;
-  outline: none;
-  width: 100%;
-  line-height: 24px;
-`,rp=({placeholder:s})=>Q.createElement(ep,null,Q.createElement(tp,{placeholder:s})),np=Oe.div`
+display: flex;
+
+flex-direction: column;
+align-items: flex-start;
+gap: 8px;
+`,tp=Oe.label`
+font-family: Co Headline;
+font-size: 22px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+`,rp=Oe.input`
+display: flex;
+padding: 12px;
+justify-content: center;
+align-items: flex-start;
+gap: 4px;
+align-self: stretch;
+
+border-radius: 4px;
+border: 2px solid #0F082B;
+background: #F7F7F8;
+
+color: #0F082B;
+font-family: Co Headline;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+`,np=({label:s,placeholder:h})=>Q.createElement(ep,null,Q.createElement(tp,null,s),Q.createElement(rp,{placeholder:h})),op=Oe.div`
   display: flex;
   padding: 4px;
   align-items: center;
   gap: 16px;
-`,op=Oe.input`
+`,ip=Oe.input`
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -500,7 +509,7 @@ Error generating stack: `+d.message+`
   &:checked:before {
     display: block;
   }
-`,ip=Oe.label`
+`,ap=Oe.label`
   color: #1b1a23;
   font-family: Co Headline;
   font-style: normal;
@@ -508,5 +517,5 @@ Error generating stack: `+d.message+`
   line-height: normal;
   word-break: break-word;
   text-align: start;
-`,ap=({label:s})=>{const[h,S]=Q.useState(!1),E=()=>{S(!h)};return Q.createElement(np,{onClick:E},Q.createElement(op,{type:"radio",checked:h}),Q.createElement(ip,null,s))};exports.Avatar=nl;exports.Button=Xn;exports.Card=Cu;exports.Header=zd;exports.Icon=ze;exports.Information=Yd;exports.InputRadio=ap;exports.InputText=rp;exports.Logo=Ic;exports.Ratio=Ji;exports.Section=Qd;exports.Text=qd;
+`,sp=({label:s})=>{const[h,S]=Q.useState(!1),E=()=>{S(!h)};return Q.createElement(op,{onClick:E},Q.createElement(ip,{type:"radio",checked:h}),Q.createElement(ap,null,s))};exports.Avatar=nl;exports.Button=Xn;exports.Card=Cu;exports.Header=zd;exports.Icon=ze;exports.Information=Yd;exports.InputRadio=sp;exports.InputText=np;exports.Logo=Ic;exports.Ratio=Ji;exports.Section=Qd;exports.Text=qd;
 //# sourceMappingURL=popoyoko-ui-vite.cjs.js.map

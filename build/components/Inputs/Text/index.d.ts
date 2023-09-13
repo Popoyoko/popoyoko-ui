@@ -1,5 +1,6 @@
 import React from "react";
-export declare const InputText: ({ placeholder }: {
+export declare const InputText: ({ label, placeholder }: {
+    label: any;
     placeholder: any;
 }) => React.FunctionComponentElement<{
     ref?: React.LegacyRef<HTMLDivElement>;

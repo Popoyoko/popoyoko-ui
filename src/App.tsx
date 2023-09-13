@@ -31,11 +31,11 @@ function App() {
             <div className="FormGroup">
               <div className="Text">
                 <p>Email</p>
-                <InputText placeholder="placeholder" />
+                <InputText label="email" placeholder="placeholder" />
               </div>
               <div className="Text">
                 <p>Mot de passe</p>
-                <InputText placeholder="placeholder" />
+                <InputText label="Mot de passe" placeholder="placeholder" />
 
                 <InputSelect
                   label="Sélectionnez aze"
@@ -50,7 +50,9 @@ function App() {
           <div className="FormSection">
             <h2>Pas encore de compte ?</h2>
             <Button.Secondary label="Créer un compte" typeSvg="none" />
+            <Button.Tertiary label="Créer un compte" typeSvg="none" />
           </div>
+          
           <Information label="tazeazd"></Information>
           <Icon.Add />
           <Icon.ArrowRight large/>

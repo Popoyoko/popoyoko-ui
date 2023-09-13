@@ -1,47 +1,60 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 interface InputDateProps {
-  placeholder: string;
-  srcIcon: string;
-  onClick?: () => void;
+  label: string;
+  value: string;
+  onChange: (value: string) => void;
 }
 
-const DateButton = styled.button`
+const InputWrapper = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
   align-items: flex-start;
-  padding: 12px;
-  gap: 4px;
-  width: 326px;
-  height: 48px;
-  background: #f7f7f8;
-  border: 2px solid #0f082b;
-  border-radius: 4px;
+  gap: 8px;
 `;
 
-const Placeholder = styled.p`
-  box-sizing: border-box;
+const DateLabel = styled.label`
+  font-family: Co Headline;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 `;
 
-const Vector = styled.svg`
-  position: absolute;
-  left: 3px;
-  right: 4px;
-  top: 2px;
-  bottom: 4px;
+const DateInput = styled.input`
+display: flex;
+padding: 12px;
+justify-content: center;
+align-items: flex-start;
+gap: 4px;
+align-self: stretch;
+
+border-radius: 4px;
+border: 2px solid #0F082B;
+background: #F7F7F8;
+
+color: #0F082B;
+font-family: Co Headline;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
 `;
 
-export const InputDate = ({
-  placeholder,
-  srcIcon,
-  onClick,
-}: InputDateProps) => {
+export const InputDate = ({ label, value, onChange }: InputDateProps) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    onChange(e.target.value);
+  };
+
   return (
-    <DateButton onClick={onClick}>
-      <Placeholder>{placeholder}</Placeholder>
-      <Vector href={srcIcon} />
-    </DateButton>
+    <InputWrapper>
+      <DateLabel>{label}</DateLabel>
+      <DateInput
+        type="date"
+        value={value}
+        onChange={handleChange}
+      />
+    </InputWrapper>
   );
 };

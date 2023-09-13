@@ -8,6 +8,7 @@ import { Button } from "./components";
 import { Ratio } from "./components";
 import { InputSelect } from "./components/Inputs/Select";
 import { InputRadio } from "./components/Inputs/Radio";
+import { InputDate } from "./components/Inputs/Date";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -43,6 +44,8 @@ function App() {
                 />
 
                 <InputRadio label="rtazeazeazef efesfe fefeqzdzd fefeazzaea zeazee"/>
+
+                <InputDate label="tzest"></InputDate>
               </div>
             </div>
             <Button.Primary label="Se connecter" typeSvg="none" />

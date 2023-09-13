@@ -10,3 +10,5 @@ export { Section } from "./Section";
 export { Text } from "./Text";
 export { InputText } from "./Inputs/Text";
 export { InputRadio } from "./Inputs/Radio";
+export { InputSelect } from "./Inputs/Select";
+export { InputDate } from "./Inputs/Date";

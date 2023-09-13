@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 interface InputDateProps {
   label: string;
-  value: string;
-  onChange: (value: string) => void;
+  value?: string;
+  onChange?: (value: string) => void;
 }
 
 const InputWrapper = styled.div`

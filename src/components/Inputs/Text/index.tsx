@@ -8,7 +8,7 @@ interface InputTextProps {
 
 const InputWrapper = styled.div`
 display: flex;
-
+min-width: 0;
 flex-direction: column;
 align-items: flex-start;
 gap: 8px;
@@ -20,6 +20,7 @@ font-size: 22px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
+min-width: 0;
 `;
 
 const TextInput = styled.input`

@@ -8,6 +8,7 @@ import { Button } from "./components";
 import { Ratio } from "./components";
 import { InputSelect } from "./components/Inputs/Select";
 import { InputRadio } from "./components/Inputs/Radio";
+import { InputDate } from "./components/Inputs/Date";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -31,11 +32,11 @@ function App() {
             <div className="FormGroup">
               <div className="Text">
                 <p>Email</p>
-                <InputText placeholder="placeholder" />
+                <InputText label="email" placeholder="placeholder" />
               </div>
               <div className="Text">
                 <p>Mot de passe</p>
-                <InputText placeholder="placeholder" />
+                <InputText label="Mot de passe" placeholder="placeholder" />
 
                 <InputSelect
                   label="Sélectionnez aze"
@@ -43,6 +44,8 @@ function App() {
                 />
 
                 <InputRadio label="rtazeazeazef efesfe fefeqzdzd fefeazzaea zeazee"/>
+
+                <InputDate label="tzest"></InputDate>
               </div>
             </div>
             <Button.Primary label="Se connecter" typeSvg="none" />
@@ -50,7 +53,9 @@ function App() {
           <div className="FormSection">
             <h2>Pas encore de compte ?</h2>
             <Button.Secondary label="Créer un compte" typeSvg="none" />
+            <Button.Tertiary label="Créer un compte" typeSvg="none" />
           </div>
+          
           <Information label="tazeazd"></Information>
           <Icon.Add />
           <Icon.ArrowRight large/>

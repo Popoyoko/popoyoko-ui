@@ -1,7 +1,6 @@
 import React from "react";
-export declare const InputText: ({ label, placeholder }: {
+export declare const InputRadio: ({ label }: {
     label: any;
-    placeholder: any;
 }) => React.FunctionComponentElement<{
     ref?: React.LegacyRef<HTMLDivElement>;
     key?: React.Key;
@@ -52,7 +51,7 @@ export declare const InputText: ({ label, placeholder }: {
     results?: number;
     security?: string;
     unselectable?: "on" | "off";
-    inputMode?: "none" | "search" | "text" | "tel" | "url" | "email" | "numeric" | "decimal";
+    inputMode?: "none" | "search" | "text" | "email" | "tel" | "url" | "numeric" | "decimal";
     is?: string;
     "aria-activedescendant"?: string;
     "aria-atomic"?: boolean | "true" | "false";
@@ -66,7 +65,7 @@ export declare const InputText: ({ label, placeholder }: {
     "aria-colindextext"?: string;
     "aria-colspan"?: number;
     "aria-controls"?: string;
-    "aria-current"?: boolean | "time" | "step" | "true" | "false" | "page" | "location" | "date";
+    "aria-current"?: boolean | "time" | "step" | "date" | "true" | "false" | "page" | "location";
     "aria-describedby"?: string;
     "aria-description"?: string;
     "aria-details"?: string;

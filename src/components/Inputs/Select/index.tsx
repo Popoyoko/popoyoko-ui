@@ -8,15 +8,19 @@ interface InputSelectProps {
 
 const SelectWrapper = styled.div`
   position: relative;
+  display: flex;
+
+flex-direction: column;
+align-items: flex-start;
+gap: 8px;
 `;
 
 const SelectLabel = styled.label`
-  display: block;
-  font-family: "Co Headline";
-  font-style: normal;
-  font-size: 16px;
-  color: #0f082b;
-  margin-bottom: 4px;
+font-family: Co Headline;
+font-size: 22px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
 `;
 
 const SelectInput = styled.select`
@@ -43,8 +47,9 @@ export const InputSelect = ({ label, options }: InputSelectProps) => {
 
   return (
     <SelectWrapper>
+      <SelectLabel>{label}</SelectLabel>
       <SelectInput value={selectedOption} onChange={handleSelectChange}>
-        <option value="">{label}</option>
+        <option value="">Option</option>
         {options.map((option, index) => (
           <option key={index} value={option}>
             {option}

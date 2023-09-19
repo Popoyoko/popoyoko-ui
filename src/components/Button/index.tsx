@@ -20,19 +20,19 @@ const StyledButton = styled.button`
 
   /* Styles pour le bouton primary */
   &.primary {
-    background-color: #191cb1;
+    background-color: #228C53;
     color: #eeebff;
     border: none;
     border-radius: 2px;
     font-family: serif;
 
     &:hover {
-      background-color: #0023fc;
+      background-color: #228C53;
       color: #d9ccff;
     }
 
     &:active {
-      background-color: #171673;
+      background-color: #228C53;
       color: #f5f6ff;
     }
 
@@ -45,20 +45,20 @@ const StyledButton = styled.button`
   /* Styles pour le bouton secondary */
   &.secondary {
     background: #f8f8f8;
-    border: 2px solid #171673;
+    border: 2px solid #1B6042;
     border-radius: 2px;
-    color: #171673;
+    color: #1B6042;
 
     &:hover {
       background: #ffffff;
-      border: 2px solid #191CB1;
-      color: #191CB1;
+      border: 2px solid #1B6042;
+      color: #1B6042;
     }
 
     &:active {
       background: #e4e4e4;
-      border: 2px solid #111046;
-      color: #111046;
+      border: 2px solid #1B6042;
+      color: #1B6042;
     }
 
     &:disabled {
@@ -78,12 +78,10 @@ const StyledButton = styled.button`
     &:hover {
       background: #ffffff;
       color: #228c53;
-      border: 2px #ffffff;
     }
 
     &:active {
       background: #e4e4e4;
-      border: 2px dashed #153f33;
       color: #153f33;
     }
 

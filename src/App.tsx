@@ -62,6 +62,9 @@ function App() {
           
           <Card.Default title="test" mention="mention" subTitle="subtitle" price={13}/>
 
+
+          <Card.Media/>
+
           <Information label="tazeazd"></Information>
           
 

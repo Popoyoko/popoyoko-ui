@@ -23,8 +23,12 @@ function App() {
             <a href="http://localhost:6006/" target="_blank">
               <img src={logo_popoyoko} className="logo popoyoko" />
             </a>
-            <Icon.Add small/>
-          <Icon.ArrowRight large/>
+            <Icon.ArrowRight size="small"/>
+          <Icon.ArrowRight size="medium"/>
+          <Icon.ArrowRight size="large"/>
+          <Icon.Add size="small"/>
+          <Icon.Add size="medium"/>
+          <Icon.Add size="large"/>
           </div>
 
           <div className="FormSection">

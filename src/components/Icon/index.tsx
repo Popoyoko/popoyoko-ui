@@ -1,5 +1,4 @@
 import React from "react";
-import ReactSVG from "react-svg";
 import styled from "styled-components";
 
 import Add from "../../Icons/Add/add.svg";
@@ -37,12 +36,33 @@ const IconContainer = styled.div`
   }
 `;
 
+const IconImage = styled.img`
+  width: 100%;
+  height: 100%;
+
+  &.icon-small {
+    width: 8px;
+    height: 8px;
+  }
+
+  &.icon-medium {
+    width: 16px;
+    height: 16px;
+  }
+
+  &.icon-large {
+    width: 32px;
+    height: 32px;
+  }
+`;
+
+
 interface IconProps {
-  size: "small" | "medium" | "large";
-  icon: string;
+  size?: "small" | "medium" | "large";
+  icon?: string;
 }
 
-const iconMap = {
+const iconMap: Record<string, string> = {
   Add,
   AddPicture,
   ArrowBottom,
@@ -62,26 +82,26 @@ const iconMap = {
 export const Icon = ({ size = "medium", icon }: IconProps) => {
   const className = `icon-${size} icon`;
 
-  const IconElement = iconMap[icon];
+  const iconSrc = iconMap[icon];
 
   return (
     <IconContainer className={className}>
-      <ReactSVG src={IconElement} />
+      <IconImage src={iconSrc} alt={icon} />
     </IconContainer>
   );
 };
 
-Icon.Add = (props) => <Icon icon="Add" {...props} />;
-Icon.AddPicture = (props) => <Icon icon="AddPicture" {...props} />;
-Icon.ArrowBottom = (props) => <Icon icon="ArrowBottom" {...props} />;
-Icon.ArrowLeft = (props) => <Icon icon="ArrowLeft" {...props} />;
-Icon.ArrowRight = (props) => <Icon icon="ArrowRight" {...props} />;
-Icon.ArrowTop = (props) => <Icon icon="ArrowTop" {...props} />;
-Icon.ArrowTriangle = (props) => <Icon icon="ArrowTriangle" {...props} />;
-Icon.DateFlat = (props) => <Icon icon="DateFlat" {...props} />;
-Icon.DateLine = (props) => <Icon icon="DateLine" {...props} />;
-Icon.Information = (props) => <Icon icon="Information" {...props} />;
-Icon.Search = (props) => <Icon icon="Search" {...props} />;
-Icon.Upload = (props) => <Icon icon="Upload" {...props} />;
-Icon.UserFlat = (props) => <Icon icon="UserFlat" {...props} />;
-Icon.UserLine = (props) => <Icon icon="UserLine" {...props} />;
+Icon.Add = (props: IconProps) => <Icon icon="Add" {...props} />;
+Icon.AddPicture = (props: IconProps) => <Icon icon="AddPicture" {...props} />;
+Icon.ArrowBottom = (props: IconProps) => <Icon icon="ArrowBottom" {...props} />;
+Icon.ArrowLeft = (props: IconProps) => <Icon icon="ArrowLeft" {...props} />;
+Icon.ArrowRight = (props: IconProps) => <Icon icon="ArrowRight" {...props} />;
+Icon.ArrowTop = (props: IconProps) => <Icon icon="ArrowTop" {...props} />;
+Icon.ArrowTriangle = (props: IconProps) => <Icon icon="ArrowTriangle" {...props} />;
+Icon.DateFlat = (props: IconProps) => <Icon icon="DateFlat" {...props} />;
+Icon.DateLine = (props: IconProps) => <Icon icon="DateLine" {...props} />;
+Icon.Information = (props: IconProps) => <Icon icon="Information" {...props} />;
+Icon.Search = (props: IconProps) => <Icon icon="Search" {...props} />;
+Icon.Upload = (props: IconProps) => <Icon icon="Upload" {...props} />;
+Icon.UserFlat = (props: IconProps) => <Icon icon="UserFlat" {...props} />;
+Icon.UserLine = (props: IconProps) => <Icon icon="UserLine" {...props} />;

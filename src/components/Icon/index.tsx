@@ -17,8 +17,11 @@ import UserFlat from "../../Icons/UserFlat/userFlat.svg";
 import UserLine from "../../Icons/UserLine/userLine.svg";
 
 const IconContainer = styled.div`
-  width: 100%;
-  height: 100%;
+width: 100%;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
 
   &.icon-small {
     width: 8px;
@@ -39,6 +42,7 @@ const IconContainer = styled.div`
 const IconImage = styled.img`
   width: 100%;
   height: 100%;
+
 
   &.icon-small {
     width: 8px;

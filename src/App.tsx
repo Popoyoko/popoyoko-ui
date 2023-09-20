@@ -3,7 +3,7 @@ import { useState } from "react";
 import logo_popoyoko from "/Logo-popoyoko.svg";
 import "./App.css";
 import React from "react";
-import { Icon, Information, InputText } from "./components";
+import { Card, Icon, Information, InputText } from "./components";
 import { Button } from "./components";
 import { Ratio } from "./components";
 import { InputSelect } from "./components/Inputs/Select";
@@ -56,9 +56,13 @@ function App() {
             <Button.Tertiary label="Créer un compte" typeSvg="none" />
           </div>
           
+          <Card.Default title="test" mention="mention" subTitle="subtitle" price={13}/>
+
           <Information label="tazeazd"></Information>
           <Icon.Add />
           <Icon.ArrowRight large/>
+          
+
         </div>
       ) : (
         <></>

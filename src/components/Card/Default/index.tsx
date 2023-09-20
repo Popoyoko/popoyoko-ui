@@ -3,66 +3,105 @@ import styled from "styled-components";
 import Ratio from "../../Ratio";
 
 export interface DefaultProps {
-  label?: string;
+  title?: string;
   mention?: string;
   subTitle?: string;
   price?: number;
 }
 
-const CardContainer = styled.div`
-  .card {
-    padding: 0;
-    width: auto;
-  }
+const CardContainer = styled.div``;
 
-  .card-section {
-    width: 100%;
-  }
+const CardSection = styled.div`
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+`;
 
-  .card-group {
-    padding: 16px;
-  }
+const CardInformation = styled.div`
+  display: flex;
+  align-items: flex-end;
+  align-self: stretch;
+  justify-content: space-between;
+`;
 
-  .card-information {
-    display: flex;
-    align-items: flex-end;
-  }
+const CardGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+`;
 
-  .card-title {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-  }
+const Mention = styled.p`
+  margin: 0;
 
-  p {
-    text-align: start;
-    margin: 0;
-  }
+  color: #353538;
+  font-family: Co Headline;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+`;
+
+const Title = styled.p`
+  align-self: stretch;
+  text-align: start;
+  margin: 0;
+
+  color: #1b1a23;
+  font-family: Co Headline;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+`;
+
+const SubTitle = styled.p`
+  align-self: stretch;
+  text-align: start;
+  margin: 0;
+
+  color: #1b1a23;
+  font-family: Co Headline;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+`;
+
+const Price = styled.p`
+  margin: 0;
+
+  color: #171673;
+  font-family: Co Headline;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 `;
 
 export const Default = ({
-  label = "",
+  title = "",
   mention = "",
   subTitle = "",
   price = 0,
 }: DefaultProps) => {
   return (
     <CardContainer>
-      <div className="card">
-        <Ratio.L2H3></Ratio.L2H3>
-      </div>
-      <div className="card-section">
-        <div className="card-group">
-          <p>{mention}</p>
-          <div className="card-information">
-            <div className="card-title">
-              <p>{label}</p>
-              <p>{subTitle}</p>
-            </div>
-            {price}
-          </div>
-        </div>
-      </div>
+      <Ratio.L2H3></Ratio.L2H3>
+      <CardSection>
+        <CardGroup>
+          <Mention>{mention}</Mention>
+          <CardInformation>
+            <CardGroup>
+              <Title>{title}</Title>
+              <SubTitle>{subTitle}</SubTitle>
+            </CardGroup>
+            <Price>{price}</Price>
+          </CardInformation>
+        </CardGroup>
+      </CardSection>
     </CardContainer>
   );
 };

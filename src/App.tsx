@@ -63,8 +63,6 @@ function App() {
           <Card.Default title="test" mention="mention" subTitle="subtitle" price={13}/>
 
           <Information label="tazeazd"></Information>
-          <Icon.Add />
-          <Icon.ArrowRight large/>
           
 
         </div>

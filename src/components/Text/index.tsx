@@ -3,41 +3,59 @@ import styled from 'styled-components';
 
 interface TextProps {
   title: string;
-  description: string;
+  label: string;
 }
 
 const TextLayout = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0px;
-  overflow-y: scroll;
-  width: 19.5rem;
-  height: 18rem;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+
+  // overflow-y: scroll;
 `;
 
 const TextTitle = styled.p`
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 32px;
+margin: 0; 
+
+color: #1B1A23;
+font-family: Co Headline;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 32px;
 `;
 
-const TextDescription = styled.p`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 16px 0px;
-  isolation: isolate;
-  font-family: 'sans-serif';
-  text-align: start;
+const Textlabel = styled.p`
+margin: 0; 
+
+color: #1B1A23;
+font-family: Co Headline;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-align: start;
 `;
 
-export const Text = ({ title, description}: TextProps) => {
+const Scroll = styled.div`
+display: flex;
+padding: 16px 0px;
+flex-direction: column;
+align-items: flex-start;
+align-self: stretch;
+
+max-height: 256px;
+overflow-y: auto; 
+`;
+
+
+export const Text = ({ title, label}: TextProps) => {
   return (
     <TextLayout>
       <TextTitle>{title}</TextTitle>
-      <TextDescription>{description}</TextDescription>
+      <Scroll>
+      <Textlabel>{label}</Textlabel>
+      </Scroll>
     </TextLayout>
   );
 };

@@ -36,39 +36,21 @@ const SecondaryButton = styled.button`
 interface SecondaryProps {
   typeSvg?: "none" | "left" | "right" | "only";
   label?: string;
-  srcIcon?: string;
+  children?: React.ReactNode;
   onClick?: () => void;
 }
 
 export const Secondary = ({
   label,
   typeSvg,
-  srcIcon,
+  children,
   onClick,
 }: SecondaryProps) => {
-  if (typeSvg === "none") {
-    return <SecondaryButton onClick={onClick}>{label}</SecondaryButton>;
-  } else if (typeSvg === "left") {
-    return (
-      <SecondaryButton onClick={onClick}>
-        <img src={srcIcon}></img>
-        {label}
-      </SecondaryButton>
-    );
-  } else if (typeSvg === "right") {
-    return (
-      <SecondaryButton onClick={onClick}>
-        {label}
-        <img src={srcIcon}></img>
-      </SecondaryButton>
-    );
-  } else if (typeSvg === "only") {
-    return (
-      <SecondaryButton onClick={onClick}>
-        <img src={srcIcon}></img>
-      </SecondaryButton>
-    );
-  }
-
-  return <SecondaryButton onClick={onClick}></SecondaryButton>;
+  return (
+    <SecondaryButton onClick={onClick}>
+      {typeSvg === "left" && children}
+      {label}
+      {typeSvg === "right" && children}
+    </SecondaryButton>
+  );
 };

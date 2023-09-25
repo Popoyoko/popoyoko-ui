@@ -14,3 +14,6 @@ export { InputText } from "./Inputs/Text"
 export { InputRadio } from "./Inputs/Radio"
 export { InputSelect } from "./Inputs/Select"
 export { InputDate } from "./Inputs/Date"
+
+
+export { Slider } from "./Slider"

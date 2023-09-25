@@ -3,19 +3,21 @@ import styled from "styled-components";
 import Ratio from "../../Ratio";
 
 export interface DefaultProps {
-  media?: string; 
+  media?: string;
   title?: string;
   mention?: string;
   subTitle?: string;
   price?: number;
 }
 
-const CardContainer = styled.div``;
+const CardContainer = styled.div`
+  min-width: 246px;
+`;
 
 const CardImage = styled.img`
-width: 100%;
-height: 100%;
-object-fit: cover; 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;
 
 const CardSection = styled.div`
@@ -97,7 +99,9 @@ export const Default = ({
 }: DefaultProps) => {
   return (
     <CardContainer>
-      <Ratio.L2H3><CardImage  src={media} alt="Media" /></Ratio.L2H3>
+      <Ratio.L2H3>
+        <CardImage src={media} alt={media} />
+      </Ratio.L2H3>
       <CardSection>
         <CardGroup>
           <Mention>{mention}</Mention>

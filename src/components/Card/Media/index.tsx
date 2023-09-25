@@ -9,6 +9,7 @@ export interface MediaProps {
 const Card = styled.div`
   padding: 0px;
   width: auto;
+  min-width: 246px;
 `;
 
 const CardImage = styled.img`

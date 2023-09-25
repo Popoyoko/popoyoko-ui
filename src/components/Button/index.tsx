@@ -4,8 +4,8 @@ import styled from "styled-components";
 interface ButtonProps {
   type: "primary" | "secondary" | "tertiary";
   typeSvg: "none" | "left" | "right" | "only";
-  label: string;
-  srcIcon?: string;
+  label?: string;
+  children?: React.ReactNode;
 }
 
 const StyledButton = styled.button`
@@ -16,7 +16,7 @@ const StyledButton = styled.button`
   align-items: center;
   padding: 8px 16px;
   gap: 8px;
-  width: 100%;
+  width: 100%; 
 
   /* Styles pour le bouton primary */
   &.primary {
@@ -102,18 +102,23 @@ font-weight: 400;
 line-height: normal;
 `
 
+const ButtonSvgOnly = styled(StyledButton)`
+padding: 8px;
+width: fit-content;
+`
+
 const Button = ({
   type = "primary",
   label,
   typeSvg,
-  srcIcon,
+  children,
 }: ButtonProps) => {
   if (typeSvg === "none") {
     return <StyledButton className={type}><SpanButton>{label}</SpanButton></StyledButton>;
   } else if (typeSvg === "left") {
     return (
       <StyledButton className={type}>
-        <img src={srcIcon} alt="Icon" />
+        {children}
         <SpanButton>{label}</SpanButton>
       </StyledButton>
     );
@@ -121,14 +126,14 @@ const Button = ({
     return (
       <StyledButton className={type}>
         <SpanButton>{label}</SpanButton>
-        <img src={srcIcon} alt="Icon" />
+        {children}
       </StyledButton>
     );
   } else if (typeSvg === "only") {
     return (
-      <StyledButton className={type}>
-        <img src={srcIcon} alt="Icon" />
-      </StyledButton>
+      <ButtonSvgOnly className={type}>
+        {children}
+      </ButtonSvgOnly>
     );
   }
 };

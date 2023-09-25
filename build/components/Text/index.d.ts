@@ -1,7 +1,7 @@
 import React from "react";
-export declare const Text: ({ title, description }: {
+export declare const Text: ({ title, label }: {
     title: any;
-    description: any;
+    label: any;
 }) => React.FunctionComponentElement<{
     ref?: React.LegacyRef<HTMLDivElement>;
     key?: React.Key;

@@ -9,7 +9,7 @@ const meta: Meta<typeof Default> = {
   component: Default,
   argTypes: {
     // Assigns the argTypes to the Colors category
-    label: {
+    title: {
       table: {
         category: 'Text',
         subcategory: 'Title contents',
@@ -44,7 +44,7 @@ type Story = StoryObj<typeof Default>
 export const default_card: Story = {
   render: (args) => <Default {...args} />,
   args: {
-    label: "Title",
+    title: "Title",
     mention: "Mention",
     subTitle: "SubTitle",
     price: 246,

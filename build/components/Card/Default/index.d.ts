@@ -1,6 +1,7 @@
 import React from "react";
-export declare const Default: ({ label, mention, subTitle, price }: {
-    label?: string;
+export declare const Default: ({ media, title, mention, subTitle, price }: {
+    media?: string;
+    title?: string;
     mention?: string;
     subTitle?: string;
     price?: number;

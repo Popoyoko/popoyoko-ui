@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Button from "../../Button";
 import Ratio from "../../Ratio"
-import edit from "../../../assets/edit.svg";
+import { Icon } from "../../Icon";
 
 const CoverContainer = styled.div`
   position: relative;
@@ -31,11 +31,11 @@ export interface CoverProps {
   background?: string;
 }
 
-export const Cover = ({ showedit=true, background=`url(https://st3.depositphotos.com/23594922/31822/v/600/depositphotos_318221368-stock-illustration-missing-picture-page-for-website.jpg)` }: CoverProps) => {
+export const Cover = ({ showedit=true, background=`https://imgs.search.brave.com/eHBodvumUFQ7TzAM2YRFjFbE9P2IB_VeLxS5-sesWlo/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA1Lzc5LzY4LzI0/LzM2MF9GXzU3OTY4/MjQ3OV9qNGpSZngw/bmwzQzh2TXJUWVZh/cEZuR1A4RWdOSGdm/ay5qcGc` }: CoverProps) => {
   const backgroundImageStyle = background
     ? { backgroundImage: `url(${background})` }
     : {
-        backgroundImage: `url(https://st3.depositphotos.com/23594922/31822/v/600/depositphotos_318221368-stock-illustration-missing-picture-page-for-website.jpg)`,
+        backgroundImage: `https://imgs.search.brave.com/eHBodvumUFQ7TzAM2YRFjFbE9P2IB_VeLxS5-sesWlo/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA1Lzc5LzY4LzI0/LzM2MF9GXzU3OTY4/MjQ3OV9qNGpSZngw/bmwzQzh2TXJUWVZh/cEZuR1A4RWdOSGdm/ay5qcGc`,
       };
 
   return (
@@ -44,7 +44,7 @@ export const Cover = ({ showedit=true, background=`url(https://st3.depositphotos
       <CoverImage src={background} style={backgroundImageStyle}></CoverImage>
       {showedit && (
         <EditContainer>
-          <Button.Tertiary typeSvg="right" label="Edit" srcIcon={edit} />
+          <Button.Tertiary typeSvg="right" label="Edit"><Icon.AddPicture size="medium" /></Button.Tertiary>
         </EditContainer>
       )}
       </Ratio.L1H1>

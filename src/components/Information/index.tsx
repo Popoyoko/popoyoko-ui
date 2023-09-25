@@ -4,6 +4,7 @@ import { Icon } from "../Icon";
 
 interface InformationProps {
   label?: string;
+  background?: string;
 }
 
 const InformationSection = styled.div`
@@ -28,11 +29,14 @@ const InformationContent = styled.p`
   margin: 0;
 `;
 
-export const Information = ({ label = "Information" }: InformationProps) => {
+export const Information = ({ label = "Information", background = "#2018b0" }: InformationProps) => {
+  const InformationSectionWithBackground = styled(InformationSection)`
+  background: ${background};
+  `
   return (
-    <InformationSection>
-      <Icon.Information className="information-svg" />
+    <InformationSectionWithBackground>
+      <Icon.Information/>
       <InformationContent>{label}</InformationContent>
-    </InformationSection>
+    </InformationSectionWithBackground>
   );
 };

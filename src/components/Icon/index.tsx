@@ -24,13 +24,13 @@ align-items: center;
 justify-content: center;
 
   &.icon-small {
-    width: 8px;
-    height: 8px;
+    width: 16px;
+    height: 16px;
   }
 
   &.icon-medium {
-    width: 16px;
-    height: 16px;
+    width: 24px;
+    height: 24px;
   }
 
   &.icon-large {
@@ -45,13 +45,13 @@ const IconImage = styled.img`
 
 
   &.icon-small {
-    width: 8px;
-    height: 8px;
+    width: 16px;
+    height: 16px;
   }
 
   &.icon-medium {
-    width: 16px;
-    height: 16px;
+    width: 24px;
+    height: 24px;
   }
 
   &.icon-large {

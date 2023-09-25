@@ -57,7 +57,7 @@ function App() {
           <div className="FormSection">
             <h2>Pas encore de compte ?</h2>
             <Button.Secondary label="Créer un compte" typeSvg="none" />
-            <Button.Primary label="Créer un compte" typeSvg="only" ><Icon.Add size="large" /></Button.Primary>
+            <Button.Tertiary typeSvg="only" ><Icon.Add size="large" /></Button.Tertiary>
    
             <Slider>
   <Card.Default

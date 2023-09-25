@@ -16,7 +16,7 @@ const StyledButton = styled.button`
   align-items: center;
   padding: 8px 16px;
   gap: 8px;
-  width: 100%;
+  width: 100%; 
 
   /* Styles pour le bouton primary */
   &.primary {
@@ -102,6 +102,11 @@ font-weight: 400;
 line-height: normal;
 `
 
+const ButtonSvgOnly = styled(StyledButton)`
+padding: 8px;
+width: fit-content;
+`
+
 const Button = ({
   type = "primary",
   label,
@@ -126,9 +131,9 @@ const Button = ({
     );
   } else if (typeSvg === "only") {
     return (
-      <StyledButton className={type}>
+      <ButtonSvgOnly className={type}>
         {children}
-      </StyledButton>
+      </ButtonSvgOnly>
     );
   }
 };

@@ -1,5 +1,7 @@
 import React from "react";
-export declare const Media: () => React.FunctionComponentElement<{
+export declare const Media: ({ media }: {
+    media?: string;
+}) => React.FunctionComponentElement<{
     ref?: React.LegacyRef<HTMLDivElement>;
     key?: React.Key;
     defaultChecked?: boolean;

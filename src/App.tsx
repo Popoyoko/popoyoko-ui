@@ -3,7 +3,7 @@ import { useState } from "react";
 import logo_popoyoko from "/Logo-popoyoko.svg";
 import "./App.css";
 import React from "react";
-import { Slider, Text, Card, Icon, Information, InputText } from "./components";
+import { Slider, Text, Card, Icon, Information, InputText, Avatar } from "./components";
 import { Button } from "./components";
 import { Ratio } from "./components";
 import { InputSelect } from "./components/Inputs/Select";
@@ -59,7 +59,7 @@ function App() {
             <h2>Pas encore de compte ?</h2>
             <Button.Secondary label="Créer un compte" typeSvg="none" />
             <Button.Tertiary typeSvg="only" ><Icon.Add size="large" /></Button.Tertiary>
-   
+   <Avatar.Cover showedit={true}></Avatar.Cover>
             <Slider>
   <Card.Default
     title="test"

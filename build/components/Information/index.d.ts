@@ -1,8 +1,11 @@
 import React from "react";
-export declare const Information: ({ label }: {
+export declare const Information: ({ label, background }: {
     label?: string;
+    background?: string;
 }) => React.FunctionComponentElement<{
-    ref?: React.LegacyRef<HTMLDivElement>;
+    slot?: string;
+    style?: React.CSSProperties;
+    title?: string;
     key?: React.Key;
     defaultChecked?: boolean;
     defaultValue?: string | number | readonly string[];
@@ -20,11 +23,8 @@ export declare const Information: ({ label }: {
     lang?: string;
     nonce?: string;
     placeholder?: string;
-    slot?: string;
     spellCheck?: boolean | "true" | "false";
-    style?: React.CSSProperties;
     tabIndex?: number;
-    title?: string;
     translate?: "yes" | "no";
     radioGroup?: string;
     role?: React.AriaRole;
@@ -272,4 +272,5 @@ export declare const Information: ({ label }: {
     onAnimationIterationCapture?: React.AnimationEventHandler<HTMLDivElement>;
     onTransitionEnd?: React.TransitionEventHandler<HTMLDivElement>;
     onTransitionEndCapture?: React.TransitionEventHandler<HTMLDivElement>;
+    ref?: React.Ref<HTMLDivElement>;
 }>;

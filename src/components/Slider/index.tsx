@@ -1,26 +1,24 @@
 import React from "react";
 import styled from "styled-components";
-import Card from "../Card"; // Assurez-vous d'importer votre composant CardDefault
 
-// Styles pour le conteneur du slider
 const SliderContainer = styled.div`
 position: relative;
   display: flex;
   align-items: flex-start;
   gap: 17px;
-  overflow-x: auto; /* Activer le défilement horizontal en cas de dépassement */
-  white-space: nowrap; /* Empêche le retour à la ligne des éléments enfants */
-  width: 100%; /* Ajuster la largeur du conteneur du slider selon les besoins */
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
   z-index: 1;
 `;
 
 const SlideItem = styled.div`
-  /* Définissez la largeur fixe que vous souhaitez pour chaque enfant */
-  width: 300px; /* Ajustez selon vos besoins */
+  width: 300px;
+  box-sizing: border-box;
 `;
 
 interface SliderProps {
-  children: React.ReactNode; // Utilisez React.ReactNode pour accepter des éléments React en tant qu'enfants
+  children: React.ReactNode;
 }
 
 export const Slider = ({ children }: SliderProps) => {

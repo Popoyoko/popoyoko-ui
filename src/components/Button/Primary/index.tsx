@@ -32,8 +32,8 @@ const PrimaryButton = styled.button`
 `;
 
 interface PrimaryProps {
-  typeSvg: "none" | "left" | "right" | "only";
-  label: string;
+  typeSvg?: "none" | "left" | "right" | "only";
+  label?: string;
   srcIcon?: string;
   onClick?: () => void;
 }

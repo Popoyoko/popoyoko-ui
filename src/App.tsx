@@ -23,12 +23,12 @@ function App() {
             <a href="http://localhost:6006/" target="_blank">
               <img src={logo_popoyoko} className="logo popoyoko" />
             </a>
-            <Icon.ArrowRight size="small"/>
-          <Icon.ArrowRight size="medium"/>
-          <Icon.ArrowRight size="large"/>
-          <Icon.Add size="small"/>
-          <Icon.Add size="medium"/>
-          <Icon.Add size="large"/>
+            <Icon.ArrowRight size="small" />
+            <Icon.ArrowRight size="medium" />
+            <Icon.ArrowRight size="large" />
+            <Icon.Add size="small" />
+            <Icon.Add size="medium" />
+            <Icon.Add size="large" />
           </div>
 
           <div className="FormSection">
@@ -47,7 +47,7 @@ function App() {
                   options={["Option 1", "Option 2", "Option 3"]}
                 />
 
-                <InputRadio label="rtazeazeazef efesfe fefeqzdzd fefeazzaea zeazee"/>
+                <InputRadio label="rtazeazeazef efesfe fefeqzdzd fefeazzaea zeazee" />
 
                 <InputDate label="tzest"></InputDate>
               </div>
@@ -57,19 +57,27 @@ function App() {
           <div className="FormSection">
             <h2>Pas encore de compte ?</h2>
             <Button.Secondary label="Créer un compte" typeSvg="none" />
+            <Button.Tertiary label="Créer un compte" typeSvg="none" ><Icon.Add size="large" /></Button.Tertiary>
+   
+
             <Button.Tertiary label="Créer un compte" typeSvg="none" />
           </div>
-          
-          <Card.Default title="test" mention="mention" subTitle="subtitle" price={13}/>
 
+          <Card.Default
+            title="test"
+            mention="mention"
+            subTitle="subtitle"
+            price={13}
+          />
 
-          <Card.Media/>
+          <Card.Media />
 
-          <Text title="Description" label="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel dui ac odio malesuada semper. Vivamus tincidunt elit velit, eget placerat quam ornare et. Proin maximus neque vel neque elementum, et elementum quam sagittis. Mauris ultricies magna nec diam vulputate lacinia. Proin aliquam velit id diam molestie interdum. Nam vel tellus viverra, mattis erat vitae, fringilla magna. Fusce in ligula eu lectus rutrum porta ac sed augue. Pellentesque in ex odio. Ut lobortis, massa vel lacinia bibendum, leo mi luctus diam, id mollis orci elit a felis. Sed pretium facilisis tortor, eu pulvinar justo euismod vitae. Duis dapibus lorem sit amet turpis dapibus, non accumsan ligula maximus. In sagittis massa lacus, et consequat nunc mattis vitae. Phasellus ac mauris nec leo luctus egestas. Etiam tristique orci nec mi posuere, non aliquet elit congue. Proin auctor justo elit, vitae interdum diam pretium vel."/>
+          <Text
+            title="Description"
+            label="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel dui ac odio malesuada semper. Vivamus tincidunt elit velit, eget placerat quam ornare et. Proin maximus neque vel neque elementum, et elementum quam sagittis. Mauris ultricies magna nec diam vulputate lacinia. Proin aliquam velit id diam molestie interdum. Nam vel tellus viverra, mattis erat vitae, fringilla magna. Fusce in ligula eu lectus rutrum porta ac sed augue. Pellentesque in ex odio. Ut lobortis, massa vel lacinia bibendum, leo mi luctus diam, id mollis orci elit a felis. Sed pretium facilisis tortor, eu pulvinar justo euismod vitae. Duis dapibus lorem sit amet turpis dapibus, non accumsan ligula maximus. In sagittis massa lacus, et consequat nunc mattis vitae. Phasellus ac mauris nec leo luctus egestas. Etiam tristique orci nec mi posuere, non aliquet elit congue. Proin auctor justo elit, vitae interdum diam pretium vel."
+          />
 
           <Information label="tazeazd"></Information>
-          
-
         </div>
       ) : (
         <></>

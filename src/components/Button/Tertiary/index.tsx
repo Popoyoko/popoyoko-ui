@@ -1,82 +1,56 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
 
 const TertiaryButton = styled.button`
-background: #F8F8F8;
-border-radius: 2px;
-color: #1B6042;
-border: 2px #F8F8F8;
+  background: #f8f8f8;
+  border-radius: 2px;
+  color: #1b6042;
+  border: 2px #f8f8f8;
 
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 8px 16px;
-gap: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 8px;
 
-&:hover {
-background: #FFFFFF;
-color: #228C53;
-border: 2px #FFFFFF;
-}
+  &:hover {
+    background: #ffffff;
+    color: #228c53;
+    border: 2px #ffffff;
+  }
 
-&:active {
-background: #E4E4E4;
-border: 2px dashed #153F33;
-color: #153F33;
-}
+  &:active {
+    background: #e4e4e4;
+    border: 2px dashed #153f33;
+    color: #153f33;
+  }
 
-&:disabled {
-background: rgba(119, 119, 119, 0.11);
-border: 2px dashed rgba(33, 193, 103, 0.11);
-color: rgba(33, 193, 103, 0.11);
-}
+  &:disabled {
+    background: rgba(119, 119, 119, 0.11);
+    border: 2px dashed rgba(33, 193, 103, 0.11);
+    color: rgba(33, 193, 103, 0.11);
+  }
 `;
 
 interface TertiaryProps {
-    typeSvg: 'none' | 'left' | 'right' | 'only';
-    label: string;
-    srcIcon?: string;
-    onClick?: () => void;
+  typeSvg?: "none" | "left" | "right" | "only";
+  label?: string;
+  children?: React.ReactNode;
+  onClick?: () => void;
 }
 
 export const Tertiary = ({
-    label,
-    typeSvg,
-    srcIcon,
-    onClick,
+  label,
+  typeSvg,
+  children,
+  onClick,
 }: TertiaryProps) => {
-
-    if(typeSvg === 'none'){
-        return(
-            <TertiaryButton onClick={onClick}>
-                {label}
-            </TertiaryButton>
-        );
-    } else if(typeSvg === 'left'){
-        return(
-            <TertiaryButton onClick={onClick}>
-                <img src={srcIcon}></img>
-                {label}
-            </TertiaryButton>
-        );
-    } else if(typeSvg === 'right'){
-        return(
-            <TertiaryButton onClick={onClick}>
-                {label}
-                <img src={srcIcon}></img>
-                </TertiaryButton>
-        );
-    } else if(typeSvg === 'only'){
-        return(
-            <TertiaryButton onClick={onClick}>
-                <img src={srcIcon}></img>
-            </TertiaryButton>
-        );
-    }
-
-    return (
-        <TertiaryButton onClick={onClick}></TertiaryButton>
-    )
+  return (
+    <TertiaryButton onClick={onClick}>
+      {typeSvg === "left" && children}
+      {label}
+      {typeSvg === "right" && children}
+    </TertiaryButton>
+  );
 };
-

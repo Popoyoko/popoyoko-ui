@@ -34,8 +34,8 @@ const SecondaryButton = styled.button`
 `;
 
 interface SecondaryProps {
-  typeSvg: "none" | "left" | "right" | "only";
-  label: string;
+  typeSvg?: "none" | "left" | "right" | "only";
+  label?: string;
   srcIcon?: string;
   onClick?: () => void;
 }

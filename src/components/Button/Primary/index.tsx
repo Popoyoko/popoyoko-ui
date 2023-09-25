@@ -1,4 +1,3 @@
-
 import React from "react";
 import styled from "styled-components";
 
@@ -34,33 +33,21 @@ const PrimaryButton = styled.button`
 interface PrimaryProps {
   typeSvg?: "none" | "left" | "right" | "only";
   label?: string;
-  srcIcon?: string;
+  children?: React.ReactNode;
   onClick?: () => void;
 }
 
-export const Primary = ({ label, typeSvg, srcIcon, onClick }: PrimaryProps) => {
-  // let icon = null;
-  if (typeSvg === "none") {
-    return <button className="primary" onClick={onClick}>{label}</button>;
-  } else if (typeSvg === "left") {
-    return (
-      <PrimaryButton onClick={onClick}>
-        <img src={srcIcon}></img>
-        {label}
-      </PrimaryButton>
-    );
-  } else if (typeSvg === "right") {
-    return (
-      <PrimaryButton onClick={onClick}>
-        {label}
-        <img src={srcIcon}></img>
-      </PrimaryButton>
-    );
-  } else if (typeSvg === "only") {
-    return (
-      <PrimaryButton onClick={onClick}>
-        <img src={srcIcon}></img>
-      </PrimaryButton>
-    );
-  }
+export const Primary = ({
+  label,
+  typeSvg,
+  children,
+  onClick,
+}: PrimaryProps) => {
+  return (
+    <PrimaryButton onClick={onClick}>
+      {typeSvg === "left" && children}
+      {label}
+      {typeSvg === "right" && children}
+    </PrimaryButton>
+  );
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import GlobalStyles from "../../GlobalStyles"
 import { Icon } from "../Icon";
 
 interface InformationProps {
@@ -34,9 +35,12 @@ export const Information = ({ label = "Information", background = "#2018b0" }: I
   background: ${background};
   `
   return (
+    <>
+    <GlobalStyles />
     <InformationSectionWithBackground>
       <Icon.Information/>
       <InformationContent>{label}</InformationContent>
     </InformationSectionWithBackground>
+    </>
   );
 };

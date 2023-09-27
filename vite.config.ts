@@ -32,6 +32,10 @@ export default defineConfig({
               src: "fonts",
               dest: "build",
             },
+            {
+              src: "GlobalStyles",
+              dest: "build",
+            },
           ],
           hook: "writeBundle", // Utilisez le hook "writeBundle" pour copier après la génération du bundle
         }),

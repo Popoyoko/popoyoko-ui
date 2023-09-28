@@ -1,3 +1,22 @@
+@font-face {
+  font-family: "Co Headline";
+  src: url("../fonts/Co_Headline_Regular.otf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Co Headline";
+  src: url("../fonts/Co_Headline_Bold.otf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Co Headline";
+  src: url("../fonts/Co_Headline_Light.otf");
+  font-weight: lighter;
+}
+
+
 #root {
   max-width: 1280px;
   margin: 0 auto;

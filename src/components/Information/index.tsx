@@ -1,24 +1,20 @@
 import React from "react";
 import { Icon } from "../Icon";
-import popoyoko from "../../tokens/popoyoko.json";
+import  tokenfile from "../../tokens/config";
 
 interface InformationProps {
   label?: string;
   background?: string;
 }
 
-const style = (tokenfile) => {
-  const background = tokenfile.information.bg.default;
-};
-
 export const Information = ({
   label = "Information",
-  background = popoyoko.InformationSection.background,
+  background = tokenfile.Test.color,
 }: InformationProps) => {
   return (
-    <div style={popoyoko.InformationSection}>
+    <div style={{ ...tokenfile.InformationSection, background}} >
       <Icon.Information />
-      <p style={popoyoko.InformationContent}>{label}</p>
+      <p style={tokenfile.InformationContent}>{label}</p>
     </div>
   );
 };

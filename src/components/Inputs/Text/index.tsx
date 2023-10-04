@@ -43,14 +43,15 @@ font-weight: 400;
 line-height: 24px; /* 150% */
 `;
 
-export const InputText = ({
+export const InputText: React.FC<InputTextProps & React.HTMLProps<HTMLInputElement>> = ({
     label,
     placeholder,
+    ...props
 }: InputTextProps) => {
     return (
         <InputWrapper>
             <SelectLabel>{label}</SelectLabel>
-            <TextInput placeholder={placeholder} />
+            <TextInput placeholder={placeholder} {...props}/>
         </InputWrapper>
     )
 }

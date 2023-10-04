@@ -4,6 +4,7 @@ import styled from 'styled-components';
 interface InputTextProps {
     label: string;
     placeholder: string;
+    type?: string;
 };
 
 const InputWrapper = styled.div`
@@ -46,12 +47,13 @@ line-height: 24px; /* 150% */
 export const InputText: React.FC<InputTextProps & React.HTMLProps<HTMLInputElement>> = ({
     label,
     placeholder,
+    type = 'text',
     ...props
 }: InputTextProps) => {
     return (
         <InputWrapper>
             <SelectLabel>{label}</SelectLabel>
-            <TextInput placeholder={placeholder} {...props}/>
+            <TextInput type={type} placeholder={placeholder} {...props}/>
         </InputWrapper>
     )
 }

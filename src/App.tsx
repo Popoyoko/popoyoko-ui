@@ -69,7 +69,8 @@ function App() {
               onClick={() => {
                 console.log("Bouton cliqué !");
               }}
-            />
+              
+              />
           </div>
           <div className="FormSection">
             <h2>Pas encore de compte ?</h2>

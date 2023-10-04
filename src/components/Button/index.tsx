@@ -7,6 +7,7 @@ interface ButtonProps {
   label?: string;
   children?: React.ReactNode;
   onClick?: () => void;
+  value?: string;
 }
 
 const StyledButton = styled.button`
@@ -114,26 +115,27 @@ const Button = ({
   typeSvg,
   children,
   onClick,
+  value,
 }: ButtonProps) => {
   if (typeSvg === "none") {
-    return <StyledButton className={type} onClick={onClick}><SpanButton>{label}</SpanButton></StyledButton>;
+    return <StyledButton className={type} onClick={onClick} value={value}><SpanButton>{label}</SpanButton></StyledButton>;
   } else if (typeSvg === "left") {
     return (
-      <StyledButton className={type} onClick={onClick}>
+      <StyledButton className={type} onClick={onClick} value={value}>
         {children}
         <SpanButton>{label}</SpanButton>
       </StyledButton>
     );
   } else if (typeSvg === "right") {
     return (
-      <StyledButton className={type} onClick={onClick}>
+      <StyledButton className={type} onClick={onClick} value={value}>
         <SpanButton>{label}</SpanButton>
         {children}
       </StyledButton>
     );
   } else if (typeSvg === "only") {
     return (
-      <ButtonSvgOnly className={type} onClick={onClick}>
+      <ButtonSvgOnly className={type} onClick={onClick} value={value}>
         {children}
       </ButtonSvgOnly>
     );

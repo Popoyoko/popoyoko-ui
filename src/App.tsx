@@ -69,7 +69,6 @@ function App() {
               onClick={() => {
                 console.log("Bouton cliqué !");
               }}
-              style={{ fontWeight: "bold" }}
             />
           </div>
           <div className="FormSection">

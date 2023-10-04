@@ -37,17 +37,15 @@ interface TertiaryProps {
   typeSvg?: "none" | "left" | "right" | "only";
   label?: string;
   children?: React.ReactNode;
-  onClick?: () => void;
 }
 
 export const Tertiary = ({
   label,
   typeSvg,
   children,
-  onClick,
 }: TertiaryProps) => {
   return (
-    <TertiaryButton onClick={onClick}>
+    <TertiaryButton>
       {typeSvg === "left" && children}
       {label}
       {typeSvg === "right" && children}

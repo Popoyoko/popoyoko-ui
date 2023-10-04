@@ -34,17 +34,15 @@ interface PrimaryProps {
   typeSvg?: "none" | "left" | "right" | "only";
   label?: string;
   children?: React.ReactNode;
-  onClick?: () => void;
 }
 
 export const Primary = ({
   label,
   typeSvg,
   children,
-  onClick,
 }: PrimaryProps) => {
   return (
-    <PrimaryButton onClick={onClick}>
+    <PrimaryButton>
       {typeSvg === "left" && children}
       {label}
       {typeSvg === "right" && children}

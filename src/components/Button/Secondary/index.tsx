@@ -37,17 +37,15 @@ interface SecondaryProps {
   typeSvg?: "none" | "left" | "right" | "only";
   label?: string;
   children?: React.ReactNode;
-  onClick?: () => void;
 }
 
 export const Secondary = ({
   label,
   typeSvg,
   children,
-  onClick,
 }: SecondaryProps) => {
   return (
-    <SecondaryButton onClick={onClick}>
+    <SecondaryButton>
       {typeSvg === "left" && children}
       {label}
       {typeSvg === "right" && children}

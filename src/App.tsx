@@ -45,7 +45,7 @@ function App() {
             <div className="FormGroup">
               <div className="Text">
                 <p>Email</p>
-                <InputText label="email" placeholder="placeholder" />
+                <InputText type="password" label="email" placeholder="placeholder" />
               </div>
               <div className="Text">
                 <p>Mot de passe</p>
@@ -69,7 +69,8 @@ function App() {
               onClick={() => {
                 console.log("Bouton cliqué !");
               }}
-            />
+              
+              />
           </div>
           <div className="FormSection">
             <h2>Pas encore de compte ?</h2>

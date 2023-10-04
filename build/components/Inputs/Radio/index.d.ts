@@ -1,5 +1,6 @@
 import React from "react";
-export declare const InputRadio: ({ label }: {
+export declare const InputRadio: ({ label, ...props }: {
+    [x: string]: any;
     label: any;
 }) => React.FunctionComponentElement<{
     ref?: React.LegacyRef<HTMLDivElement>;

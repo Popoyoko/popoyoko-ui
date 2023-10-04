@@ -164,7 +164,7 @@ line-height: normal;
 `,sr=c(Ne)`
 padding: 8px;
 width: fit-content;
-`,G=({type:e="primary",label:t,typeSvg:n,children:r})=>{if(n==="none")return i.createElement(Ne,{className:e},i.createElement(Ye,null,t));if(n==="left")return i.createElement(Ne,{className:e},r,i.createElement(Ye,null,t));if(n==="right")return i.createElement(Ne,{className:e},i.createElement(Ye,null,t),r);if(n==="only")return i.createElement(sr,{className:e},r)};G.Primary=e=>i.createElement(G,{type:"primary",...e});G.Secondary=e=>i.createElement(G,{type:"secondary",...e});G.Tertiary=e=>i.createElement(G,{type:"tertiary",...e});const cr=c.div`
+`,G=({type:e="primary",label:t,typeSvg:n,children:r,onClick:o,value:a})=>{if(n==="none")return i.createElement(Ne,{className:e,onClick:o,value:a},i.createElement(Ye,null,t));if(n==="left")return i.createElement(Ne,{className:e,onClick:o,value:a},r,i.createElement(Ye,null,t));if(n==="right")return i.createElement(Ne,{className:e,onClick:o,value:a},i.createElement(Ye,null,t),r);if(n==="only")return i.createElement(sr,{className:e,onClick:o,value:a},r)};G.Primary=e=>i.createElement(G,{type:"primary",...e});G.Secondary=e=>i.createElement(G,{type:"secondary",...e});G.Tertiary=e=>i.createElement(G,{type:"tertiary",...e});const cr=c.div`
   position: relative;
   overflow: hidden;
 `,lr=c(cr)`
@@ -445,7 +445,7 @@ font-size: 16px;
 font-style: normal;
 font-weight: 400;
 line-height: 24px; /* 150% */
-`,fo=({label:e,placeholder:t})=>i.createElement(uo,null,i.createElement(go,null,e),i.createElement(po,{placeholder:t})),ho=c.div`
+`,fo=({label:e,placeholder:t,type:n="text",...r})=>i.createElement(uo,null,i.createElement(go,null,e),i.createElement(po,{type:n,placeholder:t,...r})),ho=c.div`
   display: flex;
   padding: 4px;
   align-items: center;
@@ -472,7 +472,7 @@ line-height: 24px; /* 150% */
   line-height: normal;
   word-break: break-word;
   text-align: start;
-`,yo=({label:e})=>{const[t,n]=i.useState(!1),r=()=>{n(!t)};return i.createElement(ho,{onClick:r},i.createElement(mo,{type:"radio",checked:t}),i.createElement(Mo,null,e))},Io=c.div`
+`,yo=({label:e,...t})=>{const[n,r]=i.useState(!1),o=()=>{r(!n)};return i.createElement(ho,{onClick:o},i.createElement(mo,{type:"radio",checked:n,...t}),i.createElement(Mo,null,e))},Io=c.div`
   position: relative;
   display: flex;
 

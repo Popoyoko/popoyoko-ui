@@ -23,26 +23,26 @@ const DateLabel = styled.label`
 `;
 
 const DateInput = styled.input`
-display: flex;
-padding: 12px;
-justify-content: center;
-align-items: flex-start;
-gap: 4px;
-align-self: stretch;
+  display: flex;
+  padding: 12px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4px;
+  align-self: stretch;
 
-border-radius: 4px;
-border: 2px solid #0F082B;
-background: #F7F7F8;
+  border-radius: 4px;
+  border: 2px solid #0f082b;
+  background: #f7f7f8;
 
-color: #0F082B;
-font-family: Co Headline;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 24px; /* 150% */
+  color: #0f082b;
+  font-family: Co Headline;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
 `;
 
-export const InputDate = ({ label, value, onChange }: InputDateProps) => {
+export const InputDate: React.FC<InputDateProps & React.HTMLProps<HTMLInputElement>> = ({ label, value, onChange, ...props }: InputDateProps) => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     onChange(e.target.value);
   };
@@ -50,11 +50,7 @@ export const InputDate = ({ label, value, onChange }: InputDateProps) => {
   return (
     <InputWrapper>
       <DateLabel>{label}</DateLabel>
-      <DateInput
-        type="date"
-        value={value}
-        onChange={handleChange}
-      />
+      <DateInput type="date" value={value} onChange={handleChange} {...props}/>
     </InputWrapper>
   );
 };

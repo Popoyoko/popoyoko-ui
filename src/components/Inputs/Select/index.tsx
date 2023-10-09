@@ -10,17 +10,17 @@ const SelectWrapper = styled.div`
   position: relative;
   display: flex;
 
-flex-direction: column;
-align-items: flex-start;
-gap: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
 `;
 
 const SelectLabel = styled.label`
-font-family: Co Headline;
-font-size: 22px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+  font-family: Co Headline;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 `;
 
 const SelectInput = styled.select`
@@ -36,7 +36,9 @@ const SelectInput = styled.select`
   outline: none;
 `;
 
-export const InputSelect = ({ label, options }: InputSelectProps) => {
+export const InputSelect: React.FC<
+  InputSelectProps & React.HTMLProps<HTMLInputElement>
+> = ({ label, options, ...props }: InputSelectProps) => {
   const [selectedOption, setSelectedOption] = useState<string | undefined>(
     undefined
   );
@@ -48,7 +50,11 @@ export const InputSelect = ({ label, options }: InputSelectProps) => {
   return (
     <SelectWrapper>
       <SelectLabel>{label}</SelectLabel>
-      <SelectInput value={selectedOption} onChange={handleSelectChange}>
+      <SelectInput
+        value={selectedOption}
+        onChange={handleSelectChange}
+        {...props}
+      >
         <option value="">Option</option>
         {options.map((option, index) => (
           <option key={index} value={option}>

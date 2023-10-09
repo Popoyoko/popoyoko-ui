@@ -18,6 +18,7 @@ import { InputSelect } from "./components/Inputs/Select";
 import { InputRadio } from "./components/Inputs/Radio";
 import { InputDate } from "./components/Inputs/Date";
 import { InputSearch } from "./components/Inputs/Search";
+import { InputDownload } from "./components/Inputs/Download";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -49,7 +50,7 @@ function App() {
               </div>
               <div className="Text">
                 <p>Mot de passe</p>
-                <InputText label="Mot de passe" placeholder="placeholder" onClick={() => {
+                <InputText name="tae" label="Mot de passe" placeholder="placeholder" onClick={() => {
                 console.log("Bouton cliqué !");
               }} />
 
@@ -71,6 +72,7 @@ function App() {
               }}
               
               />
+              <InputDownload name="azr" label="test" icon="left"></InputDownload>
           </div>
           <div className="FormSection">
             <h2>Pas encore de compte ?</h2>

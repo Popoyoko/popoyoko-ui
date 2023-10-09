@@ -25,14 +25,15 @@ const DownloadInput = styled.input`
   display: none;
 `;
 
-export const InputDownload = ({
+export const InputDownload: React.FC<InputDownloadProps & React.HTMLProps<HTMLInputElement>> = ({
     label,
     icon,
+    ...props
 }: InputDownloadProps) => {
     if (icon === "left") {
         return (
             <form>
-                <DownloadLabel htmlFor="file-input">
+                <DownloadLabel htmlFor="file-input" {...props}>
                     {label}
                     <img src={download} alt="download" />
                     <DownloadInput type="file" name="file" id="file-input" />

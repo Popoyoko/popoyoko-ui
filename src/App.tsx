@@ -11,6 +11,9 @@ import {
   Information,
   InputText,
   Avatar,
+  Header,
+  Logo,
+  Section,
 } from "./components";
 import { Button } from "./components";
 import { Ratio } from "./components";
@@ -18,6 +21,8 @@ import { InputSelect } from "./components/Inputs/Select";
 import { InputRadio } from "./components/Inputs/Radio";
 import { InputDate } from "./components/Inputs/Date";
 import { InputSearch } from "./components/Inputs/Search";
+import { InputDownload } from "./components/Inputs/Download";
+import InputUpload from "./components/Inputs/Upload";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -25,8 +30,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* Practolib test */}
-      {isMobile ? (
         <div className="Login">
           <div className="Logo">
             <a href="http://localhost:6006/" target="_blank">
@@ -40,74 +43,20 @@ function App() {
             <Icon.Add size="large" />
           </div>
 
-          <div className="FormSection">
-            <h2>Connexion</h2>
-            <div className="FormGroup">
-              <div className="Text">
-                <p>Email</p>
-                <InputText type="password" label="email" placeholder="placeholder" />
-              </div>
-              <div className="Text">
-                <p>Mot de passe</p>
-                <InputText label="Mot de passe" placeholder="placeholder" onClick={() => {
-                console.log("Bouton cliqué !");
-              }} />
+          <Avatar.Small showbadge={true}></Avatar.Small>
+          <Avatar.Cover showedit={true}></Avatar.Cover>
 
-                <InputSelect
-                  label="Sélectionnez aze"
-                  options={["Option 1", "Option 2", "Option 3"]}
-                />
+          <Button.Primary label="Button Primary" typeSvg="none" onClick={() => {console.log("Bouton cliqué !");}}/>
+          <Button.Primary label="Button Primary" typeSvg="right"><Icon.Add size="large" />-</Button.Primary>
+          <Button.Primary label="Button Primary" typeSvg="only"><Icon.Add size="large" /></Button.Primary>
 
-                <InputRadio label="rtazeazeazef efesfe fefeqzdzd fefeazzaea zeazee" />
+          <Button.Secondary label="Button Secondary" typeSvg="none" onClick={() => {console.log("Bouton cliqué !");}}/>
+          <Button.Secondary label="Button Secondary" typeSvg="right"><Icon.Add size="large" /></Button.Secondary>
+          <Button.Secondary typeSvg="only"><Icon.Add size="large" /></Button.Secondary>
 
-                <InputDate label="tzest"></InputDate>
-              </div>
-            </div>
-            <Button.Primary
-              label="Se connecter"
-              typeSvg="none"
-              onClick={() => {
-                console.log("Bouton cliqué !");
-              }}
-              
-              />
-          </div>
-          <div className="FormSection">
-            <h2>Pas encore de compte ?</h2>
-            <Button.Secondary label="Créer un compte" typeSvg="none" />
-            <Button.Tertiary typeSvg="only">
-              <Icon.Add size="large" />
-            </Button.Tertiary>
-            <Avatar.Cover showedit={true}></Avatar.Cover>
-            <Slider>
-              <Card.Default
-                title="test"
-                mention="mention"
-                subTitle="subtitle"
-                price={13}
-              />
-              <Card.Default
-                title="test2"
-                mention="mention2"
-                subTitle="subtitle2"
-                price={14}
-              />
-              <Card.Default
-                title="test3"
-                mention="mention3"
-                subTitle="subtitle3"
-                price={15}
-              />
-              <Card.Default
-                title="test3"
-                mention="mention3"
-                subTitle="subtitle3"
-                price={15}
-              />
-            </Slider>
-
-            <Button.Tertiary label="Créer un compte" typeSvg="none" />
-          </div>
+          <Button.Tertiary label="Button Tertiary" typeSvg="none" onClick={() => {console.log("Bouton cliqué !");}}/>
+          <Button.Tertiary label="Button Tertiary" typeSvg="right"><Icon.Add size="large" /></Button.Tertiary>
+          <Button.Tertiary typeSvg="only"><Icon.Add size="large" /></Button.Tertiary>
 
           <Card.Default
             title="test"
@@ -118,23 +67,62 @@ function App() {
 
           <Card.Media />
 
-          <Text
-            title="Description"
-            label="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel dui ac odio malesuada semper. Vivamus tincidunt elit velit, eget placerat quam ornare et. Proin maximus neque vel neque elementum, et elementum quam sagittis. Mauris ultricies magna nec diam vulputate lacinia. Proin aliquam velit id diam molestie interdum. Nam vel tellus viverra, mattis erat vitae, fringilla magna. Fusce in ligula eu lectus rutrum porta ac sed augue. Pellentesque in ex odio. Ut lobortis, massa vel lacinia bibendum, leo mi luctus diam, id mollis orci elit a felis. Sed pretium facilisis tortor, eu pulvinar justo euismod vitae. Duis dapibus lorem sit amet turpis dapibus, non accumsan ligula maximus. In sagittis massa lacus, et consequat nunc mattis vitae. Phasellus ac mauris nec leo luctus egestas. Etiam tristique orci nec mi posuere, non aliquet elit congue. Proin auctor justo elit, vitae interdum diam pretium vel."
+          <Header></Header>
+
+          <Information label="Information"></Information>
+          <Information label="Information" background="white"></Information>
+
+          <InputDate label="Input Date" value="????"></InputDate>
+
+          <InputDownload label="Input Download" icon="right"/>
+
+          <InputRadio label="Input Radio"/>
+
+          <InputSearch placeholder="Input Search..."></InputSearch>
+
+          <InputSelect
+            label="Input Select"
+            options={["Option 1", "Option 2", "Option 3"]}
           />
 
-          <Card.Media />
-          <InputSearch placeholder="Search..."></InputSearch>
-          <Text
-            title="Description"
-            label="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel dui ac odio malesuada semper. Vivamus tincidunt elit velit, eget placerat quam ornare et. Proin maximus neque vel neque elementum, et elementum quam sagittis. Mauris ultricies magna nec diam vulputate lacinia. Proin aliquam velit id diam molestie interdum. Nam vel tellus viverra, mattis erat vitae, fringilla magna. Fusce in ligula eu lectus rutrum porta ac sed augue. Pellentesque in ex odio. Ut lobortis, massa vel lacinia bibendum, leo mi luctus diam, id mollis orci elit a felis. Sed pretium facilisis tortor, eu pulvinar justo euismod vitae. Duis dapibus lorem sit amet turpis dapibus, non accumsan ligula maximus. In sagittis massa lacus, et consequat nunc mattis vitae. Phasellus ac mauris nec leo luctus egestas. Etiam tristique orci nec mi posuere, non aliquet elit congue. Proin auctor justo elit, vitae interdum diam pretium vel."
-          />
+          <InputText label="Input Text" placeholder="Text" onClick={() => {console.log("Bouton cliqué !");}}/>
+          <InputText label="Input Text" type="password" placeholder="Password" />
 
-          <Information label="tazeazd"></Information>
+          <InputUpload label="Input Upload"></InputUpload>
+
+          <Logo src="logo"></Logo>
+
+          <Section title="Titre" label="Label"></Section>
+
+          <Slider>
+            <Card.Default
+              title="test"
+              mention="mention"
+              subTitle="subtitle"
+              price={13}
+            />
+            <Card.Default
+              title="test2"
+              mention="mention2"
+              subTitle="subtitle2"
+              price={14}
+            />
+            <Card.Default
+              title="test3"
+              mention="mention3"
+              subTitle="subtitle3"
+              price={15}
+            />
+            <Card.Default
+              title="test3"
+              mention="mention3"
+              subTitle="subtitle3"
+              price={15}
+            />
+          </Slider>
+
+          <Text title="Text" label="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel dui ac odio malesuada semper. Vivamus tincidunt elit velit, eget placerat quam ornare et. Proin maximus neque vel neque elementum, et elementum quam sagittis. Mauris ultricies magna nec diam vulputate lacinia. Proin aliquam velit id diam molestie interdum. Nam vel tellus viverra, mattis erat vitae, fringilla magna. Fusce in ligula eu lectus rutrum porta ac sed augue. Pellentesque in ex odio. Ut lobortis, massa vel lacinia bibendum, leo mi luctus diam, id mollis orci elit a felis. Sed pretium facilisis tortor, eu pulvinar justo euismod vitae. Duis dapibus lorem sit amet turpis dapibus, non accumsan ligula maximus. In sagittis massa lacus, et consequat nunc mattis vitae. Phasellus ac mauris nec leo luctus egestas. Etiam tristique orci nec mi posuere, non aliquet elit congue. Proin auctor justo elit, vitae interdum diam pretium vel."/>
         </div>
-      ) : (
-        <></>
-      )}
     </div>
   );
 }

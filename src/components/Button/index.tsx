@@ -7,7 +7,7 @@ interface ButtonProps {
   label?: string;
   children?: React.ReactNode;
   onClick?: () => void;
-  value?: string;
+  value?: any;
 }
 
 const StyledButton = styled.button`

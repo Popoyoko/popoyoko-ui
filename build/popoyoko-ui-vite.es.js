@@ -1362,8 +1362,6 @@ m.UserFlat = (e) => /* @__PURE__ */ a.createElement(m, { icon: "UserFlat", ...e 
 m.UserLine = (e) => /* @__PURE__ */ a.createElement(m, { icon: "UserLine", ...e });
 const zr = c.div`
   position: relative;
-  width: 256px;
-  height: 256px;
   background-size: cover;
   object-fit: cover;
 `, Or = c.div`
@@ -1380,7 +1378,7 @@ const zr = c.div`
   const n = t ? { backgroundImage: `url(${t})` } : {
     backgroundImage: "https://imgs.search.brave.com/eHBodvumUFQ7TzAM2YRFjFbE9P2IB_VeLxS5-sesWlo/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA1Lzc5LzY4LzI0/LzM2MF9GXzU3OTY4/MjQ3OV9qNGpSZngw/bmwzQzh2TXJUWVZh/cEZuR1A4RWdOSGdm/ay5qcGc"
   };
-  return /* @__PURE__ */ a.createElement(zr, null, /* @__PURE__ */ a.createElement(ue.L1H1, null, /* @__PURE__ */ a.createElement(kr, { src: t, style: n }), e && /* @__PURE__ */ a.createElement(Or, null, /* @__PURE__ */ a.createElement(_.Tertiary, { typeSvg: "right", label: "Edit" }, /* @__PURE__ */ a.createElement(m.AddPicture, { size: "medium" })))));
+  return /* @__PURE__ */ a.createElement(zr, null, /* @__PURE__ */ a.createElement(ue.L1H1, null, /* @__PURE__ */ a.createElement(kr, { src: t, style: n }), e && /* @__PURE__ */ a.createElement(Or, null, /* @__PURE__ */ a.createElement(_.Tertiary, { typeSvg: "right", label: "Edit" }, /* @__PURE__ */ a.createElement(m.AddPicture, null)))));
 }, qe = ({ children: e }) => /* @__PURE__ */ a.createElement("div", null, e);
 qe.Small = dr;
 qe.Cover = Lr;
@@ -1605,7 +1603,7 @@ font-size: 16px;
 font-style: normal;
 font-weight: 400;
 line-height: 24px; /* 150% */
-`, Co = ({ label: e, placeholder: t, type: n = "text", ...r }) => /* @__PURE__ */ a.createElement(go, null, /* @__PURE__ */ a.createElement(po, null, e), /* @__PURE__ */ a.createElement(fo, { type: n, placeholder: t, ...r })), ho = c.div`
+`, Co = ({ label: e, placeholder: t, type: n = "text", name: r, value: o, onClick: i }) => /* @__PURE__ */ a.createElement(go, null, /* @__PURE__ */ a.createElement(po, null, e), /* @__PURE__ */ a.createElement(fo, { type: n, placeholder: t, name: r, value: o, onClick: i })), ho = c.div`
   display: flex;
   padding: 4px;
   align-items: center;
@@ -1632,24 +1630,24 @@ line-height: 24px; /* 150% */
   line-height: normal;
   word-break: break-word;
   text-align: start;
-`, zo = ({ label: e, ...t }) => {
-  const [n, r] = xt(!1), o = () => {
-    r(!n);
+`, zo = ({ label: e, name: t, value: n }) => {
+  const [r, o] = xt(!1), i = () => {
+    o(!r);
   };
-  return /* @__PURE__ */ a.createElement(ho, { onClick: o }, /* @__PURE__ */ a.createElement(mo, { type: "radio", checked: n, ...t }), /* @__PURE__ */ a.createElement(Mo, null, e));
+  return /* @__PURE__ */ a.createElement(ho, { onClick: i }, /* @__PURE__ */ a.createElement(mo, { type: "radio", checked: r, name: t, value: n }), /* @__PURE__ */ a.createElement(Mo, null, e));
 }, yo = c.div`
   position: relative;
   display: flex;
 
-flex-direction: column;
-align-items: flex-start;
-gap: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
 `, Io = c.label`
-font-family: Co Headline;
-font-size: 22px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+  font-family: Co Headline;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 `, xo = c.select`
   width: 100%;
   padding: 12px;
@@ -1661,11 +1659,11 @@ line-height: normal;
   font-size: 16px;
   color: #0f082b;
   outline: none;
-`, Oo = ({ label: e, options: t }) => {
-  const [n, r] = xt(void 0), o = (i) => {
-    r(i.target.value);
+`, Oo = ({ label: e, options: t, name: n, onClick: r }) => {
+  const [o, i] = xt(void 0), s = (d) => {
+    i(d.target.value);
   };
-  return /* @__PURE__ */ a.createElement(yo, null, /* @__PURE__ */ a.createElement(Io, null, e), /* @__PURE__ */ a.createElement(xo, { value: n, onChange: o }, /* @__PURE__ */ a.createElement("option", { value: "" }, "Option"), t.map((i, s) => /* @__PURE__ */ a.createElement("option", { key: s, value: i }, i))));
+  return /* @__PURE__ */ a.createElement(yo, null, /* @__PURE__ */ a.createElement(Io, null, e), /* @__PURE__ */ a.createElement(xo, { value: o, onChange: s, name: n }, /* @__PURE__ */ a.createElement("option", { value: "" }, "Option"), t.map((d, l) => /* @__PURE__ */ a.createElement("option", { key: l, value: d, onClick: r }, d))));
 }, Do = c.div`
   display: flex;
   flex-direction: column;

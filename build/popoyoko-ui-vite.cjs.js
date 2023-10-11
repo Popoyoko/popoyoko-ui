@@ -216,8 +216,6 @@ justify-content: center;
   }
 `,wr={Add:gr,AddPicture:pr,ArrowBottom:fr,ArrowLeft:hr,ArrowRight:mr,ArrowTop:Mr,ArrowTriangle:yr,DateFlat:Ir,DateLine:xr,Information:Dr,Search:Nr,Upload:Ut,UserFlat:Er,UserLine:Ar},h=({size:e="medium",icon:t})=>{const n=`icon-${e} icon`,r=wr[t];return i.createElement(br,{className:n},i.createElement(Tr,{src:r,alt:t}))};h.Add=e=>i.createElement(h,{icon:"Add",...e});h.AddPicture=e=>i.createElement(h,{icon:"AddPicture",...e});h.ArrowBottom=e=>i.createElement(h,{icon:"ArrowBottom",...e});h.ArrowLeft=e=>i.createElement(h,{icon:"ArrowLeft",...e});h.ArrowRight=e=>i.createElement(h,{icon:"ArrowRight",...e});h.ArrowTop=e=>i.createElement(h,{icon:"ArrowTop",...e});h.ArrowTriangle=e=>i.createElement(h,{icon:"ArrowTriangle",...e});h.DateFlat=e=>i.createElement(h,{icon:"DateFlat",...e});h.DateLine=e=>i.createElement(h,{icon:"DateLine",...e});h.Information=e=>i.createElement(h,{icon:"Information",...e});h.Search=e=>i.createElement(h,{icon:"Search",...e});h.Upload=e=>i.createElement(h,{icon:"Upload",...e});h.UserFlat=e=>i.createElement(h,{icon:"UserFlat",...e});h.UserLine=e=>i.createElement(h,{icon:"UserLine",...e});const vr=c.div`
   position: relative;
-  width: 256px;
-  height: 256px;
   background-size: cover;
   object-fit: cover;
 `,jr=c.div`
@@ -230,7 +228,7 @@ justify-content: center;
   width: 100%;
   height: 100%;
   object-fit: cover;
-`,Cr=({showedit:e=!0,background:t="https://imgs.search.brave.com/eHBodvumUFQ7TzAM2YRFjFbE9P2IB_VeLxS5-sesWlo/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA1Lzc5LzY4LzI0/LzM2MF9GXzU3OTY4/MjQ3OV9qNGpSZngw/bmwzQzh2TXJUWVZh/cEZuR1A4RWdOSGdm/ay5qcGc"})=>{const n=t?{backgroundImage:`url(${t})`}:{backgroundImage:"https://imgs.search.brave.com/eHBodvumUFQ7TzAM2YRFjFbE9P2IB_VeLxS5-sesWlo/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA1Lzc5LzY4LzI0/LzM2MF9GXzU3OTY4/MjQ3OV9qNGpSZngw/bmwzQzh2TXJUWVZh/cEZuR1A4RWdOSGdm/ay5qcGc"};return i.createElement(vr,null,i.createElement(ae.L1H1,null,i.createElement(Sr,{src:t,style:n}),e&&i.createElement(jr,null,i.createElement(G.Tertiary,{typeSvg:"right",label:"Edit"},i.createElement(h.AddPicture,{size:"medium"})))))},Se=({children:e})=>i.createElement("div",null,e);Se.Small=ar;Se.Cover=Cr;const zr=c.div`
+`,Cr=({showedit:e=!0,background:t="https://imgs.search.brave.com/eHBodvumUFQ7TzAM2YRFjFbE9P2IB_VeLxS5-sesWlo/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA1Lzc5LzY4LzI0/LzM2MF9GXzU3OTY4/MjQ3OV9qNGpSZngw/bmwzQzh2TXJUWVZh/cEZuR1A4RWdOSGdm/ay5qcGc"})=>{const n=t?{backgroundImage:`url(${t})`}:{backgroundImage:"https://imgs.search.brave.com/eHBodvumUFQ7TzAM2YRFjFbE9P2IB_VeLxS5-sesWlo/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA1Lzc5LzY4LzI0/LzM2MF9GXzU3OTY4/MjQ3OV9qNGpSZngw/bmwzQzh2TXJUWVZh/cEZuR1A4RWdOSGdm/ay5qcGc"};return i.createElement(vr,null,i.createElement(ae.L1H1,null,i.createElement(Sr,{src:t,style:n}),e&&i.createElement(jr,null,i.createElement(G.Tertiary,{typeSvg:"right",label:"Edit"},i.createElement(h.AddPicture,null)))))},Se=({children:e})=>i.createElement("div",null,e);Se.Small=ar;Se.Cover=Cr;const zr=c.div`
   min-width: 246px;
 `,Or=c.img`
   width: 100%;
@@ -445,7 +443,7 @@ font-size: 16px;
 font-style: normal;
 font-weight: 400;
 line-height: 24px; /* 150% */
-`,fo=({label:e,placeholder:t,type:n="text",...r})=>i.createElement(uo,null,i.createElement(go,null,e),i.createElement(po,{type:n,placeholder:t,...r})),ho=c.div`
+`,fo=({label:e,placeholder:t,type:n="text",name:r,value:o,onClick:a})=>i.createElement(uo,null,i.createElement(go,null,e),i.createElement(po,{type:n,placeholder:t,name:r,value:o,onClick:a})),ho=c.div`
   display: flex;
   padding: 4px;
   align-items: center;
@@ -472,19 +470,19 @@ line-height: 24px; /* 150% */
   line-height: normal;
   word-break: break-word;
   text-align: start;
-`,yo=({label:e,...t})=>{const[n,r]=i.useState(!1),o=()=>{r(!n)};return i.createElement(ho,{onClick:o},i.createElement(mo,{type:"radio",checked:n,...t}),i.createElement(Mo,null,e))},Io=c.div`
+`,yo=({label:e,name:t,value:n})=>{const[r,o]=i.useState(!1),a=()=>{o(!r)};return i.createElement(ho,{onClick:a},i.createElement(mo,{type:"radio",checked:r,name:t,value:n}),i.createElement(Mo,null,e))},Io=c.div`
   position: relative;
   display: flex;
 
-flex-direction: column;
-align-items: flex-start;
-gap: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
 `,xo=c.label`
-font-family: Co Headline;
-font-size: 22px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+  font-family: Co Headline;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 `,Do=c.select`
   width: 100%;
   padding: 12px;
@@ -496,7 +494,7 @@ line-height: normal;
   font-size: 16px;
   color: #0f082b;
   outline: none;
-`,No=({label:e,options:t})=>{const[n,r]=i.useState(void 0),o=a=>{r(a.target.value)};return i.createElement(Io,null,i.createElement(xo,null,e),i.createElement(Do,{value:n,onChange:o},i.createElement("option",{value:""},"Option"),t.map((a,s)=>i.createElement("option",{key:s,value:a},a))))},Eo=c.div`
+`,No=({label:e,options:t,name:n,onClick:r})=>{const[o,a]=i.useState(void 0),s=u=>{a(u.target.value)};return i.createElement(Io,null,i.createElement(xo,null,e),i.createElement(Do,{value:o,onChange:s,name:n},i.createElement("option",{value:""},"Option"),t.map((u,l)=>i.createElement("option",{key:l,value:u,onClick:r},u))))},Eo=c.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;

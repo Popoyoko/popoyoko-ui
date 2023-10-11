@@ -1,7 +1,9 @@
 import React from "react";
-export declare const InputSelect: ({ label, options }: {
+export declare const InputSelect: ({ label, options, name, onClick }: {
     label: any;
     options: any;
+    name: any;
+    onClick: any;
 }) => React.FunctionComponentElement<{
     ref?: React.LegacyRef<HTMLDivElement>;
     key?: React.Key;

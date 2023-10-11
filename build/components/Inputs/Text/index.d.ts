@@ -1,9 +1,11 @@
 import React from "react";
-export declare const InputText: ({ label, placeholder, type, ...props }: {
-    [x: string]: any;
+export declare const InputText: ({ label, placeholder, type, name, value, onClick }: {
     label: any;
     placeholder: any;
     type?: string;
+    name: any;
+    value: any;
+    onClick: any;
 }) => React.FunctionComponentElement<{
     ref?: React.LegacyRef<HTMLDivElement>;
     key?: React.Key;

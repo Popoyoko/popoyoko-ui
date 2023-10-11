@@ -14,8 +14,6 @@ const DownloadLabel = styled.label`
   align-items: center;
   padding: 8px 16px;
   gap: 8px;
-  width: 326px;
-  height: 54px;
   background: #f7f7f8;
   border: 2px dashed #171673;
   border-radius: 2px;

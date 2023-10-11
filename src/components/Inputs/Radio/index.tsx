@@ -36,11 +36,11 @@ const Label = styled.label`
 
 interface InputRadioProps {
   label: string;
+  name?: string;
+  value?: any;
 }
 
-export const InputRadio: React.FC<
-  InputRadioProps & React.HTMLProps<HTMLInputElement>
-> = ({ label, ...props }: InputRadioProps) => {
+export const InputRadio = ({ label, name, value }: InputRadioProps) => {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleRadioClick = () => {
@@ -49,7 +49,7 @@ export const InputRadio: React.FC<
 
   return (
     <RadioWrapper onClick={handleRadioClick}>
-      <CustomRadio type="radio" checked={isChecked} {...props}/>
+      <CustomRadio type="radio" checked={isChecked} name={name} value={value}/>
       <Label>{label}</Label>
     </RadioWrapper>
   );

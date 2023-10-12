@@ -76,7 +76,7 @@ function App() {
 
           <InputDownload label="Input Download" icon="right"/>
 
-          <InputRadio label="Input Radio"/>
+          <InputRadio label="Input Radio" checked={true}/>
 
           <InputSearch placeholder="Input Search..."></InputSearch>
 

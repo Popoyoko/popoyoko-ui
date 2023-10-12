@@ -443,7 +443,7 @@ font-size: 16px;
 font-style: normal;
 font-weight: 400;
 line-height: 24px; /* 150% */
-`,fo=({label:e,placeholder:t,type:n="text",name:r,value:o,onClick:a})=>i.createElement(uo,null,i.createElement(go,null,e),i.createElement(po,{type:n,placeholder:t,name:r,value:o,onClick:a})),ho=c.div`
+`,fo=({label:e,placeholder:t,type:n="text",name:r,value:o,onChange:a})=>i.createElement(uo,null,i.createElement(go,null,e),i.createElement(po,{type:n,placeholder:t,name:r,value:o,onChange:a})),ho=c.div`
   display: flex;
   padding: 4px;
   align-items: center;

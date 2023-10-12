@@ -1603,7 +1603,7 @@ font-size: 16px;
 font-style: normal;
 font-weight: 400;
 line-height: 24px; /* 150% */
-`, Co = ({ label: e, placeholder: t, type: n = "text", name: r, value: o, onClick: i }) => /* @__PURE__ */ a.createElement(go, null, /* @__PURE__ */ a.createElement(po, null, e), /* @__PURE__ */ a.createElement(fo, { type: n, placeholder: t, name: r, value: o, onClick: i })), ho = c.div`
+`, Co = ({ label: e, placeholder: t, type: n = "text", name: r, value: o, onChange: i }) => /* @__PURE__ */ a.createElement(go, null, /* @__PURE__ */ a.createElement(po, null, e), /* @__PURE__ */ a.createElement(fo, { type: n, placeholder: t, name: r, value: o, onChange: i })), ho = c.div`
   display: flex;
   padding: 4px;
   align-items: center;

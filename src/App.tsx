@@ -85,7 +85,7 @@ function App() {
             options={["Option 1", "Option 2", "Option 3"]}
           />
 
-          <InputText label="Input Text" placeholder="Text" onClick={() => {console.log("Bouton cliqué !");}}/>
+          <InputText label="Input Text" placeholder="Text"/>
           <InputText label="Input Text" type="password" placeholder="Password" />
 
           <InputUpload label="Input Upload"></InputUpload>

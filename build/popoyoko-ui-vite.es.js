@@ -1693,16 +1693,13 @@ font-size: 16px;
 font-style: normal;
 font-weight: 400;
 line-height: 24px; /* 150% */
-`, ko = ({ label: e, value: t, onChange: n }) => {
-  const r = (o) => {
-    n(o.target.value);
-  };
-  return /* @__PURE__ */ a.createElement(Do, null, /* @__PURE__ */ a.createElement(No, null, e), /* @__PURE__ */ a.createElement(Eo, {
-    type: "date",
-    value: t,
-    onChange: r
-  }));
-}, Ao = c.div`
+`, ko = ({ label: e, lang: t = "fr", value: n, name: r, onChange: o }) => /* @__PURE__ */ a.createElement(Do, null, /* @__PURE__ */ a.createElement(No, null, e), /* @__PURE__ */ a.createElement(Eo, {
+  lang: t,
+  value: n,
+  type: "date",
+  name: r,
+  onChange: o
+})), Ao = c.div`
 position: relative;
   display: flex;
   align-items: flex-start;

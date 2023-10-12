@@ -1,7 +1,9 @@
 import React from "react";
-export declare const InputDate: ({ label, value, onChange }: {
+export declare const InputDate: ({ label, lang, value, name, onChange }: {
     label: any;
+    lang?: string;
     value: any;
+    name: any;
     onChange: any;
 }) => React.FunctionComponentElement<{
     ref?: React.LegacyRef<HTMLDivElement>;

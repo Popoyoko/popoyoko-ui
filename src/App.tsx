@@ -72,7 +72,7 @@ function App() {
           <Information label="Information"></Information>
           <Information label="Information" background="white"></Information>
 
-          <InputDate label="Input Date" value="????"></InputDate>
+          <InputDate label="Input Date"></InputDate>
 
           <InputDownload label="Input Download" icon="right"/>
 

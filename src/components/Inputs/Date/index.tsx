@@ -2,9 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 interface InputDateProps {
-  label: string;
+  label?: string;
   value?: string;
-  onChange?: (value: string) => void;
+  name?: string;
+  lang?: string;
+  onChange?: () => void;
 }
 
 const InputWrapper = styled.div`
@@ -42,18 +44,17 @@ font-weight: 400;
 line-height: 24px; /* 150% */
 `;
 
-export const InputDate = ({ label, value, onChange }: InputDateProps) => {
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    onChange(e.target.value);
-  };
+export const InputDate = ({ label, lang="fr", value, name, onChange }: InputDateProps) => {
 
   return (
     <InputWrapper>
       <DateLabel>{label}</DateLabel>
       <DateInput
-        type="date"
+        lang={lang}
         value={value}
-        onChange={handleChange}
+        type="date"
+        name={name}
+        onChange={onChange}
       />
     </InputWrapper>
   );

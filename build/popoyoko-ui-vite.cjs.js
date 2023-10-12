@@ -523,7 +523,7 @@ font-size: 16px;
 font-style: normal;
 font-weight: 400;
 line-height: 24px; /* 150% */
-`,To=({label:e,value:t,onChange:n})=>{const r=o=>{n(o.target.value)};return i.createElement(Eo,null,i.createElement(Ao,null,e),i.createElement(bo,{type:"date",value:t,onChange:r}))},wo=c.div`
+`,To=({label:e,lang:t="fr",value:n,name:r,onChange:o})=>i.createElement(Eo,null,i.createElement(Ao,null,e),i.createElement(bo,{lang:t,value:n,type:"date",name:r,onChange:o})),wo=c.div`
 position: relative;
   display: flex;
   align-items: flex-start;

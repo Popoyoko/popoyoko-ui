@@ -23,6 +23,7 @@ import { InputDate } from "./components/Inputs/Date";
 import { InputSearch } from "./components/Inputs/Search";
 import { InputDownload } from "./components/Inputs/Download";
 import InputUpload from "./components/Inputs/Upload";
+import { GroupRadio } from "./components/Inputs/Radio/Group";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -77,6 +78,12 @@ function App() {
           <InputDownload label="Input Download" icon="right"/>
 
           <InputRadio label="Input Radio" checked={true}/>
+
+          <GroupRadio>
+          <InputRadio label="Input Radio" checked={true}/>
+          <InputRadio label="Input Radio" checked={true}/>
+          <InputRadio label="Input Radio" checked={true}/>
+          </GroupRadio>
 
           <InputSearch placeholder="Input Search..."></InputSearch>
 

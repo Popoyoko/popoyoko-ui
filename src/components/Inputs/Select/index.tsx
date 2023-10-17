@@ -5,7 +5,7 @@ interface InputSelectProps {
   label?: string;
   options: string[];
   name?: string;
-  onClick?: () => void;
+  onChange?: () => void;
 }
 
 const SelectWrapper = styled.div`
@@ -42,7 +42,7 @@ export const InputSelect = ({
   label,
   options,
   name,
-  onClick,
+  onChange,
 }: InputSelectProps) => {
   const [selectedOption, setSelectedOption] = useState<string | undefined>(
     undefined
@@ -58,7 +58,7 @@ export const InputSelect = ({
       <SelectInput value={selectedOption} onChange={handleSelectChange}  name={name}>
         <option value="">Option</option>
         {options.map((option, index) => (
-          <option key={index} value={option} onClick={onClick}>
+          <option key={index} value={option} onChange={onChange}>
             {option}
           </option>
         ))}

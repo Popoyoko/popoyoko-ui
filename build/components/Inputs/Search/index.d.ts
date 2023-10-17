@@ -1,6 +1,7 @@
 import React from "react";
-export declare const InputSearch: ({ placeholder }: {
+export declare const InputSearch: ({ placeholder, onChange }: {
     placeholder: any;
+    onChange: any;
 }) => React.FunctionComponentElement<{
     ref?: React.LegacyRef<HTMLDivElement>;
     key?: React.Key;

@@ -80,9 +80,9 @@ function App() {
           <InputRadio label="Input Radio" checked={true}/>
 
           <GroupRadio>
-          <InputRadio label="Input Radio" checked={true}/>
-          <InputRadio label="Input Radio" checked={true}/>
-          <InputRadio label="Input Radio" checked={true}/>
+          <InputRadio label="Input Radio" checked={true} name="test"/>
+          <InputRadio label="Input Radio" checked={true} name="test"/>
+          <InputRadio label="Input Radio" checked={true} name="test"/>
           </GroupRadio>
 
           <InputSearch placeholder="Input Search..."></InputSearch>

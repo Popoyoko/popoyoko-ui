@@ -1482,7 +1482,7 @@ font-weight: 400;
 line-height: 24px; /* 150% */
 
 border: none;
-`, qr = ({ placeholder: e }) => /* @__PURE__ */ a.createElement(Jr, null, /* @__PURE__ */ a.createElement(Kr, { type: "search", placeholder: e }), /* @__PURE__ */ a.createElement(m.Search, null)), eo = c.div`
+`, qr = ({ placeholder: e, onChange: t }) => /* @__PURE__ */ a.createElement(Jr, null, /* @__PURE__ */ a.createElement(Kr, { type: "search", placeholder: e, onChange: t }), /* @__PURE__ */ a.createElement(m.Search, null)), eo = c.div`
   display: flex;
 `, wo = () => /* @__PURE__ */ a.createElement(eo, null, /* @__PURE__ */ a.createElement(Xr, { src: "" }), /* @__PURE__ */ a.createElement(qr, { placeholder: "" }), /* @__PURE__ */ a.createElement(qe.Small, null)), to = c.div`
   display: flex;
@@ -1659,11 +1659,11 @@ line-height: 24px; /* 150% */
   font-size: 16px;
   color: #0f082b;
   outline: none;
-`, Oo = ({ label: e, options: t, name: n, onClick: r }) => {
+`, Oo = ({ label: e, options: t, name: n, onChange: r }) => {
   const [o, i] = xt(void 0), s = (l) => {
     i(l.target.value);
   };
-  return /* @__PURE__ */ a.createElement(yo, null, /* @__PURE__ */ a.createElement(Io, null, e), /* @__PURE__ */ a.createElement(xo, { value: o, onChange: s, name: n }, /* @__PURE__ */ a.createElement("option", { value: "" }, "Option"), t.map((l, d) => /* @__PURE__ */ a.createElement("option", { key: d, value: l, onClick: r }, l))));
+  return /* @__PURE__ */ a.createElement(yo, null, /* @__PURE__ */ a.createElement(Io, null, e), /* @__PURE__ */ a.createElement(xo, { value: o, onChange: s, name: n }, /* @__PURE__ */ a.createElement("option", { value: "" }, "Option"), t.map((l, d) => /* @__PURE__ */ a.createElement("option", { key: d, value: l, onChange: r }, l))));
 }, Do = c.div`
   display: flex;
   flex-direction: column;

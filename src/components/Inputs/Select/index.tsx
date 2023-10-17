@@ -3,9 +3,10 @@ import styled from "styled-components";
 
 interface InputSelectProps {
   label?: string;
-  options: string[];
+  options: (string | { label: string; value: string | number })[];
   name?: string;
-  onChange?: () => void;
+  value?: string | number;
+  onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
 }
 
 const SelectWrapper = styled.div`
@@ -42,24 +43,19 @@ export const InputSelect = ({
   label,
   options,
   name,
+  value,
   onChange,
 }: InputSelectProps) => {
-  const [selectedOption, setSelectedOption] = useState<string | undefined>(
-    undefined
-  );
-
-  const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedOption(event.target.value);
-  };
-
   return (
     <SelectWrapper>
       <SelectLabel>{label}</SelectLabel>
-      <SelectInput value={selectedOption} onChange={handleSelectChange}  name={name}>
-        <option value="">Option</option>
+      <SelectInput value={value} onChange={onChange} name={name}>
         {options.map((option, index) => (
-          <option key={index} value={option} onChange={onChange}>
-            {option}
+          <option
+            key={index}
+            value={typeof option === "object" ? option.value : option}
+          >
+            {typeof option === "object" ? option.label : option}
           </option>
         ))}
       </SelectInput>

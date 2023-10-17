@@ -49,8 +49,7 @@ const InputUpload: React.FC<InputUploadProps> = ({
         onChange={handleFileChange}
       />
       <ButtonUpload onClick={handleClick} name={name}>
-        {label}
-        {selectedFile && selectedFile.name} {/* Affiche le nom du fichier sélectionné */}
+        {selectedFile ? selectedFile.name : label} {/* Affiche le nom du fichier sélectionné */}
         <img src={upload} alt='upload'></img>
       </ButtonUpload>
     </>

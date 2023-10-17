@@ -325,7 +325,7 @@ font-weight: 400;
 line-height: 24px; /* 150% */
 
 border: none;
-`,_r=({placeholder:e})=>i.createElement(Vr,null,i.createElement(Fr,{type:"search",placeholder:e}),i.createElement(h.Search,null)),$r=c.div`
+`,_r=({placeholder:e,onChange:t})=>i.createElement(Vr,null,i.createElement(Fr,{type:"search",placeholder:e,onChange:t}),i.createElement(h.Search,null)),$r=c.div`
   display: flex;
 `,Xr=()=>i.createElement($r,null,i.createElement(Bt,{src:""}),i.createElement(_r,{placeholder:""}),i.createElement(Se.Small,null)),Jr=c.div`
   display: flex;
@@ -494,7 +494,7 @@ line-height: 24px; /* 150% */
   font-size: 16px;
   color: #0f082b;
   outline: none;
-`,No=({label:e,options:t,name:n,onClick:r})=>{const[o,a]=i.useState(void 0),s=l=>{a(l.target.value)};return i.createElement(Io,null,i.createElement(xo,null,e),i.createElement(Do,{value:o,onChange:s,name:n},i.createElement("option",{value:""},"Option"),t.map((l,u)=>i.createElement("option",{key:u,value:l,onClick:r},l))))},Eo=c.div`
+`,No=({label:e,options:t,name:n,onChange:r})=>{const[o,a]=i.useState(void 0),s=l=>{a(l.target.value)};return i.createElement(Io,null,i.createElement(xo,null,e),i.createElement(Do,{value:o,onChange:s,name:n},i.createElement("option",{value:""},"Option"),t.map((l,u)=>i.createElement("option",{key:u,value:l,onChange:r},l))))},Eo=c.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;

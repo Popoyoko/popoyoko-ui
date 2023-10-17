@@ -5,6 +5,7 @@ import { Icon } from "../../Icon";
 
 interface InputSearchProps {
   placeholder: string;
+  onChange?: () => void;
 }
 
 const SearchWrapper = styled.div`
@@ -32,11 +33,12 @@ border: none;
 
 export const InputSearch = ({
     placeholder,
+    onChange,
 }: InputSearchProps) => {
     
     return (
         <SearchWrapper>
-            <SearchInput type='search' placeholder={placeholder}></SearchInput>
+            <SearchInput type='search' placeholder={placeholder} onChange={onChange}></SearchInput>
             <Icon.Search/>
         </SearchWrapper>
     )

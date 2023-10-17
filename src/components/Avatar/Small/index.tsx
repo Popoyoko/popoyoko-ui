@@ -39,7 +39,7 @@ export const Small = ({ showbadge = true, background=`url(https://st3.depositpho
         src={background}
         style={backgroundImageStyle}
       ></img>
-      {showbadge && <Badge></Badge>}
+      {showbadge && <Badge/>}
     </SmallContainer>
   );
 };

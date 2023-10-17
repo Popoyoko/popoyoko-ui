@@ -17,6 +17,6 @@ export const Input_Date: Story = {
     render: (args) => <InputDate {...args} />,
     args: {
       label: "label",
-      value: "jj/mm/aaaa",
+      value: "aaaa-mm-jj",
     },
   };

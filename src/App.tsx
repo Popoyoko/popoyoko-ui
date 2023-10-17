@@ -23,6 +23,7 @@ import { InputDate } from "./components/Inputs/Date";
 import { InputSearch } from "./components/Inputs/Search";
 import { InputDownload } from "./components/Inputs/Download";
 import InputUpload from "./components/Inputs/Upload";
+import { GroupRadio } from "./components/Inputs/Radio/Group";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -72,11 +73,17 @@ function App() {
           <Information label="Information"></Information>
           <Information label="Information" background="white"></Information>
 
-          <InputDate label="Input Date" value="????"></InputDate>
+          <InputDate label="Input Date"></InputDate>
 
           <InputDownload label="Input Download" icon="right"/>
 
-          <InputRadio label="Input Radio"/>
+          <InputRadio label="Input Radio" checked={true}/>
+
+          <GroupRadio>
+          <InputRadio label="Input Radio" checked={true}/>
+          <InputRadio label="Input Radio" checked={true}/>
+          <InputRadio label="Input Radio" checked={true}/>
+          </GroupRadio>
 
           <InputSearch placeholder="Input Search..."></InputSearch>
 
@@ -85,7 +92,7 @@ function App() {
             options={["Option 1", "Option 2", "Option 3"]}
           />
 
-          <InputText label="Input Text" placeholder="Text" onClick={() => {console.log("Bouton cliqué !");}}/>
+          <InputText label="Input Text" placeholder="Text"/>
           <InputText label="Input Text" type="password" placeholder="Password" />
 
           <InputUpload label="Input Upload"></InputUpload>

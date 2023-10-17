@@ -38,10 +38,12 @@ interface InputRadioProps {
   label: string;
   name?: string;
   value?: any;
+  checked?: boolean;
+  onChange?: () => void;
 }
 
-export const InputRadio = ({ label, name, value }: InputRadioProps) => {
-  const [isChecked, setIsChecked] = useState(false);
+export const InputRadio = ({ label, name, value, checked, onChange }: InputRadioProps) => {
+  const [isChecked, setIsChecked] = useState(checked);
 
   const handleRadioClick = () => {
     setIsChecked(!isChecked);
@@ -49,7 +51,7 @@ export const InputRadio = ({ label, name, value }: InputRadioProps) => {
 
   return (
     <RadioWrapper onClick={handleRadioClick}>
-      <CustomRadio type="radio" checked={isChecked} name={name} value={value}/>
+      <CustomRadio type="radio" onChange={onChange} checked={isChecked} name={name} value={value}/>
       <Label>{label}</Label>
     </RadioWrapper>
   );

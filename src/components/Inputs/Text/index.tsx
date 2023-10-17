@@ -7,7 +7,7 @@ interface InputTextProps {
     type?: string;
     name?: string;
     value?: any;
-    onClick?: () => void;
+    onChange?: () => void;
 };
 
 const InputWrapper = styled.div`
@@ -53,12 +53,12 @@ export const InputText= ({
     type = 'text',
     name,
     value,
-    onClick,
+    onChange,
 }: InputTextProps) => {
     return (
         <InputWrapper>
             <SelectLabel>{label}</SelectLabel>
-            <TextInput type={type} placeholder={placeholder} name={name} value={value} onClick={onClick}/>
+            <TextInput type={type} placeholder={placeholder} name={name} value={value} onChange={onChange}/>
         </InputWrapper>
     )
 }

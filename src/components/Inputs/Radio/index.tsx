@@ -1,5 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useId } from "react";
 import styled from "styled-components";
+
+interface InputRadioProps {
+  label: string;
+  name?: string;
+  value?: any;
+  checked?: boolean;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
 
 const RadioWrapper = styled.div`
   display: flex;
@@ -26,7 +34,7 @@ const CustomRadio = styled.input`
 
 const Label = styled.label`
   color: #1b1a23;
-  font-family: Co Headline;
+  font-family: Co Headline;R
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -34,25 +42,13 @@ const Label = styled.label`
   text-align: start;
 `;
 
-interface InputRadioProps {
-  label: string;
-  name?: string;
-  value?: any;
-  checked?: boolean;
-  onChange?: () => void;
-}
-
 export const InputRadio = ({ label, name, value, checked, onChange }: InputRadioProps) => {
-  const [isChecked, setIsChecked] = useState(checked);
-
-  const handleRadioClick = () => {
-    setIsChecked(!isChecked);
-  };
+  const id = useId()
 
   return (
-    <RadioWrapper onClick={handleRadioClick}>
-      <CustomRadio type="radio" onChange={onChange} checked={isChecked} name={name} value={value}/>
-      <Label>{label}</Label>
+    <RadioWrapper>
+      <CustomRadio type="radio" id={id} onChange={onChange} checked={checked} name={name} value={value}/>
+      <Label htmlFor={id}>{label}</Label>
     </RadioWrapper>
   );
 };

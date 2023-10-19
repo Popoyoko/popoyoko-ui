@@ -89,7 +89,7 @@ function App() {
 
           <InputSelect
             label="Input Select"
-            options={["Option 1", "Option 2", "Option 3"]}
+            options={[{label:"aze", value:2133}, "Option 2", "Option 3"]}
           />
 
           <InputText label="Input Text" placeholder="Text"/>

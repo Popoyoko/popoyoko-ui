@@ -73,7 +73,10 @@ function App() {
           <Information label="Information" background="white"></Information>
 
           <InputDate label="Input Date"></InputDate>
-
+          
+          <br/>
+          <InputUpload label="Input Upload"></InputUpload>
+          <br/>
           <InputDownload label="Input Download" icon="right"/>
 
           <InputRadio label="Input Radio" checked={true}/>
@@ -91,8 +94,6 @@ function App() {
 
           <InputText label="Input Text" placeholder="Text"/>
           <InputText label="Input Text" type="password" placeholder="Password" />
-
-          <InputUpload label="Input Upload"></InputUpload>
 
           <Logo src="logo"></Logo>
 

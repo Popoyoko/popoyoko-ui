@@ -5,9 +5,12 @@ const SmallContainer = styled.div`
   position: relative;
   width: 48px;
   height: 48px;
-  border-radius: 1024px;
-  background-size: cover;
-  object-fit: cover;
+`;
+
+const AvatarImage = styled.img`
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 `;
 
 const Badge = styled.div`
@@ -16,30 +19,25 @@ const Badge = styled.div`
   right: 0px;
   width: 12px;
   height: 12px;
-  background: #2018B0;
-  border-radius: 1024px;
+  background: #2018b0;
+  border-radius: 50%;
 `;
 
 export interface SmallProps {
   showbadge?: boolean;
   background?: string;
+  onClick?: () => void;
 }
 
-export const Small = ({ showbadge = true, background=`url(https://st3.depositphotos.com/23594922/31822/v/600/depositphotos_318221368-stock-illustration-missing-picture-page-for-website.jpg)` }: SmallProps) => {
-  const backgroundImageStyle = background
-    ? { backgroundImage: `url(${background})` }
-    : {
-        backgroundImage: `url(https://st3.depositphotos.com/23594922/31822/v/600/depositphotos_318221368-stock-illustration-missing-picture-page-for-website.jpg)`,
-      };
-
+export const Small = ({
+  showbadge = true,
+  background = `https://st3.depositphotos.com/23594922/31822/v/600/depositphotos_318221368-stock-illustration-missing-picture-page-for-website.jpg`,
+  onClick,
+}: SmallProps) => {
   return (
-    <SmallContainer>
-      <img
-        className="small"
-        src={background}
-        style={backgroundImageStyle}
-      ></img>
-      {showbadge && <Badge/>}
+    <SmallContainer onClick={onClick}>
+      <AvatarImage src={background} />
+      {showbadge && <Badge />}
     </SmallContainer>
   );
 };

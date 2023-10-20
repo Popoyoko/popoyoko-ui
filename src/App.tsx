@@ -44,7 +44,7 @@ function App() {
             <Icon.Add size="large" />
           </div>
 
-          <Avatar.Small showbadge={true}></Avatar.Small>
+          <Avatar.Small showbadge={true} background={logo_popoyoko} onClick={() => console.log("Avatar Small")}></Avatar.Small>
           <Avatar.Cover showedit={true}></Avatar.Cover>
 
           <Button.Primary label="Button Primary" typeSvg="none" onClick={() => {console.log("Bouton cliqué !");}}/>

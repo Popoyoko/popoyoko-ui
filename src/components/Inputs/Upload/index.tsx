@@ -5,6 +5,7 @@ import upload from "../../../Icons/Upload/upload.svg";
 interface InputUploadProps {
   label: string;
   name?: string;
+  acceptedExtensions?: string;
 }
 
 const ButtonUpload = styled.button`
@@ -23,7 +24,8 @@ width: 100%;
 
 const InputUpload: React.FC<InputUploadProps> = ({ 
     label,
-    name
+    name,
+    acceptedExtensions = ".jpg,.png,.pdf"
 }) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -39,17 +41,19 @@ const InputUpload: React.FC<InputUploadProps> = ({
     }
   };
 
+
+
   return (
     <>
       <input
         type="file"
-        accept=".jpg,.png,.pdf" // extensions fichiers
+        accept={acceptedExtensions}
         style={{ display: 'none' }}
         ref={inputRef}
         onChange={handleFileChange}
       />
       <ButtonUpload onClick={handleClick} name={name}>
-        {selectedFile ? selectedFile.name : label} {/* Affiche le nom du fichier sélectionné */}
+        {selectedFile ? selectedFile.name : label} 
         <img src={upload} alt='upload'></img>
       </ButtonUpload>
     </>

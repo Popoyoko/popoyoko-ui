@@ -1,7 +1,8 @@
 import React from "react";
-export declare const Small: ({ showbadge, background }: {
+export declare const Small: ({ showbadge, background, onClick }: {
     showbadge?: boolean;
     background?: string;
+    onClick: any;
 }) => React.FunctionComponentElement<{
     ref?: React.LegacyRef<HTMLDivElement>;
     key?: React.Key;

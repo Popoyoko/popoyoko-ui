@@ -26,9 +26,11 @@ font-family: Co Headline;
 font-size: 16px;
 font-style: normal;
 font-weight: 400;
-line-height: 24px; /* 150% */
+line-height: 24px;
 
 border: none;
+width: 100%;
+outline: none;
 `;
 
 export const InputSearch = ({

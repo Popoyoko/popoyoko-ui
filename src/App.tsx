@@ -22,8 +22,7 @@ import { InputRadio } from "./components/Inputs/Radio";
 import { InputDate } from "./components/Inputs/Date";
 import { InputSearch } from "./components/Inputs/Search";
 import { InputDownload } from "./components/Inputs/Download";
-import InputUpload from "./components/Inputs/Upload";
-import { GroupRadio } from "./components/Inputs/Radio/Group";
+import { InputUpload } from "./components/Inputs/Upload";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -44,7 +43,7 @@ function App() {
             <Icon.Add size="large" />
           </div>
 
-          <Avatar.Small showbadge={true}></Avatar.Small>
+          <Avatar.Small showbadge={true} background={logo_popoyoko} onClick={() => console.log("Avatar Small")}></Avatar.Small>
           <Avatar.Cover showedit={true}></Avatar.Cover>
 
           <Button.Primary label="Button Primary" typeSvg="none" onClick={() => {console.log("Bouton cliqué !");}}/>
@@ -74,16 +73,17 @@ function App() {
           <Information label="Information" background="white"></Information>
 
           <InputDate label="Input Date"></InputDate>
-
+          
+          <br/>
+          <InputUpload label="Input Upload"></InputUpload>
+          <br/>
           <InputDownload label="Input Download" icon="right"/>
 
           <InputRadio label="Input Radio" checked={true}/>
 
-          <GroupRadio>
-          <InputRadio label="Input Radio" checked={true} name="test"/>
-          <InputRadio label="Input Radio" checked={true} name="test"/>
-          <InputRadio label="Input Radio" checked={true} name="test"/>
-          </GroupRadio>
+          <InputRadio label="Input Radio Grouped" checked={true} name="test"/>
+          <InputRadio label="Input Radio Grouped" checked={true} name="test"/>
+          <InputRadio label="Input Radio Grouped" checked={true} name="test"/>
 
           <InputSearch placeholder="Input Search..."></InputSearch>
 
@@ -94,8 +94,6 @@ function App() {
 
           <InputText label="Input Text" placeholder="Text"/>
           <InputText label="Input Text" type="password" placeholder="Password" />
-
-          <InputUpload label="Input Upload"></InputUpload>
 
           <Logo src="logo"></Logo>
 

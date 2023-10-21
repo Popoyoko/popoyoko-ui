@@ -1,6 +1,6 @@
 import React from 'react';
 import { StoryObj, Meta } from '@storybook/react';
-import InputUpload from './index';
+import { InputUpload } from './index';
 
 const meta: Meta<typeof InputUpload> = {
     title: 'Components/Inputs/Upload',

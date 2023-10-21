@@ -1,5 +1,5 @@
-import React, { useRef, useState } from 'react';
-import styled from 'styled-components';
+import React, { useRef, useState } from "react";
+import styled from "styled-components";
 import upload from "../../../Icons/Upload/upload.svg";
 
 interface InputUploadProps {
@@ -9,24 +9,24 @@ interface InputUploadProps {
 }
 
 const ButtonUpload = styled.button`
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 8px 16px;
-gap: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 8px;
 
-background: #F7F7F8;
-border: 2px dashed #171673;
-border-radius: 2px;
-width: 100%;
+  background: #f7f7f8;
+  border: 2px dashed #171673;
+  border-radius: 2px;
+  width: 100%;
 `;
 
-const InputUpload: React.FC<InputUploadProps> = ({ 
-    label,
-    name,
-    acceptedExtensions = ".jpg,.png,.pdf"
-}) => {
+export const InputUpload = ({
+  label,
+  name,
+  acceptedExtensions = ".jpg,.png,.pdf",
+}: InputUploadProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
 
@@ -41,23 +41,19 @@ const InputUpload: React.FC<InputUploadProps> = ({
     }
   };
 
-
-
   return (
     <>
       <input
         type="file"
         accept={acceptedExtensions}
-        style={{ display: 'none' }}
+        style={{ display: "none" }}
         ref={inputRef}
         onChange={handleFileChange}
       />
       <ButtonUpload onClick={handleClick} name={name}>
-        {selectedFile ? selectedFile.name : label} 
-        <img src={upload} alt='upload'></img>
+        {selectedFile ? selectedFile.name : label}
+        <img src={upload} alt="upload"></img>
       </ButtonUpload>
     </>
   );
 };
-
-export default InputUpload;

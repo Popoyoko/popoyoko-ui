@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import upload from "../../Icons/Upload/upload.svg";
 import { Icon } from "../Icon";
 
 interface SectionProps {

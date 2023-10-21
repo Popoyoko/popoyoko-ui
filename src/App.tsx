@@ -22,7 +22,7 @@ import { InputRadio } from "./components/Inputs/Radio";
 import { InputDate } from "./components/Inputs/Date";
 import { InputSearch } from "./components/Inputs/Search";
 import { InputDownload } from "./components/Inputs/Download";
-import InputUpload from "./components/Inputs/Upload";
+import { InputUpload } from "./components/Inputs/Upload";
 
 function App() {
   const [count, setCount] = useState(0);

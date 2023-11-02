@@ -2,12 +2,13 @@ import React from "react";
 import styled from "styled-components";
 
 interface ButtonProps {
-  variant: "primary" | "secondary" | "tertiary";
+  variant?: "primary" | "secondary" | "tertiary";
   typeSvg: "none" | "left" | "right" | "only";
   label?: string;
   children?: React.ReactNode;
   onClick?: () => void;
   value?: any;
+  type?: "button" | "submit" | "reset";
 }
 
 const StyledButton = styled.button`
@@ -116,41 +117,42 @@ const Button = ({
   children,
   onClick,
   value,
+  type,
 }: ButtonProps) => {
   if (typeSvg === "none") {
-    return <StyledButton className={variant} onClick={onClick} value={value}><SpanButton>{label}</SpanButton></StyledButton>;
+    return <StyledButton className={variant} type={type} onClick={onClick} value={value}><SpanButton>{label}</SpanButton></StyledButton>;
   } else if (typeSvg === "left") {
     return (
-      <StyledButton className={variant} onClick={onClick} value={value}>
+      <StyledButton className={variant} type={type} onClick={onClick} value={value}>
         {children}
         <SpanButton>{label}</SpanButton>
       </StyledButton>
     );
   } else if (typeSvg === "right") {
     return (
-      <StyledButton className={variant} onClick={onClick} value={value}>
+      <StyledButton className={variant} type={type} onClick={onClick} value={value}>
         <SpanButton>{label}</SpanButton>
         {children}
       </StyledButton>
     );
   } else if (typeSvg === "only") {
     return (
-      <ButtonSvgOnly className={variant} onClick={onClick} value={value}>
+      <ButtonSvgOnly className={variant} type={type} onClick={onClick} value={value}>
         {children}
       </ButtonSvgOnly>
     );
   }
 };
 
-Button.Primary = (props: Omit<ButtonProps, "type">) => {
+Button.Primary = (props: Omit<ButtonProps, "variant">) => {
   return <Button variant="primary" {...props} />;
 };
 
-Button.Secondary = (props: Omit<ButtonProps, "type">) => {
+Button.Secondary = (props: Omit<ButtonProps, "variant">) => {
   return <Button variant="secondary" {...props} />;
 };
 
-Button.Tertiary = (props: Omit<ButtonProps, "type">) => {
+Button.Tertiary = (props: Omit<ButtonProps, "variant">) => {
   return <Button variant="tertiary" {...props} />;
 };
 

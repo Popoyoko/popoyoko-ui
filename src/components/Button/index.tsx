@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 interface ButtonProps {
-  type: "primary" | "secondary" | "tertiary";
+  variant: "primary" | "secondary" | "tertiary";
   typeSvg: "none" | "left" | "right" | "only";
   label?: string;
   children?: React.ReactNode;
@@ -110,7 +110,7 @@ width: fit-content;
 `
 
 const Button = ({
-  type = "primary",
+  variant = "primary",
   label,
   typeSvg,
   children,
@@ -118,24 +118,24 @@ const Button = ({
   value,
 }: ButtonProps) => {
   if (typeSvg === "none") {
-    return <StyledButton className={type} onClick={onClick} value={value}><SpanButton>{label}</SpanButton></StyledButton>;
+    return <StyledButton className={variant} onClick={onClick} value={value}><SpanButton>{label}</SpanButton></StyledButton>;
   } else if (typeSvg === "left") {
     return (
-      <StyledButton className={type} onClick={onClick} value={value}>
+      <StyledButton className={variant} onClick={onClick} value={value}>
         {children}
         <SpanButton>{label}</SpanButton>
       </StyledButton>
     );
   } else if (typeSvg === "right") {
     return (
-      <StyledButton className={type} onClick={onClick} value={value}>
+      <StyledButton className={variant} onClick={onClick} value={value}>
         <SpanButton>{label}</SpanButton>
         {children}
       </StyledButton>
     );
   } else if (typeSvg === "only") {
     return (
-      <ButtonSvgOnly className={type} onClick={onClick} value={value}>
+      <ButtonSvgOnly className={variant} onClick={onClick} value={value}>
         {children}
       </ButtonSvgOnly>
     );
@@ -143,15 +143,15 @@ const Button = ({
 };
 
 Button.Primary = (props: Omit<ButtonProps, "type">) => {
-  return <Button type="primary" {...props} />;
+  return <Button variant="primary" {...props} />;
 };
 
 Button.Secondary = (props: Omit<ButtonProps, "type">) => {
-  return <Button type="secondary" {...props} />;
+  return <Button variant="secondary" {...props} />;
 };
 
 Button.Tertiary = (props: Omit<ButtonProps, "type">) => {
-  return <Button type="tertiary" {...props} />;
+  return <Button variant="tertiary" {...props} />;
 };
 
 export default Button;

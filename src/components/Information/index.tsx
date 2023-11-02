@@ -29,14 +29,12 @@ const InformationContent = styled.p`
   margin: 0;
 `;
 
-export const Information = ({ label = "Information", background = "#2018b0" }: InformationProps) => {
-  const InformationSectionWithBackground = styled(InformationSection)`
-  background: ${background};
-  `
+export const Information = ({ label = "Information"}: InformationProps) => {
+
   return (
-    <InformationSectionWithBackground>
+    <InformationSection>
       <Icon.Information/>
       <InformationContent>{label}</InformationContent>
-    </InformationSectionWithBackground>
+    </InformationSection>
   );
 };

@@ -71,7 +71,6 @@ function App() {
           <Header></Header>
 
           <Information label="Information"></Information>
-          <Information label="Information" background="white"></Information>
 
           <InputDate label="Input Date"></InputDate>
 

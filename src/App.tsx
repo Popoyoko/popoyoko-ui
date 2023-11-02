@@ -71,7 +71,7 @@ function App() {
           <Header></Header>
 
           <Information label="Information"></Information>
-          <Stepper total={5} current={3}></Stepper>
+          <Stepper total={5} current={3} title="stepper"></Stepper>
           <InputDate label="Input Date"></InputDate>
           
           <br/>

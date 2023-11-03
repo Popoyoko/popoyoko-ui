@@ -68,7 +68,7 @@ function App() {
 
           <Card.Media />
 
-          <Header></Header>
+          <Header logoBackground={logo_popoyoko} avatarBackground={logo_popoyoko}></Header>
 
           <Information label="Information"></Information>
           <Stepper total={5} current={3} title="stepper"></Stepper>

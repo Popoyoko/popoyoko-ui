@@ -6,16 +6,23 @@ import styled from "styled-components";
 
 const ContainerHeader = styled.div`
   display: flex;
+  padding: 48px 16px 16px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 `;
 
-// interface HeaderProps {}
+interface HeaderProps {
+  logoBackground?: string;
+  avatarBackground?: string;
+}
 
-export const Header = () => {
+export const Header = ({ logoBackground, avatarBackground }: HeaderProps) => {
   return (
     <ContainerHeader>
-      <Logo src=""></Logo>
+      <Logo background={logoBackground}></Logo>
       <InputSearch placeholder=""></InputSearch>
-      <Avatar.Small></Avatar.Small>
+      <Avatar.Small background={avatarBackground}></Avatar.Small>
     </ContainerHeader>
   );
 };

@@ -23,6 +23,7 @@ import { InputDate } from "./components/Inputs/Date";
 import { InputSearch } from "./components/Inputs/Search";
 import { InputDownload } from "./components/Inputs/Download";
 import { InputUpload } from "./components/Inputs/Upload";
+import { Stepper } from "./components/Stepper";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -70,7 +71,7 @@ function App() {
           <Header></Header>
 
           <Information label="Information"></Information>
-
+          <Stepper total={5} current={3} title="stepper"></Stepper>
           <InputDate label="Input Date"></InputDate>
           
           <br/>

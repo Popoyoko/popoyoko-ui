@@ -6,9 +6,10 @@ import { Icon } from "../../Icon";
 interface InputSearchProps {
   placeholder: string;
   onChange?: () => void;
+  onSubmit?: (event: React.FormEvent<HTMLFormElement>) => void;
 }
 
-const SearchWrapper = styled.div`
+const SearchWrapper = styled.form`
 display: flex;
 padding: 12px;
 justify-content: space-between;
@@ -36,10 +37,16 @@ outline: none;
 export const InputSearch = ({
     placeholder,
     onChange,
+    onSubmit,
 }: InputSearchProps) => {
-    
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault(); // Empêche la soumission du formulaire par défaut
+        if (onSubmit) {
+          onSubmit(event);
+        }
+      };
     return (
-        <SearchWrapper>
+        <SearchWrapper onSubmit={handleSubmit}>
             <SearchInput type='search' placeholder={placeholder} onChange={onChange}></SearchInput>
             <Icon.Search/>
         </SearchWrapper>

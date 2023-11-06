@@ -2,27 +2,29 @@ import React from 'react';
 import styled from 'styled-components';
 
 interface LogoProps {
-    src: string;
+    background: string;
 }
 
 const LogoWrapper = styled.div`
-  height: 32px;
-  width: 32px;
   background: #D9D9D9;
   display: flex;
+  align-items: center;
+  justify-content: center;
+
 `;
 
 const LogoImage = styled.img`
-  max-height: 32px;
-  max-width: 32px;
+  max-height: 48px;
+  max-width: 48px;
+  object-fit: cover;
 `;
 
 export const Logo = ({
-    src
+    background
 }: LogoProps) => {
     return (
         <LogoWrapper>
-            <LogoImage src={src}></LogoImage>
+            <LogoImage src={background}></LogoImage>
         </LogoWrapper>
     );
 };

@@ -3,7 +3,7 @@ declare const Avatar: {
     ({ children }: {
         children: any;
     }): React.DetailedReactHTMLElement<null, HTMLElement>;
-    Small: ({ showbadge, background }: import("./Small").SmallProps) => React.JSX.Element;
+    Small: ({ showbadge, background, onClick, }: import("./Small").SmallProps) => React.JSX.Element;
     Cover: ({ showedit, background }: import("./Cover").CoverProps) => React.JSX.Element;
 };
 export default Avatar;

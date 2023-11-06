@@ -1,6 +1,6 @@
 import React from "react";
-export declare const Logo: ({ src }: {
-    src: any;
+export declare const Logo: ({ background }: {
+    background: any;
 }) => React.FunctionComponentElement<{
     ref?: React.LegacyRef<HTMLDivElement>;
     key?: React.Key;

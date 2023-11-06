@@ -1,12 +1,13 @@
 import React from "react";
 declare const Button: {
-    ({ type, label, typeSvg, children, onClick, value }: {
-        type?: string;
+    ({ variant, label, typeSvg, children, onClick, value, type }: {
+        variant?: string;
         label: any;
         typeSvg: any;
         children: any;
         onClick: any;
         value: any;
+        type: any;
     }): React.FunctionComponentElement<{
         ref?: React.LegacyRef<HTMLButtonElement>;
         key?: React.Key;
@@ -571,28 +572,31 @@ declare const Button: {
         ref?: React.Ref<HTMLButtonElement>;
     }>;
     Primary(props: any): React.FunctionComponentElement<{
-        type?: string;
+        variant?: string;
         label: any;
         typeSvg: any;
         children: any;
         onClick: any;
         value: any;
+        type: any;
     }>;
     Secondary(props: any): React.FunctionComponentElement<{
-        type?: string;
+        variant?: string;
         label: any;
         typeSvg: any;
         children: any;
         onClick: any;
         value: any;
+        type: any;
     }>;
     Tertiary(props: any): React.FunctionComponentElement<{
-        type?: string;
+        variant?: string;
         label: any;
         typeSvg: any;
         children: any;
         onClick: any;
         value: any;
+        type: any;
     }>;
 };
 export default Button;

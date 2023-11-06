@@ -68,7 +68,7 @@ function App() {
 
           <Card.Media />
 
-          <Header logoBackground={logo_popoyoko} avatarBackground={logo_popoyoko}></Header>
+          <Header logoBackground={logo_popoyoko}/>
 
           <Information label="Information"></Information>
           <Stepper total={5} current={3} title="stepper"></Stepper>
@@ -95,7 +95,7 @@ function App() {
           <InputText label="Input Text" placeholder="Text"/>
           <InputText label="Input Text" type="password" placeholder="Password" />
 
-          <Logo src="logo"></Logo>
+          <Logo background="logo"></Logo>
 
           <Section title="Titre" label="Label"></Section>
 

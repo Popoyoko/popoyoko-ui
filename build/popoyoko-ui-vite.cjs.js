@@ -62,7 +62,6 @@ See https://s-c.sh/2BAXzed for more info.`),window[Me]+=1);const ar=c.div`
   width: 48px;
   height: 48px;
 `,sr=c.img`
-  width: 100%;
   height: 100%;
   border-radius: 50%;
 `,cr=c.div`

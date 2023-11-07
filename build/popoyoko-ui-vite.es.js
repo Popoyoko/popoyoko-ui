@@ -1142,7 +1142,6 @@ const dr = c.div`
   width: 48px;
   height: 48px;
 `, ur = c.img`
-  width: 100%;
   height: 100%;
   border-radius: 50%;
 `, gr = c.div`

@@ -337,7 +337,7 @@ outline: none;
   justify-content: center;
   align-items: center;
   gap: 8px;
-`,Kr=({logoBackground:e})=>i.createElement(Jr,null,i.createElement(Bt,{background:e}),i.createElement(Wt,{placeholder:""}),i.createElement(Se.Small,null)),qr=c.div`
+`,Kr=({logoBackground:e,avatarBackground:t,onClick:n})=>i.createElement(Jr,null,i.createElement(Bt,{background:e}),i.createElement(Wt,{placeholder:""}),i.createElement(Se.Small,{background:t,onClick:n})),qr=c.div`
   display: flex;
   padding: 16px;
   align-items: flex-start;

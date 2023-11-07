@@ -14,15 +14,16 @@ const ContainerHeader = styled.div`
 
 interface HeaderProps {
   logoBackground?: string;
-  // avatarBackground?: string;
+  avatarBackground?: string;
+  onClick?: () => void;
 }
 
-export const Header = ({ logoBackground }: HeaderProps) => {
+export const Header = ({ logoBackground, avatarBackground, onClick }: HeaderProps) => {
   return (
     <ContainerHeader>
       <Logo background={logoBackground}/>
       <InputSearch placeholder=""/>
-      <Avatar.Small />
+      <Avatar.Small background={avatarBackground} onClick={onClick}/>
     </ContainerHeader>
   );
 };

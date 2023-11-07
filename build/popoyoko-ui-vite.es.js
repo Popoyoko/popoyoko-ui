@@ -1490,7 +1490,7 @@ outline: none;
   justify-content: center;
   align-items: center;
   gap: 8px;
-`, Oo = ({ logoBackground: e }) => /* @__PURE__ */ a.createElement(ro, null, /* @__PURE__ */ a.createElement(qr, { background: e }), /* @__PURE__ */ a.createElement(no, { placeholder: "" }), /* @__PURE__ */ a.createElement(qe.Small, null)), oo = c.div`
+`, Oo = ({ logoBackground: e, avatarBackground: t, onClick: n }) => /* @__PURE__ */ a.createElement(ro, null, /* @__PURE__ */ a.createElement(qr, { background: e }), /* @__PURE__ */ a.createElement(no, { placeholder: "" }), /* @__PURE__ */ a.createElement(qe.Small, { background: t, onClick: n })), oo = c.div`
   display: flex;
   padding: 16px;
   align-items: flex-start;

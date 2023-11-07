@@ -6,7 +6,6 @@ interface LogoProps {
 }
 
 const LogoWrapper = styled.div`
-  background: #D9D9D9;
   display: flex;
   align-items: center;
   justify-content: center;

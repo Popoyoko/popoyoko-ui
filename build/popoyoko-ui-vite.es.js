@@ -1447,7 +1447,6 @@ const Rr = c.div`
 Wt.Default = Vr;
 Wt.Media = Xr;
 const Jr = c.div`
-  background: #D9D9D9;
   display: flex;
   align-items: center;
   justify-content: center;

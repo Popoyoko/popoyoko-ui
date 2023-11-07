@@ -299,7 +299,6 @@ justify-content: center;
   height: 100%;
   object-fit: cover;
 `,Fr=({media:e="https://imgs.search.brave.com/eHBodvumUFQ7TzAM2YRFjFbE9P2IB_VeLxS5-sesWlo/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA1Lzc5LzY4LzI0/LzM2MF9GXzU3OTY4/MjQ3OV9qNGpSZngw/bmwzQzh2TXJUWVZh/cEZuR1A4RWdOSGdm/ay5qcGc"})=>i.createElement(Br,null,i.createElement(ae.L2H3,null,i.createElement(Wr,{src:e,alt:e}))),et=({children:e})=>i.createElement("div",null,e);et.Default=Hr;et.Media=Fr;const Vr=c.div`
-  background: #D9D9D9;
   display: flex;
   align-items: center;
   justify-content: center;

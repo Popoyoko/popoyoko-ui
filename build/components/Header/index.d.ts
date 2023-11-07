@@ -1,6 +1,8 @@
 import React from "react";
-export declare const Header: ({ logoBackground }: {
+export declare const Header: ({ logoBackground, avatarBackground, onClick }: {
     logoBackground: any;
+    avatarBackground: any;
+    onClick: any;
 }) => React.FunctionComponentElement<{
     ref?: React.LegacyRef<HTMLDivElement>;
     key?: React.Key;

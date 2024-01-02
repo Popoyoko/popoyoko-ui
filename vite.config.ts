@@ -4,6 +4,11 @@ import ts from "rollup-plugin-typescript2";
 import eslint from "@rollup/plugin-eslint";
 import svgr from "vite-plugin-svgr";
 import copy from "rollup-plugin-copy";
+import createStyledComponentsTransformer from 'typescript-plugin-styled-components';
+
+const styledComponentsTransformer = createStyledComponentsTransformer({
+  displayName: true,
+});
 
 export default defineConfig({
   build: {
@@ -33,6 +38,11 @@ export default defineConfig({
         }),
         ts({
           tsconfig: path.resolve(__dirname, "tsconfig.json"),
+          transformers: [
+            () => ({
+              before: [styledComponentsTransformer],
+            }),
+          ],
         }),
         eslint({
           include: ["src/**/*.ts", "src/**/*.tsx"], // Les fichiers à linter

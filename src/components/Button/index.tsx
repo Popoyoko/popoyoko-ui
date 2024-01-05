@@ -3,13 +3,14 @@ import styled from "styled-components";
 import { Icon } from "../Icon";
 
 type ChildType = React.ReactElement<typeof Icon> | string;
+type ButtonType = "button" | "submit" | "reset";
 
 interface ButtonProps {
   variant?: "primary" | "secondary" | "tertiary";
   label?: string;
   children?: ChildType | ChildType[];
   action?: () => void;
-  actionType?: "button" | "submit" | "reset";
+  actionType?: ButtonType;
   value?: any;
 }
 
@@ -102,7 +103,7 @@ const Button = ({
   variant = "primary",
   children = "Label",
   action = () => console.log("Button as been clicked"),
-  actionType = "button",
+  actionType,
   value,
 }: ButtonProps) => {
     return (

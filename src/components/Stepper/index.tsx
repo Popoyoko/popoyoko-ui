@@ -65,7 +65,7 @@ export const Stepper = ({
     <ContainerStepper>
       <StepperSection>
         <StepperTitle>{title}</StepperTitle>
-        <Button.Tertiary typeSvg="only">
+        <Button.Tertiary>
           <Icon.ArrowLeft size="medium" />
         </Button.Tertiary>
       </StepperSection>

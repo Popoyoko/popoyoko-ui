@@ -13,7 +13,7 @@ node_modules/
 # Editor directories and files
 .vscode/*
 storybook-static
-build
+build/
 !.vscode/extensions.json
 .idea
 .DS_Store

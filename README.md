@@ -53,13 +53,13 @@ The "--watch" option tells Vite to monitor the application's source files and to
 
  Install the package using your package manager of choice (bun, npm or yarn):
 
- ### `bun install popoyoko-ui-vite`
+ ### `bun add github:Popoyoko/popoyoko-ui#package`
 
 Now you can import the desired components from the library
 
 For example :
 ```bash 
-    import { Information } from "vite-popoyoko";
+    import { Information } from "popoyoko-ui";
 ```
  You can easily view all components and their props directly in the storybook.
 

@@ -42,7 +42,7 @@ export const Cover = ({ showedit=true, background=`https://imgs.search.brave.com
       <CoverImage src={background} style={backgroundImageStyle}></CoverImage>
       {showedit && (
         <EditContainer>
-          <Button.Tertiary typeSvg="right" label="Edit"><Icon.AddPicture/></Button.Tertiary>
+          <Button.Tertiary><Icon.AddPicture/>Edit</Button.Tertiary>
         </EditContainer>
       )}
       </Ratio.L1H1>

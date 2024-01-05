@@ -6,11 +6,11 @@
   "files": [
     "build"
   ],
-  "module": "./build/popoyoko-ui-vite.es.js",
+  "module": "./build/popoyoko-ui.es.js",
   "exports": {
     ".": {
-      "import": "./build/popoyoko-ui-vite.es.js",
-      "require": "./build/popoyoko-ui-vite.cjs.js",
+      "import": "./build/popoyoko-ui.es.js",
+      "require": "./build/popoyoko-ui.cjs.js",
       "types": "./build/index.d.ts"
     }
   },

@@ -1,16 +1,16 @@
 {
-    "name": "vite-popoyoko",
+    "name": "popoyoko-ui",
     "private": true,
     "version": "0.0.0",
     "main": "./index.d.ts",
     "files": [
       "./"
     ],
-    "module": "./popoyoko-ui-vite.es.js",
+    "module": "./popoyoko-ui.es.js",
     "exports": {
       ".": {
-        "import": "./popoyoko-ui-vite.es.js",
-        "require": "./popoyoko-ui-vite.cjs.js",
+        "import": "./popoyoko-ui.es.js",
+        "require": "./popoyoko-ui.cjs.js",
         "types": "./index.d.ts"
       }
     }

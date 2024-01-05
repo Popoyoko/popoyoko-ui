@@ -5,6 +5,7 @@ import eslint from "@rollup/plugin-eslint";
 import svgr from "vite-plugin-svgr";
 import copy from "rollup-plugin-copy";
 import createStyledComponentsTransformer from 'typescript-plugin-styled-components';
+import { getDefaultLibFileName } from "typescript";
 
 const styledComponentsTransformer = createStyledComponentsTransformer({
   displayName: true,
@@ -14,9 +15,9 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, "./src/index.tsx"),
-      name: "popoyoko-ui-vite",
+      name: "popoyoko-ui",
       formats: ["es", "cjs"],
-      fileName: (format) => `popoyoko-ui-vite.${format}.js`,
+      fileName: (format) => `popoyoko-ui.${format}.js`,
     },
     rollupOptions: {
       external: ["react", "react-dom"],

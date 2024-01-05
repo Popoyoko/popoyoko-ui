@@ -33,6 +33,10 @@ export default defineConfig({
               src: "src/Icons",
               dest: "build", // Spécifiez le répertoire "Icons" à l'intérieur de "build"
             },
+            {
+              src: "package.json",
+              dest: "build", // Spécifiez le répertoire "Icons" à l'intérieur de "build"
+            },
           ],
           hook: "writeBundle", // Utilisez le hook "writeBundle" pour copier après la génération du bundle
         }),

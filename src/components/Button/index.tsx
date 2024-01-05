@@ -1,14 +1,16 @@
 import React from "react";
 import styled from "styled-components";
+import { Icon } from "../Icon";
+
+type ChildType = React.ReactElement<typeof Icon> | string;
 
 interface ButtonProps {
   variant?: "primary" | "secondary" | "tertiary";
-  typeSvg: "none" | "left" | "right" | "only";
   label?: string;
-  children?: React.ReactNode;
-  onClick?: () => void;
+  children?: ChildType | ChildType[];
+  action?: () => void;
+  actionType?: "button" | "submit" | "reset";
   value?: any;
-  type?: "button" | "submit" | "reset";
 }
 
 const StyledButton = styled.button`
@@ -96,53 +98,20 @@ const StyledButton = styled.button`
   }
 `;
 
-
-const SpanButton = styled.span`
-font-family: Co Headline;
-font-size: 22px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-`
-
-const ButtonSvgOnly = styled(StyledButton)`
-padding: 8px;
-width: fit-content;
-`
-
 const Button = ({
   variant = "primary",
-  label,
-  typeSvg,
-  children,
-  onClick,
+  children = "Label",
+  action = () => console.log("Button as been clicked"),
+  actionType = "button",
   value,
-  type,
 }: ButtonProps) => {
-  if (typeSvg === "none") {
-    return <StyledButton className={variant} type={type} onClick={onClick} value={value}><SpanButton>{label}</SpanButton></StyledButton>;
-  } else if (typeSvg === "left") {
     return (
-      <StyledButton className={variant} type={type} onClick={onClick} value={value}>
-        {children}
-        <SpanButton>{label}</SpanButton>
-      </StyledButton>
-    );
-  } else if (typeSvg === "right") {
-    return (
-      <StyledButton className={variant} type={type} onClick={onClick} value={value}>
-        <SpanButton>{label}</SpanButton>
+      <StyledButton className={variant} onClick={action} type={actionType} value={value}>
         {children}
       </StyledButton>
-    );
-  } else if (typeSvg === "only") {
-    return (
-      <ButtonSvgOnly className={variant} type={type} onClick={onClick} value={value}>
-        {children}
-      </ButtonSvgOnly>
     );
   }
-};
+;
 
 Button.Primary = (props: Omit<ButtonProps, "variant">) => {
   return <Button variant="primary" {...props} />;

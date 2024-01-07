@@ -2,13 +2,16 @@ import React from "react";
 import styled from "styled-components";
 import { Icon } from "../Icon";
 
-type ChildType = React.ReactElement<typeof Icon> | string;
 type ButtonType = "button" | "submit" | "reset";
+type ChildType =
+  | React.ReactElement<typeof Icon>
+  | string
+  | [string, React.ReactElement<typeof Icon>]
+  | [React.ReactElement<typeof Icon>, string];
 
-interface ButtonProps {
+export interface ButtonProps {
   variant?: "primary" | "secondary" | "tertiary";
-  label?: string;
-  children?: ChildType | ChildType[];
+  children: ChildType;
   action?: () => void;
   actionType?: ButtonType;
   value?: any;
@@ -103,7 +106,7 @@ const Button = ({
   variant = "primary",
   children = "Label",
   action = () => console.log("Button as been clicked"),
-  actionType,
+  actionType = "button",
   value,
 }: ButtonProps) => {
     return (

@@ -1,6 +1,6 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import Button, { ButtonProps } from "./index";
+import Button from "./index";
 import { Icon, IconMap } from "../Icon";
 
 type CustomButtonProps = React.ComponentProps<typeof Button> & { iconPosition: string, icon?: string, label: string, isLabel: boolean }
@@ -9,6 +9,16 @@ const meta: Meta<CustomButtonProps> = {
     title: "Components/Button",
     component: Button,
     argTypes: {
+        variant: {
+            control: {
+                type: "select",
+            },
+        },
+        type: {
+            control: {
+                type: "select",
+            },
+        },
         label: {
             control: "text",
             if: { arg: 'iconPosition', neq: "only" },
@@ -25,7 +35,7 @@ const meta: Meta<CustomButtonProps> = {
                 type: "radio",
             },
             if: { arg: 'icon', eq: undefined },
-        },
+        }
     },
 };
 
@@ -35,38 +45,46 @@ type Story = StoryObj<CustomButtonProps>;
 
 export const Default: Story = (props: CustomButtonProps) => {
 
-    const { variant, icon, iconPosition, label } = props
+    const { variant, icon, iconPosition, label, action, children } = props
 
-    const BChildren = () => {
-        if (!icon) {
-            return label
-        } else {
-            switch (iconPosition) {
-                case "before":
-                    return [<Icon icon={icon} />, label]
-                case "after":
-                    return [label, <Icon icon={icon} />]
-                case "only":
-                    return <Icon icon={icon} />
-                default:
-                    break;
-            }
+    if (!icon) {
+        return (
+            <Button variant={variant} action={action}>
+                {label}
+            </Button>
+        )
+    }
+    else {
+        switch (iconPosition) {
+            case "before":
+                return (
+                    <Button variant={variant} action={action}>
+                        <Icon icon={icon} />{label}
+                    </Button>
+                )
+            case "after":
+                return (
+                    <Button variant={variant} action={action}>
+                        {label}<Icon icon={icon} />
+                    </Button>
+                )
+            case "only":
+                return (
+                    <Button variant={variant} action={action}>
+                        <Icon icon={icon} />
+                    </Button>
+                )
+            default:
+                return (
+                    <Button variant={variant} action={action} children={label} />
+                )
         }
     }
-
-    return (
-        <Button variant={variant}>
-            <BChildren />
-        </Button>
-    )
 
 };
 
 Default.args = {
     variant: "primary",
-    action: () => alert("Button clicked"),
-    actionType: "button",
-    value: "your_value_here",
     label: "Label",
     icon: undefined,
     iconPosition: "before"

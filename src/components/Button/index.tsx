@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { Icon } from "../Icon";
 
-type ButtonType = "button" | "submit" | "reset";
-type ChildType =
+
+export type ChildType =
   | React.ReactElement<typeof Icon>
   | string
   | [string, React.ReactElement<typeof Icon>]
@@ -13,11 +13,11 @@ export interface ButtonProps {
   variant?: "primary" | "secondary" | "tertiary";
   children: ChildType;
   action?: () => void;
-  actionType?: ButtonType;
   value?: any;
+  type?: "button"
 }
 
-const StyledButton = styled.button`
+const StyledButton = styled.button<ButtonProps>`
   /* Styles communs pour tous les boutons */
   display: flex;
   flex-direction: row;
@@ -104,18 +104,19 @@ const StyledButton = styled.button`
 
 const Button = ({
   variant = "primary",
-  children = "Label",
+  children,
   action = () => console.log("Button as been clicked"),
-  actionType = "button",
-  value,
+  value = undefined,
+  type = undefined
 }: ButtonProps) => {
-    return (
-      <StyledButton className={variant} onClick={action} type={actionType} value={value}>
-        {children}
-      </StyledButton>
-    );
-  }
-;
+
+  return (
+    <StyledButton className={variant} onClick={action} type={type} value={value}>
+      {children}
+    </StyledButton>
+  );
+}
+  ;
 
 Button.Primary = (props: Omit<ButtonProps, "variant">) => {
   return <Button variant="primary" {...props} />;

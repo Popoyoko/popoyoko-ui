@@ -2,9 +2,11 @@
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-## This is the **developement branch**
+## This is the **Developement Repo**
 
 📦 [Here is the **package branch**](https://github.com/Popoyoko/popoyoko-ui/tree/package) <= The best place if you want to use it
+
+📦 [Here is the **DEV package branch**](https://github.com/Popoyoko/popoyoko-ui/tree/package) <= The best place if you want to use it
 
 🕹️ [Here is the **storybook branch**](popoyoko.github.io/popoyoko-ui/)
 

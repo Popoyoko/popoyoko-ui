@@ -76,7 +76,7 @@ export const Default: Story = (props: CustomButtonProps) => {
                 )
             default:
                 return (
-                    <Button variant={variant} action={action} children={label} />
+                    <Button variant={variant} action={action}>{label}</Button>
                 )
         }
     }

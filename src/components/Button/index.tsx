@@ -104,7 +104,7 @@ const StyledButton = styled.button<ButtonProps>`
 
 const Button = ({
   variant = "primary",
-  children = "Label",
+  children,
   action = () => console.log("Button as been clicked"),
   value = undefined,
   type = undefined

@@ -4,7 +4,7 @@ import styled from "styled-components";
 interface InputRadioProps {
   label: string;
   name?: string;
-  value?: any;
+  value?: string;
   checked?: boolean;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }

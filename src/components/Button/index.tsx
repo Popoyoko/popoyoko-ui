@@ -13,7 +13,7 @@ export interface ButtonProps {
   variant?: "primary" | "secondary" | "tertiary";
   children: ChildType;
   action?: () => void;
-  value?: any;
+  value?: string;
   type?: "button"
 }
 
@@ -104,11 +104,11 @@ const StyledButton = styled.button<ButtonProps>`
 
 const Button = ({
   variant = "primary",
-  children,
+  children = "Label",
   action = () => console.log("Button as been clicked"),
   value = undefined,
   type = undefined
-}: ButtonProps) => {
+}: ButtonProps): React.ReactElement<typeof StyledButton> => {
 
   return (
     <StyledButton className={variant} onClick={action} type={type} value={value}>

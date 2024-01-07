@@ -5,10 +5,12 @@ name: "🚀 Deployment (Main Branch)"
 on:
   push:
     branches:
+      - main
       - develop
 
 jobs:
   deployment-on-main:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
 
     steps:
@@ -22,7 +24,7 @@ jobs:
         with:
           ref: develop
 
-      - name: 📦 Install dependencies
+      - name: 🔗 Install dependencies
         run: bun i
 
       - name: 🎨 Build Storybook
@@ -33,7 +35,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./storybook-static
-          publish_branch: main
+          publish_branch: storybook
 
       - name: 📦 Build Package
         run: bun run build
@@ -44,3 +46,34 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
           publish_branch: package
+
+  deployment-on-develop:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🐰 Set up bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: 📥 Checkout code
+        uses: actions/checkout@v2
+        with:
+          ref: develop
+
+      - name: 🔗 Install dependencies
+        run: bun i
+
+      - name: 📝 Verify Storybook build
+        run: bun run build-storybook
+
+      - name: 📦 Build Development Package
+        run: bun run build
+
+      - name: 🚀 Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          publish_branch: dev-package

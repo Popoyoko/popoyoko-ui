@@ -64,7 +64,7 @@ Launch a compilation process in "watch" mode that monitors the application's sou
 "watch": "vite build --watch --mode development"
 command launches the "vite build" command with two additional options: "--watch" and "--mode development".
 
-The "--watch" option tells Vite to monitor the application's source files and to recompile automatically as soon as there are changes. The "--mode development" option tells Vite to compile the application in development mode
+The "--watch" option tells Vite to monitor the application's source files and to recompile automatically as soon as there are changes. The "--mode development" option tells Vite to compile the application in development mode.
 
 ## Use in a react project
 

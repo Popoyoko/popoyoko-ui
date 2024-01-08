@@ -6,9 +6,9 @@
 
 📦 [Here is the **package branch**](https://github.com/Popoyoko/popoyoko-ui/tree/package) <= The best place if you want to use it
 
-📦 [Here is the **DEV package branch**](https://github.com/Popoyoko/popoyoko-ui/tree/package) <= The best place if you want to use it
+📦 [Here is the **DEV package branch**](https://github.com/Popoyoko/popoyoko-ui/tree/dev-package) <= The best place if you want to use it
 
-🕹️ [Here is the **storybook branch**](popoyoko.github.io/popoyoko-ui/)
+🕹️ [Here is the **storybook**](https://popoyoko.github.io/popoyoko-ui/)
 
 ## This reportory is using bun instead of npm
 

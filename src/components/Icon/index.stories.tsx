@@ -38,6 +38,7 @@ type Story = StoryObj<typeof Icon>;
 export const icon: Story = {
   render: (args) => <Icon {...args} />,
   args: {
-    
+    icon: 'Add',
+    size: 'medium',
   },
 };

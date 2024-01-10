@@ -6,10 +6,6 @@ const meta: Meta<typeof Icon> = {
   title: 'Components/Icon',
   component: Icon,
   argTypes: {
-    size: {
-      options: ['small', 'medium', 'large'],
-      control: { type: 'radio' },
-    },
     icon: {
       options: [
         'Add',
@@ -29,6 +25,10 @@ const meta: Meta<typeof Icon> = {
       ],
       control: { type: 'select' },
     },
+    size: {
+      options: ['small', 'medium', 'large'],
+      control: { type: 'radio' },
+    },
   },
 };
 
@@ -38,6 +38,7 @@ type Story = StoryObj<typeof Icon>;
 export const icon: Story = {
   render: (args) => <Icon {...args} />,
   args: {
-
+    icon: 'Add',
+    size: 'medium',
   },
 };

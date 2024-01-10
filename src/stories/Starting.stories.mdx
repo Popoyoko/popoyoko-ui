@@ -1,0 +1,196 @@
+import { Meta } from '@storybook/addon-docs';
+
+import github from './assets/github.svg';
+import npm from './assets/npm.svg';
+import figma from './assets/figma.svg';
+
+
+
+<Meta title="Starting" />
+
+<style>
+  {`
+    .subheading {
+      --mediumdark: '#999999';
+      font-weight: 900;
+      font-size: 13px;
+      color: #999;
+      letter-spacing: 6px;
+      line-height: 24px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      margin-top: 40px;
+    }
+
+    .link-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      row-gap: 10px;
+    }
+
+    @media (min-width: 620px) {
+      .link-list {
+        row-gap: 20px;
+        column-gap: 20px;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media all and (-ms-high-contrast:none) {
+    .link-list {
+        display: -ms-grid;
+        -ms-grid-columns: 1fr 1fr;
+        -ms-grid-rows: 1fr 1fr;
+      }
+    }
+
+    .link-item {
+      display: block;
+      padding: 20px 30px 20px 15px;
+      border: 1px solid #00000010;
+      border-radius: 5px;
+      transition: background 150ms ease-out, border 150ms ease-out, transform 150ms ease-out;
+      color: #333333;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .link-item:hover {
+      border-color: #1EA7FD50;
+      transform: translate3d(0, -3px, 0);
+      box-shadow: rgba(0, 0, 0, 0.08) 0 3px 10px 0;
+    }
+
+    .link-item:active {
+      border-color: #1EA7FD;
+      transform: translate3d(0, 0, 0);
+    }
+
+    .link-item strong {
+      font-weight: 700;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .link-item img {
+      height: 40px;
+      width: 40px;
+      margin-right: 15px;
+      flex: none;
+    }
+
+    .link-item span {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  `}
+</style>
+
+# Getting Started
+
+Developers: This guide will get you up and running with the Popoyoko Design System!
+
+Designers: Please consult the Figma Design System for designer resources.
+
+  <a className="link-item" href="##" target="_blank">
+    <img src={figma} alt="figma" />
+    <span>
+      <strong>Figma</strong>
+      View the design, customize and make a token
+    </span>
+  </a>
+
+## Installation
+
+To install **popoyoko-ui**, you can choose between installing the package directly with [**npm**](), or with [**github**](https://github.com/Popoyoko/popoyoko-ui) (npm being the simplest, I recommend it).
+
+<div className="link-list">
+  <a className="link-item" href="https://github.com/Popoyoko/popoyoko-ui" target="_blank">
+    <img src={github} alt="github" />
+    <span>
+      <strong>Github</strong>
+      View the source and add issues
+    </span>
+  </a>
+  <a className="link-item" href="##" target="_blank">
+    <img src={npm} alt="npm" />
+    <span>
+      <strong>Npm</strong>
+      Download package and use it
+    </span>
+  </a>
+</div>
+
+### Use in a react project
+
+**To use Popoyoko UI Vite in your React project, follow these steps:**
+
+ Install the package using your package manager of choice (bun, npm or yarn):
+
+### `bun add github:Popoyoko/popoyoko-ui#package`
+
+Now you can import the desired components from the library
+
+For example :
+
+```bash
+import { Information } from "popoyoko-ui";
+```
+
+## How does it work?
+#### This reportory is using bun instead of npm
+
+🏴‍☠️ [Install **BUN** here](https://bun.sh/)
+
+```bash
+bun run dev
+```
+
+Runs the vite application in development mode.
+
+The page will be reloaded if you make any changes.
+You will also see all lint errors in the console.
+
+```bash
+bun run build
+```
+
+Builds the application for production in the build folder.
+
+"tsc && vite build"
+"tsc" compiles the TypeScript code into JavaScript.
+"vite build" builds the application for production using the Vite tool.
+
+Your library is ready to be exported to other applications!
+
+```bash
+bun run preview
+```
+
+Launch a local development server that allows to preview the application under development.
+
+```bash
+bun run storybook
+```
+
+Launch the Storybook environment, a development tool for designing and testing user interface components in isolation.
+
+port 6006 is used
+
+```bash
+bun run build-storybook
+```
+
+Allows you to create a build of the user interface of the application or website, using Storybook as a compilation tool.
+
+```bash
+bun run run watch
+```
+
+Launch a compilation process in "watch" mode that monitors the application's source files and automatically recompiles them as soon as there are changes.
+
+"watch": "vite build --watch --mode development"
+command launches the "vite build" command with two additional options: "--watch" and "--mode development".
+
+The "--watch" option tells Vite to monitor the application's source files and to recompile automatically as soon as there are changes. The "--mode development" option tells Vite to compile the application in development mode.

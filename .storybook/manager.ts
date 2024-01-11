@@ -4,7 +4,7 @@ import { create } from '@storybook/theming';
 addons.setConfig({
     theme: create({ 
         base: "dark", 
-        brandTitle: "Life",     
+        brandTitle: "Popoyoko",     
         brandUrl: "https://github.com/Popoyoko/popoyoko-ui",
         brandImage: "/logo.svg",
         brandTarget: '_self',

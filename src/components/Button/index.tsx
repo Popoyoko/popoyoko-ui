@@ -1,14 +1,23 @@
 import React from "react";
 import styled from "styled-components";
+import { Icon } from "../Icon";
 
-interface ButtonProps {
-  type: "primary" | "secondary" | "tertiary";
-  typeSvg: "none" | "left" | "right" | "only";
-  label?: string;
-  children?: React.ReactNode;
+
+export type ChildType =
+  | React.ReactElement<typeof Icon>
+  | string
+  | [string, React.ReactElement<typeof Icon>]
+  | [React.ReactElement<typeof Icon>, string];
+
+export interface ButtonProps {
+  variant?: "primary" | "secondary" | "tertiary";
+  children: ChildType;
+  action?: () => void;
+  value?: string;
+  type?: "button"
 }
 
-const StyledButton = styled.button`
+const StyledButton = styled.button<ButtonProps>`
   /* Styles communs pour tous les boutons */
   display: flex;
   flex-direction: row;
@@ -93,61 +102,32 @@ const StyledButton = styled.button`
   }
 `;
 
-
-const SpanButton = styled.span`
-font-family: Co Headline;
-font-size: 22px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-`
-
-const ButtonSvgOnly = styled(StyledButton)`
-padding: 8px;
-width: fit-content;
-`
-
 const Button = ({
-  type = "primary",
-  label,
-  typeSvg,
+  variant = "primary",
   children,
-}: ButtonProps) => {
-  if (typeSvg === "none") {
-    return <StyledButton className={type}><SpanButton>{label}</SpanButton></StyledButton>;
-  } else if (typeSvg === "left") {
-    return (
-      <StyledButton className={type}>
-        {children}
-        <SpanButton>{label}</SpanButton>
-      </StyledButton>
-    );
-  } else if (typeSvg === "right") {
-    return (
-      <StyledButton className={type}>
-        <SpanButton>{label}</SpanButton>
-        {children}
-      </StyledButton>
-    );
-  } else if (typeSvg === "only") {
-    return (
-      <ButtonSvgOnly className={type}>
-        {children}
-      </ButtonSvgOnly>
-    );
-  }
+  action = () => console.log("Button as been clicked"),
+  value = undefined,
+  type = undefined
+}: ButtonProps): React.ReactElement<typeof StyledButton> => {
+
+  return (
+    <StyledButton className={variant} onClick={action} type={type} value={value}>
+      {children}
+    </StyledButton>
+  );
+}
+  ;
+
+Button.Primary = (props: Omit<ButtonProps, "variant">) => {
+  return <Button variant="primary" {...props} />;
 };
 
-Button.Primary = (props: Omit<ButtonProps, "type">) => {
-  return <Button type="primary" {...props} />;
+Button.Secondary = (props: Omit<ButtonProps, "variant">) => {
+  return <Button variant="secondary" {...props} />;
 };
 
-Button.Secondary = (props: Omit<ButtonProps, "type">) => {
-  return <Button type="secondary" {...props} />;
-};
-
-Button.Tertiary = (props: Omit<ButtonProps, "type">) => {
-  return <Button type="tertiary" {...props} />;
+Button.Tertiary = (props: Omit<ButtonProps, "variant">) => {
+  return <Button variant="tertiary" {...props} />;
 };
 
 export default Button;

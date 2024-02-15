@@ -1,26 +1,29 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
 interface InputSelectProps {
-  label: string;
-  options: string[];
+  label?: string;
+  options: (string | { label: string; value: string | number })[];
+  name?: string;
+  value?: string | number;
+  onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
 }
 
 const SelectWrapper = styled.div`
   position: relative;
   display: flex;
 
-flex-direction: column;
-align-items: flex-start;
-gap: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
 `;
 
 const SelectLabel = styled.label`
-font-family: Co Headline;
-font-size: 22px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+  font-family: Co Headline;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 `;
 
 const SelectInput = styled.select`
@@ -36,23 +39,23 @@ const SelectInput = styled.select`
   outline: none;
 `;
 
-export const InputSelect = ({ label, options }: InputSelectProps) => {
-  const [selectedOption, setSelectedOption] = useState<string | undefined>(
-    undefined
-  );
-
-  const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedOption(event.target.value);
-  };
-
+export const InputSelect = ({
+  label,
+  options,
+  name,
+  value,
+  onChange,
+}: InputSelectProps) => {
   return (
     <SelectWrapper>
       <SelectLabel>{label}</SelectLabel>
-      <SelectInput value={selectedOption} onChange={handleSelectChange}>
-        <option value="">Option</option>
+      <SelectInput value={value} onChange={onChange} name={name}>
         {options.map((option, index) => (
-          <option key={index} value={option}>
-            {option}
+          <option
+            key={index}
+            value={typeof option === "object" ? option.value : option}
+          >
+            {typeof option === "object" ? option.label : option}
           </option>
         ))}
       </SelectInput>

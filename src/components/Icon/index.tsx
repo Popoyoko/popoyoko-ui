@@ -61,12 +61,12 @@ const IconImage = styled.img`
 `;
 
 
-interface IconProps {
+export interface IconProps {
   size?: "small" | "medium" | "large";
   icon?: string;
 }
 
-const iconMap: Record<string, string> = {
+export const IconMap: Record<string, string> = {
   Add,
   AddPicture,
   ArrowBottom,
@@ -86,11 +86,11 @@ const iconMap: Record<string, string> = {
 export const Icon = ({ size = "medium", icon }: IconProps) => {
   const className = `icon-${size} icon`;
 
-  const iconSrc = iconMap[icon];
+  const IconSrc = IconMap[icon];
 
   return (
     <IconContainer className={className}>
-      <IconImage src={iconSrc} alt={icon} />
+      <IconImage src={IconSrc} alt={icon} />
     </IconContainer>
   );
 };

@@ -2,8 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 interface InputTextProps {
-    label: string;
-    placeholder: string;
+    label?: string;
+    placeholder?: string;
+    type?: string;
+    name?: string;
+    value?: string;
+    onChange?: () => void;
 };
 
 const InputWrapper = styled.div`
@@ -43,14 +47,18 @@ font-weight: 400;
 line-height: 24px; /* 150% */
 `;
 
-export const InputText = ({
+export const InputText= ({
     label,
     placeholder,
+    type = 'text',
+    name,
+    value,
+    onChange,
 }: InputTextProps) => {
     return (
         <InputWrapper>
             <SelectLabel>{label}</SelectLabel>
-            <TextInput placeholder={placeholder} />
+            <TextInput type={type} placeholder={placeholder} name={name} value={value} onChange={onChange}/>
         </InputWrapper>
     )
 }

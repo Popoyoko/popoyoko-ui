@@ -1,14 +1,16 @@
 # .github/workflows/main.yml
 
-name: "🚀 Deployment (Main Branch)"
+name: "🚀 Deployment"
 
 on:
   push:
     branches:
+      - main
       - develop
 
 jobs:
-  deployment-on-main:
+  Deployment:
+    if: ${{ github.ref == 'refs/heads/main' || github.ref == 'refs/heads/develop' }}
     runs-on: ubuntu-latest
 
     steps:
@@ -20,17 +22,37 @@ jobs:
       - name: 📥 Checkout code
         uses: actions/checkout@v2
         with:
-          ref: develop
+          ref: ${{ github.ref }}
 
-      - name: 📦 Install dependencies
+      - name: 🔗 Install dependencies
         run: bun i
 
       - name: 🎨 Build Storybook
         run: bun run build-storybook
 
-      - name: 🚀 Deploy
+      - name: 🚀 Deploy Storybook
         uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./storybook-static
-          publish_branch: main
+          publish_branch: storybook
+
+      - name: 📦 Build Package
+        run: bun run build
+
+      - name: 🚀 Deploy Package
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          publish_branch: package
+
+      - name: 🚀 Deploy Development Package
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/develop' }}  
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          publish_branch: dev-package

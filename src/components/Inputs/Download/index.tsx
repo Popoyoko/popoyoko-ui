@@ -1,11 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 import download from "../../../assets/download.svg";
 
 interface InputDownloadProps {
-    label: string;
-    icon: "right" | "left";
-};
+  label: string;
+  icon: "right" | "left";
+}
 
 const DownloadLabel = styled.label`
   display: flex;
@@ -14,8 +14,6 @@ const DownloadLabel = styled.label`
   align-items: center;
   padding: 8px 16px;
   gap: 8px;
-  width: 326px;
-  height: 54px;
   background: #f7f7f8;
   border: 2px dashed #171673;
   border-radius: 2px;
@@ -25,29 +23,15 @@ const DownloadInput = styled.input`
   display: none;
 `;
 
-export const InputDownload = ({
-    label,
-    icon,
-}: InputDownloadProps) => {
-    if (icon === "left") {
-        return (
-            <form>
-                <DownloadLabel htmlFor="file-input">
-                    {label}
-                    <img src={download} alt="download" />
-                    <DownloadInput type="file" name="file" id="file-input" />
-                </DownloadLabel>
-            </form>
-        );
-    } else if (icon === "right") {
-        return (
-            <form>
-                <DownloadLabel htmlFor="file-input">
-                    <img src={download} alt="download" />
-                    {label}
-                    <DownloadInput type="file" name="file" id="file-input" />
-                </DownloadLabel>
-            </form>
-        );
-    }
+export const InputDownload = ({ label, icon }: InputDownloadProps) => {
+  return (
+    <form>
+      <DownloadLabel htmlFor="file-input">
+        {icon === "left" && <img src={download} alt="download" />}
+        {label}
+        {icon === "right" && <img src={download} alt="download" />}
+        <DownloadInput type="file" name="file" id="file-input" />
+      </DownloadLabel>
+    </form>
+  );
 };

@@ -1,6 +1,6 @@
 import React from "react";
-import styled from 'styled-components';
-import upload from "../../Icons/Upload/upload.svg";
+import styled from "styled-components";
+import { Icon } from "../Icon";
 
 interface SectionProps {
   title?: string;
@@ -9,36 +9,36 @@ interface SectionProps {
 
 const ContainerSection = styled.div`
   display: flex;
+  padding: 32px 16px;
   flex-direction: column;
   align-items: flex-start;
-  padding: 16px;
   gap: 16px;
 `;
 
 const Title = styled.h2`
   margin: 0;
-  font-family: 'Co Headline';
+  color: #000;
+
+  font-family: Co Headline;
+  font-size: 16px;
   font-style: normal;
   font-weight: 700;
-  font-size: 16px;
-  line-height: 28px;
-  color: #000000;
+  line-height: normal;
 `;
 
 const SectionBtn = styled.div`
-  box-sizing: border-box;
   display: flex;
-  flex-direction: row;
+  padding: 32px;
   justify-content: center;
   align-items: center;
-  padding: 32px;
   gap: 16px;
+  align-self: stretch;
   border: 2px dashed #32568f;
 `;
 
 const SectionLabel = styled.p`
   margin: 0;
-  font-family: 'Co Headline';
+  font-family: "Co Headline";
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
@@ -55,12 +55,9 @@ SectionProps) => {
     <ContainerSection>
       <Title>{title}</Title>
       <SectionBtn>
-        <div className="section-svg">
-          <img src={upload} alt="section" />
-        </div>
+        <Icon.Upload/>
         <SectionLabel>{label}</SectionLabel>
       </SectionBtn>
     </ContainerSection>
   );
 };
-

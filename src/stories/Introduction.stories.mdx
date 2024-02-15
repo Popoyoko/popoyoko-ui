@@ -1,8 +1,9 @@
 import { Meta } from '@storybook/addon-docs';
 
-import POPOYOKOcover from './assets/POPOYOKOcover.svg';
-import POPOYOKObackground from './assets/POPOYOKObackground.svg';
-import POPOYOKOcoverprofile from './assets/POPOYOKOcoverprofile.svg';
+
+import PopoyokoCover from './assets/PopoyokoCover.svg';
+import PopoyokoBackground from './assets/PopoyokoBackground.svg';
+import PopoyokoCoverprofile from './assets/PopoyokoCoverprofile.svg';
 
 import github from './assets/github.svg';
 import npm from './assets/npm.svg';
@@ -12,9 +13,24 @@ import figma from './assets/figma.svg';
 
 <Meta title="Introduction" />
 
-
 <style>
   {`
+    .css-qa4clq {
+      max-width: none;
+    }
+
+    .css-k7lbue{
+      padding: 0;
+    }
+
+    img{
+      width: 100%;
+    }
+
+    .introduction{
+      padding: 5%;
+    }
+
     .subheading {
       --mediumdark: '#999999';
       font-weight: 900;
@@ -94,6 +110,7 @@ import figma from './assets/figma.svg';
 
 <img src={POPOYOKOcover} alt="popoyoko cover" />
 
+<section className="introduction">
 ### Welcome to the Popoyoko Design System.
 
 What is our Design System ? 
@@ -127,5 +144,8 @@ If you're new, start with the [**strating**](?path=/docs/starting--docs) guide, 
     </span>
   </a>
 </div>
+
+</section>
+
 
 <img src={POPOYOKObackground} alt="popoyoko background" />

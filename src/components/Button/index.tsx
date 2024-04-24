@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Icon } from "../Icon";
 
+import { ComponentPopoyoko } from "../../../build-tokens/web/ComponentPopoyoko"
 
 export type ChildType =
   | React.ReactElement<typeof Icon>
@@ -29,7 +30,7 @@ const StyledButton = styled.button<ButtonProps>`
 
   /* Styles pour le bouton primary */
   &.primary {
-    background-color: #228C53;
+    background-color: ${ComponentPopoyoko.ButtonPrimary.BG.Initial};    
     color: #eeebff;
     border: none;
     border-radius: 2px;

@@ -1,0 +1,18 @@
+{
+  "Core": {
+    "Transparent": {
+      "value": "rgba(0,0,0,0)",
+      "type": "color"
+    },
+    "WIP": {
+      "Semantic": {
+        "value": "#00ff31",
+        "type": "color"
+      },
+      "Semantics": {
+        "value": "#f200ff",
+        "type": "color"
+      }
+    }
+  }
+}

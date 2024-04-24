@@ -1,0 +1,62 @@
+{
+  "BG": {
+    "ActionHigh": {
+      "Initial": {
+        "value": "{Semantics.BG.ActionHigh.Initial}",
+        "type": "color"
+      },
+      "Ripple": {
+        "value": "{Semantics.BG.ActionHigh.Ripple}",
+        "type": "color"
+      }
+    },
+    "ActionLow": {
+      "Initial": {
+        "value": "{Semantics.BG.ActionLow.Initial}",
+        "type": "color"
+      },
+      "Ripple": {
+        "value": "{Semantics.BG.ActionLow.Ripple}",
+        "type": "color"
+      }
+    }
+  },
+  "FG": {
+    "ActionHigh": {
+      "Initial": {
+        "value": "{Semantics.FG.ActionHigh.Initial}",
+        "type": "color"
+      }
+    },
+    "ActionLow": {
+      "Initial": {
+        "value": "{Semantics.FG.ActionLow.Initial}",
+        "type": "color"
+      }
+    }
+  },
+  "Sizes": {
+    "BorderRadius": {
+      "XS": {
+        "value": "{Semantics.Sizes.BorderRadius.XS}",
+        "type": "borderRadius"
+      },
+      "SM": {
+        "value": "{Semantics.Sizes.BorderRadius.SM}",
+        "type": "borderRadius"
+      },
+      "MD": {
+        "value": "{Semantics.Sizes.BorderRadius.MD}",
+        "type": "borderRadius"
+      },
+      "LG": {
+        "value": "{Semantics.Sizes.BorderRadius.LG}",
+        "type": "borderRadius"
+      },
+      "XL": {
+        "value": "{Semantics.Sizes.BorderRadius.XL}",
+        "type": "borderRadius"
+      }
+    }
+  }
+}

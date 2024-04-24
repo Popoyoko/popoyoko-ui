@@ -1,0 +1,482 @@
+{
+  "Popoyoko": {
+    "Neutral": {
+      "100": {
+        "value": "#000000",
+        "type": "color"
+      },
+      "200": {
+        "value": "#1B1A23",
+        "type": "color"
+      },
+      "300": {
+        "value": "#353538",
+        "type": "color"
+      },
+      "400": {
+        "value": "#F7F7F8",
+        "type": "color"
+      },
+      "500": {
+        "value": "#FFFFFF",
+        "type": "color"
+      }
+    },
+    "FontSize": {
+      "11": {
+        "value": "11",
+        "type": "fontSizes"
+      },
+      "12": {
+        "value": "12",
+        "type": "fontSizes"
+      },
+      "14": {
+        "value": "14",
+        "type": "fontSizes"
+      },
+      "16": {
+        "value": "16",
+        "type": "fontSizes"
+      },
+      "20": {
+        "value": "20",
+        "type": "fontSizes"
+      },
+      "22": {
+        "value": "22",
+        "type": "fontSizes"
+      },
+      "24": {
+        "value": "24",
+        "type": "fontSizes"
+      },
+      "32": {
+        "value": "32",
+        "type": "fontSizes"
+      },
+      "36": {
+        "value": "36",
+        "type": "fontSizes"
+      },
+      "45": {
+        "value": "45",
+        "type": "fontSizes"
+      },
+      "57": {
+        "value": "57",
+        "type": "fontSizes"
+      }
+    },
+    "Tangaroa": {
+      "value": "#03093D",
+      "type": "color"
+    },
+    "Blue": {
+      "200": {
+        "value": "#171673",
+        "type": "color"
+      },
+      "300": {
+        "value": "#2018B0",
+        "type": "color"
+      },
+      "400": {
+        "value": "#0821FB",
+        "type": "color"
+      },
+      "500": {
+        "value": "#C6CEFE",
+        "type": "color"
+      },
+      "600": {
+        "value": "#D9CCFF",
+        "type": "color"
+      }
+    },
+    "Scale": {
+      "Flat": {
+        "0": {
+          "value": "{Popoyoko.Tangaroa}",
+          "type": "color"
+        },
+        "100": {
+          "value": "{Popoyoko.Tangaroa}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "{Tools.Linear.200}",
+                "space": "srgb",
+                "color": "{Popoyoko.Blue.400}"
+              }
+            }
+          }
+        },
+        "200": {
+          "value": "{Popoyoko.Tangaroa}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "{Tools.Linear.400}",
+                "space": "srgb",
+                "color": "{Popoyoko.Blue.400}"
+              }
+            }
+          }
+        },
+        "300": {
+          "value": "{Popoyoko.Tangaroa}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "{Tools.Linear.600}",
+                "space": "srgb",
+                "color": "{Popoyoko.Blue.400}"
+              }
+            }
+          }
+        },
+        "400": {
+          "value": "{Popoyoko.Tangaroa}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "{Tools.Linear.800}",
+                "space": "srgb",
+                "color": "{Popoyoko.Blue.400}"
+              }
+            }
+          }
+        },
+        "500": {
+          "value": "{Popoyoko.Blue.400}",
+          "type": "color"
+        },
+        "600": {
+          "value": "{Popoyoko.Blue.600}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "{Tools.Linear.800}",
+                "space": "srgb",
+                "color": "{Popoyoko.Blue.400}"
+              }
+            }
+          }
+        },
+        "700": {
+          "value": "{Popoyoko.Blue.600}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "{Tools.Linear.600}",
+                "space": "srgb",
+                "color": "{Popoyoko.Blue.400}"
+              }
+            }
+          }
+        },
+        "800": {
+          "value": "{Popoyoko.Blue.600}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "{Tools.Linear.400}",
+                "space": "srgb",
+                "color": "{Popoyoko.Blue.400}"
+              }
+            }
+          }
+        },
+        "900": {
+          "value": "{Popoyoko.Blue.600}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "{Tools.Linear.200}",
+                "space": "srgb",
+                "color": "{Popoyoko.Blue.400}"
+              }
+            }
+          }
+        },
+        "1000": {
+          "value": "{Popoyoko.Blue.600}",
+          "type": "color"
+        }
+      },
+      "Fade": {
+        "0": {
+          "value": "{Popoyoko.Blue.400}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0",
+                "space": "lch",
+                "color": "#rgba(8,33,251,0)"
+              }
+            }
+          }
+        },
+        "100": {
+          "value": "{Popoyoko.Blue.400}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "{Tools.Linear.100}",
+                "space": "srgb",
+                "color": "rgba(8,33,251,0)"
+              }
+            }
+          }
+        },
+        "200": {
+          "value": "{Popoyoko.Blue.400}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "{Tools.Linear.200}",
+                "space": "srgb",
+                "color": "rgba(8,33,251,0)"
+              }
+            }
+          }
+        },
+        "300": {
+          "value": "{Popoyoko.Blue.400}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "{Tools.Linear.300}",
+                "space": "srgb",
+                "color": "rgba(8,33,251,0)"
+              }
+            }
+          }
+        },
+        "400": {
+          "value": "{Popoyoko.Blue.400}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "{Tools.Linear.400}",
+                "space": "srgb",
+                "color": "rgba(8,33,251,0)"
+              }
+            }
+          }
+        },
+        "500": {
+          "value": "{Popoyoko.Blue.400}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "{Tools.Linear.500}",
+                "space": "srgb",
+                "color": "rgba(8,33,251,0)"
+              }
+            }
+          }
+        },
+        "600": {
+          "value": "{Popoyoko.Blue.400}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "{Tools.Linear.600}",
+                "space": "srgb",
+                "color": "rgba(8,33,251,0)"
+              }
+            }
+          }
+        },
+        "700": {
+          "value": "{Popoyoko.Blue.400}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "{Tools.Linear.700}",
+                "space": "srgb",
+                "color": "rgba(8,33,251,0)"
+              }
+            }
+          }
+        },
+        "800": {
+          "value": "{Popoyoko.Blue.400}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "{Tools.Linear.800}",
+                "space": "srgb",
+                "color": "rgba(8,33,251,0)"
+              }
+            }
+          }
+        },
+        "900": {
+          "value": "{Popoyoko.Blue.400}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "{Tools.Linear.900}",
+                "space": "srgb",
+                "color": "rgba(8,33,251,0)"
+              }
+            }
+          }
+        },
+        "1000": {
+          "value": "{Popoyoko.Blue.400}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "{Tools.Linear.1000}",
+                "space": "srgb",
+                "color": "rgba(8,33,251,0)"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Co Headline": {
+      "value": "Co Headline",
+      "type": "fontFamilies"
+    },
+    "none": {
+      "value": "none",
+      "type": "textDecoration"
+    },
+    "underline": {
+      "value": "underline",
+      "type": "textDecoration"
+    },
+    "line-through": {
+      "value": "line-through",
+      "type": "textDecoration"
+    },
+    "Light": {
+      "value": "Light",
+      "type": "fontWeights"
+    },
+    "Regular": {
+      "value": "Regular",
+      "type": "fontWeights"
+    },
+    "Bold": {
+      "value": "Bold",
+      "type": "fontWeights"
+    },
+    "Radius": {
+      "None": {
+        "value": "0px",
+        "type": "borderRadius",
+        "description": "Default",
+        "parent": "Sizes/Mode 1"
+      },
+      "SM": {
+        "value": "1px",
+        "type": "borderRadius",
+        "description": "Tags",
+        "parent": "Sizes/Mode 1"
+      },
+      "MD": {
+        "value": "3px",
+        "type": "borderRadius",
+        "description": "Elevated, Inputs",
+        "parent": "Sizes/Mode 1"
+      },
+      "LG": {
+        "value": "6px",
+        "type": "borderRadius",
+        "description": "Surfaces",
+        "parent": "Sizes/Mode 1"
+      },
+      "Infinite": {
+        "value": "{Tools.Size.Radius.Infinite}",
+        "type": "borderRadius",
+        "description": "Les boutons",
+        "parent": "Sizes/Mode 1"
+      }
+    },
+    "Spacing": {
+      "4": {
+        "value": "4",
+        "type": "spacing"
+      },
+      "8": {
+        "value": "8",
+        "type": "spacing"
+      },
+      "12": {
+        "value": "12",
+        "type": "spacing"
+      },
+      "16": {
+        "value": "16",
+        "type": "spacing"
+      },
+      "32": {
+        "value": "32",
+        "type": "spacing"
+      }
+    },
+    "Sizing": {
+      "16": {
+        "value": "16",
+        "type": "sizing"
+      },
+      "24": {
+        "value": "24",
+        "type": "sizing"
+      },
+      "32": {
+        "value": "32",
+        "type": "sizing"
+      },
+      "48": {
+        "value": "48",
+        "type": "sizing"
+      }
+    }
+  }
+}

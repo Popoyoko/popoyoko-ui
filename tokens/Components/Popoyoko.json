@@ -1,0 +1,12 @@
+{
+  "Components": {
+    "ButtonPrimary": {
+      "BG": {
+        "Initial": {
+          "value": "{BG.ActionHigh.Initial}",
+          "type": "color"
+        }
+      }
+    }
+  }
+}

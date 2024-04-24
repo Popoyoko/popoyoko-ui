@@ -1,0 +1,80 @@
+{
+  "Practolib": {
+    "Dark": {
+      "Horizon Gradient": {
+        "value": "#3bbc27",
+        "type": "color",
+        "description": "Action color"
+      },
+      "Lavender Mystery": {
+        "value": "#9cf7d2",
+        "type": "color",
+        "description": "Primary color"
+      },
+      "Prestige Blue": {
+        "value": "#173d2f",
+        "type": "color",
+        "description": "Background color"
+      },
+      "Deep Blue": {
+        "value": "#06210d",
+        "type": "color",
+        "description": "Surface color"
+      }
+    },
+    "Light": {
+      "Skyline Gradient": {
+        "value": "#0f3e1c",
+        "type": "color",
+        "description": "Action color"
+      },
+      "Lavender Charm": {
+        "value": "#45d65f",
+        "type": "color",
+        "description": "Primary color"
+      },
+      "Noble Grey": {
+        "value": "#f0fcf4",
+        "type": "color",
+        "description": "Surface color"
+      },
+      "White": {
+        "value": "#ffffff",
+        "type": "color",
+        "description": "Background color"
+      }
+    },
+    "Radius": {
+      "None": {
+        "value": "0px",
+        "type": "borderRadius",
+        "description": "Default",
+        "parent": "Sizes/Mode 1"
+      },
+      "SM": {
+        "value": "1px",
+        "type": "borderRadius",
+        "description": "Tags",
+        "parent": "Sizes/Mode 1"
+      },
+      "MD": {
+        "value": "3px",
+        "type": "borderRadius",
+        "description": "Elevated, Inputs",
+        "parent": "Sizes/Mode 1"
+      },
+      "LG": {
+        "value": "6px",
+        "type": "borderRadius",
+        "description": "Surfaces",
+        "parent": "Sizes/Mode 1"
+      },
+      "Infinite": {
+        "value": "{Tools.Size.Radius.Infinite}",
+        "type": "borderRadius",
+        "description": "Les boutons",
+        "parent": "Sizes/Mode 1"
+      }
+    }
+  }
+}

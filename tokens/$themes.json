@@ -1,0 +1,34 @@
+[
+  {
+    "id": "f2dff3a1b452b3e942918e86aaa6f9fdaff89037",
+    "name": "Popoyoko",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "Tools": "source",
+      "Core": "source",
+      "Branding/Popoyoko": "source",
+      "Semantics/Popoyoko/Core": "source",
+      "Semantics/Popoyoko/Dark": "source",
+      "Semantic": "enabled"
+    },
+    "group": "Semantic"
+  },
+  {
+    "id": "7dc3e9e5b772918629cab3a17bf27a99498ec03d",
+    "name": "Popoyoko",
+    "$figmaStyleReferences": {
+      "ButtonPrimary.BG.Initial": "S:caec7d6237d45c5c73237d2e2bdc63e0d32a812c,"
+    },
+    "selectedTokenSets": {
+      "Tools": "source",
+      "Core": "source",
+      "Branding/Popoyoko": "source",
+      "Semantics/Popoyoko/Core": "source",
+      "Semantics/Popoyoko/Dark": "source",
+      "Semantic": "source",
+      "Components/Popoyoko": "source",
+      "Component": "enabled"
+    },
+    "group": "Component"
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "Semantics": {
+    "Sizes": {
+      "BorderRadius": {
+        "XS": {
+          "value": "{Popoyoko.Radius.None}",
+          "type": "borderRadius"
+        },
+        "SM": {
+          "value": "{Popoyoko.Radius.SM}",
+          "type": "borderRadius"
+        },
+        "MD": {
+          "value": "{Popoyoko.Radius.MD}",
+          "type": "borderRadius"
+        },
+        "LG": {
+          "value": "{Popoyoko.Radius.LG}",
+          "type": "borderRadius"
+        },
+        "XL": {
+          "value": "{Popoyoko.Radius.Infinite}",
+          "type": "borderRadius"
+        }
+      }
+    }
+  }
+}

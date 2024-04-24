@@ -1,0 +1,40 @@
+{
+  "Semantics": {
+    "BG": {
+      "ActionHigh": {
+        "Initial": {
+          "value": "{Popoyoko.Blue.300}",
+          "type": "color"
+        },
+        "Ripple": {
+          "value": "rgba(255,255,255,0.3)",
+          "type": "color"
+        }
+      },
+      "ActionLow": {
+        "Initial": {
+          "value": "Transparent",
+          "type": "color"
+        },
+        "Ripple": {
+          "value": "rgba(255,255,255,0.3)",
+          "type": "color"
+        }
+      }
+    },
+    "FG": {
+      "ActionHigh": {
+        "Initial": {
+          "value": "{Popoyoko.Neutral.400}",
+          "type": "color"
+        }
+      },
+      "ActionLow": {
+        "Initial": {
+          "value": "{Popoyoko.Blue.600}",
+          "type": "color"
+        }
+      }
+    }
+  }
+}

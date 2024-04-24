@@ -1,0 +1,10 @@
+{
+  "ButtonPrimary": {
+    "BG": {
+      "Initial": {
+        "value": "{Components.ButtonPrimary.BG.Initial}",
+        "type": "color"
+      }
+    }
+  }
+}

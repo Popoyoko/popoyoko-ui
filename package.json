@@ -17,6 +17,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "build-tokens": "bun index.ts",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
@@ -24,8 +25,10 @@
     "lint": "eslint --ext .ts,.tsx src"
   },
   "dependencies": {
+    "@tokens-studio/sd-transforms": "^0.15.2",
     "add": "^2.0.6",
     "caniuse-lite": "^1.0.30001507",
+    "chroma-js": "^2.4.2",
     "esbuild": "^0.17.17",
     "node": "^20.2.0",
     "react": "^18.2.0",
@@ -33,6 +36,7 @@
     "react-svg": "3.0.0",
     "react-use-match-media": "^1.4.0",
     "rollup-plugin-typescript2": "^0.34.1",
+    "style-dictionary": "^3.9.2",
     "styled-components": "^6.0.7",
     "typescript-plugin-styled-components": "^3.0.0"
   },

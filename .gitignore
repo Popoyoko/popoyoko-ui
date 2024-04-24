@@ -14,6 +14,7 @@ node_modules/
 .vscode/*
 storybook-static/
 build/
+build-tokens/
 !.vscode/extensions.json
 .idea
 .DS_Store

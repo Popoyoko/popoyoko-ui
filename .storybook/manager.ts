@@ -1,6 +1,5 @@
 import { addons } from '@storybook/manager-api';
 import { create } from '@storybook/theming';
-import './storybook-custom.css';
 
 addons.setConfig({
     theme: create({ 
@@ -14,9 +13,6 @@ addons.setConfig({
         colorSecondary: '#0023FC',   
         
         appBg: '#080312',
-        appPreviewBg: '#080312',
-
-        
 
         textColor: '#9E89DA',
         textInverseColor: '#ffffff',

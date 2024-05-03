@@ -1,0 +1,1 @@
+const t=""+new URL("github-fa93a6d5.svg",import.meta.url).href,a=""+new URL("npm-5ff4574a.svg",import.meta.url).href,e=""+new URL("figma-01110dbc.svg",import.meta.url).href;export{e as f,t as g,a as n};

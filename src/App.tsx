@@ -4,6 +4,7 @@ import "./App.css";
 import React from "react";
 import {
   Icon,
+  TestButton,
 } from "./components";
 import { Button } from "./components";
 import { Header } from "./components";
@@ -14,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <Button.Primary><Icon.Add/>Label</Button.Primary>
-      <Header brand={brand} />
+      <TestButton brand={brand} />
     </div>
   );
 }

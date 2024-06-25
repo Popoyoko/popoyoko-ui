@@ -1,9 +1,11 @@
+// validatetokens.ts
 import * as fs from 'fs';
 import * as path from 'path';
 
-const tokensDir = path.resolve(__dirname, 'build-tokens/web'); 
-const BrandName = "Popoyoko"; 
+const tokensDir = path.resolve(__dirname, 'build-tokens/web');
+const BrandName = "Popoyoko";
 
+// Liste des noms de fichiers attendus
 const expectedFiles = [
   `Color${BrandName}Dark.ts`,
   `Color${BrandName}Light.ts`,
@@ -11,6 +13,7 @@ const expectedFiles = [
   `Sizes${BrandName}.ts`
 ];
 
+// Fonction pour vérifier la présence des fichiers
 function checkTokens() {
   const missingFiles = expectedFiles.filter(filename => {
     const filePath = path.join(tokensDir, filename);
@@ -22,10 +25,11 @@ function checkTokens() {
     missingFiles.forEach(filename => {
       console.error(filename);
     });
-    process.exit(1);
+    process.exit(1); // Quitter avec un code d'erreur
   } else {
     console.log('Tous les fichiers de tokens sont présents.');
   }
 }
 
-checkTokens();
+// Exporter la fonction de vérification par défaut
+export default checkTokens;

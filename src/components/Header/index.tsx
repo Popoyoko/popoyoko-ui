@@ -2,7 +2,7 @@ import React from "react";
 import { Logo } from "../Logo";
 import { InputSearch } from "../Inputs/Search";
 import Avatar from "../Avatar";
-import { loadTokens } from "../../../tokens-config/tokenService";
+import { loadTokens } from "../../../tokens-config/loadTokens";
 
 interface HeaderProps {
   brand: string;
@@ -17,7 +17,6 @@ export const Header = ({ brand, logoBackground, avatarBackground, onClick }: Hea
   return (
     <div>
       <Logo background={logoBackground}/>
-      <button style={{ backgroundColor: tokens.componentTokens.ButtonPrimary.BG.Initial }}></button>
       <InputSearch placeholder=""/>
       <Avatar.Small background={avatarBackground} onClick={onClick}/>
     </div>

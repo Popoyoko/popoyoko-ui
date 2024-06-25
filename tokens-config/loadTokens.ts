@@ -10,9 +10,6 @@ interface TokenConfig {
   
     console.log("Loading tokens from:", pathToComponentTokens, pathToSizeTokens);
 
-    //const componentTokens = require(pathToComponentTokens);
-    //const sizeTokens = require(pathToSizeTokens);
-
     const componentTokensModule = await import(pathToComponentTokens);
     const sizeTokensModule = await import(pathToSizeTokens);
   

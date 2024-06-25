@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { loadTokens } from "../../../tokens-config/tokenService";
+import { loadTokens } from "../../../tokens-config/loadTokens";
 
 interface TestButtonProps {
   brand: string;

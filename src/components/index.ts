@@ -19,3 +19,6 @@ export { InputDownload } from "./Inputs/Download"
 export { InputUpload } from "./Inputs/Upload"
 
 export { Slider } from "./Slider"
+
+
+export { TestButton } from "./TestButton"

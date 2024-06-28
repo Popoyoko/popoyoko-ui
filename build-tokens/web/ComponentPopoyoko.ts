@@ -5,3 +5,5 @@ export const ComponentPopoyoko = {
     }
   }
 }
+
+export default ComponentPopoyoko;

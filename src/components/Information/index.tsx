@@ -1,25 +1,18 @@
 import React from "react";
 import { Icon } from "../Icon";
-import  tokenfile from "../../tokens/config";
 
-
-type TokenizedComponent = {
-  tokenfile: "../../tokens/config";
-}
-
-interface InformationProps extends TokenizedComponent {
+interface InformationProps {
   label?: string;
   background?: string;
 }
 
 export const Information = ({
   label = "Information",
-  background = tokenfile.Test.color,
 }: InformationProps) => {
   return (
-    <div style={{ ...tokenfile.InformationSection, background}} >
+    <div>
       <Icon.Information />
-      <p style={tokenfile.InformationContent}>{label}</p>
+      <p>{label}</p>
     </div>
   );
 };

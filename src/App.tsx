@@ -4,16 +4,18 @@ import "./App.css";
 import React from "react";
 import {
   Icon,
+  TestButton,
 } from "./components";
 import { Button } from "./components";
+import { Header } from "./components";
 
 function App() {
-  const [count, setCount] = useState(0);
-  const isMobile = useMatchMedia("(max-width:700px)");
+  const brand = "Popoyoko";
 
   return (
     <div className="App">
       <Button.Primary><Icon.Add/>Label</Button.Primary>
+      <TestButton brand={brand} />
     </div>
   );
 }

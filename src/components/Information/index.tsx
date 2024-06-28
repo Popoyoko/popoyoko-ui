@@ -2,7 +2,12 @@ import React from "react";
 import { Icon } from "../Icon";
 import  tokenfile from "../../tokens/config";
 
-interface InformationProps {
+
+type TokenizedComponent = {
+  tokenfile: "../../tokens/config";
+}
+
+interface InformationProps extends TokenizedComponent {
   label?: string;
   background?: string;
 }

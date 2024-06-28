@@ -14,7 +14,8 @@ export interface ButtonProps {
   children: ChildType;
   action?: () => void;
   value?: string;
-  type?: "button"
+  type?: "button";
+  disabled?: boolean;
 }
 
 const StyledButton = styled.button<ButtonProps>`
@@ -46,8 +47,8 @@ const StyledButton = styled.button<ButtonProps>`
     }
 
     &:disabled {
-      background-color: rgba(0, 35, 252, 0.19);
-      color: rgba(0, 35, 252, 0.29);
+      background-color: #170F354D;
+      color: #170F354D;
     }
   }
 
@@ -56,7 +57,7 @@ const StyledButton = styled.button<ButtonProps>`
     background: #f8f8f8;
     border: 2px solid #1B6042;
     border-radius: 2px;
-    color: #1B6042;
+    color: #191CB1;
 
     &:hover {
       background: #ffffff;
@@ -73,7 +74,7 @@ const StyledButton = styled.button<ButtonProps>`
     &:disabled {
       border-radius: 2px;
       border: 2px dashed rgba(0, 35, 252, 0.11);
-      background: rgba(112, 112, 119, 0.11);
+      background: #170F354D;
     }
   }
 
@@ -96,7 +97,7 @@ const StyledButton = styled.button<ButtonProps>`
 
     &:disabled {
       background: rgba(119, 119, 119, 0.11);
-      border: 2px dashed rgba(33, 193, 103, 0.11);
+      border: 2px dashed #140B2533;
       color: rgba(33, 193, 103, 0.11);
     }
   }
@@ -107,11 +108,12 @@ const Button = ({
   children,
   action = () => console.log("Button as been clicked"),
   value = undefined,
-  type = undefined
+  type = undefined,
+  disabled = false
 }: ButtonProps): React.ReactElement<typeof StyledButton> => {
 
   return (
-    <StyledButton className={variant} onClick={action} type={type} value={value}>
+    <StyledButton className={`${variant} ${disabled ? "disabled" : ""}`} onClick={disabled ? undefined : action} type={type} value={value} disabled={disabled}>
       {children}
     </StyledButton>
   );

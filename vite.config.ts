@@ -11,6 +11,7 @@ const styledComponentsTransformer = createStyledComponentsTransformer({
   displayName: true,
 });
 
+
 export default defineConfig({
   build: {
     lib: {
@@ -60,5 +61,5 @@ export default defineConfig({
     outDir: "build",
     sourcemap: true,
     assetsDir: "assets",
-  },
+  }
 });

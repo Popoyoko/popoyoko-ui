@@ -1,32 +1,24 @@
 import path from 'path';
 import fs from 'fs';
 
+const configPath = path.resolve(__dirname, '../../tokens.config.js');
+const config = require(configPath) as TokenConfig; 
+
 interface TokenConfig {
-  brand: string; 
   tokenDirectory: string;
+  brand: string;
 }
 
-const defaultConfigPath = path.resolve(__dirname, '../tokens.config.js');
-const defaultConfig = require(defaultConfigPath);
+export const loadTokens = async (config: TokenConfig) => {
+  const { brand, tokenDirectory } = config;
 
-export const loadTokens = async (config: Partial<TokenConfig> = {}) => {
-  const effectiveConfig: TokenConfig = {
-    brand: config.brand || defaultConfig.brand,
-    tokenDirectory: config.tokenDirectory || defaultConfig.tokenDirectory,
-  };
-
-  const { brand, tokenDirectory } = effectiveConfig;
-
+  // Chemins des fichiers de tokens
   const pathToComponentTokens = path.join(tokenDirectory, `Component${brand}.ts`);
   const pathToSizeTokens = path.join(tokenDirectory, `Sizes${brand}.ts`);
 
-  console.log("Loading tokens from:", pathToComponentTokens, pathToSizeTokens);
-
+  // Chargement des modules de tokens
   const componentTokensModule = await import(pathToComponentTokens);
   const sizeTokensModule = await import(pathToSizeTokens);
-
-  console.log("Loaded component tokens:", componentTokensModule.default);
-  console.log("Loaded size tokens:", sizeTokensModule.default);
 
   return {
     componentTokens: componentTokensModule.default,

@@ -1,21 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { loadTokens } from "../../../tokens-config/loadTokens";
+// src/components/TestButton.tsx
+import React from 'react';
+import { useTokens } from '../../contexts/TokensProvider';
 
-interface TestButtonProps {
-  brand: string;
-}
-
-export const TestButton = ({ brand }: TestButtonProps) => {
-  const [tokens, setTokens] = useState<any>(null);
-
-  useEffect(() => {
-    const fetchTokens = async () => {
-      const loadedTokens = await loadTokens({ brand });
-      setTokens(loadedTokens);
-    };
-
-    fetchTokens();
-  }, [brand]);
+export const TestButton = () => {
+  const { tokens } = useTokens();
 
   if (!tokens) {
     return <div>Loading...</div>;

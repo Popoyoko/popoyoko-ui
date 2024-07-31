@@ -1,27 +1,27 @@
-import path from 'path';
-import fs from 'fs';
-
-const configPath = path.resolve(__dirname, '../../tokens.config.js');
-const config = require(configPath) as TokenConfig; 
-
-interface TokenConfig {
-  tokenDirectory: string;
-  brand: string;
-}
+import config from './tokens-config'; 
+import { TokenConfig } from './tokens-config';
 
 export const loadTokens = async (config: TokenConfig) => {
-  const { brand, tokenDirectory } = config;
+  const { tokenDirectory, brand } = config;
 
-  // Chemins des fichiers de tokens
-  const pathToComponentTokens = path.join(tokenDirectory, `Component${brand}.ts`);
-  const pathToSizeTokens = path.join(tokenDirectory, `Sizes${brand}.ts`);
+  const pathToComponentTokens = `${tokenDirectory}/web/Component${brand}.ts`;
+  const pathToSizeTokens = `${tokenDirectory}/web/Sizes${brand}.ts`;
 
-  // Chargement des modules de tokens
-  const componentTokensModule = await import(pathToComponentTokens);
-  const sizeTokensModule = await import(pathToSizeTokens);
+  console.log("Loading tokens from:", pathToComponentTokens, pathToSizeTokens);
 
-  return {
-    componentTokens: componentTokensModule.default,
-    sizeTokens: sizeTokensModule.default,
-  };
+  try {
+    const componentTokensModule = await import(/* @vite-ignore */ pathToComponentTokens);
+    const sizeTokensModule = await import(/* @vite-ignore */ pathToSizeTokens);
+
+    console.log("Loaded component tokens:", componentTokensModule.default);
+    console.log("Loaded size tokens:", sizeTokensModule.default);
+
+    return {
+      componentTokens: componentTokensModule.default,
+      sizeTokens: sizeTokensModule.default,
+    };
+  } catch (error) {
+    console.error('Error loading tokens:', error);
+    throw error; 
+  }
 };

@@ -1,19 +1,23 @@
-// src/components/TestButton.tsx
 import React from 'react';
-import { useTokens } from '../../contexts/TokensProvider';
+import { useTokens } from '../../../tokens-config/TokenContext';
 
-export const TestButton = () => {
-  const { tokens } = useTokens();
+interface TestButtonProps {
+  label: string;
+}
 
-  if (!tokens) {
-    return <div>Loading...</div>;
+export const TestButton: React.FC<TestButtonProps> = ({ label }) => {
+  const { componentTokens } = useTokens();
+
+  if (!componentTokens) {
+    return (
+      <p>no component tokens</p>
+    ); 
   }
 
   return (
-    <div>
-      <button style={{ backgroundColor: tokens.componentTokens.ButtonPrimary.BG.Initial }}>
-        Button
-      </button>
-    </div>
+    <button style={componentTokens.ButtonPrimary.BG.Initial}>
+      {label}
+    </button>
   );
 };
+

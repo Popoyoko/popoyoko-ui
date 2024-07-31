@@ -15,7 +15,7 @@ export const TestButton: React.FC<TestButtonProps> = ({ label }) => {
   }
 
   return (
-    <button style={componentTokens.ButtonPrimary.BG.Initial}>
+    <button style={{ backgroundColor: componentTokens.ButtonPrimary.BG.Initial}}>
       {label}
     </button>
   );

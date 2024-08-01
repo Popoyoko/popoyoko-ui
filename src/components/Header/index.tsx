@@ -12,7 +12,6 @@ interface HeaderProps {
 }
 
 export const Header = ({ brand, logoBackground, avatarBackground, onClick }: HeaderProps) => {
-  const tokens = loadTokens({ brand });
 
   return (
     <div>

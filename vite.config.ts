@@ -6,12 +6,14 @@ import svgr from "vite-plugin-svgr";
 import copy from "rollup-plugin-copy";
 import createStyledComponentsTransformer from 'typescript-plugin-styled-components';
 import { getDefaultLibFileName } from "typescript";
-import dynamicImportVars from '@rollup/plugin-dynamic-import-vars';
+import { variablesConfigPlugin } from './vite-plugin-variables-config';
+
 
 const styledComponentsTransformer = createStyledComponentsTransformer({
   displayName: true,
 });
 
+const tokenPath = './new-tokens/web/ComponentLibra';
 
 export default defineConfig({
   build: {
@@ -57,7 +59,7 @@ export default defineConfig({
           exclude: ["node_modules/**", "build/**", "src/**/*.stories.tsx"], // Les fichiers à exclure
         }),
         svgr(),
-        dynamicImportVars()
+        variablesConfigPlugin({ tokenPath }),
       ],
     },
     outDir: "build",

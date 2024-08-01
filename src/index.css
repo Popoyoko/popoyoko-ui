@@ -1,7 +1,6 @@
 @font-face {
   font-family: "Co Headline";
   src: url("/fonts/Co_Headline_Bold.otf") format("otf");
-  /* Autres déclarations de police... */
 }
 
 :root {

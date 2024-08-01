@@ -2,21 +2,20 @@ import useMatchMedia from "./hooks/useMatchMedia";
 import { useState } from "react";
 import "./App.css";
 import React from "react";
-import {
-  Icon,
-  TestButton,
-} from "./components";
-import { Button } from "./components";
-import { Header } from "./components";
+import { Button, Icon, TestButton} from "./components";
+import { TokenProvider } from '../tokens-config/TokenContext';
 
 function App() {
-  const brand = "Popoyoko";
-
   return (
+    <TokenProvider>
     <div className="App">
-      <Button.Primary><Icon.Add/>Label</Button.Primary>
-      <TestButton brand={brand} />
+      <Button.Primary>
+        <Icon.Add />
+        Label
+      </Button.Primary>
+      <TestButton label="test"/>
     </div>
+    </TokenProvider>
   );
 }
 

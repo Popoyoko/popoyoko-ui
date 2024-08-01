@@ -1,31 +1,23 @@
-import React, { useEffect, useState } from "react";
-import { loadTokens } from "../../../tokens-config/loadTokens";
+import React from 'react';
+import { useTokens } from '../../../tokens-config/TokenContext';
 
 interface TestButtonProps {
-  brand: string;
+  label: string;
 }
 
-export const TestButton = ({ brand }: TestButtonProps) => {
-  const [tokens, setTokens] = useState<any>(null);
+export const TestButton: React.FC<TestButtonProps> = ({ label }) => {
+  const { componentTokens } = useTokens();
 
-  useEffect(() => {
-    const fetchTokens = async () => {
-      const loadedTokens = await loadTokens({ brand });
-      setTokens(loadedTokens);
-    };
-
-    fetchTokens();
-  }, [brand]);
-
-  if (!tokens) {
-    return <div>Loading...</div>;
+  if (!componentTokens) {
+    return (
+      <p>no component tokens</p>
+    ); 
   }
 
   return (
-    <div>
-      <button style={{ backgroundColor: tokens.componentTokens.ButtonPrimary.BG.Initial }}>
-        Button
-      </button>
-    </div>
+    <button style={{ backgroundColor: componentTokens.ButtonPrimary.BG.Initial}}>
+      {label}
+    </button>
   );
 };
+

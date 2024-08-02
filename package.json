@@ -21,9 +21,14 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "watch": "vite build --watch --mode development",
+<<<<<<< HEAD
     "lint": "eslint --ext .ts,.tsx src",
     "postinstall": "cp tokens.config.js ../path/to/user/project/"
   },
+=======
+    "lint": "eslint --ext .ts,.tsx src"
+    },
+>>>>>>> develop
   "dependencies": {
     "@rollup/plugin-dynamic-import-vars": "^2.1.2",
     "@types/node": "^20.14.8",

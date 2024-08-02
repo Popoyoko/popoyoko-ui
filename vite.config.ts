@@ -36,15 +36,15 @@ export default defineConfig({
           targets: [
             {
               src: "src/Icons",
-              dest: "build", // Spécifiez le répertoire "Icons" à l'intérieur de "build"
+              dest: "build",
             },
             {
               src: "library-package.json",
-              dest: "build/", // Spécifiez le répertoire "Icons" à l'intérieur de "build"
+              dest: "build/",
               rename: "package.json"
             },
           ],
-          hook: "writeBundle", // Utilisez le hook "writeBundle" pour copier après la génération du bundle
+          hook: "writeBundle", 
         }),
         ts({
           tsconfig: path.resolve(__dirname, "tsconfig.json"),
@@ -55,8 +55,8 @@ export default defineConfig({
           ],
         }),
         eslint({
-          include: ["src/**/*.ts", "src/**/*.tsx"], // Les fichiers à linter
-          exclude: ["node_modules/**", "build/**", "src/**/*.stories.tsx"], // Les fichiers à exclure
+          include: ["src/**/*.ts", "src/**/*.tsx"],
+          exclude: ["node_modules/**", "build/**", "src/**/*.stories.tsx"], 
         }),
         svgr(),
         variablesConfigPlugin({ tokenPath }),

@@ -16,7 +16,7 @@
     "declaration": true,
     "jsx": "react"
   },
-  "include": ["src", "scripts"],
+  "include": ["src", "vite-plugin-variables-config.ts"],
   "references": [{ "path": "./tsconfig.node.json" }],
   "exclude": [
     "node_modules",

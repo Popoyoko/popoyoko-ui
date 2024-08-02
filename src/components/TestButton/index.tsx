@@ -8,6 +8,8 @@ interface TestButtonProps {
 export const TestButton: React.FC<TestButtonProps> = ({ label }) => {
   const { componentTokens } = useTokens();
 
+  const BG = {Initial:componentTokens.ButtonPrimary.BG.Initial}
+
   if (!componentTokens) {
     return (
       <p>no component tokens</p>
@@ -15,7 +17,7 @@ export const TestButton: React.FC<TestButtonProps> = ({ label }) => {
   }
 
   return (
-    <button style={{ backgroundColor: componentTokens.ButtonPrimary.BG.Initial}}>
+    <button style={{ backgroundColor: BG.Initial}}>
       {label}
     </button>
   );

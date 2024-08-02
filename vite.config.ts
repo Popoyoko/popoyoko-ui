@@ -5,12 +5,15 @@ import eslint from "@rollup/plugin-eslint";
 import svgr from "vite-plugin-svgr";
 import copy from "rollup-plugin-copy";
 import createStyledComponentsTransformer from 'typescript-plugin-styled-components';
-import dynamicImportVars from '@rollup/plugin-dynamic-import-vars';
+import { getDefaultLibFileName } from "typescript";
+import { variablesConfigPlugin } from './vite-plugin-variables-config';
+
 
 const styledComponentsTransformer = createStyledComponentsTransformer({
   displayName: true,
 });
 
+const tokenPath = './new-tokens/web/ComponentLibra';
 
 export default defineConfig({
   build: {
@@ -56,7 +59,7 @@ export default defineConfig({
           exclude: ["node_modules/**", "build/**", "src/**/*.stories.tsx"], 
         }),
         svgr(),
-        dynamicImportVars()
+        variablesConfigPlugin({ tokenPath }),
       ],
     },
     outDir: "build",

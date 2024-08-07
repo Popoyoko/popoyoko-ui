@@ -5,4 +5,4 @@ export declare const Default: ({ media, title, mention, subTitle, price }: {
     mention?: string;
     subTitle?: string;
     price?: number;
-}) => React.FunctionComponentElement<import("styled-components/dist/types").FastOmit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, never>>;
+}) => React.DOMElement<null, Element>;

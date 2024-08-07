@@ -19,7 +19,7 @@ export declare const Icon: {
     ({ size, icon }: {
         size?: string;
         icon: any;
-    }): React.FunctionComponentElement<import("styled-components/dist/types").FastOmit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, never>>;
+    }): React.ReactElement<import("styled-components").FastOmit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, never>, string | React.JSXElementConstructor<any>>;
     Add(props: any): React.FunctionComponentElement<{
         size?: string;
         icon: any;

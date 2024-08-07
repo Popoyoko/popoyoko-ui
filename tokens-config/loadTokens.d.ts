@@ -1,4 +1,3 @@
-export declare const loadTokens: (config: any) => Promise<{
+export declare const loadTokens: () => Promise<{
     componentTokens: any;
-    sizeTokens: any;
 }>;

@@ -6,4 +6,4 @@ export declare const InputText: ({ label, placeholder, type, name, value, onChan
     name: any;
     value: any;
     onChange: any;
-}) => React.FunctionComponentElement<import("styled-components/dist/types").FastOmit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, never>>;
+}) => React.DOMElement<null, Element>;

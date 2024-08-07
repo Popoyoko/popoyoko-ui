@@ -7,7 +7,13 @@ declare const Button: {
         value?: any;
         type?: any;
         disabled?: boolean;
-    }): React.FunctionComponentElement<import("styled-components/dist/types").FastOmit<React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>, never>>;
+    }): React.DOMElement<{
+        className: string;
+        onClick: () => void;
+        type: any;
+        value: any;
+        disabled: boolean;
+    }, Element>;
     Primary(props: any): React.FunctionComponentElement<{
         variant?: string;
         children: any;

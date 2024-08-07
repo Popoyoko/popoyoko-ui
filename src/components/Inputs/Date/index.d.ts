@@ -5,4 +5,4 @@ export declare const InputDate: ({ label, lang, value, name, onChange }: {
     value: any;
     name: any;
     onChange: any;
-}) => React.FunctionComponentElement<import("styled-components/dist/types").FastOmit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, never>>;
+}) => React.DOMElement<null, Element>;

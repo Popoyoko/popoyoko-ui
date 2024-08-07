@@ -9,18 +9,16 @@ export function variablesConfigPlugin(options: VariablesConfigPluginOptions): Pl
     name: 'variables-config-plugin',
     transform(code, id) {
       if (id.endsWith('tokens-config.ts')) {
-        console.log(`Transforming ${id} with tokenPath ${options.tokenPath}`);
         const updatedCode = code.replace(
-          /componentVariablesPath:\s*'[^']*'/,
+          /componentVariablesPath:\s*".*?"/,
           `componentVariablesPath: '${options.tokenPath}'`
         );
+        //console.log(`Updated variables path: ${options.tokenPath}`);
         return {
           code: updatedCode,
-          map: null, 
         };
       }
       return null;
-    }
+    },
   };
 }
-

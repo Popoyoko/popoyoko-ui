@@ -1,6 +1,6 @@
-import { Plugin } from 'vite';
-interface VariablesConfigPluginOptions {
-    tokenPath: string;
-}
-export declare function variablesConfigPlugin(options: VariablesConfigPluginOptions): Plugin;
-export {};
+export declare function variablesConfigPlugin(options: any): {
+    name: string;
+    transform(code: any, id: any): {
+        code: any;
+    };
+};

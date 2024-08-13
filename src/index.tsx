@@ -2,6 +2,4 @@ import "./index.scss";
 
 export * from "./components/index";
 
-// import { Information } from "./components";
-
-// export {Information}
+export { variablesConfigPlugin } from "../vite-plugin-variables-config";

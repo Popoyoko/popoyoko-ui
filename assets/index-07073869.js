@@ -1,0 +1,1 @@
+import{j as t}from"./jsx-runtime-7c9a5671.js";import{L as m}from"./index-009eaa84.js";import{L as s}from"./index-119ac4d3.js";const o=({children:r})=>t("div",{children:r});o.L1H1=m;o.L2H3=s;export{o as R};

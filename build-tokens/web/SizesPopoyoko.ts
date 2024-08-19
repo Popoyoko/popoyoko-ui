@@ -7,3 +7,5 @@ export const SizesPopoyoko = {
     "XL": "999"
   }
 }
+
+export default SizesPopoyoko;

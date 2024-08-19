@@ -2,19 +2,20 @@ import useMatchMedia from "./hooks/useMatchMedia";
 import { useState } from "react";
 import "./App.css";
 import React from "react";
-import {
-  Icon,
-} from "./components";
-import { Button } from "./components";
+import { Button, Icon, TestButton} from "./components";
+import { TokenProvider } from '../tokens-config/TokenContext';
 
 function App() {
-  const [count, setCount] = useState(0);
-  const isMobile = useMatchMedia("(max-width:700px)");
-
   return (
+    <TokenProvider>
     <div className="App">
-      <Button.Primary><Icon.Add/>Label</Button.Primary>
+      <Button.Primary>
+        <Icon.Add />
+        Label
+      </Button.Primary>
+      <TestButton label="test"/>
     </div>
+    </TokenProvider>
   );
 }
 

@@ -1,4 +1,4 @@
-import { config } from '../tokens-config';
+import { config } from './tokens-config';
 
 export const loadTokens = async () => {
   try {

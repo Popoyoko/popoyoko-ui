@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTokens } from '../../../tokens-config/TokenContext';
+import { useTokens } from '../../tokens-config/TokenContext';
 
 interface TestButtonProps {
   label: string;

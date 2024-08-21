@@ -54,7 +54,7 @@ export default defineConfig({
           ],
         }),
         eslint({
-          include: ["src/**/*.ts", "src/**/*.tsx", "scripts/vite/*.ts"],
+          include: ["src/**/*.ts", "src/**/*.tsx"],
           exclude: ["node_modules/**", "build/**", "src/**/*.stories.tsx"], 
         }),
         svgr(),

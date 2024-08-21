@@ -15,8 +15,10 @@
     "noEmit": true,
     "declaration": true,
     "jsx": "react",
+    "outDir": "./build",
+    "rootDir": "./src",
   },
-  "include": ["src", "scripts"],
+  "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }],
   "exclude": [
     "node_modules",

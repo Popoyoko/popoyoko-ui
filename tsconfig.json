@@ -25,6 +25,7 @@
     "build",
     "storybook-static",
     "src/**/*.test.tsx",
-    "src/App.tsx"
+    "src/App.tsx",
+    "scripts"
     ]
 }

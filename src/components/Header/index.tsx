@@ -2,16 +2,14 @@ import React from "react";
 import { Logo } from "../Logo";
 import { InputSearch } from "../Inputs/Search";
 import Avatar from "../Avatar";
-import { loadTokens } from "../../../tokens-config/loadTokens";
 
 interface HeaderProps {
-  brand: string;
   logoBackground?: string;
   avatarBackground?: string;
   onClick?: () => void;
 }
 
-export const Header = ({ brand, logoBackground, avatarBackground, onClick }: HeaderProps) => {
+export const Header = ({ logoBackground, avatarBackground, onClick }: HeaderProps) => {
 
   return (
     <div>

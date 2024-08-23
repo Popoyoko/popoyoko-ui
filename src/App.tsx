@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./App.css";
 import React from "react";
 import { Button, Icon, TestButton} from "./components";
-import { TokenProvider } from '../tokens-config/TokenContext';
+import { TokenProvider } from './tokens-config/TokenContext';
 
 function App() {
   return (

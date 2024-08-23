@@ -14,7 +14,9 @@
     "isolatedModules": false,
     "noEmit": true,
     "declaration": true,
-    "jsx": "react"
+    "jsx": "react",
+    "outDir": "./build",
+    "rootDir": "./src",
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }],

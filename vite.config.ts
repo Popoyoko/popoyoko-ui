@@ -6,7 +6,7 @@ import svgr from "vite-plugin-svgr";
 import copy from "rollup-plugin-copy";
 import createStyledComponentsTransformer from 'typescript-plugin-styled-components';
 import { getDefaultLibFileName } from "typescript";
-import { variablesConfigPlugin } from './vite-plugin-variables-config';
+import { variablesConfigPlugin } from './src/plugins/vite-plugin-variables-config';
 
 
 const styledComponentsTransformer = createStyledComponentsTransformer({
@@ -65,11 +65,11 @@ export default defineConfig({
     assetsDir: "assets",
   },
   plugins: [
-    variablesConfigPlugin({ tokenPath: './build-tokens/web/ComponentPopoyoko' }), 
+    variablesConfigPlugin({ tokenPath: '../../build-tokens/web/ComponentPopoyoko' }), 
   ],
   resolve: {
     alias: [
-      { find: '@', replacement: '/src' }
+      { find: '@', replacement: '/src' },
     ]
   }
 });

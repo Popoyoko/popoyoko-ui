@@ -1,7 +1,8 @@
 import { Plugin } from 'vite';
+import * as path from 'path';
 
 interface VariablesConfigPluginOptions {
-  tokenPath: string;
+  tokenPath: string; 
 }
 
 export function variablesConfigPlugin(options: VariablesConfigPluginOptions): Plugin {
@@ -9,11 +10,15 @@ export function variablesConfigPlugin(options: VariablesConfigPluginOptions): Pl
     name: 'variables-config-plugin',
     transform(code, id) {
       if (id.endsWith('tokens-config.ts')) {
+        const tokensConfigDir = path.dirname(id);
+
+        const resolvedTokenPath = path.relative(tokensConfigDir, path.resolve(options.tokenPath));
+
         const updatedCode = code.replace(
           /componentVariablesPath:\s*".*?"/,
-          `componentVariablesPath: '${options.tokenPath}'`
+          `componentVariablesPath: '${resolvedTokenPath}'`
         );
-        //console.log(`Updated variables path: ${options.tokenPath}`);
+
         return {
           code: updatedCode,
         };

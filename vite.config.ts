@@ -31,9 +31,8 @@ export default defineConfig({
               dest: "build",
             },
             {
-              src: "library-package.json",
+              src: "package.json",
               dest: "build/",
-              rename: "package.json"
             },
           ],
           hook: "writeBundle", 

@@ -3,9 +3,6 @@ import * as path from 'path';
 
 interface VariablesConfigPluginOptions {
   tokenPath: string; 
-
-interface VariablesConfigPluginOptions {
-  tokenPath: string;
 }
 
 export function variablesConfigPlugin(options: VariablesConfigPluginOptions): Plugin {
@@ -22,7 +19,6 @@ export function variablesConfigPlugin(options: VariablesConfigPluginOptions): Pl
           `componentVariablesPath: '${resolvedTokenPath}'`
         );
 
-        //console.log(`Updated variables path: ${options.tokenPath}`);
         return {
           code: updatedCode,
         };

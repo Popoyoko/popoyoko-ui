@@ -35,6 +35,10 @@ export default defineConfig({
               dest: "build/",
               rename: "package.json"
             },
+            {
+              src: "./build-tokens",
+              dest: "build",
+            },
           ],
           hook: "writeBundle", 
         }),

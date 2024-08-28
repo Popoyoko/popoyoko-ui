@@ -35,6 +35,10 @@ export default defineConfig({
               dest: "build/",
               rename: "package.json"
             },
+            {
+              src: "./popoyoko-default-variables",
+              dest: "build",
+            },
           ],
           hook: "writeBundle", 
         }),
@@ -53,7 +57,7 @@ export default defineConfig({
     assetsDir: "assets",
   },
   plugins: [
-    variablesConfigPlugin({ tokenPath: '../../build-tokens/web/ComponentPopoyoko' }), 
+    variablesConfigPlugin({ tokenPath: '../../popoyoko-default-variables/web/ComponentPopoyoko' }), 
   ],
   resolve: {
     alias: [

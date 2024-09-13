@@ -9,18 +9,19 @@ export function variablesConfigPlugin(options: VariablesConfigPluginOptions): Pl
   return {
     name: 'variables-config-plugin',
     transform(code, id) {
-      if (id.endsWith('tokens-config.ts')) {
-        const tokensConfigDir = path.dirname(id);
+      if (id.endsWith('tokens-path.json')) {
+        console.log(`Transforming ${id}`);
 
+        const tokensConfigDir = path.dirname(id);
         const resolvedTokenPath = path.relative(tokensConfigDir, path.resolve(options.tokenPath));
 
-        const updatedCode = code.replace(
-          /componentVariablesPath:\s*".*?"/,
-          `componentVariablesPath: '${resolvedTokenPath}'`
-        );
+        const newContent = JSON.stringify({
+          componentVariablesPath: resolvedTokenPath
+        }, null, 2); 
+
 
         return {
-          code: updatedCode,
+          code: `export default ${newContent};`,
         };
       }
       return null;

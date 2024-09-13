@@ -61,7 +61,6 @@ export default defineConfig({
     assetsDir: "assets",
   },
   plugins: [
-    variablesConfigPlugin({ tokenPath: './builded/web/ComponentPopoyoko' }), 
   ],
   resolve: {
     alias: [

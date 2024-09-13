@@ -8,20 +8,18 @@ interface VariablesConfigPluginOptions {
 export function variablesConfigPlugin(options: VariablesConfigPluginOptions): Plugin {
   return {
     name: 'variables-config-plugin',
-    transform(code, id) {
+    load(id) {
       if (id.endsWith('tokens-path.json')) {
-        console.log(`Transforming ${id}`);
 
-        const tokensConfigDir = path.dirname(id);
-        const resolvedTokenPath = path.relative(tokensConfigDir, path.resolve(options.tokenPath));
-
+        console.log(`Using tokenPath from user config: ${options.tokenPath}`);
+        
         const newContent = JSON.stringify({
-          componentVariablesPath: resolvedTokenPath
+          componentVariablesPath: options.tokenPath
         }, null, 2); 
 
-
         return {
-          code: `export default ${newContent};`,
+          code: newContent, 
+          map: null
         };
       }
       return null;

@@ -1,7 +1,7 @@
 export declare function variablesConfigPlugin(options: any): {
     name: string;
-    load(id: any): {
-        code: string;
+    transform(code: any, id: any): {
+        code: any;
         map: any;
     };
 };

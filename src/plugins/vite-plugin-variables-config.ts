@@ -1,26 +1,26 @@
 import { Plugin } from 'vite';
 
 interface VariablesConfigPluginOptions {
-  tokenPath?: string;
+  tokenPath: string;
 }
 
 export function variablesConfigPlugin(options: VariablesConfigPluginOptions): Plugin {
   return {
     name: 'variables-config-plugin',
-    load(id) {
+    transform(code, id) {
       if (id.endsWith('tokens-config.ts')) {
 
         console.log(`Using tokenPath from user config: ${options.tokenPath}`);
-        
+
         const newContent = `
-        export const config = {
-          componentVariablesPath: '${options.tokenPath}'
-        };
-      `;
+          export const config = {
+            componentVariablesPath: '${options.tokenPath}'
+          };
+        `;
 
         return {
-          code: modifiedCode,
-          map: null,
+          code: newContent,
+          map: null
         };
       }
       return null;

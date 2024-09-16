@@ -1699,7 +1699,7 @@ position: relative;
   width: 300px;
   box-sizing: border-box;
 `, Ko = ({ children: e }) => /* @__PURE__ */ a.createElement(Po, null, a.Children.map(e, (t, n) => /* @__PURE__ */ a.createElement(Qo, { key: n }, t))), Zo = {
-  componentVariablesPath: "./bfeuild/web/ComponentPopoyoko"
+  componentVariablesPath: "../../popoyoko-default-variables/web/ComponentPopoyoko"
 }, Ro = async () => {
   try {
     const e = `${Zo.componentVariablesPath}`;

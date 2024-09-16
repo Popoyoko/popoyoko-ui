@@ -1,8 +1,7 @@
 import { Plugin } from 'vite';
-import * as path from 'path';
 
 interface VariablesConfigPluginOptions {
-  tokenPath: string; 
+  tokenPath?: string;
 }
 
 export function variablesConfigPlugin(options: VariablesConfigPluginOptions): Plugin {
@@ -20,8 +19,8 @@ export function variablesConfigPlugin(options: VariablesConfigPluginOptions): Pl
       `;
 
         return {
-          code: newContent, 
-          map: null
+          code: modifiedCode,
+          map: null,
         };
       }
       return null;

@@ -62,7 +62,6 @@ export default defineConfig({
   },
   plugins: [
     variablesConfigPlugin({ tokenPath: './build/web/ComponentPopoyoko' }), 
-
   ],
   resolve: {
     alias: [

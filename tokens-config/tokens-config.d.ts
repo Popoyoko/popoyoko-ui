@@ -1,3 +1,4 @@
-export declare const config: {
+export interface TokenConfig {
     componentVariablesPath: string;
-};
+}
+export declare const config: TokenConfig;

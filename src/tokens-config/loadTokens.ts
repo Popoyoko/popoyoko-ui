@@ -1,14 +1,12 @@
-import { config } from './tokens-config';
+import { loadTokensConfig } from './loadTokensConfig';
 
 export const loadTokens = async () => {
   try {
-    const pathToComponentTokens = `${config.componentVariablesPath}`;
+    const pathToComponentTokens = await loadTokensConfig();
 
     console.log("Loading tokens from:", pathToComponentTokens);
 
     const componentTokensModule = await import(`${pathToComponentTokens}.ts`);
-
-    console.log("Loaded component tokens:", componentTokensModule.default);
 
     return {
       componentTokens: componentTokensModule.default,

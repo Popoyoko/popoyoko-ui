@@ -61,6 +61,7 @@ export default defineConfig({
     assetsDir: "assets",
   },
   plugins: [
+
   ],
   resolve: {
     alias: [

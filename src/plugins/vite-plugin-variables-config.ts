@@ -1,28 +1,26 @@
 import { Plugin } from 'vite';
 
 interface VariablesConfigPluginOptions {
-  tokenPath?: string;
+  tokenPath: string;
 }
 
 export function variablesConfigPlugin(options: VariablesConfigPluginOptions): Plugin {
   return {
     name: 'variables-config-plugin',
     transform(code, id) {
-      if (id.endsWith('loadTokensConfig.ts')) {
-        const userTokenPath: string = options.tokenPath || '../../popoyoko-default-variables/web/ComponentPopoyoko';
-        
-        console.log(`Using tokenPath from user config: ${userTokenPath}`);
+      if (id.endsWith('tokens-config.ts')) {
 
-        const modifiedCode = code.replace(
-          /const defaultTokenPath = ["'].*?["'];/,
-          `const defaultTokenPath = '${userTokenPath}';`
-        );
+        console.log(`Using tokenPath from user config: ${options.tokenPath}`);
 
-        console.log("Modified code:\n", modifiedCode);
+        const newContent = `
+          export const config = {
+            componentVariablesPath: '${options.tokenPath}'
+          };
+        `;
 
         return {
-          code: modifiedCode,
-          map: null,
+          code: newContent,
+          map: null
         };
       }
       return null;

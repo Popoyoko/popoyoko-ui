@@ -1,11 +1,10 @@
 import * as path from "path";
 import { defineConfig } from "vite";
 import ts from "rollup-plugin-typescript2";
-import eslint from "@rollup/plugin-eslint";
 import svgr from "vite-plugin-svgr";
 import copy from "rollup-plugin-copy";
 import { getDefaultLibFileName } from "typescript";
-import { variablesConfigPlugin } from './src/plugins/vite-plugin-variables-config';
+import { variablesConfigPlugin } from "./src/plugins/vite-plugin-variables-config";
 
 export default defineConfig({
   build: {
@@ -33,7 +32,7 @@ export default defineConfig({
             {
               src: "library-package.json",
               dest: "build/",
-              rename: "package.json"
+              rename: "package.json",
             },
             {
               src: "./popoyoko-default-variables",
@@ -44,15 +43,12 @@ export default defineConfig({
               dest: "build/tokens-config",
             },
           ],
-          hook: "writeBundle", 
+          hook: "writeBundle",
         }),
         ts({
           tsconfig: path.resolve(__dirname, "tsconfig.json"),
         }),
-        eslint({
-          include: ["src/**/*.ts", "src/**/*.tsx"],
-          exclude: ["node_modules/**", "build/**", "src/**/*.stories.tsx"], 
-        }),
+
         svgr(),
       ],
     },
@@ -60,12 +56,8 @@ export default defineConfig({
     sourcemap: true,
     assetsDir: "assets",
   },
-  plugins: [
-
-  ],
+  plugins: [],
   resolve: {
-    alias: [
-      { find: '@', replacement: '/src' },
-    ]
-  }
+    alias: [{ find: "@", replacement: "/src" }],
+  },
 });

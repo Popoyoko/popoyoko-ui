@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: 🐰 Set up bun
-        uses: oven-sh/setup-bun@v1
+        uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
 
@@ -24,8 +24,18 @@ jobs:
         with:
           ref: ${{ github.ref }}
 
-      - name: 🔗 Install dependencies
+      - name: 🔗 Clone dependencies
+        run: |
+          mkdir node_modules && cd ./node_modules
+          git clone https://github.com/Popoyoko/popoyoko-branding.git ./popoyoko-branding
+          mv popoyoko-branding branding
+          git clone https://github.com/Popoyoko/build-tokens.git ./build-tokens
+
+      - name: 🐰 add dependancies
         run: bun i
+
+      - name: List modules
+        run: ls -l ./node_modules/
 
       - name: 🎨 Build Storybook
         run: bun run build-storybook
@@ -51,7 +61,7 @@ jobs:
 
       - name: 🚀 Deploy Development Package
         uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.ref == 'refs/heads/develop' }}  
+        if: ${{ github.ref == 'refs/heads/develop' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build

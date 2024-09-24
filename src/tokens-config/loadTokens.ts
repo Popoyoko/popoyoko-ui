@@ -1,4 +1,4 @@
-import { config } from './tokens-config';
+import { config } from "./tokens-config";
 
 export const loadTokens = async () => {
   try {
@@ -8,10 +8,10 @@ export const loadTokens = async () => {
 
     const componentTokensModule = await import(`${pathToComponentTokens}.ts`);
 
-    console.log("Loaded component tokens:", componentTokensModule.default);
+    console.log("Loaded component tokens:", componentTokensModule.Component);
 
     return {
-      componentTokens: componentTokensModule.default,
+      componentTokens: componentTokensModule.Component,
     };
   } catch (error) {
     console.error("Error loading tokens:", error);

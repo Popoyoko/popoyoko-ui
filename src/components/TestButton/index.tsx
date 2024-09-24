@@ -1,24 +1,25 @@
-import React from 'react';
-import { useTokens } from '../../tokens-config/TokenContext';
+// biome-ignore lint/style/useImportType: <explanation>
+import React from "react";
+import { useTokens } from "../../tokens-config/TokenContext";
 
 interface TestButtonProps {
-  label: string;
+	label: string;
 }
 
 export const TestButton: React.FC<TestButtonProps> = ({ label }) => {
-  const { componentTokens } = useTokens();
+	const { componentTokens } = useTokens();
 
-  const BG = {Initial:componentTokens.ButtonPrimary.BG.Initial}
+	console.log(componentTokens);
 
-  if (!componentTokens) {
-    return (
-      <p>no component tokens</p>
-    ); 
-  }
+	const BG = { Initial: componentTokens.ButtonPrimary.BG.Initial };
 
-  return (
-    <button style={{ backgroundColor: BG.Initial}}>
-      {label}
-    </button>
-  );
+	if (!componentTokens) {
+		return <p>no component tokens</p>;
+	}
+
+	return (
+		<button type="button" style={{ backgroundColor: BG.Initial }}>
+			{label}
+		</button>
+	);
 };

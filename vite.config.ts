@@ -1,10 +1,11 @@
-import * as path from "path";
+import * as path from "node:path";
 import { defineConfig } from "vite";
 import ts from "rollup-plugin-typescript2";
 import svgr from "vite-plugin-svgr";
 import copy from "rollup-plugin-copy";
-import { getDefaultLibFileName } from "typescript";
+// import { getDefaultLibFileName } from "typescript";
 import { variablesConfigPlugin } from "./src/plugins/vite-plugin-variables-config";
+import { designTokens } from "./src/plugins/vite-plugin-design-tokens";
 
 export default defineConfig({
   build: {
@@ -48,7 +49,6 @@ export default defineConfig({
         ts({
           tsconfig: path.resolve(__dirname, "tsconfig.json"),
         }),
-
         svgr(),
       ],
     },
@@ -56,7 +56,7 @@ export default defineConfig({
     sourcemap: true,
     assetsDir: "assets",
   },
-  plugins: [],
+  plugins: [designTokens("./node_modules/branding/tokens/")],
   resolve: {
     alias: [{ find: "@", replacement: "/src" }],
   },

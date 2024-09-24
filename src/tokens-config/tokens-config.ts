@@ -3,5 +3,5 @@ export interface TokenConfig {
 }
 
 export const config: TokenConfig = {
-  componentVariablesPath: '../../popoyoko-default-variables/web/ComponentPopoyoko' 
+  componentVariablesPath: "../../tokens/web/Component",
 };
